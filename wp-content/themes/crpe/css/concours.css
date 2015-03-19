@@ -1,0 +1,200 @@
+.header_crpe{
+    height: 600px;
+}
+
+.background_concours_1 {
+    height:30em;
+  //  padding:;
+    text-align: center;
+    color: #FFF;
+    background: url(../img/concours/concour_back_1.jpg) center top fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+   color:white;
+   position: relative;
+}
+.text_fond_1{
+    font-size: 6em;
+    font-weight: lighter;
+    padding-top: 1.3em;
+}
+.prepa-exam-right {
+    float:right;
+    /*display: inline-block;*/
+}
+.prepa-exam-left {
+        float:left;
+/*        display:inline-block;*/
+}
+.prepa-left {
+    padding-right: 3em;
+    padding-left: 2em;
+   
+}
+.prepa-right {
+    padding-right: 5em;
+    padding-left: 2em;
+  
+}
+.prepa-gray {
+    background-color: #f0f0f0;
+}
+
+.background_prepa {
+/*    padding: 150px 0;*/
+    text-align: center;
+    color: black;
+    background: url(../img/prepa/prepa_fond.jpg) center top fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.thumbnail {
+     background-color: rgba(255, 255, 255, 0);
+}
+.post-content_prepa_1 {
+    top:50%;
+    left:18%;
+    position: absolute;
+    color:black;
+}
+.post-content_prepa_2 {
+    top:50%;
+    right:21%;
+    position: absolute;
+    color:black;
+}
+.post-content_prepa_3 {
+    top:34%;
+    left:15%;
+    position: absolute;
+    color:black;
+}
+.post-content_prepa_3_2 {
+    top:44%;
+    left:15%;
+    position: absolute;
+    color:black;
+}
+.post-content_prepa_4 {
+    top:34%;
+    right:23%;
+    position: absolute;
+    color:black;
+}
+.post-content_prepa_4_2 {
+    top:44%;
+    right:23%;
+    position: absolute;
+    color:black;
+}
+
+
+.concours_back_1 { 
+    height: 15em;    
+   
+    text-align: center;
+    color: #FFF;
+/*    background: url(../img/accueil/img_fond_1.jpg) center top fixed;*/
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.accueil_pack_2 .row{
+    margin-left: 7em;
+    width: 55%;
+    top: 25em;
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    padding: 2em 1em 0 1em;
+    line-height: 1.4em;
+}
+
+.concours_back_1 .stat{
+    margin-bottom: 0;
+    padding: 0em  0 4em 0;
+    margin-left: 7.3em;
+}
+.stat p{
+    color:white;
+}
+.epreuve_concours{
+    height: 53em;
+    background: url(../img/concours/epreuve_concours.jpg)
+}
+
+.index_cercle_back_c{
+    width:220px;
+    height:220px;
+    background-color: #ff9764;
+    border-radius: 50%;
+    padding-top: 2.5em;
+    color:white;
+}
+.index_cercle_back_c_2{
+    width:150px;
+    height:150px;
+    background-color: #ff9764;
+    border-radius: 50%;
+    padding-top: 2.5em;
+    color:white;
+}
+.index_cercle_back_c h2{
+    color:white;
+}
+
+
+
+.reseau_nat p {
+    font-weight: normal;
+}
+
+.stat h2{
+    font-size: 3.5em;
+}
+
+
+.background_concours_2 {
+    height:30em;
+   // padding:;
+    text-align: center;
+    color: #FFF;
+    background: url(../img/concours/concours_back_2.jpg) center top fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+   color:white;
+   margin-bottom: 35em;
+}
+.background_prepa_1 h2 {
+    font-size: 6em;
+    padding-top: 0.7em;
+}
+.background_prepa_3 h2 {
+    font-size: 6em;
+    padding-top: 1.3em;
+}
+.prepa_p_1{
+    color:white;
+    padding: 1.3em 15em 0 15em;
+}
+.middle_pack_rond h3{
+   padding: 0 0 0 7em;
+   font-weight: bold;
+}
+.middle_pack_rond p{
+   padding: 0 0 0 5.5em;
+   
+}
+.middle_pack_rond p2{
+   padding:0;
+}
+.right_right{
+    background-color:#f0f0f0;
+}

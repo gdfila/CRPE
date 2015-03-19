@@ -1,0 +1,78 @@
+.header_crpe{
+    height: 600px;
+}
+.background_prepa_1 {
+    height:27em;
+    padding:;
+    text-align: center;
+    color: #FFF;
+    background: url(../img/prepa/photo_prepa_2.jpg) center top fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+   color:white;
+}
+.background_prepa_3 {
+    height:30em;
+    padding:;
+    text-align: center;
+    color: #FFF;
+    background: url(../img/prepa/photo_prepa_3.jpg) center top fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+   color:white;
+   margin-bottom: 35em;
+}
+.prepa_back_1{
+    height: 18em;
+}
+
+.index_cercle_back_p{
+    width:220px;
+    height:220px;
+    background-color: #99cddd;
+    border-radius: 50%;
+    padding-top: 2.5em;
+    color:white;
+}
+.index_cercle_back_p h2{
+    color:white;
+}
+
+
+.epreuve_prepa{
+    height: 50em;
+    background: url(../img/prepa/epreuve_prepa.jpg)
+}
+
+
+
+.background_prepa_1 h2 {
+    font-size: 6em;
+    padding-top: 0.7em;
+}
+.background_prepa_3 h2 {
+    font-size: 6em;
+    padding-top: 1.1em;
+}
+.prepa_p_1{
+    color:white;
+    padding: 1.3em 15em 0 15em;
+}
+.middle_pack_rond h3{
+   padding: 0 0 0 7em;
+   font-weight: bold;
+}
+.middle_pack_rond p{
+   padding: 0 0 0 5.5em;
+   
+}
+.middle_pack_rond p2{
+   padding:0;
+}
+.right_right{
+    background-color:#f0f0f0;
+}
