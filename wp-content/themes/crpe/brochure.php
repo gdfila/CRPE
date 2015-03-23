@@ -4,36 +4,42 @@
  */
 ?>
 <?php
-
 include_once "api/Thalamus_init.php";
-
 
 // Liste des centres
 $centersList = $client->call(array("service" => "center","method" => "centersList"));
-
+// plage horaire
+$horaireList = $client->call(array("service" => "prospect","method" => "callBackTimesList"));
 
 $data=[];
     $i=0;
 foreach ($centersList as $centre)
 {
-  if (empty($centre))
-  {    
-      goto sortie;
-    }
-     foreach ($centre as $unCentre)
+           if (empty($centre))
+        {   
+            break ;
+         }
+   //var_dump($centre);
+     foreach ($centre as $key=>$unCentre)
     {
-         if($unCentre->typeId==2)
-        {   array_push($data, array( "name"=>$unCentre->name ,"id"=>$unCentre->id));}
+          if (empty($unCentre))
+        {    
+              // var_dump('passer 2');   
+            break 2;
+          
+          }
+        
+     //    if($unCentre->typeId==2)
+    //    {   
+    array_push($data, array( "name"=>$unCentre->name ,"id"=>$unCentre->id));}
    //     $centerFormationsList = $client->call(array("service" => "formation","method" => "centerFormationsList","centerId"=>$unCentre->id));
      //   var_dump($centerFormationsList );
         
-    }
-   sortie: 
+       //  }
+  
  }
  
- 
- 
-?>
+ ?>
 <?php get_header(); ?>
 
 <?php
@@ -44,12 +50,13 @@ foreach ($centersList as $centre)
 <div class="content">
     
     <div class="container-fluid content-background" style="background: url(<?php echo $post_thumbnail_url; ?>) no-repeat; background-size: cover;"></div>
-    
+ 
 
-<?php // if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <?php if (isset($_GET['erreur']))
+
+ <?php 
+ if (isset($_GET['erreur']))
  {
- var_dump($_GET);
+ 
     echo '<div class="alert">';
  
         switch ($_GET['erreur'])
@@ -61,15 +68,29 @@ foreach ($centersList as $centre)
             case 'courrier' :
                 echo 'Votre adresse pour l\'envoie de la brochure est imcomplete.';
                 break;
- 
-            default :
-                echo 'Une erreur est survenue.';
+            case 'brochure':
+                  echo $_GET['mess'];
+                break;
+            case 'rappel' :
+                  echo $_GET['mess'];
+                 break;
  
         }
- 
-    echo '</div>';
- 
- } ?>
+          echo '</div>';
+ }
+         if (isset($_GET['sucess']))
+        {
+             switch ($_GET['success'])
+        {
+            case 'brochure' :
+                echo '<div class="alert">';
+                 echo 'La demande a bien été enregistré';
+                  echo '</div>';
+             }
+        }
+              
+  ?>
+    
 <div class="row">
       <div class="col-sm-6 form_left">
        
@@ -92,8 +113,20 @@ foreach ($centersList as $centre)
                 </div>  
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" name="rappel"> Demander à être rappelé
+                        <input type="checkbox" name="rappel" id='rappel'> Demander à être rappelé
                     </label><br>
+                            <!-- plage horaire -->
+                            
+                                <div class="form-group horaireHidden"  id="horaire" >
+                                    <label for="exampleInputPassword1">Plage horaire souhaitée</label>
+                                    <select class="form-control input-lg" name="horaire">
+                                         <?php foreach($horaireList as $horaire):  ?>
+                                                   <?php foreach($horaire as $heure):  ?>
+                                                        <option  value="<?php echo $heure->id; ?>"><?php echo $heure->name; ?></option>
+                                                    <?php endforeach ?>
+                                        <?php endforeach ?>
+                                    </select>
+                               </div>
                     <label>
                         <input type="checkbox"  name="brochure" id="brochure"> Recevoir la brochure par courrier
                    

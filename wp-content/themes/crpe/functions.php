@@ -56,33 +56,121 @@ require_once ABSPATH . 'wp-content/themes/crpe/cpt/crpe_centres.php';
  */
 
 function traitementFormBrochure() {
-     
-    if (isset($_POST['valider']) && isset($_POST['brochure-verif']))  
+     $_GET['erreur']="";
+    $_GET['sucess']="";
+    $_GET['mess']="";
+    
+     if (isset($_POST['valider']) && isset($_POST['brochure-verif']))  
    {
-            if (wp_verify_nonce($_POST['brochure-verif'], 'brochure')) 
-        {
-             
-              /* demande de rappel   */
-            if($_POST['rappel']==true  && isset($_POST['telephone']))
-             {
-                  $url = add_query_arg('erreur', 'telephone', wp_get_referer());
+            verifform(); // verif formulaire
+            
+                    include_once "api/Thalamus_init.php";
+              //*-----------------  demande d'envoi de documentation --------*/
+                    if(empty($_POST['telephone']))
+                    { $tel="0000000000"; }
+                     else { $tel=$_POST['telephone'] ; }
+                 // envoi de brochure par courrier    
+              if($_POST['brochure']==true)
+              {$documentationRequest = $client->call(array(
+                    "service" => "prospect",
+                    "method" => "documentationRequest",
+                    "centerId" => $_POST['centre'],
+                    "formationId" => 400,
+                    "callBackTimeId" => 1,
+                    "booklet" => True,
+                    "callBack" => True,
+                    "lastName" => $_POST['nom'],
+                    "firstName" => $_POST['prenom'],
+                    "email" => $_POST['email'],
+                    "phoneNumber" => $tel,
+                    "addressStreet" =>$_POST['adress'],
+                    "zip" => $_POST['cp'],
+                    "city" => $_POST['ville']
+                      ));
+              }else   // telechargement brochure
+              {     $documentationRequest = $client->call(array(
+                    "service" => "prospect",
+                    "method" => "documentationRequest",
+                    "centerId" => $_POST['centre'],
+                    "formationId" => 400,
+                    "callBackTimeId" => 1,
+                    "booklet" => false,
+                    "callBack" => True,
+                    "lastName" => $_POST['nom'],
+                    "firstName" => $_POST['prenom'],
+                    "email" => $_POST['email'],
+                    "phoneNumber" => $tel,
+                     "addressStreet" =>"",
+                    "zip" => "",
+                    "city" =>""
+                ));
+            }
+               if ($documentationRequest->success!=true)
+                    {
+                          $_GET['erreur']='brochure';
+                          $_GET['mess']=$documentationRequest->errorMessage;
+                            require_once ABSPATH . 'wp-content/themes/crpe/brochure.php';
+                                 exit();
+                    }
+                    rappel($client) ;// demande de rappel telephonique
+              
+                      require_once ABSPATH . 'wp-content/themes/crpe/uploadbrochure.php';
+                           exit();
+          
+      }
 
-                  wp_safe_redirect($url);
+    }
+
+add_action('template_redirect', 'traitementFormBrochure');
+
+
+//**----------------------------- verif les champs du formulaire -----------------**/
+function verifForm()
+{
+      if (wp_verify_nonce($_POST['brochure-verif'], 'brochure')) 
+     {                /* demande de rappel   */
+            if($_POST['rappel']==true && empty($_POST['telephone']))
+             {
+                 $_GET['erreur']="telephone";
+                 require_once ABSPATH . 'wp-content/themes/crpe/brochure.php';
                   exit();
               }
+     }
               /*  envoie brochure par courrier */
             
-              if($_POST['brochure']==true )
-               {
-                  if (isset($_POST['adresse']) || isset($_POST['cp']) || isset($_POST['ville']))
-                  {
-                     $url = add_query_arg('erreur', 'courrier', wp_get_referer());
-                      wp_safe_redirect($url);
-                    exit();
-                  }
-              }
-                
-         }
-     }
+        if($_POST['brochure']==true )
+         {
+                    if (empty($_POST['adress']) || empty($_POST['cp']) || empty($_POST['ville']))
+                    {
+                               $_GET['erreur']="courrier";        
+                               require_once ABSPATH . 'wp-content/themes/crpe/brochure.php';
+                                 exit();
+                    }
+           }
+     
 }
-add_action('template_redirect', 'traitementFormBrochure');
+/*------------------------------------------  demande de rappel telephonique --------------------------*/
+function rappel($client)
+{
+     if($_POST['rappel']==true)
+               {    
+                   $callBack = $client->call(array(
+                            "service" => "prospect",
+                            "method" => "callBackRequest",
+                            "centerId" => $_POST['centre'],
+                            "formationId" => 400,
+                            "lastName" =>  $_POST['nom'],
+                            "firstName" =>  $_POST['prenom'],
+                            "email" => $_POST['email'],
+                            "phoneNumber" => $_POST['telephone'],
+                             "callBackTimeId" => $_POST['horaire']
+                        ));
+                 
+                    if ($callBack->success!=true)   {
+                          $_GET['erreur']='rappel';
+                          $_GET['mess']=$callBack->errorMessage;
+                            require_once ABSPATH . 'wp-content/themes/crpe/brochure.php';
+                                 exit();
+                    }
+                 }
+}

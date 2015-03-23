@@ -16,3 +16,12 @@ and open the template in the editor.
 {
     display: block;
 }
+
+.horaireHidden
+{
+    display:none;
+}
+.horaire
+{
+    display: block;
+}

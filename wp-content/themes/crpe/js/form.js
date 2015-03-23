@@ -15,3 +15,20 @@
          }
          
     });
+    
+    /**
+ * formulaire brochure
+ * si  chekbox rappel  est cochez on fait apparaitre les champs plage horaire
+ */
+     $('#rappel').change(function(){
+         var ok=$("#rappel").is(":checked");
+        if (ok== true )
+       {        
+            $('#horaire').addClass("horaire").removeClass("horaireHidden");
+        }
+       else
+       {
+          $('#horaire').addClass("horaireHidden").removeClass("horaire");
+         }
+         
+    });
