@@ -19,7 +19,6 @@ function my_toolbars( $toolbars )
 	$toolbars['Very Simple' ] = array();
 	$toolbars['Very Simple' ][1] = array('bold' , 'italic' , 'underline' );
 
-	
 	if( ($key = array_search('code' , $toolbars['Full' ][2])) !== false )
 	{
 	    unset( $toolbars['Full' ][2][$key] );
@@ -50,34 +49,37 @@ add_action( 'wp_footer', 'theme_name_scripts' );
 
 require_once ABSPATH . 'wp-content/themes/crpe/cpt/crpe_centres.php';
 
-
 /**
  * formulaire brochure
  */
-
 function traitementFormBrochure() {
      $_GET['erreur']="";
     $_GET['sucess']="";
     $_GET['mess']="";
-    
+    $_GET['centre']="";
+   
      if (isset($_POST['valider']) && isset($_POST['brochure-verif']))  
    {
             verifform(); // verif formulaire
             
                     include_once "api/Thalamus_init.php";
               //*-----------------  demande d'envoi de documentation --------*/
-                    if(empty($_POST['telephone']))
-                    { $tel="0000000000"; }
+                    if(empty($_POST['telephone']))   { $tel="0000000000"; }
                      else { $tel=$_POST['telephone'] ; }
+                   
+                     $centre= explode("/",$_POST['centre']);
+                     $idcentre=$centre[0];
+                     $nomCentre=explode(" ",$centre[1]);
+                     
                  // envoi de brochure par courrier    
               if($_POST['brochure']==true)
               {$documentationRequest = $client->call(array(
                     "service" => "prospect",
                     "method" => "documentationRequest",
-                    "centerId" => $_POST['centre'],
+                    "centerId" => $idcentre,
                     "formationId" => 400,
                     "callBackTimeId" => 1,
-                    "booklet" => True,
+                    "booklet" => True,  /*  envoi par courrier  */
                     "callBack" => True,
                     "lastName" => $_POST['nom'],
                     "firstName" => $_POST['prenom'],
@@ -91,7 +93,7 @@ function traitementFormBrochure() {
               {     $documentationRequest = $client->call(array(
                     "service" => "prospect",
                     "method" => "documentationRequest",
-                    "centerId" => $_POST['centre'],
+                    "centerId" => $idcentre,
                     "formationId" => 400,
                     "callBackTimeId" => 1,
                     "booklet" => false,
@@ -113,8 +115,9 @@ function traitementFormBrochure() {
                                  exit();
                     }
                     rappel($client) ;// demande de rappel telephonique
-              
-                      require_once ABSPATH . 'wp-content/themes/crpe/uploadbrochure.php';
+                    $_GET['centre']=strtolower($nomCentre[1]);
+                  
+                      require_once ABSPATH . 'wp-content/themes/crpe/telechargement_brochure.php'; 
                            exit();
           
       }

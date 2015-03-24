@@ -13,30 +13,16 @@ $horaireList = $client->call(array("service" => "prospect","method" => "callBack
 
 $data=[];
     $i=0;
-foreach ($centersList as $centre)
-{
-           if (empty($centre))
-        {   
-            break ;
-         }
-   //var_dump($centre);
-     foreach ($centre as $key=>$unCentre)
-    {
-          if (empty($unCentre))
-        {    
-              // var_dump('passer 2');   
-            break 2;
-          
-          }
-        
-     //    if($unCentre->typeId==2)
-    //    {   
-    array_push($data, array( "name"=>$unCentre->name ,"id"=>$unCentre->id));}
-   //     $centerFormationsList = $client->call(array("service" => "formation","method" => "centerFormationsList","centerId"=>$unCentre->id));
-     //   var_dump($centerFormationsList );
-        
-       //  }
-  
+ if(!empty($centersList))
+ {
+     foreach ($centersList->datas as $centre)
+        {
+                     if (empty($centre))
+                {   
+                    break ;
+                 }
+                    array_push($data, array( "name"=>$centre->name ,"id"=>$centre->id));
+           }
  }
  
  ?>
@@ -51,18 +37,16 @@ foreach ($centersList as $centre)
     
     <div class="container-fluid content-background" style="background: url(<?php echo $post_thumbnail_url; ?>) no-repeat; background-size: cover;"></div>
  
-
-
  <?php 
+
  if (isset($_GET['erreur']))
  {
- 
-    echo '<div class="alert">';
+     echo '<div class="alert">';
  
         switch ($_GET['erreur'])
         {
             case 'telephone' :
-                echo 'Vous devez indiquer un numero de téléphone pour être rappeler.';
+                echo 'Vous devez indiquer un numéro de téléphone pour être rappeler.';
                 break;
  
             case 'courrier' :
@@ -146,13 +130,15 @@ foreach ($centersList as $centre)
                                  <input type="text" name="ville" class="form-control"  >
                              </div>
                     </div> 
-                                    
+                     
                 <div class="form-group">
                     <label for="exampleInputPassword1">Centre</label>
                     <select class="form-control input-lg" name="centre">
+                     
                          <?php foreach($data as $nom):  ?>
-                             
-                        <option  value="<?php echo $nom['id']; ?>"><?php echo $nom['name']; ?></option>
+                         
+                     
+                        <option  value="<?php echo $nom['id']."/".$nom['name']; ?>"><?php echo $nom['name']; ?></option>
                         <?php endforeach ?>
                     </select>
                 </div>

@@ -5,10 +5,12 @@
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
  <?php the_post_thumbnail(); ?>
 
+    
 
   <section class="centre_nom">
     
     <div class="container">
+       
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1 clearfix"><br><br>
                 <h1 class="text-center text-uppercase "><?php the_field('adresse_-_ville');?></h1><br>
@@ -18,7 +20,10 @@
      </div>
 </section>   
     
-
+ 
+   
+    <h2>test <a href="<?php the_field('telechargement_brochure') ?>" >telechargement</a></h2>
+ 
     <div class=row">
         <div class="col-sm-6 gray text-center"><br>
             <h3 class="text-uppercase"><strong><?php the_field('nom_du_centre'); ?></strong></h3><br>
@@ -29,6 +34,7 @@
             <?php the_field('adresse-code_postal'); ?> <?php the_field('adresse_-_ville');?></strong></h3>
             <p><strong><?php the_field('telephone'); ?></strong></p>
             <p><?php the_field('horaires_douvertures');?></p>
+       
         </div>
         <div class="col-sm-6 form-padding">
             <form>
