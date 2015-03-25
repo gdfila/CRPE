@@ -24,14 +24,17 @@ a:hover { text-decoration: none;}
 .nav_header .top_nav {            
     background-color: #17405c;
     color: #fff; text-transform: uppercase;}
+.nav_header .top_nav div {
+    padding: 25px 0 15px 30px;}
 .nav_header .top_nav .logo {  
     position: absolute; top: 0; z-index: 1;
     width: 140px; height: 115%; padding-top: 70px;
     background-color: #3497db;}
 .nav_header .top_nav .logo img {  
     position: absolute; bottom: 0;}
-.nav_header .top_nav p {  
-    padding: 25px 10px 15px;
+.nav_header .top_nav p {
+    padding-left: 20px;  
+    background: url('../img/arrow.png') no-repeat; background-position-y: 5px;
     letter-spacing: 0.04em;}
 .nav_header .top_nav p, .nav_header .content_nav nav {
     margin-left: 200px;}
@@ -49,11 +52,14 @@ a:hover { text-decoration: none;}
 .nav_header .content_nav li:hover > .sub-menu { 
     display: block;}
 .nav_header .content_nav .sub-menu { 
-    position: absolute; left: 0;
+    position: absolute; left: 0; z-index: 1;
     display: none; width: 100%;
     background-color: #3497db;
-    text-align: center;}
+    text-align: center;
+    /* CSS3 */
+    -moz-box-shadow: 0px -1px 5px 0px #656565; -webkit-box-shadow: 0px -1px 5px 0px #656565; -o-box-shadow: 0px -1px 5px 0px #656565; box-shadow: 0px -1px 5px 0px #656565; filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=90, Strength=5);}
 .nav_header .content_nav .sub-menu li a { 
+    padding: 8px 15px;
     text-transform: none;}
 .nav_header .content_nav .sub-menu li a:hover { 
     text-decoration: underline;}
