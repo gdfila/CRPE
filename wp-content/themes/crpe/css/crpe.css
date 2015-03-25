@@ -10,7 +10,17 @@
     font-style: normal;
 }
 
-body { font-family: 'robotoregular', helvetica, sans-serif; font-size: 14px;}
+*, *:before, *:after { margin: 0; padding: 0; list-style: none;}
+body { 
+    position: relative;
+    font-family: 'robotoregular', helvetica, sans-serif;}
+body, a { font-size: 14px;}
+.logo { 
+    max-width: 120px;}
+h1, h2, h3, h4, h5, h6 { text-transform: uppercase;}
+h4 { 
+    margin-bottom: 25px;
+    font-size: 16px;}
 a:hover { text-decoration: none;}
 
 /***********************************************
@@ -26,10 +36,12 @@ a:hover { text-decoration: none;}
     color: #fff; text-transform: uppercase;}
 .nav_header .top_nav div {
     padding: 25px 0 15px 30px;}
-.nav_header .top_nav .logo {  
+.nav_header .top_nav .logo_nav {  
     position: absolute; top: 0; z-index: 1;
     width: 140px; height: 115%; padding-top: 70px;
     background-color: #3497db;}
+.nav_header .top_nav .logo_nav .logo { 
+    display: block; margin: auto;}
 .nav_header .top_nav .logo img {  
     position: absolute; bottom: 0;}
 .nav_header .top_nav p {
@@ -57,7 +69,7 @@ a:hover { text-decoration: none;}
     background-color: #3497db;
     text-align: center;
     /* CSS3 */
-    -moz-box-shadow: 0px -1px 5px 0px #656565; -webkit-box-shadow: 0px -1px 5px 0px #656565; -o-box-shadow: 0px -1px 5px 0px #656565; box-shadow: 0px -1px 5px 0px #656565; filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=90, Strength=5);}
+    -moz-box-shadow: 0px -1px 1px 0px #656565; -webkit-box-shadow: 0px -1px 1px 0px #656565; -o-box-shadow: 0px -1px 1px 0px #656565; box-shadow: 0px -1px 1px 0px #656565;}
 .nav_header .content_nav .sub-menu li a { 
     padding: 8px 15px;
     text-transform: none;}
@@ -68,12 +80,64 @@ a:hover { text-decoration: none;}
 
 .nav_fixed { position: fixed;}
 
+/***********************************************
+**************** plugin action *****************
+***********************************************/
 
+#action {
+    position: fixed; top: 200px; right: 0; z-index: 9998;}
+#action a {
+    display: block; width: 70px; height: 70px;
+    background-color: #17405c;
+    line-height: 125px; font-size: 9px; color: #fff; text-align: center;}
+#action a:hover {
+    background-color: #f16150;}
 
 /***********************************************
-******* Modification de bootstrap **************
+******************** Footer ********************
 ***********************************************/
-ul, ol { margin-bottom: 0px;}
+
+/* Fil d'ariane */
+#ariane {
+    width: 100%; padding: 10px 0;
+    background-color: #f16150;}
+#ariane a {
+    color: #fff; text-transform: uppercase;}
+#ariane a:hover {
+    text-decoration: underline;}
+
+/* Footer logo+lien */
+footer {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #17405c;}
+footer, footer a, footer a:hover { 
+    color: #fff;}
+footer a { font-size: 12px;}
+footer a:hover {
+    text-decoration: underline;}
+footer div div div:nth-child(2), 
+footer div div div:nth-child(3), 
+footer div div div:nth-child(4) {
+    min-height: 120px;
+    border-left: 1px solid #fff;}
+footer div div div:nth-child(4) a {
+    margin-right: 15px;}
+footer div div div:nth-child(4) a:hover img {
+    opacity: 0.8;}
+footer div div div:nth-child(4) a img {
+    width: 30px; height: 30px;}
+
+
+
+
+
+@media (min-width: 500px) {
+  .carousel {
+     width:100%;
+    }
+}
+
 
 
 
