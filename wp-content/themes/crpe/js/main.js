@@ -1,5 +1,5 @@
 // menu fixe
-$(window).on('wheel', scrolling);
+/*$(window).on('wheel', scrolling);
 
 function scrolling(e){
     var scroll = $(this).scrollTop();
@@ -11,8 +11,7 @@ function scrolling(e){
         $('.nav_header').removeClass('nav_header_fixed');
         $('.logo_galien_crpe').attr('src', 'http://localhost/galien_crpe/wp-content/themes/crpe/img/accueil/logo_galien.png');
     }
-} 
-
+} */
 
 $('.img-temoin').click(function() {
    $('.img-temoin').each(function () {

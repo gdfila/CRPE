@@ -35,29 +35,24 @@
 <!--NAV-->
 
     <!--header class="nav_header nav_header_fixed container-fluid"-->
-    <header class="nav_header container-fluid hidden-xs">
-
-        <div class="row"> 
-            <div class="col-sm-2">
-                <a href="/galien_crpe/"><img class="img-responsive logo_galien_crpe hvr-pulse-shrink" src="<?php echo get_template_directory_uri() ?>/img/accueil/logo_galien.png" alt="" class="logo" /></a>
-                </div>
-             <div class="container">
-                
-                 <div class="col-sm-2">
-
-                <div class="col-sm-7 col-sm-offset-1">
-                     <nav class="navbar navbar-me">
-                        <?php
-                            wp_nav_menu([ 
-                            'theme_location' => 'nav',
-                            'container' => 'navbar-header', ]);
-                        ?>
-                     </nav>
-                </div>
+    <header class="nav_header hidden-xs">
+        <div class="top_nav">
+            <div class="container">
+                <a class="logo" href="/galien_crpe/">
+                    <img class="img-responsive logo_galien_crpe hvr-pulse-shrink" src="<?php echo get_template_directory_uri() ?>/img/accueil/logo.png" alt="" />
+                </a>
+                <p>formation au concours de recrutement de professeur des écoles</p>
             </div>
-         </div>
-        
+        </div>
+        <div class="content_nav">
+            <div class="container">
+                <nav>
+                    <?php
+                        wp_nav_menu([ 
+                        'theme_location' => 'nav',
+                        'container' => 'navbar-header', ]);
+                    ?>
+                </nav>
+            </div>
+        </div>
     </header>
-
-
-

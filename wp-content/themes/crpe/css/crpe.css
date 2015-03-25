@@ -1,3 +1,97 @@
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/Roboto-Regular-webfont.eot');
+    src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body { font-family: 'robotoregular', helvetica, sans-serif; font-size: 14px;}
+a:hover { text-decoration: none;}
+
+/***********************************************
+*********** Menu navigation ********************
+***********************************************/
+
+/* Barre de navigation à l'ouverture de la page */
+
+.nav_header { 
+    position: relative; z-index: 9999;}
+.nav_header .top_nav {            
+    background-color: #17405c;
+    color: #fff; text-transform: uppercase;}
+.nav_header .top_nav .logo {  
+    position: absolute; top: 0; z-index: 1;
+    width: 140px; height: 115%; padding-top: 70px;
+    background-color: #3497db;}
+.nav_header .top_nav .logo img {  
+    position: absolute; bottom: 0;}
+.nav_header .top_nav p {  
+    padding: 25px 10px 15px;
+    letter-spacing: 0.04em;}
+.nav_header .top_nav p, .nav_header .content_nav nav {
+    margin-left: 200px;}
+.nav_header .content_nav {    
+    position: relative;
+    background-color: #f16150;}
+.nav_header .content_nav nav > ul li a { 
+    display: block; padding: 15px 30px;
+    color: #fff; text-transform: uppercase;}
+.nav_header .content_nav nav ul li, 
+.nav_header .content_nav nav ul li ul li { 
+    display: inline-block;}
+.nav_header .content_nav li:hover > a { 
+    background-color: #3497db;}
+.nav_header .content_nav li:hover > .sub-menu { 
+    display: block;}
+.nav_header .content_nav .sub-menu { 
+    position: absolute; left: 0;
+    display: none; width: 100%;
+    background-color: #3497db;
+    text-align: center;}
+.nav_header .content_nav .sub-menu li a { 
+    text-transform: none;}
+.nav_header .content_nav .sub-menu li a:hover { 
+    text-decoration: underline;}
+
+/* Barre de navigation au scroll */
+
+.nav_fixed { position: fixed;}
+
+
+
+/***********************************************
+******* Modification de bootstrap **************
+***********************************************/
+ul, ol { margin-bottom: 0px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .header_crpe{
     height: 600px;
 }
