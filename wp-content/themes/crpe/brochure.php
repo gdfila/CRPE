@@ -7,13 +7,13 @@
 include_once "api/Thalamus_init.php";
 
 // Liste des centres
-$centersList = $client->call(array("service" => "center","method" => "centersList"));
+//$centersList = $client->call(array("service" => "center","method" => "centersList"));
+$centersList = $client->call(array("service" => "formation","method" => "centersListByFormation","formationId" => 400));
 // plage horaire
 $horaireList = $client->call(array("service" => "prospect","method" => "callBackTimesList"));
 
 $data=[];
-    $i=0;
- if(!empty($centersList))
+   if(!empty($centersList))
  {
      foreach ($centersList->datas as $centre)
         {
@@ -81,19 +81,19 @@ $data=[];
             <form method="post" action="#">
                      <?php wp_nonce_field('brochure', 'brochure-verif'); ?>  <!-- pour verifier que les reponse du formulaire proviennet bien de notre site -->
                 <div class="form-group">
-                    <label for="exampleInputName1">Nom</label>
+                    <label for="nom">Nom</label>
                     <input type="text" name="nom" class="form-control" id="exampleInputName1" >
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail">Prénom</label>
+                    <label for="prenom">Prénom</label>
                     <input type="text" name="prenom" class="form-control" id="exampleInputFirstname" >
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email</label>
+                    <label for="Email1">Email</label>
                     <input type="email" name="email" class="form-control" id="exampleInputEmail1" >
                 <div class="form-group">
-                    <label for="exampleInputPhone">Télephone</label>
-                    <input type="tel" name="telephone" class="form-control" >
+                    <label for="telephone">Télephone</label>
+                    <input type="tel" name="telephone" class="form-control" placeholder="exemple: 0102030405">
                 </div>  
                 <div class="checkbox">
                     <label>
@@ -132,7 +132,7 @@ $data=[];
                     </div> 
                      
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Centre</label>
+                    <label for="centre">Centre</label>
                     <select class="form-control input-lg" name="centre">
                      
                          <?php foreach($data as $nom):  ?>

@@ -168,7 +168,7 @@ function rappel($client)
                             "phoneNumber" => $_POST['telephone'],
                              "callBackTimeId" => $_POST['horaire']
                         ));
-                 
+               
                     if ($callBack->success!=true)   {
                           $_GET['erreur']='rappel';
                           $_GET['mess']=$callBack->errorMessage;
@@ -177,3 +177,36 @@ function rappel($client)
                     }
                  }
 }
+
+/**
+ * formulaire contact
+ */
+function traitementFormContact() {
+     $_GET['erreur']="";
+    $_GET['sucess']="";
+    $_GET['mess']="";
+    $_GET['centre']="";
+ 
+     if (isset($_POST['valider']) && isset($_POST['contact-verif']))  
+   {
+      if (wp_verify_nonce($_POST['contact-verif'], 'contact')) 
+     {                /* demande de rappel   */
+            if($_POST['rappel']==true && empty($_POST['telephone']))
+             {
+                 $_GET['erreur']="telephone";
+                 require_once ABSPATH . 'wp-content/themes/crpe/contact.php';
+                  exit();
+              }
+                include_once "api/Thalamus_init.php";
+                    rappel($client);
+                    
+                          $_GET['erreur']='success';
+                       
+                            require_once ABSPATH . 'wp-content/themes/crpe/contact.php';
+                             exit();
+                       }
+            
+   }
+   
+}
+add_action('template_redirect', 'traitementFormContact');
