@@ -29,17 +29,16 @@
                 </div>
                 <div class="col-sm-3">
                     <h4>Suivez-nous</h4>
-                    <a href="https://www.facebook.com/CoursGalien.Officiel"><img src="<?php bloginfo('template_directory'); ?>/img/footer/picto_fb.png "></a> 
-                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/footer/picto_twitter.png "></a> 
-                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/footer/picto_google+.png "></a> 
-                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/footer/picto_linkedin.png "></a>
-                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/footer/picto_youtube.png "></a>
+                    <a href="https://www.facebook.com/CoursGalien.Officiel"><img src="<?php bloginfo('template_directory'); ?>/img/picto/picto_fb.png "></a> 
+                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/picto/picto_twitter.png "></a> 
+                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/picto/picto_google+.png "></a> 
+                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/picto/picto_linkedin.png "></a>
+                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/picto/picto_youtube.png "></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="<?php bloginfo('template_url'); ?>/js/vendor/jquery-1.11.2.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/vendor/bootstrap.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/jquery.counterup.js"></script>

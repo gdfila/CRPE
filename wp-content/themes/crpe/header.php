@@ -15,7 +15,6 @@
     <script src="<?php bloginfo('template_url'); ?>/js/vendor/jquery-1.11.2.js"></script>
 
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/index.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/centre.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/concours.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/anne.css">

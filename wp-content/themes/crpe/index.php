@@ -1,286 +1,149 @@
+<!--
+Récuperation du header
+ -->
 <?php get_header(); ?>
-<div class="accueil" data-id="scroll_fixed">
-    <div class="content">
-
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        
-   
-        
-        
-<div class="container_slider">
-<?php echo do_shortcode('[image-carousel]'); ?>
-    <div class="carousel-caption hidden-sm"><a href="/galien_crpe/contact/brochure/"><button class="btn  btn-slider  text-uppercase">Candidature</button></a><a href="/galien_crpe/contact/brochure/"><button class="btn  btn-slider  text-uppercase">documentation</button></a></div>
-</div>
-
-   
-
-<section class="esprit_galien">
     
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-10 col-sm-offset-1 clearfix"><br><br>
-                <h1 class="text-center text-uppercase ">Adoptez l'esprit Galien !</h1><br>
-                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium                     architecto, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium architecto,                  reprehenderit quia delectus volupt</p><br><br>
-            </div>
-        </div>
-     </div>
-</section>   
-    
+<!-- ??????????? -->
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-<section class="accueil_logo">       
-        
-     <div class="container">
+<div class="accueil">
+    <!--
+    Affiche un slider automatique sur toute la largeur de la page
+     -->            
+    <div class="container_slider">
+        <?php echo do_shortcode('[image-carousel]'); ?>
+    </div>
+
+    <!--
+    Section pour mettre en avant le texte, exemple : l'accroche. Un h1 pour le titre général de la page et un texte grossi
+     -->
+    <section class="accroche">
+        <div class="container">
+            <h1 class="text-center">Preparez le concours de recrutement de professeur des écoles</h1>
+            <p class="text-center">Rejoindre le Cours Galien, c’est la garantie d’une préparation sérieuse et adaptée, vous permettant d’aborder en toute confiance le Concours de Recrutement de Professeur des Ecoles.</p>
+        </div><!-- /container -->
+    </section>  
+
+    <!--
+    Section présentant les valeurs de l'école avec un fond "parallax"
+    -> Supprimer la classe "valeur_back"
+     -->
+    <section class="valeurs valeur_back">
+        <div class="container">
+                <div class="row">
+                    <h1 class="text-center">Adoptez l'esprit Galien !</h1>
+                    <div class="col-sm-3">
+                        <div class=" cercle-3">
+                            <strong>Partage</strong>
+                            <p>Nos professeurs spécialistes des matières enseignées partagent leurs connaissances et vous donnent leurs astuces pour réussir le jour J.</p>
+                        </div>
+                    </div><!-- /col-sm-3 -->
+                    <div class="col-sm-3">
+                        <div class="cercle-3">
+                            <strong>Progression</strong>
+                            <p>Elle repose sur trois étapes essentielles qui mènent vers le succès : entraînement, méthode et encadrement.</p>
+                        </div>
+                    </div><!-- /col-sm-3 -->
+                    <div class="col-sm-3">
+                        <div class="cercle-3">
+                            <strong>Cohésion</strong>
+                            <p>Il ne peut y avoir de partage sans cohésion. Toutes nos équipes sont focalisées sur un seul objectif : votre réussite.</p>
+                        </div>
+                    </div><!-- /col-sm-3 -->
+                    <div class="col-sm-3">
+                        <div class="cercle-3">
+                            <strong>Réussite</strong>
+                            <p>Ultime étape des efforts fournis et pour laquelle nous vous accompagnons chaque jour grâce à une stratégie de concours précise.</p>
+                        </div>
+                    </div><!-- /col-sm-3 -->
+                </div><!-- /row -->
+        </div><!-- /container -->
+    </section> 
+
+    <!--
+    Section présentant les témoignages sous slider
+     -->
+    <section class="temoignages">
+        <div class="container">
+            <h2 class="text-center">Ils ont choisi Galien</h2>
             <div class="row">
-                 <div class="col-sm-6 ">
-                    <span class="media-left"><br>
-                      <img src="<?php bloginfo('template_directory'); ?>/img/accueil/logo_partage.png" class="                      img-responsive pull-left image-padding" alt="">
-                    </span>
-                    <div class="media-body">
-                      <h3 class="text-uppercase"><strong>Partage</strong></h3>
-                      <p class="text-muted image-padding">Lorem ipsum dolor sit amet, consectetur adipisicing                       elit. Ipsam molestiae esse </p>
-                    </div>
-                </div>
-                <div class="col-sm-6 clearfix">
-                    <span class="media-left"><br>
-                        <img src="<?php bloginfo('template_directory'); ?>/img/accueil/logo_progression.png" class="img-responsive pull-left  image-padding" alt="">
-                    </span>
-                    <div class="media-body">
-                          <h3 class="text-uppercase"><strong>Progression</strong></h3>
-                          <p class="text-muted image-padding">Lorem ipsum dolor sit amet, consectetur                                   adipisicing elit. Ipsam molestiae esse </p>
-                    </div>
-                </div>
-          </div>
-     </div>
-    
-    <div class="container">
-        <div class="row">
-            
-            <div class="col-sm-6 clearfix">
-                <span class="media-left"><br>
-                    <img src="<?php bloginfo('template_directory'); ?>/img/accueil/logo_cohesion.png" class="img-responsive  pull-left  image-padding" alt="">
-                </span>
-                <div class="media-body">
-                    <h3 class="text-uppercase"><strong>Cohesion</strong></h3>
-                      <p class="text-muted image-padding">Lorem ipsum dolor sit amet, consectetur adipisicing                       elit. Ipsam molestiae esse </p>
-                </div>
-              </div>
-            <div class="col-sm-6  clearfix">
-                <span class="media-left"><br>
-                    <img src="<?php bloginfo('template_directory'); ?>/img/accueil/logo_reussite.png" class="img-responsive  pull-left  image-padding" alt="">
-                </span>
-                <div class="media-body">
-                    <h3 class="text-uppercase"><strong>Reussite</strong></h3>
-                      <p class="text-muted image-padding">Lorem ipsum dolor sit amet, consectetur adipisicing                       elit. Ipsam molestiae esse </p>
-                </div>
-              </div>
-          </div>
-    </div><br><br><br>
-        
-  </section>
+                
+            </div><!-- /row -->
+        </div><!-- /container -->
+    </section>
 
-           <div class="container">
+    <!--
+    Section présentant les chiffres de l'école avec un fond "parallax"
+    -> Supprimer la classe "stat_back"
+     --> 
+    <section class="statistiques stat_back">
+        <div class="container">
+                <div class="row">
+                    <h1 class="text-center">Galien en chiffres !</h1>
+                    <div class="col-sm-4">
+                        <div class="cercle-4">
+                            <strong class="counter">98</strong><span>%</span>
+                            <p>d'étudiants satisfaits de nos formations</p>
+                        </div>
+                    </div><!-- /col-sm-4 -->
+                    <div class="col-sm-4">
+                        <div class="cercle-4">
+                            <strong class="counter">66</strong><span>%</span>
+                            <p>de taux de réussite au concours</p>
+                        </div>
+                    </div><!-- /col-sm-4 -->
+                    <div class="col-sm-4">
+                        <div class="cercle-4">
+                            <strong class="counter">900</strong>
+                            <p>étudiants préparés à ce concours</p>
+                        </div>
+                    </div><!-- /col-sm-4 -->
+                </div><!-- /row -->
+        </div><!-- /container -->
+    </section>
+
+    <!--
+    Section présentant les formuless de l'école
+    -->  
+    <section class="formules">
+        <div class="container">
             <div class="row">
-                <div class="col-sm-12 center-block ">
-                    <a class="" href="/galien_crpe/la-prepa/"><button class="btn  btn-btn center-block text-uppercase ">le crpe</button></a>
-                    <br><br>
-                </div>
-            </div>
-        </div>
-
-        
-        
-<section class="accueil_temoignages">
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4 image-padding">
-                <img  src ="<?php bloginfo('template_directory'); ?>/img/accueil/paul.png" class="img-circle img-temoin center-block" alt="">
-                <h3  class="text-center text-uppercase titre-img"><?php the_field('nom');?></h3>
-                <h3 class="text-center"><?php the_field('profession_gauche');?></h3>
-                <p class="text-muted text-center text-padding"><?php the_field('texte_gauche');?></p>
-            </div>
-            <div class="col-sm-4 image-padding">
-                <img  src="<?php bloginfo('template_directory'); ?>/img/accueil/marie.png" class="img-circle img-temoin center-block" alt="">
-                <h3  class="text-center text-uppercase titre-img"><?php the_field('prenom_centre');?></h3>
-                <h3 class="text-center"><?php the_field('profession');?></h3>
-                <p class="text-muted text-center text-padding"><?php the_field('texte_centre');?></p>
-            </div>
-            <div class="col-sm-4">
-                 <img src="<?php bloginfo('template_directory'); ?>/img/accueil/edouard.png" class="img-circle img-temoin center-block" alt="">
-                <h3 class="text-center text-uppercase titre-img"><?php the_field('prenom_droite');?></h3>
-                <h3 class="text-center"><?php the_field('profession_droite');?></h3>
-                <p class="text-muted text-center text-padding"><?php the_field('texte_droite');?></p>
-            </div>
-        </div>
-    </div>
-    <br><br>
-    <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <a class="center-block" href="/galien_crpe/le-concours/"><button class="btn  btn-btn center-block text-uppercase ">Concours</button></a>
-                    <br><br>
-                </div>
-            </div>
-        </div>
-</section>
-
-    
-<section class="accueil_background_1">
-
-<div class="container stat_index">
-    
-            <div class="row">
-                <div class="col-sm-3">
-
-                    <div class="caption post-content index_cercle_back hidden-xs">
-                        <span><h2 class="text-center counter">365</h2></span>
-                        <p class="text-muted text-center p_stat">lorem ipsum</p>
+                <h2 class="text-center">Decouvrez nos formules</h2>
+                <div class="col-sm-6">
+                    <div>
+                        <h3 class="text-center">Pack entrainement</h3>
+                        <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
+                        <p>4 concours blancs</p>
+                        <p><strong>Epreuve</strong></p>
+                        <p>en conditions réelles</p>
+                        <p>000H/400€</p>
+                        <p class="button"><em>En savoir +</em></p>
+                        <button class="btn btn-primary center-block">Inscrivez-vous</button>
                     </div>
                 </div>
-                <div class="col-sm-3">
-                       <div class="caption post-content index_cercle_back hidden-xs">
-                        <span><h2 class="text-center counter">98</h2></span>
-                        <p class="text-muted text-center p_stat">lorem ipsum</p>
+                <div class="col-sm-6">
+                    <div>
+                        <h3 class="text-center">Pack complete</h3>
+                        <img src="<?php bloginfo('template_directory'); ?>/img/images/DSC_0191-2.jpg" alt="">
+                        <p>Préparation aux épreuves</p>
+                        <p>4 concours blancs</p>
+                        <p><strong>Modules de remise à niveau inclus</strong></p>
+                        <p>272H/1950€</p>
+                        <p class="button"><em>En savoir +</em></p>
+                        <button class="btn btn-primary center-block">Inscrivez-vous</button>
                     </div>
-                  
-                </div>
-                <div class="col-sm-3">
-                   <div class="caption post-content index_cercle_back hidden-xs">
-                        <h2 class="text-center counter"><strong>69</strong></h2>
-                    <p class="text-muted text-center p_stat">lorem ipsum</p>
-                    </div>
-                </div>
-                <div class="col-sm-3">
+                    <p></p>
+                </div><!-- /col-sm-6 -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+    </section>
 
-                    <div class="caption post-content index_cercle_back hidden-xs">
-                        <h2 class="text-center counter"><strong>1.642</strong></h2>
-                      <p class="text-muted text-center p_stat">lorem ipsum</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-</div
+    <?php endwhile;else : ?>
+        <p>desolé pas de centres pour l'instant...</p>
+    <?php endif; ?>
 
-</section>
-        
-<section class="reseau_nat">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-10 col-sm-offset-1 clearfix">
-        <br><br>
-        <h1 class="text-center text-uppercase ">Un reseau national</h1><br>
-        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse provident dicta, alias voluptas nihil molestias a sed sequi, possimus asperiores quasi velit veniam ipsa doloremque explicabo molestiae, quis dignissimos doloribus? Lorem ipsum dolor sit amet, consectetur adipisicing elit.?</p><br>
-      </div>
-    </div>
-  </div>
-      <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                       
-                    <button class="btn btn-btn center-block text-uppercase">Nos centres</button>
-                    <br><br><br>
-                </div>
-            </div>
-        </div>
-</section>
-
-    
-    
-
-  <div class="background2">
-    <div class="i-container">
-      <blockquote>
-        <h1  class="text-uppercase formule-text h_back_2">une formule simple</h1>
-      </blockquote>
-    </div>
-  </div>
-        
- <section class="accueil_pack">
-  <div class="container container-price hidden-xs">
-    <div class="row">
-      <div class="col-sm-1 col-sm-offset-2 price">
-        <h4 class="text-center text-uppercase titre-pack">Pack <strong>training</strong></h4>
-          <button class="btn  btn-btn center-block text-uppercase  pack_btn_right">Candidature</button><br>
-          <p class="text-center text-muted p-pack">4 concours blanc</p>
-          <p class="text-center p-pack"><strong>mathematique + francais</strong></p>
-          <p class="text-center p-pack"><strong>Epreuves</strong></p>
-           <p class="text-center text-muted p-pack">realiser en conditions réelles,copies corrigés et annotés   de facon personnalisée</p>
-          <p class="text-center p-pack"><strong>Parrainage</strong></p>
-          <p class="text-center ">telephonique et electronique</p><br>
-          <hr class="pack_surlign_left">
-          <p class="text-center p-pack"><strong>000h / 400 €</strong></p>
-      </div>
-      <div class="col-sm-1 col-sm-offset-2 price pack-complet ">
-        <h4 class="text-center text-uppercase titre-pack">Pack <strong>complet</strong></h4>
-        <button class="btn  btn-btn center-block text-uppercase pack_btn_left ">Candidature</button><br>
-          <p class="text-center text-muted p-pack">Preparation aux epreuves </p>
-          <p class="text-center p-pack"><strong>d'admisibilités + d'admission</strong></p>
-          <p class="text-center text-muted p-pack">4 concours blanc</p>
-          <p class="text-center p-pack"><strong>mathematique + francais</strong></p>
-          <p class="text-center p-pack"><strong>Modules de remise à niveau inclus</strong></p>
-          <p class="text-center p-pack"><strong>Parrainage</strong></p>
-          <p class="text-center p-surling_left">telephonique et electronique</p><br>
-          <hr class="pack_surlign_right">
-          <p class="text-center "><strong>272h / 1950 €</strong></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="formulaire_contact">
-
-  <div class="row">
-    <div class="col-sm-12">
-        <h1 class="text-center text-uppercase">Contact</h1><br>
-    </div>
-  </div>
-
-
-  <div class="row ">
-  <div class="col-sm-6 form_left ">
-    <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Nom</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nom">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Email</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-  </div>
-<div class="form-group">
-                    <label for="exampleInputPassword1">Centre</label>
-                    <select class="form-control input-lg">truc</select>
-                </div>
-  <div class="form-group">
-      <textarea class="form-control" rows="9" placeholder="Votre message"></textarea><br><br>
-  </div>
-        <button class="btn  btn-btn text-uppercase">Envoyez</button>
-</form>
-<br>
-  </div>
-  <div class="col-sm-6 form_right ">
-  <br>
-  <div class:"int_form_left">
-    <h3>Vous avez une question ?</h3><br>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit voluptas rerum pariatur eum eos      dolor cum sed aliquam, unde rem enim totam, perspiciatis voluptatem quas eaque. Cum magni, assumenda sint.      </p><br>
-    <h3>Vous etes intéressez par un Pack ?</h3><br>
-    <div class:"btn_pack_right" >
-      <button class="btn  btn-btn text-uppercase index_btn_training">Pack Training</button>
-   
-    
-      <button class="btn  btn-btn  text-uppercase">Pack Complet</button>
-    </div>
-    <br><br>
-    <h3>Souhaitez vous un rendez vous ?</h3><br>
-      <button class="btn  btn-btn  text-uppercase">Candidature</button>
-  </div>
-  </div>
-
-</section>
-
- <?php endwhile;else : ?>
-    <p>desolé pas de centres pour l'instant...</p>
-<?php endif; ?>
-</div>
-<?php get_footer(); ?>
+    <!--
+    Récuperation du footer
+     -->
+    <?php get_footer(); ?>
+</div><!-- /container_accueil -->

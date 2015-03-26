@@ -1,4 +1,12 @@
 /***********************************************
 ******* Modification de bootstrap **************
 ***********************************************/
-h1, h2, h3, h4, h5, h6, ul, ol { margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6, ul, ol { 
+	margin: 0; padding: 0;}
+.btn {
+	padding: 15px 40px;
+	border-radius: 0;}
+.btn-primary { 
+	background-color: #3497db; border: none;}
+.btn-primary:hover { 
+	background-color: #308bca;}

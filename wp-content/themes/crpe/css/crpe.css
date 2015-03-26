@@ -1,242 +1,246 @@
-@font-face {
-    font-family: 'robotoregular';
-    src: url('../fonts/Roboto-Regular-webfont.eot');
-    src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Roboto-Regular-webfont.woff2') format('woff2'),
-         url('../fonts/Roboto-Regular-webfont.woff') format('woff'),
-         url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'),
-         url('../fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-*, *:before, *:after { margin: 0; padding: 0; list-style: none;}
-body { 
-    position: relative;
-    font-family: 'robotoregular', helvetica, sans-serif;}
-body, a { font-size: 14px;}
-.logo { 
-    max-width: 120px;}
-h1, h2, h3, h4, h5, h6 { text-transform: uppercase;}
-h4 { 
-    margin-bottom: 25px;
-    font-size: 16px;}
-a:hover { text-decoration: none;}
-
 /***********************************************
-*********** Menu navigation ********************
+******* Css commun à toutes les pages **********
 ***********************************************/
-
-/* Barre de navigation à l'ouverture de la page */
-
-.nav_header { 
-    position: relative; z-index: 9999;}
-.nav_header .top_nav {            
-    background-color: #17405c;
-    color: #fff; text-transform: uppercase;}
-.nav_header .top_nav div {
-    padding: 25px 0 15px 30px;}
-.nav_header .top_nav .logo_nav {  
-    position: absolute; top: 0; z-index: 1;
-    width: 140px; height: 115%; padding-top: 70px;
-    background-color: #3497db;}
-.nav_header .top_nav .logo_nav .logo { 
-    display: block; margin: auto;}
-.nav_header .top_nav .logo img {  
-    position: absolute; bottom: 0;}
-.nav_header .top_nav p {
-    padding-left: 20px;  
-    background: url('../img/arrow.png') no-repeat; background-position-y: 5px;
-    letter-spacing: 0.04em;}
-.nav_header .top_nav p, .nav_header .content_nav nav {
-    margin-left: 200px;}
-.nav_header .content_nav {    
-    position: relative;
-    background-color: #f16150;}
-.nav_header .content_nav nav > ul li a { 
-    display: block; padding: 15px 30px;
-    color: #fff; text-transform: uppercase;}
-.nav_header .content_nav nav ul li, 
-.nav_header .content_nav nav ul li ul li { 
-    display: inline-block;}
-.nav_header .content_nav li:hover > a { 
-    background-color: #3497db;}
-.nav_header .content_nav li:hover > .sub-menu { 
-    display: block;}
-.nav_header .content_nav .sub-menu { 
-    position: absolute; left: 0; z-index: 1;
-    display: none; width: 100%;
-    background-color: #3497db;
-    text-align: center;
-    /* CSS3 */
-    -moz-box-shadow: 0px -1px 1px 0px #656565; -webkit-box-shadow: 0px -1px 1px 0px #656565; -o-box-shadow: 0px -1px 1px 0px #656565; box-shadow: 0px -1px 1px 0px #656565;}
-.nav_header .content_nav .sub-menu li a { 
-    padding: 8px 15px;
-    text-transform: none;}
-.nav_header .content_nav .sub-menu li a:hover { 
-    text-decoration: underline;}
-
-/* Barre de navigation au scroll */
-
-.nav_fixed { position: fixed;}
-
-/***********************************************
-**************** plugin action *****************
-***********************************************/
-
-#action {
-    position: fixed; top: 200px; right: 0; z-index: 9998;}
-#action a {
-    display: block; width: 70px; height: 70px;
-    background-color: #17405c;
-    line-height: 125px; font-size: 9px; color: #fff; text-align: center;}
-#action a:hover {
-    background-color: #f16150;}
-
-/***********************************************
-******************** Footer ********************
-***********************************************/
-
-/* Fil d'ariane */
-#ariane {
-    width: 100%; padding: 10px 0;
-    background-color: #f16150;}
-#ariane a {
-    color: #fff; text-transform: uppercase;}
-#ariane a:hover {
-    text-decoration: underline;}
-
-/* Footer logo+lien */
-footer {
-    width: 100%;
-    padding: 50px 0;
-    background-color: #17405c;}
-footer, footer a, footer a:hover { 
-    color: #fff;}
-footer a { font-size: 12px;}
-footer a:hover {
-    text-decoration: underline;}
-footer div div div:nth-child(2), 
-footer div div div:nth-child(3), 
-footer div div div:nth-child(4) {
-    min-height: 120px;
-    border-left: 1px solid #fff;}
-footer div div div:nth-child(4) a {
-    margin-right: 15px;}
-footer div div div:nth-child(4) a:hover img {
-    opacity: 0.8;}
-footer div div div:nth-child(4) a img {
-    width: 30px; height: 30px;}
-
-
-
-
-
-@media (min-width: 500px) {
-  .carousel {
-     width:100%;
+    @font-face {
+        font-family: 'robotoregular';
+        src: url('../fonts/Roboto-Regular-webfont.eot');
+        src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Roboto-Regular-webfont.woff2') format('woff2'),
+             url('../fonts/Roboto-Regular-webfont.woff') format('woff'),
+             url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+             url('../fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
     }
-}
+
+    *, *:before, *:after { 
+        margin: 0; padding: 0; list-style: none;}
+    body { 
+        position: relative;
+        font-family: 'robotoregular', helvetica, sans-serif; color: #777;}
+    body, a { font-size: 14px;}
+    .logo { 
+        max-width: 120px;}
+    section { 
+        padding: 50px;}
+    h1, h2, h3, h4, h5, h6 { 
+         color: #333; text-transform: uppercase;}
+    h1, h2 {
+        margin-bottom: 50px;}
+    h1 { 
+        font-size: 50px;}
+    h2 { 
+        font-size: 34px;}
+    h3 { 
+        font-size: 28px;}
+    h4 { 
+        margin-bottom: 25px;
+        font-size: 16px;}
+    a:hover { 
+        text-decoration: none;}
+    .button { 
+        cursor: pointer;}
+
+    /***********************************************
+    *********** Menu navigation ********************
+    ***********************************************/
+
+    /* Barre de navigation à l'ouverture de la page */
+
+        .nav_header { 
+            position: relative; z-index: 9999;}
+        .nav_header .top_nav {            
+            background-color: #17405c;
+            color: #fff; text-transform: uppercase;}
+        .nav_header .top_nav div {
+            padding: 25px 0 15px 30px;}
+        .nav_header .top_nav .logo_nav {  
+            position: absolute; top: 0; z-index: 1;
+            width: 140px; height: 115%; padding-top: 70px;
+            background-color: #3497db;}
+        .nav_header .top_nav .logo_nav .logo {  
+            position: absolute; bottom: 0;}
+        .nav_header .top_nav p {
+            padding-left: 20px;  
+            background: url('../img/picto/arrow.png') no-repeat; background-position-y: 5px;
+            letter-spacing: 0.04em;}
+        .nav_header .top_nav p, .nav_header .content_nav nav {
+            margin-left: 200px;}
+        .nav_header .content_nav {   
+            position: relative;
+            background-color: #f16150;}
+        .nav_header .content_nav nav > ul li a { 
+            display: block; padding: 15px;
+            color: #fff; text-transform: uppercase;}
+        .nav_header .content_nav nav ul li, 
+        .nav_header .content_nav nav ul li ul li { 
+            display: inline-block;}
+        .nav_header .content_nav li:hover > a { 
+            background-color: #3497db;}
+        .nav_header .content_nav li:hover > .sub-menu { 
+            display: block;}
+        .nav_header .content_nav .sub-menu { 
+            position: absolute; left: 0; z-index: 1;
+            display: none; width: 100%;
+            background-color: #3497db;
+            text-align: center;
+            /* CSS3 */
+            -moz-box-shadow: 0px -1px 1px 0px #656565; -webkit-box-shadow: 0px -1px 1px 0px #656565; -o-box-shadow: 0px -1px 1px 0px #656565; box-shadow: 0px -1px 1px 0px #656565;}
+        .nav_header .content_nav .sub-menu li a { 
+            padding: 8px 15px;
+            text-transform: none;}
+        .nav_header .content_nav .sub-menu li a:hover { 
+            text-decoration: underline;}
+
+    /* Barre de navigation au scroll */
+
+        .nav_fixed { position: fixed;}
+
+    /***********************************************
+    **************** plugin action *****************
+    ***********************************************/
+
+    #action {
+        position: fixed; top: 200px; right: 0; z-index: 9998;}
+    #action a {
+        display: block; width: 70px; height: 70px;
+        background-color: #17405c;
+        line-height: 125px; font-size: 9px; color: #fff; text-align: center;}
+    #action a:hover {
+        background-color: #f16150;}
+
+    /***********************************************
+    ****************** carousel ********************
+    ***********************************************/
+
+    .carousel-inner { 
+        max-height: 450px;}
+
+    /***********************************************
+    ****************** accroche ********************
+    ***********************************************/
+
+    .accroche p {
+        font-size: 24px;}
+
+    /***********************************************
+    ******************** Footer ********************
+    ***********************************************/
+
+    /* Fil d'ariane */
+    #ariane {
+        width: 100%; padding: 10px 0;
+        background-color: #f16150;}
+    #ariane a {
+        color: #fff; text-transform: uppercase;}
+    #ariane a:hover {
+        text-decoration: underline;}
+
+    /* Footer logo+lien */
+    footer {
+        width: 100%; padding: 50px 0;
+        background-color: #17405c;}
+    footer, footer h4, footer a, footer a:hover { 
+        color: #fff;}
+    footer a { font-size: 12px;}
+    footer a:hover {
+        text-decoration: underline;}
+    footer div div div:nth-child(2), 
+    footer div div div:nth-child(3), 
+    footer div div div:nth-child(4) {
+        min-height: 120px;
+        border-left: 1px solid #fff;}
+    footer div div div:nth-child(4) a {
+        margin-right: 15px;}
+    footer div div div:nth-child(4) a:hover img {
+        opacity: 0.8;}
+    footer div div div:nth-child(4) a img {
+        width: 30px; height: 30px;}
+
+    /***********************************************
+    ************* background parallax **************
+    ***********************************************/
+    .stat_back, .valeur_back {
+        background-size: cover;}
+    .valeur_back {
+        background: url('../img/images//WEB_galien_03.jpg') center top fixed;}
+    .stat_back {
+        background: url('../img/images/296_MG_9554.jpg') center top fixed;}
+
+    /***********************************************
+    ****************** Cercle /4 *******************
+    ***********************************************/
+
+    .cercle-3 {
+        width: 185px; height: 185px; padding: 2px;
+        background-color: rgba(255,255,255,0.5); border-radius: 50%;
+        text-align: center;
+        overflow: hidden;}
+    .cercle-3 strong {
+        margin: 10px 0;
+        text-transform: uppercase;}
+    .cercle-3 strong, .cercle-3 p {
+         color: #333;}
+    .cercle-3 p {
+        font-size: 12px;}
+
+    /***********************************************
+    ****************** Cercle /3 *******************
+    ***********************************************/
+
+    .cercle-4 {
+        width: 225px; height: 225px; padding: 2px; margin: auto;
+        background-color: rgba(255,255,255,0.5); border-radius: 50%;
+        text-align: center;
+        overflow: hidden;}
+    .cercle-4 strong {
+        display: inline-block; margin: 15% 0 10px;
+        text-transform: uppercase;}
+    .cercle-4 strong, .cercle-4 span {
+        font-size: 55px; color: #17405c;}
+    .cercle-4 p {
+        display: block; width: 50%; margin: auto;
+        font-size: 16px; color: #333;}
 
 
+/***********************************************
+********** Css de la page Accueil **************
+***********************************************/
+
+    /***********************************************
+    ******************* Valeurs *******************
+    ***********************************************/
+
+    .valeurs .cercle-3 {
+        padding-top: 54px;
+         background-repeat: no-repeat; background-position: 50% 5px; background-size: 34px 44px;}
+    .valeurs div div:nth-child(2) .cercle-3 { 
+        background-image: url('../img/picto/partage.png');}
+    .valeurs div div:nth-child(3) .cercle-3 { 
+        background-image: url('../img/picto/progression.png');}
+    .valeurs div div:nth-child(4) .cercle-3 { 
+        background-image: url('../img/picto/cohesion.png');}
+    .valeurs div div:nth-child(5) .cercle-3 { 
+        background-image: url('../img/picto/reussite.png');}
+
+    /***********************************************
+    ******************* Formules *******************
+    ***********************************************/
+
+    .formules .col-sm-6 { 
+        padding: 0;}
+    .formules .col-sm-6 > div {
+        width: 340px; min-height: 540px; margin: auto;
+        border: 2px solid #f0f0f0;
+        text-align: center;}
+    .formules h3 { 
+        padding: 20px;
+        background-color: #f0f0f0;}
+    .formules img {
+        max-width: 100%; margin-bottom: 25px;}
 
 
+/***********************************************
+********** Css de la page Concours *************
+***********************************************/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.header_crpe{
-    height: 600px;
-}
-.background_prepa_1 {
-    height:27em;
-    padding:;
-    text-align: center;
-    color: #FFF;
-    background: url(../img/prepa/photo_prepa_2.jpg) center top fixed;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-   color:white;
-}
-.background_prepa_3 {
-    height:30em;
-    padding:;
-    text-align: center;
-    color: #FFF;
-    background: url(../img/prepa/photo_prepa_3.jpg) center top fixed;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-   color:white;
-   margin-bottom: 35em;
-}
-.prepa_back_1{
-    height: 18em;
-}
-
-.index_cercle_back_p{
-    width:220px;
-    height:220px;
-    background-color: #99cddd;
-    border-radius: 50%;
-    padding-top: 2.5em;
-    color:white;
-}
-.index_cercle_back_p h2{
-    color:white;
-}
-
-
-.epreuve_prepa{
-    height: 50em;
-    background: url(../img/prepa/epreuve_prepa.jpg)
-}
-
-
-
-.background_prepa_1 h2 {
-    font-size: 6em;
-    padding-top: 0.7em;
-}
-.background_prepa_3 h2 {
-    font-size: 6em;
-    padding-top: 1.1em;
-}
-.prepa_p_1{
-    color:white;
-    padding: 1.3em 15em 0 15em;
-}
-.middle_pack_rond h3{
-   padding: 0 0 0 7em;
-   font-weight: bold;
-}
-.middle_pack_rond p{
-   padding: 0 0 0 5.5em;
-   
-}
-.middle_pack_rond p2{
-   padding:0;
-}
-.right_right{
-    background-color:#f0f0f0;
-}
