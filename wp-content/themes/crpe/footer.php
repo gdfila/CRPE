@@ -30,19 +30,19 @@
                 <div class="col-sm-3">
                     <h2 class="h2_small">Suivez-nous</h2>
                     <ul>
-                        <li><a href="#">Galien recrute</a></li>
-                        <li><a href="http://www.studius.fr">Studius</a></li>
-                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="https://www.facebook.com/CoursGalien.Officiel">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google+</a></li>
+                        <li><a href="#">Linkedin</a></li>
+                        <li><a href="#">Linkedin</a></li>
                     </ul>
-                    <a href="https://www.facebook.com/CoursGalien.Officiel"></a> 
-                    <a href="#"></a> 
-                    <a href="#"></a> 
-                    <a href="#"></a>
-                    <a href="#"></a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- scroll top -->
+    <a href="#" id="scroll_up" class=" change_color">^</a>
 
     <script src="<?php bloginfo('template_url'); ?>/js/vendor/bootstrap.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>

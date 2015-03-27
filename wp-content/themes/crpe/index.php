@@ -6,7 +6,7 @@ Récuperation du header
 <!-- ??????????? -->
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-<div class="accueil">
+<div id="accueil" class="top_content">
     <!--
     Affiche un slider automatique sur toute la largeur de la page
      -->            
@@ -114,11 +114,15 @@ Récuperation du header
                         <h2 class="h2_medium">Pack entrainement</h2>
                         <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
                         <p>4 concours blancs</p>
-                        <p><strong>Epreuve</strong></p>
-                        <p>en conditions réelles</p>
+                        <p><strong>Epreuve</strong><br />en conditions réelles</p>
                         <p>000H/400€</p>
-                        <p class="button"><em>En savoir +</em></p>
-                        <button class="btn btn-primary center-block">Inscrivez-vous</button>
+                        <div class="info">
+                            <p class="button active"><em>En savoir <span>+</span></em></p>
+                            <div class="info_sup">
+                                <p>Voila des infos supplémentaires</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary center-block" data-toggle="modal" data-target="#signin_form">Inscrivez-vous</button>
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -129,10 +133,14 @@ Récuperation du header
                         <p>4 concours blancs</p>
                         <p><strong>Modules de remise à niveau inclus</strong></p>
                         <p>272H/1950€</p>
-                        <p class="button"><em>En savoir +</em></p>
-                        <button class="btn btn-primary center-block">Inscrivez-vous</button>
+                        <div class="info">
+                            <p class="button active"><em>En savoir <span>+</span></em></p>
+                            <div class="info_sup">
+                                <p>Voila des infos supplémentaires</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary center-block" data-toggle="modal" data-target="#form">Inscrivez-vous</button>
                     </div>
-                    <p></p>
                 </div><!-- /col-sm-6 -->
             </div><!-- /row -->
         </div><!-- /container -->
@@ -142,8 +150,9 @@ Récuperation du header
         <p>desolé pas de centres pour l'instant...</p>
     <?php endif; ?>
 
-    <!--
-    Récuperation du footer
-     -->
-    <?php get_footer(); ?>
 </div><!-- /container_accueil -->
+
+<!--
+Récuperation du footer
+ -->
+<?php get_footer(); ?>
