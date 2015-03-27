@@ -19,8 +19,8 @@ Récuperation du header
      -->
     <section class="accroche">
         <div class="container">
-            <h1 class="text-center">Preparez le concours de recrutement de professeur des écoles</h1>
-            <p class="text-center">Rejoindre le Cours Galien, c’est la garantie d’une préparation sérieuse et adaptée, vous permettant d’aborder en toute confiance le Concours de Recrutement de Professeur des Ecoles.</p>
+            <h1 class="h1_large">Preparez le concours de recrutement de professeur des écoles</h1>
+            <h2 class="h2_medium">Rejoindre le Cours Galien, c’est la garantie d’une préparation sérieuse et adaptée, vous permettant d’aborder en toute confiance le Concours de Recrutement de Professeur des Ecoles.</h2>
         </div><!-- /container -->
     </section>  
 
@@ -31,28 +31,28 @@ Récuperation du header
     <section class="valeurs valeur_back">
         <div class="container">
                 <div class="row">
-                    <h1 class="text-center">Adoptez l'esprit Galien !</h1>
+                    <h1 class="h1_tall">Adoptez l'esprit Galien !</h1>
                     <div class="col-sm-3">
                         <div class=" cercle-3">
-                            <strong>Partage</strong>
+                            <h2 class="h2_small"><strong>Partage</strong></h2>
                             <p>Nos professeurs spécialistes des matières enseignées partagent leurs connaissances et vous donnent leurs astuces pour réussir le jour J.</p>
                         </div>
                     </div><!-- /col-sm-3 -->
                     <div class="col-sm-3">
                         <div class="cercle-3">
-                            <strong>Progression</strong>
+                            <h2 class="h2_small"><strong>Progression</strong></h2>
                             <p>Elle repose sur trois étapes essentielles qui mènent vers le succès : entraînement, méthode et encadrement.</p>
                         </div>
                     </div><!-- /col-sm-3 -->
                     <div class="col-sm-3">
                         <div class="cercle-3">
-                            <strong>Cohésion</strong>
+                            <h2 class="h2_small"><strong>Cohésion</strong></h2>
                             <p>Il ne peut y avoir de partage sans cohésion. Toutes nos équipes sont focalisées sur un seul objectif : votre réussite.</p>
                         </div>
                     </div><!-- /col-sm-3 -->
                     <div class="col-sm-3">
                         <div class="cercle-3">
-                            <strong>Réussite</strong>
+                            <h2 class="h2_small"><strong>Réussite</strong></h2>
                             <p>Ultime étape des efforts fournis et pour laquelle nous vous accompagnons chaque jour grâce à une stratégie de concours précise.</p>
                         </div>
                     </div><!-- /col-sm-3 -->
@@ -65,7 +65,7 @@ Récuperation du header
      -->
     <section class="temoignages">
         <div class="container">
-            <h2 class="text-center">Ils ont choisi Galien</h2>
+            <h1 class="h1_medium">Ils ont choisi Galien</h1>
             <div class="row">
                 
             </div><!-- /row -->
@@ -79,7 +79,7 @@ Récuperation du header
     <section class="statistiques stat_back">
         <div class="container">
                 <div class="row">
-                    <h1 class="text-center">Galien en chiffres !</h1>
+                    <h1 class="h1_tall">Galien en chiffres !</h1>
                     <div class="col-sm-4">
                         <div class="cercle-4">
                             <strong class="counter">98</strong><span>%</span>
@@ -108,10 +108,10 @@ Récuperation du header
     <section class="formules">
         <div class="container">
             <div class="row">
-                <h2 class="text-center">Decouvrez nos formules</h2>
+                <h1 class="h1_medium">Decouvrez nos formules</h1>
                 <div class="col-sm-6">
                     <div>
-                        <h3 class="text-center">Pack entrainement</h3>
+                        <h2 class="h2_medium">Pack entrainement</h2>
                         <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
                         <p>4 concours blancs</p>
                         <p><strong>Epreuve</strong></p>
@@ -123,7 +123,7 @@ Récuperation du header
                 </div>
                 <div class="col-sm-6">
                     <div>
-                        <h3 class="text-center">Pack complete</h3>
+                        <h2 class="h2_medium">Pack complet</h2>
                         <img src="<?php bloginfo('template_directory'); ?>/img/images/DSC_0191-2.jpg" alt="">
                         <p>Préparation aux épreuves</p>
                         <p>4 concours blancs</p>

@@ -9,10 +9,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
-                    <a href="/galien_crpe/"><img class="logo" src="<?php bloginfo('template_directory'); ?>/img/logo.png "></a>
+                    <h1><a href="/galien_crpe/"><img class="logo" src="<?php bloginfo('template_directory'); ?>/img/logo.png "></a></h1>
                 </div>
                 <div class="col-sm-3">
-                    <h4>Le groupe Galien</h4>
+                    <h2 class="h2_small">Le groupe Galien</h2>
                     <ul>
                         <li><a href="http://www.cours-galien.fr/">Cours Galien</a></li>
                         <li><a href="http://www.centredeformationjuridique.com/">Centre de Formation Juridique</a></li>
@@ -20,7 +20,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-3">
-                    <h4>Infos pratiques</h4>
+                    <h2 class="h2_small">Infos pratiques</h2>
                     <ul>
                         <li><a href="#">Galien recrute</a></li>
                         <li><a href="http://www.studius.fr">Studius</a></li>
@@ -28,12 +28,17 @@
                     </ul>
                 </div>
                 <div class="col-sm-3">
-                    <h4>Suivez-nous</h4>
-                    <a href="https://www.facebook.com/CoursGalien.Officiel"><img src="<?php bloginfo('template_directory'); ?>/img/picto/picto_fb.png "></a> 
-                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/picto/picto_twitter.png "></a> 
-                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/picto/picto_google+.png "></a> 
-                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/picto/picto_linkedin.png "></a>
-                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/picto/picto_youtube.png "></a>
+                    <h2 class="h2_small">Suivez-nous</h2>
+                    <ul>
+                        <li><a href="#">Galien recrute</a></li>
+                        <li><a href="http://www.studius.fr">Studius</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                    </ul>
+                    <a href="https://www.facebook.com/CoursGalien.Officiel"></a> 
+                    <a href="#"></a> 
+                    <a href="#"></a> 
+                    <a href="#"></a>
+                    <a href="#"></a>
                 </div>
             </div>
         </div>
