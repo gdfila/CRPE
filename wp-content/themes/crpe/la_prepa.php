@@ -38,9 +38,9 @@ Récuperation du header
     </section>
 
     <!--
-    Section présentant les témoignages sous slider
+    Section présentant les témoignages de professeur
      -->
-    <section class="temoignages">
+    <section class="temoignages_prof">
         <div class="container">
             <h1 class="h1_medium">Notre équipe pédagogique</h1>
             <div class="row">
@@ -69,59 +69,45 @@ Récuperation du header
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <h2 class="h2_medium">Epreuve d'admissibilité</h2>
-                    <p>3 parties - 4 heures d’épreuves</p>
+                    <h2 class="h2_medium">Préparation aux examens d’Admissibilité</h2>
+                    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.</p>
                     <div class="col-sm-6">
                         <div class=" cercle-3">
-                            <p><span>40 points</span></p>
+                            <p><span>45h</span></p>
                         </div>
                         <p><strong>Français</strong><br />
-                        préparation aux 3 épreuves<br />
-                        - 11 points -</p>
-                        <p>connaissance de la langue<br />
-                        - 11 points -</p>
-                        <p>analyse d'un dossier<br />
-                        - 13 points -</p>
+                        préparation aux 3 épreuves</p>
                     </div><!-- /col-sm-3 -->
                     <div class="col-sm-6">
                         <div class="cercle-3">
-                            <p><span>40 points</span></p>
+                            <p><span>45h</span></p>
                         </div>
-                        <p><strong>Français</strong><br />
-                        préparation aux 3 épreuves<br />
-                        - 11 points -</p>
-                        <p>connaissance de la langue<br />
-                        - 11 points -</p>
-                        <p>analyse d'un dossier<br />
-                        - 13 points -</p>
+                        <p><strong>Mathématiques</strong><br />
+                        préparation aux 3 épreuves</p>
                     </div><!-- /col-sm-3 -->
                 </div><!-- /col-sm-6 -->
                 <div class="col-sm-6">
-                    <h2 class="h2_medium">Epreuve d'admission</h2>
-                    <p>2 parties - 3 heures d’épreuves</p>
+                    <h2 class="h2_medium">Préparation aux examens d’Admission</h2>
+                    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.</p>
                     <div class="col-sm-6">
                         <div class=" cercle-3">
                             <p><span>60 points</span></p>
                         </div>
-                        <p><strong>Français</strong><br />
-                        préparation aux 3 épreuves<br />
-                        - 11 points -</p>
-                        <p>connaissance de la langue<br />
-                        - 11 points -</p>
-                        <p>analyse d'un dossier<br />
-                        - 13 points -</p>
+                        <p><strong>Séquence pédagogique</strong><br />
+                        système éducatif<br />
+                        didactique / pédagogie</p>
+                        <p><strong>Système éducatif français</strong><br />
+                        système éducatif<br />
+                        didactique / pédagogie</p>
                     </div><!-- /col-sm-3 -->
                     <div class="col-sm-6">
                         <div class="cercle-3">
                             <p><span>100 points</span></p>
                         </div>
-                        <p><strong>Français</strong><br />
-                        préparation aux 3 épreuves<br />
-                        - 11 points -</p>
-                        <p>connaissance de la langue<br />
-                        - 11 points -</p>
-                        <p>analyse d'un dossier<br />
-                        - 13 points -</p>
+                        <p><strong>Fondements scientifiques</strong><br />
+                        apports scientifiques</p>
+                        <p><strong>Education physique</strong><br />
+                        pratique de la classe</p>
                     </div><!-- /col-sm-3 -->
                 </div><!-- /col-sm-6 -->
             </div><!-- /row -->
@@ -131,12 +117,12 @@ Récuperation du header
     <!--
     Section présentant les cours
      -->
-    <section class="classes">
+    <section class="price">
         <div class="container">
-            <h1 class="h1_tall">Le déroulé des cours</h1>
-            <p>Le programme est élaboré par les enseignants spécialistes de la discipline. Il est conforme aux épreuves du concours et aux préconisations ministérielles inscrites dans le décret n°2013-768 du 23 août 2013.</p>
-            <h2 class="h2_medium">Les horaires</h2>
-            <p>Nous vous proposons une préparation intensive de 90 heures en deux temps. Les cours ont lieu le samedi en petits effectifs. Votre formation s’étale donc sur 30 semaines, et comprend au total 240 heures de cours en face à face avec des enseignants, auxquelles s’ajoutent 32 heures de concours blancs. </p>
+            <h1 class="h1_tall">Tarifs</h1>
+            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+            <h2 class="h2_medium">Financement</h2>
+            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
         </div><!-- /container -->
     </section>
 
