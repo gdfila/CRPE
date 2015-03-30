@@ -11,7 +11,7 @@ Récuperation du header
     Affiche un slider automatique sur toute la largeur de la page
      -->            
     <div class="container_slider">
-        <?php echo do_shortcode('[image-carousel]'); ?>
+        <?php echo do_shortcode('[image-carousel showcaption="true"]'); ?>
     </div>
 
     <!--
@@ -66,7 +66,68 @@ Récuperation du header
         <div class="container">
             <h1 class="h1_medium">Ils ont choisi Galien</h1>
             <div class="row">
-                
+                  <div id="carousel-example-generic" class="temoignage_slider slide" data-ride="carousel">
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <div class="col-sm-6">
+                          <div class="embed-responsive embed-responsive-16by9">
+                              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rk93EIqVd8g"></iframe>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="temoignage_slider-caption">
+                              <h2><a href="#">Antoine<br /></a> 1ere année medecine <br /> </h2><p>Ma marraine me soutient constamment tout au long de mon année et aujourd’hui mes résultats sont probants. Je me sens en confiance, et je garderai un bon souvenir dans ma Prépa.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="col-sm-6">
+                          <div class="embed-responsive embed-responsive-16by9">
+                              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-fmpxlpgQyM"></iframe>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="temoignage_slider-caption">
+                              <h2><a href="#">Alexis<br /></a> 1ere année medecine <br /></h2><p>Les cours Galien ont été très bénéfiques pour moi car ils m’ont apporté de l’aide dans la mise en place d’une méthode de travail ainsi qu’un soutien moral très important durant cette année.
+                  La 1ère année de médecine est un cap qu’il est parfois difficile de passer du 1er coup. </p>
+                          </div>
+                        </div>
+                      </div>
+                          <div class="item">
+                        <div class="col-sm-6">
+                          <div class="embed-responsive embed-responsive-16by9">
+                              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2cKztlWH_wE"></iframe>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="temoignage_slider-caption">
+                              <h2><a href="#">Joel<br /></a> 2eme année de médecine <br /></h2><p>Les cours Galien ont pour moi été d’une grande aide durant cette année difficile qu’est la Paces.
+                  Les cours Galien ont pour moi été d’une grande aide durant cette année difficile qu’est la Paces.
+                   </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="controllers col-sm-6 col-xs-12">
+                      <!-- Controls -->
+                        <a class="left temoignage_slider-control" href="#carousel-example-generic" data-slide="prev">
+                          <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right temoignage_slider-control" href="#carousel-example-generic" data-slide="next">
+                          <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
+                  <div class="controllers col-sm-6 col-xs-12">
+                        <!-- Indicators -->
+                        <ol class="temoignage_slider-indicators">
+                          <li data-target="#temoignage_slider-example-generic" data-slide-to="0" class="active"></li>
+                          <li data-target="#temoignage_slider-example-generic" data-slide-to="1"></li>
+                          <li data-target="#temoignage_slider-example-generic" data-slide-to="2"></li>
+                        </ol>
+                  </div>
+                  </div>
             </div><!-- /row -->
         </div><!-- /container -->
     </section>

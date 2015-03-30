@@ -118,7 +118,7 @@ a:hover {
     position:relative; overflow: hidden;}
 .img_prez, .img_prez img { 
     width: 100%;}
-.carousel-inner, .img_prez { 
+.carousel-inner, .carousel-inner .item , .img_prez { 
     max-height: 450px;}
 .carousel:before, .carousel:after, .img_prez:before, .img_prez:after {
     position: absolute; content: "";
@@ -315,3 +315,41 @@ footer div div div:nth-child(4) ul li:nth-child(5) a {
     font-size: 1.05em; color: #333;}
 
 #scroll_up { display: none; position: fixed; bottom: 0; right: 10px;}
+
+
+/***********************************************
+****************** Slider temoignage *******************
+***********************************************/
+
+.temoignage_slider {
+    position: relative;
+}
+
+.controllers {
+    position: absolute;
+    top: 90%;
+}
+
+.temoignage_slider-caption {
+left: 20%;
+right: 20%;
+padding-bottom: 30px;
+}
+
+.temoignage_slider-control.left,
+.temoignage_slider-control.right {
+    background-image: none;
+}
+
+.temoignage_slider-caption {
+position: relative;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 10;
+padding-top: 0;
+padding-bottom: 0;
+color: #000;
+text-align: center;
+text-shadow: none;
+}

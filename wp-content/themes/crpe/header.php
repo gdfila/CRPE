@@ -1,4 +1,25 @@
-<!doctype html>
+<?php
+    include_once "api/Thalamus_init.php";
+
+    // Liste des centres
+    //$centersList = $client->call(array("service" => "center","method" => "centersList"));
+    $centersList = $client->call(array("service" => "formation","method" => "centersListByFormation","formationId" => 400));
+    // plage horaire
+    $horaireList = $client->call(array("service" => "prospect","method" => "callBackTimesList"));
+
+    $data=[];
+       if(!empty($centersList))
+     {
+         foreach ($centersList->datas as $centre)
+            {
+                         if (empty($centre))
+                    {   
+                        break ;
+                     }
+                        array_push($data, array( "name"=>$centre->name ,"id"=>$centre->id));
+               }
+     }
+?><!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
@@ -20,7 +41,6 @@
     
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.corr.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/crpe.css">
-
 
     <?php wp_head(); ?>
 </head>
@@ -57,6 +77,7 @@
         <a href="/galien_crpe/contact/brochure">Brochure</a>
         <a href="http://www.studius.fr">Studius</a>
     </div>
+
     <!-- 
     Modal : système de pop-up de bootstrap
     -->
@@ -69,30 +90,6 @@
                 </div>
                 <div class="modal-body"> 
                     <?php
-                        include_once "api/Thalamus_init.php";
-
-                        // Liste des centres
-                        //$centersList = $client->call(array("service" => "center","method" => "centersList"));
-                        $centersList = $client->call(array("service" => "formation","method" => "centersListByFormation","formationId" => 400));
-                        // plage horaire
-                        $horaireList = $client->call(array("service" => "prospect","method" => "callBackTimesList"));
-
-                        $data=[];
-                           if(!empty($centersList))
-                         {
-                             foreach ($centersList->datas as $centre)
-                                {
-                                             if (empty($centre))
-                                        {   
-                                            break ;
-                                         }
-                                            array_push($data, array( "name"=>$centre->name ,"id"=>$centre->id));
-                                   }
-                         }
-                         
-                         ?>
-
-                        <?php
                             $post_thumbnail_id = get_post_thumbnail_id($post->ID);
                             $post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
                     ?>

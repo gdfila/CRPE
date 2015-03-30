@@ -28,132 +28,118 @@ Récuperation du header
      -->
     <section class="accroche">
         <div class="container">
-            <h1 class="h1_tall">Définition du concours</h1>
-            <p>Le concours de recrutement de professeur des écoles (CRPE1), est le concours sur lequel s'appuie en France le Ministère de l'Éducation nationale pour recruter les professeurs des écoles, exerçant dans le primaire (sans distinction dans les écoles maternelles et dans les écoles élémentaires).</p>
-            <h2 class="h2_medium">Définition du concours</h2>
-            <p>Le concours de recrutement de professeur des écoles (CRPE1), est le concours sur lequel s'appuie en France le Ministère de l'Éducation nationale pour recruter les professeurs des écoles, exerçant dans le primaire (sans distinction dans les écoles maternelles et dans les écoles élémentaires).</p>
+            <h1 class="h1_tall">Notre expérience</h1>
+            <p>Comme tout changement, le passage du lycée à la fac est souvent compliqué (nouvelles méthodes de travail, échéance très rapide des concours, niveau d’études et de connaissances de plus en plus élevé, sélection de plus en plus sévère, etc.). Et ça, Galien l’a bien compris. C’est pourquoi, depuis près de 30 ans, Galien accompagne les étudiants qui souhaitent réussir leur concours. Galien est aujourd’hui LE spécialiste dans la préparation des concours PACES, paramédicaux et sociaux.</p>
+            <h2 class="h2_medium">Un cadre propice</h2>
+            <p>Les centres Galien sont situés à proximité de votre fac, très accessibles en transport en commun afin de vous faire gagner du temps dans vos révisions. Les horaires de nos cours sont établis en fonction de ceux de votre fac.</p>
+            <h2 class="h2_medium">L'encadrement</h2>
+            <p>Chaque responsable de centre Galien, secondé par une équipe administrative et pédagogique, est garant de la qualité pédagogique. Il est là pour vous et vos parents tout au long de l’année. Il vous accompagne et répond à vos questions pour que vous ne soyez jamais seul face à vos difficultés.</p>
         </div><!-- /container -->
     </section>
-    
-    <section class="prepa_back_1">      
-       
-       <div class="container stat">
-    
+
+    <!--
+    Section présentant les témoignages sous slider
+     -->
+    <section class="temoignages">
+        <div class="container">
+            <h1 class="h1_medium">Notre équipe pédagogique</h1>
             <div class="row">
-                <div class="col-sm-3">
-
-                    <div class="caption post-content index_cercle_back_p hidden-xs">
-                        <span><h2 class="text-center counter">365</h2></span>
-                        <p class="text-muted text-center">lorem ipsum</p>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                       <div class="caption post-content index_cercle_back_p hidden-xs">
-                        <span><h2 class="text-center counter">98</h2></span>
-                        <p class="text-muted text-center">lorem ipsum</p>
-                    </div>
-                  
-                </div>
-                <div class="col-sm-3">
-                   <div class="caption post-content index_cercle_back_p hidden-xs">
-                        <h2 class="text-center counter"><strong>69</strong></h2>
-                    <p class="text-muted text-center">lorem ipsum</p>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-
-                    <div class="caption post-content index_cercle_back_p hidden-xs">
-                        <h2 class="text-center counter"><strong>1.642</strong></h2>
-                      <p class="text-muted text-center">lorem ipsum</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-</div
- </section>
-             
-    
-    
-    
-    
- <section>   
-           <div class="container">
-        <div class="row">
-            <div class="col-sm-12"><br><br>
-                <h1 class="text-center text-uppercase ">equipe pedagogique</h1><br>
-                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium architecto Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium architecto, reprehenderit, 
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium architecto, reprehenderit quia delectus volupt</p><br><br>
                 
-            <button class="btn btn-btn center-block text-uppercase btn_centres">Nos centres</button>
-                    <br><br><br></div>
-        </div>
-     </div>
-     
-        
-</section>    
- 
-<div class="background_prepa_1">
-    <div class="i-container">
-      <blockquote>
-        <h2  class="text-uppercase formule-text text_fond_2">contenu des epreuves</h2>
-           <p class="text-muted image-padding prepa_p_1">orem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam molestiae esse Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam molestiae esse . Ipsam molestiae esse Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam molestiae esse . Ipsam molestiae esse Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam molestiae esse </p>
-</p>
-      </p>
-      </blockquote>
-    </div>
-</div>
-    
-<section class="epreuve_prepa">
-  
-</section>    
+            </div><!-- /row -->
+        </div><!-- /container -->
+    </section>
+
+    <!--
+    Section présentant les cours
+     -->
+    <section class="classes">
+        <div class="container">
+            <h1 class="h1_tall">Le déroulé des cours</h1>
+            <p>Le programme est élaboré par les enseignants spécialistes de la discipline. Il est conforme aux épreuves du concours et aux préconisations ministérielles inscrites dans le décret n°2013-768 du 23 août 2013.</p>
+            <h2 class="h2_medium">Les horaires</h2>
+            <p>Nous vous proposons une préparation intensive de 90 heures en deux temps. Les cours ont lieu le samedi en petits effectifs. Votre formation s’étale donc sur 30 semaines, et comprend au total 240 heures de cours en face à face avec des enseignants, auxquelles s’ajoutent 32 heures de concours blancs. </p>
+        </div><!-- /container -->
+    </section> 
     
 
-    
+    <!--
+    Section présentant les épreuves
+     -->
+    <section class="admission">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2 class="h2_medium">Epreuve d'admissibilité</h2>
+                    <p>3 parties - 4 heures d’épreuves</p>
+                    <div class="col-sm-6">
+                        <div class=" cercle-3">
+                            <p><span>40 points</span></p>
+                        </div>
+                        <p><strong>Français</strong><br />
+                        préparation aux 3 épreuves<br />
+                        - 11 points -</p>
+                        <p>connaissance de la langue<br />
+                        - 11 points -</p>
+                        <p>analyse d'un dossier<br />
+                        - 13 points -</p>
+                    </div><!-- /col-sm-3 -->
+                    <div class="col-sm-6">
+                        <div class="cercle-3">
+                            <p><span>40 points</span></p>
+                        </div>
+                        <p><strong>Français</strong><br />
+                        préparation aux 3 épreuves<br />
+                        - 11 points -</p>
+                        <p>connaissance de la langue<br />
+                        - 11 points -</p>
+                        <p>analyse d'un dossier<br />
+                        - 13 points -</p>
+                    </div><!-- /col-sm-3 -->
+                </div><!-- /col-sm-6 -->
+                <div class="col-sm-6">
+                    <h2 class="h2_medium">Epreuve d'admission</h2>
+                    <p>2 parties - 3 heures d’épreuves</p>
+                    <div class="col-sm-6">
+                        <div class=" cercle-3">
+                            <p><span>60 points</span></p>
+                        </div>
+                        <p><strong>Français</strong><br />
+                        préparation aux 3 épreuves<br />
+                        - 11 points -</p>
+                        <p>connaissance de la langue<br />
+                        - 11 points -</p>
+                        <p>analyse d'un dossier<br />
+                        - 13 points -</p>
+                    </div><!-- /col-sm-3 -->
+                    <div class="col-sm-6">
+                        <div class="cercle-3">
+                            <p><span>100 points</span></p>
+                        </div>
+                        <p><strong>Français</strong><br />
+                        préparation aux 3 épreuves<br />
+                        - 11 points -</p>
+                        <p>connaissance de la langue<br />
+                        - 11 points -</p>
+                        <p>analyse d'un dossier<br />
+                        - 13 points -</p>
+                    </div><!-- /col-sm-3 -->
+                </div><!-- /col-sm-6 -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+    </section> 
 
-<section class="decoup">
-  <div class="background_prepa_3">
-    <div class="i-container">
-      <blockquote>
-        <h2  class="text-uppercase formule-text text_fond_2">une formule simple</h2>
-      </blockquote>
-    </div>
-  </div>
-    
-    <section class="accueil_pack_2">
-  <div class="container container-price hidden-xs">
-    <div class="row">
-      <div class="col-sm-1 col-sm-offset-2 price">
-        <h4 class="text-center text-uppercase titre-pack">Pack <strong>training</strong></h4>
-          <button class="btn  btn-btn center-block text-uppercase  pack_btn_right">Candidature</button><br>
-          <p class="text-center text-muted p-pack">4 concours blanc</p>
-          <p class="text-center p-pack"><strong>mathematique + francais</strong></p>
-          <p class="text-center p-pack"><strong>Epreuves</strong></p>
-           <p class="text-center text-muted p-pack">realiser en conditions réelles,copies corrigés et annotés   de facon personnalisée</p>
-          <p class="text-center p-pack"><strong>Parrainage</strong></p>
-          <p class="text-center ">telephonique et electronique</p><br>
-          <hr class="pack_surlign_left">
-          <p class="text-center p-pack"><strong>000h / 400 €</strong></p>
-      </div>
-      <div class="col-sm-1 col-sm-offset-2 price pack-complet ">
-        <h4 class="text-center text-uppercase titre-pack">Pack <strong>complet</strong></h4>
-        <button class="btn  btn-btn center-block text-uppercase pack_btn_left ">Candidature</button><br>
-          <p class="text-center text-muted p-pack">Preparation aux epreuves </p>
-          <p class="text-center p-pack"><strong>d'admisibilités + d'admission</strong></p>
-          <p class="text-center text-muted p-pack">4 concours blanc</p>
-          <p class="text-center p-pack"><strong>mathematique + francais</strong></p>
-          <p class="text-center p-pack"><strong>Modules de remise à niveau inclus</strong></p>
-          <p class="text-center p-pack"><strong>Parrainage</strong></p>
-          <p class="text-center p-surling_left">telephonique et electronique</p><br>
-          <hr class="pack_surlign_right">
-          <p class="text-center "><strong>272h / 1950 €</strong></p>
-      </div>
-    </div>
-  </div>
-</section>
+    <!--
+    Section présentant les cours
+     -->
+    <section class="classes">
+        <div class="container">
+            <h1 class="h1_tall">Le déroulé des cours</h1>
+            <p>Le programme est élaboré par les enseignants spécialistes de la discipline. Il est conforme aux épreuves du concours et aux préconisations ministérielles inscrites dans le décret n°2013-768 du 23 août 2013.</p>
+            <h2 class="h2_medium">Les horaires</h2>
+            <p>Nous vous proposons une préparation intensive de 90 heures en deux temps. Les cours ont lieu le samedi en petits effectifs. Votre formation s’étale donc sur 30 semaines, et comprend au total 240 heures de cours en face à face avec des enseignants, auxquelles s’ajoutent 32 heures de concours blancs. </p>
+        </div><!-- /container -->
+    </section>
 
-    
-    
- 
 </div>
     
 <?php get_footer(); ?>
