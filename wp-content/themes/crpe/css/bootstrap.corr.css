@@ -12,3 +12,9 @@ h1, h2, h3, h4, h5, h6, ul, ol {
 	background-color: #3497db; border: none;}
 .btn-primary:hover { 
 	background-color: #308bca;}
+.carousel-indicators {
+	bottom: 50px;}
+@media screen and (min-width: 768px) {
+.carousel-indicators {
+  bottom: 20px;
+}

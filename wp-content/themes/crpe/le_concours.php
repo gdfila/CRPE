@@ -4,9 +4,12 @@
  */
 ?>
 
+<!--
+Récuperation du header
+ -->
 <?php get_header(); ?>
 
-<div class="content concours">
+<div id="concours" class="top_content">
 
 <?php
     $post_thumbnail_id = get_post_thumbnail_id($post->ID);
@@ -15,7 +18,9 @@
 
 
     
-    <div class="container-fluid content-background" style="background: url(<?php echo $post_thumbnail_url; ?>) no-repeat; background-size: cover;"></div>
+    <div class="container-fluid content-background" style="background: url(<?php echo $post_thumbnail_url; ?>) no-repeat; background-size: cover;">
+        <img src="">
+    </div>
     
    <section>
     <div class="container">

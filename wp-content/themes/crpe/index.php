@@ -19,14 +19,13 @@ Récuperation du header
      -->
     <section class="accroche">
         <div class="container">
-            <h1 class="h1_large">Preparez le concours de recrutement de professeur des écoles</h1>
+            <h1 class="h1_tall">Preparez le concours de recrutement de professeur des écoles</h1>
             <h2 class="h2_medium">Rejoindre le Cours Galien, c’est la garantie d’une préparation sérieuse et adaptée, vous permettant d’aborder en toute confiance le Concours de Recrutement de Professeur des Ecoles.</h2>
         </div><!-- /container -->
     </section>  
 
     <!--
-    Section présentant les valeurs de l'école avec un fond "parallax"
-    -> Supprimer la classe "valeur_back"
+    Section présentant les valeurs de l'école
      -->
     <section class="valeurs valeur_back">
         <div class="container">
@@ -73,8 +72,7 @@ Récuperation du header
     </section>
 
     <!--
-    Section présentant les chiffres de l'école avec un fond "parallax"
-    -> Supprimer la classe "stat_back"
+    Section présentant les chiffres de l'école
      --> 
     <section class="statistiques stat_back">
         <div class="container">
