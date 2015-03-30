@@ -42,18 +42,21 @@ Récuperation du header
                     <h4 class="h4_tall"><strong><?php the_field('nom_de_levenement');?></strong></h4>
                     <p class="text-justify"><?php the_field('presentation_de_levenement');?></p>
                     <a href="<?php the_field('telechargement_brochure') ?>" >telechargement</a>
+                    <a href="#">inscription</a>
                 </div>
                 <div class="col-sm-4">
                     <h3 class="h3_tall"><strong>jusqu'au </strong><strong class="centre_texte_red"><?php the_field('date_de_la_jpo');?></strong></h3>
                     <h4 class="h4_tall"><strong><?php the_field('nom_de_la_jpo');?></strong></h4>
                     <p class="text-justify"><?php the_field('presentation_de_la_jpo');?></p>
                     <a href="<?php the_field('telechargement_brochure') ?>" >telechargement</a>
+                    <a href="#">inscription</a>
                 </div>
                 <div class="col-sm-4">
                     <h3 class="h3_tall"><strong>jusqu'au </strong><strong class="centre_texte_red"><?php the_field('date_de_levenement');?></strong></h3>
                     <h4 class="h4_tall"><strong><?php the_field('nom_de_levenement');?></strong></h4>
                     <p class="text-justify"><?php the_field('presentation_de_levenement');?></p>
                     <a href="<?php the_field('telechargement_brochure') ?>" >telechargement</a>
+                    <a href="#">inscription</a>
                 </div>
             </div>
         </div>
