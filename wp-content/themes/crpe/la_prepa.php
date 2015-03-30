@@ -38,13 +38,31 @@ Récuperation du header
     </section>
 
     <!--
-    Section présentant les témoignages de professeur
+    Section présentant les témoignages sous slider
      -->
-    <section class="temoignages_prof">
+    <section class="temoignages equipe_pedagogique">
         <div class="container">
             <h1 class="h1_medium">Notre équipe pédagogique</h1>
             <div class="row">
-                
+                  <div id="carousel-example-generic" class="temoignage_slider slide" data-ride="carousel">
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner temoignage_slider_inner">
+                        <div class="item active">
+                            <div class="col-sm-6">
+                                <div class="embed-responsive embed-responsive-16by9 col-sm-9">
+                                    <img src="../img/images/aModifier.jpg" alt="Photo de ...">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 temoignage_back">
+                              <div class="temoignage_slider-caption">
+                                  <p><strong>Robert</strong></p>
+                                  <p>Professeur de mathématique</p>
+                                  <p>Ma marraine me soutient constamment tout au long de mon année et aujourd’hui mes résultats sont probants. Je me sens en confiance, et je garderai un bon souvenir dans ma Prépa.</p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div><!-- /row -->
         </div><!-- /container -->
     </section>
@@ -73,14 +91,14 @@ Récuperation du header
                     <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.</p>
                     <div class="col-sm-6">
                         <div class=" cercle-3">
-                            <p><span>45h</span></p>
+                            <p>45h</p>
                         </div>
                         <p><strong>Français</strong><br />
                         préparation aux 3 épreuves</p>
                     </div><!-- /col-sm-3 -->
                     <div class="col-sm-6">
                         <div class="cercle-3">
-                            <p><span>45h</span></p>
+                            <p>45h</p>
                         </div>
                         <p><strong>Mathématiques</strong><br />
                         préparation aux 3 épreuves</p>
@@ -90,8 +108,9 @@ Récuperation du header
                     <h2 class="h2_medium">Préparation aux examens d’Admission</h2>
                     <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.</p>
                     <div class="col-sm-6">
-                        <div class=" cercle-3">
-                            <p><span>60 points</span></p>
+                        <div class="cercle-3 demi_cercle-container">
+                            <p>30h</p>
+                            <p class="demi_cercle">20h</p>
                         </div>
                         <p><strong>Séquence pédagogique</strong><br />
                         système éducatif<br />
@@ -101,8 +120,9 @@ Récuperation du header
                         didactique / pédagogie</p>
                     </div><!-- /col-sm-3 -->
                     <div class="col-sm-6">
-                        <div class="cercle-3">
-                            <p><span>100 points</span></p>
+                        <div class="cercle-3 demi_cercle-container">
+                            <p>20h</p>
+                            <p class="demi_cercle">20h</p>
                         </div>
                         <p><strong>Fondements scientifiques</strong><br />
                         apports scientifiques</p>
