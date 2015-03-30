@@ -71,7 +71,7 @@ a:hover {
 .nav_header .content_nav .logo_nav {  
     position: absolute; top: 0; z-index: 1;
     width: 140px; height: 115%; padding-top: 70px;
-    background-color: #3497db;}
+    background-color: #3497db; -webkit-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.085); -moz-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.085); -ms-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.085); box-shadow: 0 0px 10px 1px rgba(0,0,0,0.085);}
 .nav_header .content_nav .logo_nav .logo {  
     position: absolute; left: 10px; bottom: 15px;}
 .nav_header nav > ul li a { 
@@ -95,7 +95,7 @@ a:hover {
     padding: 8px 15px;
     text-transform: none;}
 .nav_header .content_nav .sub-menu li a:hover { 
-    text-decoration: underline;}
+    background-color: rgba(22,64,91, 0.3);}
 
 /* Barre de navigation au scroll */
 
@@ -133,6 +133,19 @@ a:hover {
     background: url('../img/bottom_incurve.png') no-repeat; background-size: 100% 100%;}
 
 /***********************************************
+**************** plugin action *****************
+***********************************************/
+
+#action {
+    position: fixed; top: 200px; right: 0; z-index: 9997;}
+#action a {
+    display: block; width: 70px; height: 70px;
+    background-color: #17405c;
+    line-height: 125px; font-size: 0.65em; color: #fff; text-align: center;}
+#action a:hover {
+    background-color: #f16150;}
+
+/***********************************************
 ************** Section Accroche ****************
 ***********************************************/
 
@@ -143,13 +156,13 @@ a:hover {
 ************ Section Valeurs *******************
 ***********************************************/
 
-.valeurs .cercle-3 {
-    padding-top: 54px;
-    background-repeat: no-repeat; background-position: 50% 5px; background-size: 34px 44px;}
-.valeurs .cercle-3 h2 {
-    margin: 0;}
-.valeur_back {
+.valeurs {
     background: url('../img/images//WEB_galien_03.jpg') center center / 100%; background-size: cover;}
+.valeurs .cercle-3 {
+    padding: 48px 10px 10px;
+    background-repeat: no-repeat; background-position: 50% 8px;}
+.valeurs .cercle-3 h2 {
+    margin-bottom: 5px;}
 .valeurs div div:nth-child(2) .cercle-3 { 
     background-image: url('../img/picto/partage.png');}
 .valeurs div div:nth-child(3) .cercle-3 { 
@@ -163,14 +176,14 @@ a:hover {
 *********** Section Statistiques ***************
 ***********************************************/
 
-.stat_back {
+.statistiques {
     background: url('../img/images/296_MG_9554.jpg') center center / 100%; background-size: cover;}
 
 /***********************************************
 ************** Section Graduate ****************
 ***********************************************/
 
-.graduate_back {
+.graduate {
     background: url('../img/images/DSC_0206-2.jpg') center center / 100%; background-size: cover;}
 .graduate h1, .graduate p {
     color: #fff;}
@@ -178,6 +191,13 @@ a:hover {
     font-size: 4em;}
 .graduate p {
     font-size: 1.6em;}
+
+/***********************************************
+********* Section Equipe pédagogique ***********
+***********************************************/
+
+.equipe_pedagogique {
+    background-color: rgba(241,97,80, 0.3);}
 
 /***********************************************
 **************** Section Test ******************
@@ -190,9 +210,11 @@ a:hover {
 .admission .cercle-3 {
     background-color: rgba(241,97,80, 1);}
 .admission .cercle-3 p {
-    font-size: 2.3em; color: #fff; line-height: 185px;}
+    font-size: 2.3em; color: #fff;}
 .admission .cercle-3 p span {
     line-height: normal;}
+.admission .demi_cercle {
+    background-color: rgba(255,255,255, 0.3);}
 
 /***********************************************
 ************ Section Perspective ***************
@@ -202,6 +224,21 @@ a:hover {
     margin-bottom: 20px;}
 .perspective ul {
     margin-bottom: 50px;}
+
+/***********************************************
+**************** Section Jpo *******************
+***********************************************/
+
+.jpo {
+    background-color: rgba(241,97,80, 0.3);}
+
+/***********************************************
+************ Section Equipements ***************
+***********************************************/
+
+.equipement .col-sm-6>div {
+    text-align: left;}
+
 
 /***********************************************
 ************* Section  Formules ****************
@@ -221,6 +258,20 @@ a:hover {
     max-width: 100%; margin-bottom: 25px;}
 .formules .info_sup {
     display: none;}
+
+/***********************************************
+***************** Formulaire *******************
+***********************************************/
+
+form {
+    text-align: left;}
+    
+/***********************************************
+***************** Scroll top *******************
+***********************************************/
+
+#scroll_up { 
+    display: none; position: fixed; bottom: 0; right: 10px;}
 
 /***********************************************
 ******************** Footer ********************
@@ -255,6 +306,8 @@ footer div div div:nth-child(4) ul li {
 footer div div div:nth-child(4) ul li a {
     display: block; width: 100%; height: 100%;
     text-indent: -9999px;}
+footer div div div:nth-child(4) ul li a:hover {
+    opacity: 0.7;}
 footer div div div:nth-child(4) ul li:nth-child(1) a {
     background: url('../img/picto/picto_fb.png') no-repeat;}
 footer div div div:nth-child(4) ul li:nth-child(2) a {
@@ -267,54 +320,78 @@ footer div div div:nth-child(4) ul li:nth-child(5) a {
     background: url('../img/picto/picto_youtube.png') no-repeat;}
 
 /***********************************************
-**************** plugin action *****************
+******************** Etat **********************
 ***********************************************/
 
-#action {
-    position: fixed; top: 200px; right: 0; z-index: 9997;}
-#action a {
-    display: block; width: 70px; height: 70px;
-    background-color: #17405c;
-    line-height: 125px; font-size: 0.65em; color: #fff; text-align: center;}
-#action a:hover {
-    background-color: #f16150;}
+    /***********************************************
+    ****************** Cercle /4 *******************
+    ***********************************************/
 
-/***********************************************
-****************** Cercle /4 *******************
-***********************************************/
+    .cercle-3 {
+        position: relative;
+        width: 185px; height: 185px; margin: 10px auto;
+        background-color: rgba(255,255,255,0.5); border-radius: 50%;
+        text-align: center; line-height: 185px;
+        overflow: hidden;}
+    .cercle-3 strong {
+        margin: 10px 0;
+        text-transform: uppercase;}
+    .cercle-3 strong, .cercle-3 p {
+         color: #333;}
+    .cercle-3 p {
+        font-size: 0.8em;}
 
-.cercle-3 {
-    width: 185px; height: 185px; margin: 10px auto; padding: 2px;
-    background-color: rgba(255,255,255,0.5); border-radius: 50%;
-    text-align: center;
-    overflow: hidden;}
-.cercle-3 strong {
-    margin: 10px 0;
-    text-transform: uppercase;}
-.cercle-3 strong, .cercle-3 p {
-     color: #333;}
-.cercle-3 p {
-    font-size: 0.8em;}
+    /***********************************************
+    ****************** Cercle /3 *******************
+    ***********************************************/
 
-/***********************************************
-****************** Cercle /3 *******************
-***********************************************/
+    .cercle-4 {
+        position: relative;
+        width: 225px; height: 225px; margin: 10px auto; padding: 2px;
+        background-color: rgba(255,255,255,0.5); border-radius: 50%;
+        text-align: center;
+        overflow: hidden;}
+    .cercle-4 strong {
+        display: inline-block; margin: 15% 0 10px;
+        text-transform: uppercase;}
+    .cercle-4 strong, .cercle-4 span {
+        font-size: 3.4em; color: #17405c;}
+    .cercle-4 p {
+        display: block; width: 50%; margin: auto;
+        font-size: 1.05em; color: #333;}
 
-.cercle-4 {
-    width: 225px; height: 225px; margin: 10px auto; padding: 2px;
-    background-color: rgba(255,255,255,0.5); border-radius: 50%;
-    text-align: center;
-    overflow: hidden;}
-.cercle-4 strong {
-    display: inline-block; margin: 15% 0 10px;
-    text-transform: uppercase;}
-.cercle-4 strong, .cercle-4 span {
-    font-size: 3.4em; color: #17405c;}
-.cercle-4 p {
-    display: block; width: 50%; margin: auto;
-    font-size: 1.05em; color: #333;}
+    /***********************************************
+    ***************** Demi-Cercle ******************
+    ***********************************************/
+    
+    .demi_cercle-container {
+        line-height: 92px;}
+    .demi_cercle { 
+        position: absolute; bottom: 0;
+        width:100%; height:50%;}
+    p.demi_cercle {
+        margin: 0;}
 
-#scroll_up { display: none; position: fixed; bottom: 0; right: 10px;}
+    /***********************************************
+    ****************** Underline *******************
+    ***********************************************/
+
+    .underline {
+        padding-bottom: 10px; margin-bottom: 10px;
+        border-bottom: 1px solid #f16150;}
+
+    /***********************************************
+    ************** Background image ****************
+    ***********************************************/
+
+    .back_img {
+        position: relative;
+        padding: 150px 50px 100px;}
+    .back_img h1 {
+        position: absolute; top: 50px; left: 0;
+        width: 100%;
+        background-color: rgba(255,255,255, 0.5);}
+
 
 
 /***********************************************
@@ -323,33 +400,23 @@ footer div div div:nth-child(4) ul li:nth-child(5) a {
 
 .temoignage_slider {
     position: relative;
-}
-
+    max-height: 246px;
+    overflow-y: hidden;}
+.temoignage_slider_inner, .temoignage_slider-caption {
+    width: 80%; margin: auto;}
+.temoignage_slider_inner .temoignage_back {
+    height: 246px;
+    background-color: #fff;}
+.temoignage_slider-caption {
+    position: relative;
+    padding-top: 50px;  
+    text-align: left;}
+.embed-responsive, .controllers .right {
+    float: right;}
 .controllers {
-    position: absolute;
-    top: 90%;
-}
-
-.temoignage_slider-caption {
-left: 20%;
-right: 20%;
-padding-bottom: 30px;
-}
-
-.temoignage_slider-control.left,
-.temoignage_slider-control.right {
-    background-image: none;
-}
-
-.temoignage_slider-caption {
-position: relative;
-left: 0;
-right: 0;
-bottom: 0;
-z-index: 10;
-padding-top: 0;
-padding-bottom: 0;
-color: #000;
-text-align: center;
-text-shadow: none;
-}
+    position: absolute; top: 45%;
+    width: 100%;}
+.controllers .left {
+    float: left;}
+.glyphicon {
+    font-size: 3em; color: #777;}

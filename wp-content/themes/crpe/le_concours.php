@@ -80,13 +80,13 @@ Récuperation du header
                         <div class="cercle-3">
                             <p><span>40 points</span></p>
                         </div>
-                        <p><strong>Français</strong><br />
-                        préparation aux 3 épreuves<br />
-                        - 11 points -</p>
-                        <p>connaissance de la langue<br />
-                        - 11 points -</p>
-                        <p>analyse d'un dossier<br />
+                        <p><strong>Mathématique</strong><br />
+                        problème sur programme<br />
                         - 13 points -</p>
+                        <p>exercices<br />
+                        - 13 points -</p>
+                        <p>analyse d'un dossier<br />
+                        - 14 points -</p>
                     </div><!-- /col-sm-3 -->
                 </div><!-- /col-sm-6 -->
                 <div class="col-sm-6">
@@ -96,25 +96,21 @@ Récuperation du header
                         <div class=" cercle-3">
                             <p><span>60 points</span></p>
                         </div>
-                        <p><strong>Français</strong><br />
-                        préparation aux 3 épreuves<br />
-                        - 11 points -</p>
-                        <p>connaissance de la langue<br />
-                        - 11 points -</p>
-                        <p>analyse d'un dossier<br />
-                        - 13 points -</p>
+                        <p><strong>Mise en situation professionnelle</strong><br />
+                        présentation du dossier<br />
+                        - 20 points -</p>
+                        <p>entretien avec un jury<br />
+                        - 40 points -</p>
                     </div><!-- /col-sm-3 -->
                     <div class="col-sm-6">
                         <div class="cercle-3">
                             <p><span>100 points</span></p>
                         </div>
-                        <p><strong>Français</strong><br />
-                        préparation aux 3 épreuves<br />
-                        - 11 points -</p>
-                        <p>connaissance de la langue<br />
-                        - 11 points -</p>
-                        <p>analyse d'un dossier<br />
-                        - 13 points -</p>
+                        <p><strong>Entretien à partir d'un dossier</strong><br />
+                        activité sportive, artistique<br />
+                        - 40 points -</p>
+                        <p>situation professionnelle<br />
+                        - 60 points -</p>
                     </div><!-- /col-sm-3 -->
                 </div><!-- /col-sm-6 -->
             </div><!-- /row -->
