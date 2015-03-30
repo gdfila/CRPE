@@ -29,33 +29,33 @@ Récuperation du header
      -->
     <section class="valeurs valeur_back">
         <div class="container">
-                <div class="row">
-                    <h1 class="h1_tall">Adoptez l'esprit Galien !</h1>
-                    <div class="col-sm-3">
-                        <div class=" cercle-3">
-                            <h2 class="h2_small"><strong>Partage</strong></h2>
-                            <p>Nos professeurs spécialistes des matières enseignées partagent leurs connaissances et vous donnent leurs astuces pour réussir le jour J.</p>
-                        </div>
-                    </div><!-- /col-sm-3 -->
-                    <div class="col-sm-3">
-                        <div class="cercle-3">
-                            <h2 class="h2_small"><strong>Progression</strong></h2>
-                            <p>Elle repose sur trois étapes essentielles qui mènent vers le succès : entraînement, méthode et encadrement.</p>
-                        </div>
-                    </div><!-- /col-sm-3 -->
-                    <div class="col-sm-3">
-                        <div class="cercle-3">
-                            <h2 class="h2_small"><strong>Cohésion</strong></h2>
-                            <p>Il ne peut y avoir de partage sans cohésion. Toutes nos équipes sont focalisées sur un seul objectif : votre réussite.</p>
-                        </div>
-                    </div><!-- /col-sm-3 -->
-                    <div class="col-sm-3">
-                        <div class="cercle-3">
-                            <h2 class="h2_small"><strong>Réussite</strong></h2>
-                            <p>Ultime étape des efforts fournis et pour laquelle nous vous accompagnons chaque jour grâce à une stratégie de concours précise.</p>
-                        </div>
-                    </div><!-- /col-sm-3 -->
-                </div><!-- /row -->
+            <div class="row">
+                <h1 class="h1_tall">Adoptez l'esprit Galien !</h1>
+                <div class="col-sm-3">
+                    <div class=" cercle-3">
+                        <h2 class="h2_small"><strong>Partage</strong></h2>
+                        <p>Nos professeurs spécialistes des matières enseignées partagent leurs connaissances et vous donnent leurs astuces pour réussir le jour J.</p>
+                    </div>
+                </div><!-- /col-sm-3 -->
+                <div class="col-sm-3">
+                    <div class="cercle-3">
+                        <h2 class="h2_small"><strong>Progression</strong></h2>
+                        <p>Elle repose sur trois étapes essentielles qui mènent vers le succès : entraînement, méthode et encadrement.</p>
+                    </div>
+                </div><!-- /col-sm-3 -->
+                <div class="col-sm-3">
+                    <div class="cercle-3">
+                        <h2 class="h2_small"><strong>Cohésion</strong></h2>
+                        <p>Il ne peut y avoir de partage sans cohésion. Toutes nos équipes sont focalisées sur un seul objectif : votre réussite.</p>
+                    </div>
+                </div><!-- /col-sm-3 -->
+                <div class="col-sm-3">
+                    <div class="cercle-3">
+                        <h2 class="h2_small"><strong>Réussite</strong></h2>
+                        <p>Ultime étape des efforts fournis et pour laquelle nous vous accompagnons chaque jour grâce à une stratégie de concours précise.</p>
+                    </div>
+                </div><!-- /col-sm-3 -->
+            </div><!-- /row -->
         </div><!-- /container -->
     </section> 
 

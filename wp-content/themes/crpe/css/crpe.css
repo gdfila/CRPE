@@ -111,19 +111,23 @@ a:hover {
     max-width: 100px;}
 
 /***********************************************
-****************** carousel ********************
+*********** carousel & img-prez ****************
 ***********************************************/
 
-.carousel-inner { 
+.img_prez {
+    position:relative; overflow: hidden;}
+.img_prez, .img_prez img { 
+    width: 100%;}
+.carousel-inner, .img_prez { 
     max-height: 450px;}
-.carousel:before, .carousel:after {
+.carousel:before, .carousel:after, .img_prez:before, .img_prez:after {
     position: absolute; content: "";
     width: 100%;}
-.carousel:before {
+.carousel:before, .img_prez_aplat:before {
     top: 0; left: 0; z-index: 13;
     height: 100%;
     background-color: rgba(22,64,91, 0.01);}
-.carousel:after {
+.carousel:after, .img_prez_incurve:after {
     bottom: -16px; left: 0; z-index: 14;
     height: 100px;
     background: url('../img/bottom_incurve.png') no-repeat; background-size: 100% 100%;}
@@ -161,6 +165,43 @@ a:hover {
 
 .stat_back {
     background: url('../img/images/296_MG_9554.jpg') center center / 100%; background-size: cover;}
+
+/***********************************************
+************** Section Graduate ****************
+***********************************************/
+
+.graduate_back {
+    background: url('../img/images/DSC_0206-2.jpg') center center / 100%; background-size: cover;}
+.graduate h1, .graduate p {
+    color: #fff;}
+.graduate h1 {
+    font-size: 4em;}
+.graduate p {
+    font-size: 1.6em;}
+
+/***********************************************
+**************** Section Test ******************
+***********************************************/
+
+.admission {
+    background-color: rgba(241,97,80, 0.3);}
+.admission h2 {
+    margin-bottom: 20px;}
+.admission .cercle-3 {
+    background-color: rgba(241,97,80, 1);}
+.admission .cercle-3 p {
+    font-size: 2.3em; color: #fff; line-height: 185px;}
+.admission .cercle-3 p span {
+    line-height: normal;}
+
+/***********************************************
+************ Section Perspective ***************
+***********************************************/
+
+.perspective h2 {
+    margin-bottom: 20px;}
+.perspective ul {
+    margin-bottom: 50px;}
 
 /***********************************************
 ************* Section  Formules ****************
@@ -243,7 +284,7 @@ footer div div div:nth-child(4) ul li:nth-child(5) a {
 ***********************************************/
 
 .cercle-3 {
-    width: 185px; height: 185px; padding: 2px;
+    width: 185px; height: 185px; margin: 10px auto; padding: 2px;
     background-color: rgba(255,255,255,0.5); border-radius: 50%;
     text-align: center;
     overflow: hidden;}
@@ -260,7 +301,7 @@ footer div div div:nth-child(4) ul li:nth-child(5) a {
 ***********************************************/
 
 .cercle-4 {
-    width: 225px; height: 225px; padding: 2px; margin: auto;
+    width: 225px; height: 225px; margin: 10px auto; padding: 2px;
     background-color: rgba(255,255,255,0.5); border-radius: 50%;
     text-align: center;
     overflow: hidden;}
