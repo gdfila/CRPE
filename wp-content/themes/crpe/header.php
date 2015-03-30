@@ -1,13 +1,14 @@
 <?php
     include_once "api/Thalamus_init.php";
 
-    // Liste des centres
-    //$centersList = $client->call(array("service" => "center","method" => "centersList"));
-    $centersList = $client->call(array("service" => "formation","method" => "centersListByFormation","formationId" => 400));
-    // plage horaire
+  // Liste des centres
+      $centersList = $client->call(array("service" => "formation","method" => "centersListByFormation","formationId" => 400));
+   //  plage horaire
     $horaireList = $client->call(array("service" => "prospect","method" => "callBackTimesList"));
-
-    $data=[];
+      $_SESSION['horaireList']=$horaireList;
+   $data=[];
+   
+   
        if(!empty($centersList))
      {
          foreach ($centersList->datas as $centre)
@@ -17,8 +18,10 @@
                         break ;
                      }
                         array_push($data, array( "name"=>$centre->name ,"id"=>$centre->id));
-               }
+               } 
      }
+     $_SESSION['centre']=$data;
+     
 ?><!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -38,6 +41,7 @@
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/centre.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/concours.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/anne.css">
     
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.corr.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/crpe.css">
@@ -147,13 +151,13 @@
                         </div>  
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="rappel" id='rappel'> Demander à être rappelé
+                                <input type="checkbox" name="rappel" id='rappelHeader'> Demander à être rappelé
                             </label><br>
                                     <!-- plage horaire -->
-                                    <div class="form-group horaireHidden"  id="horaire" >
-                                        <label for="exampleInputPassword1">Plage horaire souhaitée</label>
+                                    <div class="form-group horaireHidden"  id="horaireHeader" >
+                                        <label for="horaire">Plage horaire souhaitée</label>
                                         <select class="form-control input-lg" name="horaire">
-                                            <?php foreach($horaireList as $horaire):  ?>
+                                            <?php foreach( $_SESSION['horaireList'] as $horaire):  ?>
                                                 <?php foreach($horaire as $heure):  ?>
                                                     <option  value="<?php echo $heure->id; ?>"><?php echo $heure->name; ?></option>
                                                 <?php endforeach ?>
@@ -161,11 +165,11 @@
                                         </select>
                                    </div>
                             <label>
-                            <input type="checkbox"  name="brochure" id="brochure"> Recevoir la brochure par courrier
+                            <input type="checkbox"  name="brochure" id="brochureHeader"> Recevoir la brochure par courrier
                            
                         </div>
                         <!--adresse d'envoie-->
-                        <div  id="adressEnvoi" class="adrEnvoiHidden">
+                        <div  id="adressEnvoiHeader" class="adrEnvoiHidden">
                                     <div class="form-group">
                                           <label for="adress">Adresse</label>
                                      <input type="text" name="adress" class="form-control" >
@@ -183,7 +187,7 @@
                         <div class="form-group">
                             <label for="centre">Centre</label>
                             <select class="form-control input-lg" name="centre">
-                                <?php foreach($data as $nom):  ?>
+                                <?php foreach($_SESSION['centre'] as $nom):  ?>
                                     <option  value="<?php echo $nom['id']."/".$nom['name']; ?>"><?php echo $nom['name']; ?></option>
                                 <?php endforeach ?>
                             </select>
@@ -192,23 +196,9 @@
                         <input type="submit" class="btn btn-lg btn-primary" name="valider" value="Envoyer"><br><br>
                     </form>
                 </div>
-                    <!-- <div class="col-sm-6 form_right">
-                    <br>
-                    <div class:"int_form_left">
-                    <h3>Vous avez une question ?</h3><br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit voluptas rerum pariatur eum eos      dolor cum sed aliquam, unde rem enim totam, perspiciatis voluptatem quas eaque. Cum magni, assumenda sint.      </p><br>
-                    <h3>Vous etes intéressez par un Pack ?</h3><br>
-                    <div class:"btn_pack_right" >
-                    <button class="btn  btn-btn  text-uppercase">Pack Training</button>
-
-
-                    <button class="btn  btn-btn text-uppercase">Pack Complet</button>
-                    </div>
-                    <br><br>
-                    <h3>Souhaitez vous un rendez vous ?</h3><br>
-                    <button class="btn  btn-btn  text-uppercase">Candidature</button>
-                    </div>
-                    </div><br><br><br> -->
+                    
             </div>
         </div>
     </div>
+    
+    <h1><?php var_dump( $paged); ?></h1>

@@ -87,9 +87,9 @@ Récuperation du header
                                     <!-- plage horaire -->
                                     
                                         <div class="form-group horaireHidden"  id="horaire" >
-                                            <label for="exampleInputPassword1">Plage horaire souhaitée</label>
+                                            <label for="horaire">Plage horaire souhaitée</label>
                                             <select class="form-control input-lg" name="horaire">
-                                                 <?php foreach($horaireList as $horaire):  ?>
+                                                 <?php foreach($_SESSION['horaireList'] as $horaire):  ?>
                                                            <?php foreach($horaire as $heure):  ?>
                                                                 <option  value="<?php echo $heure->id; ?>"><?php echo $heure->name; ?></option>
                                                             <?php endforeach ?>
@@ -120,7 +120,7 @@ Récuperation du header
                             <label for="centre">Centre</label>
                             <select class="form-control input-lg" name="centre">
                              
-                                <?php foreach($data as $nom):  ?>
+                                <?php foreach($_SESSION['centre'] as $nom):  ?>
                                  
                                 <option  value="<?php echo $nom['id']."/".$nom['name']; ?>"><?php echo $nom['name']; ?></option>
                                 <?php endforeach ?>

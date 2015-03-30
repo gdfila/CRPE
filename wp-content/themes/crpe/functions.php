@@ -9,6 +9,7 @@ function crpe_theme() {
     register_nav_menus([ 
         'nav' => 'nav_header',
     ]);
+    
 }
 add_action('after_setup_theme', 'crpe_theme');
 
@@ -48,6 +49,21 @@ function theme_name_scripts() {
 add_action( 'wp_footer', 'theme_name_scripts' );
 
 require_once ABSPATH . 'wp-content/themes/crpe/cpt/crpe_centres.php';
+
+
+add_action('init', 'myStartSession', 1);
+add_action('wp_logout', 'myEndSession');
+add_action('wp_login', 'myEndSession');
+
+function myStartSession() {
+    if(!session_id()) {
+        session_start();
+    }
+}
+
+function myEndSession() {
+    session_destroy ();
+}
 
 /**
  * formulaire brochure
@@ -210,3 +226,32 @@ function traitementFormContact() {
    
 }
 add_action('template_redirect', 'traitementFormContact');
+
+/*********   remplir les champs listes lier a thalamus dans les differents formulaire **********/
+
+//function remplirSelect ()
+//{
+//    include_once "api/Thalamus_init.php";
+//
+//  // Liste des centres
+//      $centersList = $client->call(array("service" => "formation","method" => "centersListByFormation","formationId" => 400));
+//   //  plage horaire
+//    $horaireList = $client->call(array("service" => "prospect","method" => "callBackTimesList"));
+//
+//   $data=[];
+//       if(!empty($centersList))
+//     {
+//         foreach ($centersList->datas as $centre)
+//            {
+//                         if (empty($centre))
+//                    {   
+//                        break ;
+//                     }
+//                        array_push($data, array( "name"=>$centre->name ,"id"=>$centre->id));
+//               } 
+//     }
+//     return $data;
+//}
+//add_filter( 'query_va
+//s', 'remplirSelect');
+
