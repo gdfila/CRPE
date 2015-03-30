@@ -4,27 +4,36 @@
  */
 ?>
 
+<!--
+Récuperation du header
+ -->
 <?php get_header(); ?>
-<div class="content">
+
+<div id="container_prepa" class="top_content">
 
     <?php
         $post_thumbnail_id = get_post_thumbnail_id($post->ID);
         $post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
     ?>
 
-    <div class="container-fluid content-background" style="background: url(<?php echo $post_thumbnail_url; ?>) no-repeat; background-size: cover;"></div>
-    
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12"><br><br>
-                <h1 class="text-center text-uppercase ">Préparation aux concours</h1><br>
-                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium architecto Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium architecto, reprehenderit, 
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium architecto, reprehenderit quia delectus volupt</p>
-            </div>
-        </div>
-     </div>
-</section>    
+    <!--
+    Affiche une image de présentation pour la page
+     --> 
+    <div class="img_prez img_prez_aplat img_prez_incurve">
+        <img src="<?php echo $post_thumbnail_url; ?>">
+    </div>
+
+    <!--
+    Section pour mettre en avant le texte, exemple : l'accroche. Un h1 pour le titre général de la page et un texte grossi
+     -->
+    <section class="accroche">
+        <div class="container">
+            <h1 class="h1_tall">Définition du concours</h1>
+            <p>Le concours de recrutement de professeur des écoles (CRPE1), est le concours sur lequel s'appuie en France le Ministère de l'Éducation nationale pour recruter les professeurs des écoles, exerçant dans le primaire (sans distinction dans les écoles maternelles et dans les écoles élémentaires).</p>
+            <h2 class="h2_medium">Définition du concours</h2>
+            <p>Le concours de recrutement de professeur des écoles (CRPE1), est le concours sur lequel s'appuie en France le Ministère de l'Éducation nationale pour recruter les professeurs des écoles, exerçant dans le primaire (sans distinction dans les écoles maternelles et dans les écoles élémentaires).</p>
+        </div><!-- /container -->
+    </section>
     
     <section class="prepa_back_1">      
        
