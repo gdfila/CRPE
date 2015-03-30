@@ -139,8 +139,37 @@ function traitementFormBrochure() {
       }
 
     }
-
 add_action('template_redirect', 'traitementFormBrochure');
+
+/**
+ * permet de remplir les champs select des differents formulaire
+ */
+function remplirListe()
+{
+     include_once "api/Thalamus_init.php";
+
+  // Liste des centres
+      $centersList = $client->call(array("service" => "formation","method" => "centersListByFormation","formationId" => 400));
+   //  plage horaire
+    $horaireList = $client->call(array("service" => "prospect","method" => "callBackTimesList"));
+      $_SESSION['horaireList']=$horaireList;
+   $data=[];
+   
+   
+       if(!empty($centersList))
+     {
+         foreach ($centersList->datas as $centre)
+            {
+                         if (empty($centre))
+                    {   
+                        break ;
+                     }
+                        array_push($data, array( "name"=>$centre->name ,"id"=>$centre->id));
+               } 
+     }
+     $_SESSION['centre']=$data;
+}
+add_action('template_redirect', 'remplirListe');
 
 
 //**----------------------------- verif les champs du formulaire -----------------**/
@@ -195,22 +224,22 @@ function rappel($client)
 }
 
 /**
- * formulaire contact
+ * formulaire Rappel
  */
-function traitementFormContact() {
+function traitementFormRappel() {
      $_GET['erreur']="";
     $_GET['sucess']="";
     $_GET['mess']="";
     $_GET['centre']="";
  
-     if (isset($_POST['valider']) && isset($_POST['contact-verif']))  
+     if (isset($_POST['valider']) && isset($_POST['rappel-verif']))  
    {
-      if (wp_verify_nonce($_POST['contact-verif'], 'contact')) 
+      if (wp_verify_nonce($_POST['rappel-verif'], 'rappel')) 
      {                /* demande de rappel   */
             if($_POST['rappel']==true && empty($_POST['telephone']))
              {
                  $_GET['erreur']="telephone";
-                 require_once ABSPATH . 'wp-content/themes/crpe/contact.php';
+                 require_once ABSPATH . 'wp-content/themes/crpe/rappel.php';
                   exit();
               }
                 include_once "api/Thalamus_init.php";
@@ -218,40 +247,34 @@ function traitementFormContact() {
                     
                           $_GET['erreur']='success';
                        
-                            require_once ABSPATH . 'wp-content/themes/crpe/contact.php';
+                            require_once ABSPATH . 'wp-content/themes/crpe/rappel.php';
                              exit();
                        }
             
    }
    
 }
+add_action('template_redirect', 'traitementFormRappel');
+
+/****  formulaire d'inscription jpo  ***/
+function inscriptionJPO()
+{
+//    var_dump($_POST);
+//    die();
+}
+add_action('template_redirect', 'inscriptionJPO');
+
+/**** formulaire de contact ****/
+function traitementFormContact()
+{
+     if (isset($_POST['valider']) && isset($_POST['contact-verif']))  
+   {
+      if (wp_verify_nonce($_POST['contact-verif'], 'contact')) 
+      {
+          var_dump($_POST);
+          die();
+      }  
+   }
+            
+}
 add_action('template_redirect', 'traitementFormContact');
-
-/*********   remplir les champs listes lier a thalamus dans les differents formulaire **********/
-
-//function remplirSelect ()
-//{
-//    include_once "api/Thalamus_init.php";
-//
-//  // Liste des centres
-//      $centersList = $client->call(array("service" => "formation","method" => "centersListByFormation","formationId" => 400));
-//   //  plage horaire
-//    $horaireList = $client->call(array("service" => "prospect","method" => "callBackTimesList"));
-//
-//   $data=[];
-//       if(!empty($centersList))
-//     {
-//         foreach ($centersList->datas as $centre)
-//            {
-//                         if (empty($centre))
-//                    {   
-//                        break ;
-//                     }
-//                        array_push($data, array( "name"=>$centre->name ,"id"=>$centre->id));
-//               } 
-//     }
-//     return $data;
-//}
-//add_filter( 'query_va
-//s', 'remplirSelect');
-

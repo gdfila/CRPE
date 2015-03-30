@@ -1,28 +1,4 @@
-<?php
-    include_once "api/Thalamus_init.php";
-
-  // Liste des centres
-      $centersList = $client->call(array("service" => "formation","method" => "centersListByFormation","formationId" => 400));
-   //  plage horaire
-    $horaireList = $client->call(array("service" => "prospect","method" => "callBackTimesList"));
-      $_SESSION['horaireList']=$horaireList;
-   $data=[];
-   
-   
-       if(!empty($centersList))
-     {
-         foreach ($centersList->datas as $centre)
-            {
-                         if (empty($centre))
-                    {   
-                        break ;
-                     }
-                        array_push($data, array( "name"=>$centre->name ,"id"=>$centre->id));
-               } 
-     }
-     $_SESSION['centre']=$data;
-     
-?><!doctype html>
+<!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
@@ -77,7 +53,8 @@
     </header>
     <div id="action">
         <a href="#" data-toggle="modal" data-target="#form">Rappelez-moi</a>
-        <a href="/galien_crpe/contact/contact">Contact</a>
+         <a href="#" data-toggle="modal" data-target="#form">Contact</a>
+        <!--<a href="/galien_crpe/contact/contact">Contact</a>-->
         <a href="/galien_crpe/contact/brochure">Brochure</a>
         <a href="http://www.studius.fr">Studius</a>
     </div>
@@ -201,4 +178,4 @@
         </div>
     </div>
     
-    <h1><?php var_dump( $paged); ?></h1>
+  

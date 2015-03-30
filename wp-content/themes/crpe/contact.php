@@ -3,26 +3,6 @@
  * Template Name: contact
  */
 ?>
-<?php
-//include_once "api/Thalamus_init.php";
- //centre crpe
-$centersList= $client->call(array("service" => "formation","method" => "centersListByFormation","formationId" => 400));
-//plage horaire
-$horaireList = $client->call(array("service" => "prospect","method" => "callBackTimesList"));
-$data=[];
-   if(!empty($centersList))
- {
-     foreach ($centersList->datas as $centre)
-        {
-                     if (empty($centre))
-                {   
-                    break ;
-                 }
-                    array_push($data, array( "name"=>$centre->name ,"id"=>$centre->id));
-           }
- }
-  
-?>
 <?php get_header(); ?>
 
 
@@ -61,49 +41,31 @@ $data=[];
                     <form method="post" action="#">
                            <?php wp_nonce_field('contact', 'contact-verif'); ?>  <!-- pour verifier que les reponse du formulaire proviennet bien de notre site -->
                 <div class="form-group">
-                    <label for="nom">Nom</label>
-                    <input type="text" name="nom" class='form-control' id="firstname" >
+                    <label for="nom">Nom *</label>
+                    <input type="text" name="nom" class='form-control' id="firstname" required>
                 </div>
                 <div class="form-group">
-                    <label for="prenom">Prénom</label>
-                    <input type="text" name="prenom" class="form-control" id="exampleInputFirstname" >
+                    <label for="prenom">Prénom *</label>
+                    <input type="text" name="prenom" class="form-control" id="exampleInputFirstname" required>
                 </div>
                 <div class="form-group">
-                    <label for="emai1">Email</label>
-                    <input type="email" name="email" class="form-control" id="email" >
+                    <label for="emai1">Email *</label>
+                    <input type="email" name="email" class="form-control" id="email" required>
                 </div>
                 <div class="form-group">
                     <label for="telephone">Télephone</label>
                     <input type="tel" name="telephone" class="form-control" placeholder="exemple: 0102030405">
-                </div>  
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="rappel" id='rappel'> Demander à être rappelé
-                    </label>
                 </div>
-                            <!-- plage horaire -->
-                            
-                                <div class="form-group horaireHidden"  id="horaire" >
-                                    <label for="plage horaire">Plage horaire souhaitée</label>
-                                    <select class="form-control input-lg" name="horaire">
-                                         <?php foreach($_SESSION['horaireList'] as $horaire):  ?>
-                                                   <?php foreach($horaire as $heure):  ?>
-                                                        <option  value="<?php echo $heure->id; ?>"><?php echo $heure->name; ?></option>
-                                                    <?php endforeach ?>
-                                        <?php endforeach ?>
-                                    </select>
-                               </div>
-                                           
-                         <div class="form-group">
+                <div class="form-group">
                              <label for="message">Message</label>
-                             <textarea name="message"   rows="2" cols="40"></textarea>
-                          </div>
+                             <textarea name="message"   rows="2" cols="85"></textarea>
+                   </div>
               
                      <div class="form-group">
                         <label for="centres">Centre</label>
                         <select class="form-control input-lg" name="centre">
 
-                             <?php foreach($data as $nom):  ?>
+                             <?php foreach($_SESSION['centre'] as $nom):  ?>
                               <option  value="<?php echo $nom['id']; ?>"><?php echo $nom['name']; ?></option>
                             <?php endforeach ?>
                         </select>
