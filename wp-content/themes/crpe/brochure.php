@@ -22,7 +22,7 @@ Récuperation du header
         <img src="<?php echo $post_thumbnail_url; ?>" />
     </div>
     <?php 
-
+    //affichage message d'erreur
     if (isset($_GET['erreur']))
     {
         echo '<div class="alert">';
@@ -32,7 +32,6 @@ Récuperation du header
                 case 'telephone' :
                     echo 'Vous devez indiquer un numéro de téléphone pour être rappeler.';
                     break;
-     
                 case 'courrier' :
                     echo 'Votre adresse pour l\'envoie de la brochure est imcomplete.';
                     break;
@@ -42,7 +41,6 @@ Récuperation du header
                 case 'rappel' :
                       echo $_GET['mess'];
                      break;
-     
             }
             echo '</div>';
     }
@@ -61,96 +59,83 @@ Récuperation du header
     <section class="contact">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 form_left">
-           
+                <div class="col-sm-3 picto_title_doc">
+                    <h1 class="h1_small">Téléchargez les brochures d’information Galien</h1>
+                </div>
+                <div class="col-sm-6 col-sm-offset-1">
                     <form method="post" action="#">
+                        <h2 class="h2_tall">Téléchargez les brochures d’information Galien</h2>
                         <?php wp_nonce_field('brochure', 'brochure-verif'); ?>  <!-- pour verifier que les reponse du formulaire proviennet bien de notre site -->
                         <div class="form-group">
-                            <label for="nom">Nom</label>
+                            <label for="nom">Nom *</label>
                             <input type="text" name="nom" class="form-control" id="exampleInputName1" >
                         </div>
                         <div class="form-group">
-                            <label for="prenom">Prénom</label>
+                            <label for="prenom">Prénom *</label>
                             <input type="text" name="prenom" class="form-control" id="exampleInputFirstname" >
                         </div>
                         <div class="form-group">
-                            <label for="Email1">Email</label>
+                            <label for="Email1">Email *</label>
                             <input type="email" name="email" class="form-control" id="exampleInputEmail1" >
+                        </div>
                         <div class="form-group">
                             <label for="telephone">Télephone</label>
                             <input type="tel" name="telephone" class="form-control" placeholder="exemple: 0102030405">
                         </div>  
                         <div class="checkbox">
-                            <label>
+                            <p><label>
                                 <input type="checkbox" name="rappel" id='rappel'> Demander à être rappelé
-                            </label><br>
-                                    <!-- plage horaire -->
-                                    
-                                        <div class="form-group horaireHidden"  id="horaire" >
-                                            <label for="horaire">Plage horaire souhaitée</label>
-                                            <select class="form-control input-lg" name="horaire">
-                                                 <?php foreach($_SESSION['horaireList'] as $horaire):  ?>
-                                                           <?php foreach($horaire as $heure):  ?>
-                                                                <option  value="<?php echo $heure->id; ?>"><?php echo $heure->name; ?></option>
-                                                            <?php endforeach ?>
+                            </label></p>
+
+                            <!-- plage horaire -->
+                            <div id="horaire" class="form-group">
+                                <label for="horaire">Plage horaire souhaitée</label>
+                                <select class="form-control input-lg" name="horaire">
+                                     <?php foreach($_SESSION['horaireList'] as $horaire):  ?>
+                                               <?php foreach($horaire as $heure):  ?>
+                                                    <option  value="<?php echo $heure->id; ?>"><?php echo $heure->name; ?></option>
                                                 <?php endforeach ?>
-                                            </select>
-                                       </div>
-                            <label>
-                                <input type="checkbox"  name="brochure" id="brochure"> Recevoir la brochure par courrier
-                            </label>
+                                    <?php endforeach ?>
+                                </select>
+                           </div>
+
                         </div>
-                        <!--adresse d'envoie-->
-                        <div  id="adressEnvoi" class="adrEnvoiHidden">
-                                    <div class="form-group">
-                                          <label for="adress">Adresse</label>
-                                     <input type="text" name="adress" class="form-control" >
-                                 </div>
-                                 <div class="form-group">
-                                     <label for="code postal">Code postal</label>
-                                     <input type="number" name="cp" class="form-control"  >
-                                 </div>
-                                 <div class="form-group">
-                                     <label for="ville">Ville</label>
-                                     <input type="text" name="ville" class="form-control"  >
-                                 </div>
-                        </div> 
-                             
+                        <div class="checkbox">
+                            <p><label>
+                                <input type="checkbox" name="brochure" id="brochure"> Recevoir la brochure par courrier
+                            </label></p>
+
+                            <!--adresse d'envoie-->
+                            <div id="adressEnvoi">
+                                <div class="form-group">
+                                    <label for="adress">Adresse</label>
+                                    <input type="text" name="adress" class="form-control" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="code postal">Code postal</label>
+                                    <input type="number" name="cp" class="form-control"  >
+                                </div>
+                                <div class="form-group">
+                                    <label for="ville">Ville</label>
+                                    <input type="text" name="ville" class="form-control"  >
+                                </div>
+                            </div>
+
+                        </div>
                         <div class="form-group">
-                            <label for="centre">Centre</label>
+                            <label for="centre">Centre *</label>
                             <select class="form-control input-lg" name="centre">
-                             
                                 <?php foreach($_SESSION['centre'] as $nom):  ?>
-                                 
-                                <option  value="<?php echo $nom['id']."/".$nom['name']; ?>"><?php echo $nom['name']; ?></option>
+                                    <option  value="<?php echo $nom['id']."/".$nom['name']; ?>"><?php echo $nom['name']; ?></option>
                                 <?php endforeach ?>
                             </select>
                         </div>
-                        
-                        
-                        <input type="submit" class="btn btn-lg btn-primary" name="valider" value="Envoyer"><br><br>
+                        <input type="submit" class="btn btn-primary" name="valider" value="Envoyer"><br><br>
                     </form>
                 </div><!-- /col-sm-6 -->
             </div><!-- /row -->
-
-            <div class="col-sm-6 form_right">
-                <br>
-                <div class:"int_form_left">
-                    <h3>Vous avez une question ?</h3><br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit voluptas rerum pariatur eum eos      dolor cum sed aliquam, unde rem enim totam, perspiciatis voluptatem quas eaque. Cum magni, assumenda sint.      </p><br>
-                    <h3>Vous etes intéressez par un Pack ?</h3><br>
-                    <div class:"btn_pack_right" >
-                        <button class="btn  btn-btn  text-uppercase">Pack Training</button>
-                        <button class="btn  btn-btn text-uppercase">Pack Complet</button>
-                    </div>
-                    <br><br>
-                    <h3>Souhaitez vous un rendez vous ?</h3><br>
-                    <button class="btn  btn-btn  text-uppercase">Candidature</button>
-                </div>
-            </div><br><br><br>
         </div><!-- /container -->
     </section>
-
 </div><!-- /container_brochure -->
 
 <!--

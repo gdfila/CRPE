@@ -20,7 +20,7 @@ $(document).ready(function() {
     });
     
     // Menu au clic
-    $('.menu-item-has-children').click(function () {
+    $('.menu-item-has-children').click(function() {
         if (!$(this).hasClass('open')) {
             $('.menu-item-has-children').removeClass('open');
             $('.sub-menu').slideUp();
@@ -34,12 +34,12 @@ $(document).ready(function() {
     });
 
     // Scroll top clic
-    $('#scroll_up').click(function () {
+    $('#scroll_up').click(function() {
         $("html, body").animate({scrollTop: 0}), 2500;
     });
 
     // En savoir+
-    $('.info').click(function () {
+    $('.info').click(function() {
         $(this).children('.info_sup').slideToggle();
         $('.button').toggleClass('active');
         if ($('.button').hasClass('active')){    
@@ -53,5 +53,23 @@ $(document).ready(function() {
     $('.counter').counterUp({
         delay: 40,
         time: 2500
+    });
+
+    // Formulaire champs chekbox caché
+    $('#brochure').click(function(){
+        if ($("#brochure").is(":checked") == true )
+        {        
+            $('#adressEnvoi').slideDown();
+        }else{
+            $('#adressEnvoi').slideUp();
+         }        
+    });
+    $('#rappel').click(function(){
+        if ($("#rappel").is(":checked") == true )
+        {        
+            $('#horaire').slideDown();
+        }else{
+            $('#horaire').slideUp();
+         }        
     });
 });

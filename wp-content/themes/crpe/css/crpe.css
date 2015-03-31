@@ -154,7 +154,7 @@ a:hover {
 .carousel-caption:after {
     position: absolute; content: ""; top: 15px; left: 15px;
     width: 24px; height: 24px;
-    background: url('../img/picto/arrow_big.png') no-repeat; background-size: 100% 100%;}
+    background: url('../img/picto/arrow_medium.png') no-repeat; background-size: 100% 100%;}
 .carousel-caption h4 {
     margin-bottom: 5px;
     font-size: 1em; color: #fff;}
@@ -177,7 +177,7 @@ a:hover {
 #action a:nth-child(2) {
     background: #17405c url('../img/picto/picto_contact.png') no-repeat center 20px;}
 #action a:nth-child(3) {
-    background: #17405c url('../img/picto/picto_documentation.png') no-repeat center 20px;}
+    background: #17405c url('../img/picto/picto_documentation.png') no-repeat center 17px;}
 #action a:nth-child(4) {
     background: #17405c url('../img/picto/picto_espace_etudiant.png') no-repeat center 13px;}
 #action a:nth-child(1):hover, #action a:nth-child(2):hover, #action a:nth-child(3):hover, #action a:nth-child(4):hover {
@@ -299,12 +299,35 @@ a:hover {
     display: none;}
 
 /***********************************************
-***************** Formulaire *******************
+********* Section Contact (formulaire) *********
 ***********************************************/
 
-form {
+.contact {
     text-align: left;}
+#adressEnvoi, #horaire {
+    display:none;}
+#horaire label, #adressEnvoi label {
+    margin-bottom: 5px; padding-left: 0;
+    font-weight: 700;}
+.contact h1 {
+    padding-left: 44px; 
+    background: url('../img/picto/arrow_grey.png') no-repeat center left;}
+textarea {
+    max-width: 100%;}
     
+    /*********** Brochure **********/   
+    .contact .picto_title_doc {
+        padding-top: 100px;
+        background: url('../img/picto/picto_documentation_grey.png') no-repeat top center;
+        text-transform: inherit;}
+
+    /*********** Contact **********/   
+    .contact .picto_title_mail {
+        padding-top: 100px;
+        background: url('../img/picto/picto_contact_grey.png') no-repeat top center;
+        text-transform: inherit;}
+
+
 /***********************************************
 ***************** Scroll top *******************
 ***********************************************/
