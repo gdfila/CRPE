@@ -72,42 +72,42 @@ Récuperation du header
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner temoignage_slider_inner">
                         <div class="item active">
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 col-sm-offset-1">
                                 <div class="embed-responsive embed-responsive-16by9 col-sm-9">
                                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rk93EIqVd8g"></iframe>
                                 </div>
                             </div>
-                            <div class="col-sm-6 temoignage_back">
+                            <div class="col-sm-5 temoignage_back">
                               <div class="temoignage_slider-caption">
-                                  <p><strong>Antoine</strong></p>
+                                  <p class="h2_small"><strong>Antoine</strong></p>
                                   <p>1ere année medecine</p>
                                   <p>Ma marraine me soutient constamment tout au long de mon année et aujourd’hui mes résultats sont probants. Je me sens en confiance, et je garderai un bon souvenir dans ma Prépa.</p>
                               </div>
                             </div>
                         </div>
                         <div class="item">
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 col-sm-offset-1">
                                 <div class="embed-responsive embed-responsive-16by9 col-sm-9">
                                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-fmpxlpgQyM"></iframe>
                                 </div>
                             </div>
-                            <div class="col-sm-6 temoignage_back">
+                            <div class="col-sm-5 temoignage_back">
                                 <div class="temoignage_slider-caption">
-                                    <p><strong>Antoine</strong></p>
+                                    <p class="h2_small"><strong>Antoine</strong></p>
                                     <p>1ere année medecine</p>
                                     <p>Ma marraine me soutient constamment tout au long de mon année et aujourd’hui mes résultats sont probants. Je me sens en confiance, et je garderai un bon souvenir dans ma Prépa.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 col-sm-offset-1">
                                 <div class="embed-responsive embed-responsive-16by9 col-sm-9">
                                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2cKztlWH_wE"></iframe>
                                 </div>
                             </div>
-                            <div class="col-sm-6 temoignage_back">
+                            <div class="col-sm-5 temoignage_back">
                                 <div class="temoignage_slider-caption">
-                                    <p><strong>Antoine</strong></p>
+                                    <p class="h2_small"><strong>Antoine</strong></p>
                                     <p>1ere année medecine</p>
                                     <p>Ma marraine me soutient constamment tout au long de mon année et aujourd’hui mes résultats sont probants. Je me sens en confiance, et je garderai un bon souvenir dans ma Prépa.</p>
                                 </div>

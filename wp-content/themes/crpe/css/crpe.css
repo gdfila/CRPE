@@ -104,8 +104,8 @@ a:hover {
     width: 100%;}
 .nav_header .nav_fixed .logo_nav {
     position: absolute; top: 5px; z-index: 1;
-    width: inherit; height: inherit; padding-top: inherit;
-    background-color: inherit;}
+    height: inherit; padding-top: inherit;
+    background-color: inherit; -webkit-box-shadow: none; -moz-box-shadow: none; -ms-box-shadow: none; box-shadow: none;}
 .nav_header .nav_fixed .logo_nav .logo {
     position: initial;
     max-width: 100px;}
@@ -133,6 +133,35 @@ a:hover {
     background: url('../img/bottom_incurve.png') no-repeat; background-size: 100% 100%;}
 
 /***********************************************
+**************** plugin jpo ********************
+***********************************************/
+
+.carousel-caption {
+    position: absolute;
+    left: 15%;
+    bottom: 70px;
+    background-color: rgba(22,64,91,0.7);
+    padding: 15px 15px 15px 50px;
+    color: #fff;
+    width: 400px;
+    box-sizing: border-box;
+    line-height: 20px;
+    font-size: 15px;
+    z-index: 1500;
+    text-align: left;
+}
+.carousel-caption:after {
+    position: absolute; content: ""; top: 15px; left: 15px;
+    width: 24px; height: 24px;
+    background: url('../img/picto/arrow_big.png') no-repeat; background-size: 100% 100%;}
+.carousel-caption h4 {
+    margin-bottom: 5px;
+    font-size: 1em; color: #fff;}
+.carousel-caption p {
+    font-size: 0.85em;
+}
+
+/***********************************************
 **************** plugin action *****************
 ***********************************************/
 
@@ -140,9 +169,17 @@ a:hover {
     position: fixed; top: 200px; right: 0; z-index: 9997;}
 #action a {
     display: block; width: 70px; height: 70px;
-    background-color: #17405c;
-    line-height: 125px; font-size: 0.65em; color: #fff; text-align: center;}
-#action a:hover {
+    line-height: 125px; font-size: 0.65em; color: #fff; text-align: center;
+    cursor: pointer;}
+#action a:nth-child(1) {
+    background: #17405c url('../img/picto/picto_phone.png') no-repeat center 10px;}
+#action a:nth-child(2) {
+    background: #17405c url('../img/picto/picto_contact.png') no-repeat center 20px;}
+#action a:nth-child(3) {
+    background: #17405c url('../img/picto/picto_documentation.png') no-repeat center 20px;}
+#action a:nth-child(4) {
+    background: #17405c url('../img/picto/picto_espace_etudiant.png') no-repeat center 13px;}
+#action a:nth-child(1):hover, #action a:nth-child(2):hover, #action a:nth-child(3):hover, #action a:nth-child(4):hover {
     background-color: #f16150;}
 
 /***********************************************
@@ -160,7 +197,8 @@ a:hover {
     background: url('../img/images//WEB_galien_03.jpg') center center / 100%; background-size: cover;}
 .valeurs .cercle-3 {
     padding: 48px 10px 10px;
-    background-repeat: no-repeat; background-position: 50% 8px;}
+    background-repeat: no-repeat; background-position: 50% 8px;
+    line-height: normal;}
 .valeurs .cercle-3 h2 {
     margin-bottom: 5px;}
 .valeurs div div:nth-child(2) .cercle-3 { 
@@ -271,8 +309,15 @@ form {
 ***********************************************/
 
 #scroll_up { 
-    display: none; position: fixed; bottom: 0; right: 10px;}
-
+    position: fixed; bottom: 20px; right: 20px;
+    display: none; width: 38px; height: 38px;
+    background: #16405b url('../img/picto/arrow_top.png') no-repeat center; background-size: 24px; border-radius: 3px;
+    text-indent: -9999px;
+    opacity: 0.8;
+    -webkit-transition: background 200ms linear;
+    -moz-transition: background 200ms linear;
+    transition: background 200ms linear;}
+  
 /***********************************************
 ******************** Footer ********************
 ***********************************************/
@@ -409,9 +454,13 @@ footer div div div:nth-child(4) ul li:nth-child(5) a {
     background-color: #fff;}
 .temoignage_slider-caption {
     position: relative;
-    padding-top: 50px;  
-    text-align: left;}
-.embed-responsive, .controllers .right {
+    padding-top: 30px;  
+    text-align: justify;}
+.temoignage_slider-caption .h2_small {
+    margin-bottom: 0;}
+.embed-responsive {
+    width: 100%;}
+.controllers .right {
     float: right;}
 .controllers {
     position: absolute; top: 45%;
