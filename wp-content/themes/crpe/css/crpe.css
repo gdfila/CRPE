@@ -76,14 +76,15 @@ a:hover {
     position: absolute; left: 10px; bottom: 15px;}
 .nav_header nav > ul li a { 
     display: block; padding: 15px;
-    color: #fff; text-transform: uppercase;}
+    color: #fff; text-transform: uppercase;
+    cursor: pointer;}
 .nav_header nav ul li, 
 .nav_header nav ul li ul li { 
     display: inline-block;}
 .nav_header nav li:hover > a { 
     background-color: #3497db;}
 .nav_header nav li:hover > .sub-menu { 
-    display: block;}
+    display: none;}
 .nav_header nav .sub-menu { 
     position: absolute; left: 0; z-index: 1;
     display: none; width: 100%;
