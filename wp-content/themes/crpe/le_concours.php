@@ -29,7 +29,7 @@ Récuperation du header
     <section class="accroche">
         <div class="container">
             <h1 class="h1_tall">Le concours</h1>
-            <p>En 2015, 11 960 postes d’enseignants du primaire sont à pourvoir au CRPE (Concours de Recrutement de Professeurs des Ecoles) dont 11 281 postes au concours externe.Vous êtes inscrit en première année d’études en vue de l’obtention d’un master (M1) ou vous êtes titulaire d’un master (M2) reconnu par le ministère de l’éducation et vous souhaitez enseigner à l’école primaire … C’est donc le moment de préparer avec sérieux et rigueur le Concours de Recrutement de Professeurs des Ecoles.</p>
+            <p class="h2_medium">En 2015, 11 960 postes d’enseignants du primaire sont à pourvoir au CRPE (Concours de Recrutement de Professeurs des Ecoles) dont 11 281 postes au concours externe.Vous êtes inscrit en première année d’études en vue de l’obtention d’un master (M1) ou vous êtes titulaire d’un master (M2) reconnu par le ministère de l’éducation et vous souhaitez enseigner à l’école primaire … C’est donc le moment de préparer avec sérieux et rigueur le Concours de Recrutement de Professeurs des Ecoles.</p>
         </div><!-- /container -->
     </section>
 
@@ -43,7 +43,7 @@ Récuperation du header
                 <div class="col-sm-6">
                     <div>
                         <h2 class="h2_medium">Dans le public</h2>
-                        <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/images/prof_primaire.jpg" alt="">
                         <h3>11 960 postes</h3>
                         <div class="info">
                             <p class="button active"><em>En savoir <span>+</span></em></p>
@@ -64,7 +64,7 @@ Récuperation du header
                 <div class="col-sm-6">
                     <div>
                         <h2 class="h2_medium">Dans le privée</h2>
-                        <img src="<?php bloginfo('template_directory'); ?>/img/images/DSC_0191-2.jpg" alt="">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/images/fotolia_39401382.jpg" alt="">
                         <h3>1658 postes</h3>
                         <div class="info">
                             <p class="button active"><em>En savoir <span>+</span></em></p>
