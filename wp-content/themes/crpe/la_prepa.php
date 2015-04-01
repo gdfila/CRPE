@@ -29,26 +29,34 @@ Récuperation du header
     <section class="accroche">
         <div class="container">
             <div class="row">
-                <h1 class="h1_tall">Adoptez l'esprit Galien !</h1>
+                <h1 class="h1_tall">Pourquoi venir se préparer aux Cours Galien ?</h1>
+                <p>Découvrez les raisons principales : Une expérience de plus de 20 ans dans la préparation de aux concours. Une méthode qui fait ses preuves chaque année autour des marches de la réussite. Une équipe d’enseignants spécialiste des matières enseignées. Un encadrement personnalisé. Une organisation parfaitement adaptée à vos horaires. Et un espace de vie propice aux études.</p>
                 <div class="col-sm-3">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
-                    <h2 class="h2_small"><strong>Partage</strong></h2>
-                    <p>Nos professeurs spécialistes partagent leurs connaissances et vous donnent leurs astuces pour réussir le jour J.</p>
+                    <h2 class="h2_small"><strong>L'expérience</strong></h2>
+                    <p>Le défi que les cours Galien relèvent chaque jour repose sur des valeurs qui sont fondamentales à l’accomplissement de notre mission : celle de vous accompagner tout au long de cette année dans votre préparation aux concours. Ces valeurs sont portées par chaque membre des Cours Galien, professeurs, équipes administratives, dirigeants, et aussi et surtout les étudiants.</p>
                 </div><!-- /col-sm-3 -->
                 <div class="col-sm-3">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
-                    <h2 class="h2_small"><strong>Progression</strong></h2>
-                    <p>Elle repose sur trois étapes essentielles qui mènent vers le succès : entraînement, méthode et encadrement.</p>
+                    <h2 class="h2_small"><strong>La méthode</strong></h2>
+                    <p>Notre méthode s’articule autour des marches de la réussite. Elle s’accompagne de nombreux outils  mis à votre disposition pour vous accompagner vers la réussite :
+Evaluations régulières pour valider vos acquis
+Mises en situation réelles et sous forme de concours blancs
+Classement par rapport aux autres étudiants
+Corrections interactives et phase d’approfondissement
+Supports pédagogiques : programmes pédagogiques conçus pour présenter les concours (spécificités et réformes prises en compte) ; polycopiés et résumés de cours ; fiches de synthèse ; annales
+e-outils : espace web dédié ; QCM interactifs ; annales ; plannings ; mail dédié ; facebook…
+services « plus Galien » : salles de travail 7j/7 ; wifi ; espace cafet’ ; calendrier des dates des concours…</p>
                 </div><!-- /col-sm-3 -->
                 <div class="col-sm-3">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
-                    <h2 class="h2_small"><strong>Cohésion</strong></h2>
-                    <p>Il ne peut y avoir de partage sans cohésion. Toutes nos équipes sont focalisées sur un seul objectif : votre réussite.</p>
+                    <h2 class="h2_small"><strong>L'encadrement</strong></h2>
+                    <p>Chaque enseignant des Cours Galien est spécialiste de la matière qu’il enseigne, et connait nécessairement les exigences du concours. Il vous aide ainsi à maîtriser les durées et la diversité des épreuves, les difficultés, les pièges à éviter et les astuces qui feront la différence.</p>
                 </div><!-- /col-sm-3 -->
                 <div class="col-sm-3">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
-                    <h2 class="h2_small"><strong>Réussite</strong></h2>
-                    <p>Ultime étape des efforts fournis et pour laquelle nous vous accompagnons chaque jour grâce à une stratégie.</p>
+                    <h2 class="h2_small"><strong>Le cadre</strong></h2>
+                    <p>Soucieux de vous apporter un environnement de travail propice à la réussite de votre concours, les Cours Galien mettent à votre disposition des salles d’études. Vous bénéficiez d’un fonds documentaire pour continuer à vous entraîner après les cours : annales, ouvrages de référence… Des espaces détente, foyer et cuisine sont aussi des lieux d’échange avec les profs. Nos centres sont aussi équipés de wifi.</p>
                     </div>
                 </div><!-- /col-sm-3 -->
             </div><!-- /row -->
@@ -60,7 +68,7 @@ Récuperation du header
      -->
     <section class="temoignages equipe_pedagogique">
         <div class="container">
-            <h1 class="h1_medium">Notre équipe pédagogique</h1>
+            <h1 class="h1_medium">"Je prépare les candidats du CRPE à l’épreuve d’admissibilité de français depuis plus de 10 ans. Ce concours sélectif et difficile exige des savoirs précis et spécifiques."</h1>
             <div class="row">
                   <div id="carousel-example-generic" class="temoignage_slider slide" data-ride="carousel">
                     <!-- Wrapper for slides -->
@@ -73,9 +81,9 @@ Récuperation du header
                             </div>
                             <div class="col-sm-6 temoignage_back">
                               <div class="temoignage_slider-caption">
-                                  <p><strong>Robert</strong></p>
-                                  <p>Professeur de mathématique</p>
-                                  <p>Ma marraine me soutient constamment tout au long de mon année et aujourd’hui mes résultats sont probants. Je me sens en confiance, et je garderai un bon souvenir dans ma Prépa.</p>
+                                  <p><strong>Mme Gauthier</strong></p>
+                                  <p>Institutrice pendant 12 ans et diplômée en Lettres et en linguistique.</p>
+                                  <p>Je fournis à mes étudiants tous les outils et supports nécessaires pour qu’ils puissent travailler efficacement et développer une véritable culture de l’école. Notre objectif commun est de revoir les bases, d’approfondir les notions et de nous familiariser avec les concepts nouveaux, tout en tenant compte des acquis, des rythmes et de la personnalité de chacun, et en nous appuyant sur mes compétences disciplinaires et mes expériences de classe auprès des enfants, autant d’éléments indispensables pour suivre avec le plus de bénéfice possible une préparation intense, des contenus lourds et un rythme soutenu.</p>
                               </div>
                             </div>
                         </div>
@@ -86,28 +94,23 @@ Récuperation du header
     </section>
 
     <!--
-    Section présentant les préparations
+    Section présentant les formuless de l'école
     -->  
-    <section class="graduate">
+    <section class="formules">
         <div class="container">
             <div class="row">
-                <h1 class="h1_medium">Le déroulé des cours</h1>
+                <h1 class="h1_medium">Decouvrez nos formules</h1>
                 <div class="col-sm-6">
                     <div>
-                        <h2 class="h2_medium">Préparation aux examens d'admissibilité</h2>
+                        <h2 class="h2_medium">Pack entrainement</h2>
                         <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
-                        <p>1. Postes offerts à la session 2015</p>
+                        <p>4 concours blancs</p>
+                        <p><strong>Epreuve</strong><br />en conditions réelles</p>
+                        <p>000H/400€</p>
                         <div class="info">
                             <p class="button active"><em>En savoir <span>+</span></em></p>
                             <div class="info_sup">
-                                <ul>
-                                    <li>À la session 2015, 11 960 postes sont offerts</li>
-                                    <li>11 281 aux concours externes,</li>
-                                    <li>447 au troisième concours,</li>
-                                    <li>192 aux seconds concours internes,</li>
-                                    <li>40 à l'examen professionnalisé réservé. </li>
-                                    <li>De plus, 500 postes sont offerts dans le cadre du recrutement externe supplémentaire pour l'enseignement public, organisé au titre de la session 2015 dans l'académie de Créteil</li>
-                                </ul>
+                                <p>Voila des infos supplémentaires</p>
                             </div>
                         </div>
                         <button class="btn btn-primary center-block" data-toggle="modal" data-target="#signin_form">Inscrivez-vous</button>
@@ -115,17 +118,16 @@ Récuperation du header
                 </div>
                 <div class="col-sm-6">
                     <div>
-                        <h2 class="h2_medium">Préparation aux examens d'admission</h2>
+                        <h2 class="h2_medium">Pack complet</h2>
                         <img src="<?php bloginfo('template_directory'); ?>/img/images/DSC_0191-2.jpg" alt="">
-                        <p>1. Postes offerts à la session 2015</p>
+                        <p>Préparation aux épreuves</p>
+                        <p>4 concours blancs</p>
+                        <p><strong>Modules de remise à niveau inclus</strong></p>
+                        <p>272H/1950€</p>
                         <div class="info">
                             <p class="button active"><em>En savoir <span>+</span></em></p>
                             <div class="info_sup">
-                                <ul>
-                                    <li>Pour les concours de l'enseignement privé sous contrat, 1 360 contrats sont offerts :</li>
-                                    <li>850 aux concours externes et au troisième concours,</li>
-                                    <li>510 à l'examen professionnalisé réservé.</li>
-                                </ul>
+                                <p>Voila des infos supplémentaires</p>
                             </div>
                         </div>
                         <button class="btn btn-primary center-block" data-toggle="modal" data-target="#form">Inscrivez-vous</button>
