@@ -50,7 +50,9 @@ add_action( 'wp_footer', 'theme_name_scripts' );
 
 require_once ABSPATH . 'wp-content/themes/crpe/cpt/crpe_centres.php';
 
-
+/**
+ * parametre de session ->$_session
+ */
 add_action('init', 'myStartSession', 1);
 add_action('wp_logout', 'myEndSession');
 add_action('wp_login', 'myEndSession');
@@ -63,6 +65,78 @@ function myStartSession() {
 
 function myEndSession() {
     session_destroy ();
+}
+
+
+/*-------------------------   permet de rajouter des parametre a l'url -------------------------------*/
+add_action('init', 'add_my_rewrite');
+
+function add_my_rewrite() {
+  global $wp_rewrite;
+  add_rewrite_tag('%centre%','([^&]+)');
+  add_rewrite_tag('%jpoDate%','([^&]+)');
+    $wp_rewrite->add_rule('inscriptionJPO/([^/]+)/([^/]+)/([^/]+)','index.php?p=173&centre=$matches[1]&jpoDate=$matches[2],top');
+
+  $wp_rewrite->flush_rules();
+}
+
+/**
+ * ----------------------permet de remplir les champs select des differents formulaire-----------------
+ */
+function remplirListe()
+{
+     include_once "api/Thalamus_init.php";
+
+  // Liste des centres
+      $centersList = $client->call(array("service" => "formation","method" => "centersListByFormation","formationId" => 400));
+   //  plage horaire
+    $horaireList = $client->call(array("service" => "prospect","method" => "callBackTimesList"));
+      $_SESSION['horaireList']=$horaireList;
+      $_SESSION['client']=$client;
+     $data=[];
+  
+  // $results = $client->call(array("service" => "communication","method" => "centerInformationMeetingsList", "centerId" => 11));
+ 
+       if(!empty($centersList))
+     {
+         foreach ($centersList->datas as $centre)
+            {
+                         if (empty($centre))
+                    {   
+                        break ;
+                     }
+                        array_push($data, array( "name"=>$centre->name ,"id"=>$centre->id));
+               } 
+     }
+     $_SESSION['centre']=$data;
+}
+add_action('template_redirect', 'remplirListe');
+
+
+//**----------------------------- verif les champs du formulaire -----------------**/
+function verifForm()
+{
+      if (wp_verify_nonce($_POST['brochure-verif'], 'brochure')) 
+     {                /* demande de rappel   */
+            if($_POST['rappel']==true && empty($_POST['telephone']))
+             {
+                 $_GET['erreur']="telephone";
+                 require_once ABSPATH . 'wp-content/themes/crpe/brochure.php';
+                  exit();
+              }
+     }
+              /*  envoie brochure par courrier */
+            
+        if($_POST['brochure']==true )
+         {
+                    if (empty($_POST['adress']) || empty($_POST['cp']) || empty($_POST['ville']))
+                    {
+                               $_GET['erreur']="courrier";        
+                               require_once ABSPATH . 'wp-content/themes/crpe/brochure.php';
+                                 exit();
+                    }
+           }
+     
 }
 
 /**
@@ -141,62 +215,7 @@ function traitementFormBrochure() {
     }
 add_action('template_redirect', 'traitementFormBrochure');
 
-/**
- * permet de remplir les champs select des differents formulaire
- */
-function remplirListe()
-{
-     include_once "api/Thalamus_init.php";
 
-  // Liste des centres
-      $centersList = $client->call(array("service" => "formation","method" => "centersListByFormation","formationId" => 400));
-   //  plage horaire
-    $horaireList = $client->call(array("service" => "prospect","method" => "callBackTimesList"));
-      $_SESSION['horaireList']=$horaireList;
-   $data=[];
-   
-   
-       if(!empty($centersList))
-     {
-         foreach ($centersList->datas as $centre)
-            {
-                         if (empty($centre))
-                    {   
-                        break ;
-                     }
-                        array_push($data, array( "name"=>$centre->name ,"id"=>$centre->id));
-               } 
-     }
-     $_SESSION['centre']=$data;
-}
-add_action('template_redirect', 'remplirListe');
-
-
-//**----------------------------- verif les champs du formulaire -----------------**/
-function verifForm()
-{
-      if (wp_verify_nonce($_POST['brochure-verif'], 'brochure')) 
-     {                /* demande de rappel   */
-            if($_POST['rappel']==true && empty($_POST['telephone']))
-             {
-                 $_GET['erreur']="telephone";
-                 require_once ABSPATH . 'wp-content/themes/crpe/brochure.php';
-                  exit();
-              }
-     }
-              /*  envoie brochure par courrier */
-            
-        if($_POST['brochure']==true )
-         {
-                    if (empty($_POST['adress']) || empty($_POST['cp']) || empty($_POST['ville']))
-                    {
-                               $_GET['erreur']="courrier";        
-                               require_once ABSPATH . 'wp-content/themes/crpe/brochure.php';
-                                 exit();
-                    }
-           }
-     
-}
 /*------------------------------------------  demande de rappel telephonique --------------------------*/
 function rappel($client)
 {
@@ -259,8 +278,12 @@ add_action('template_redirect', 'traitementFormRappel');
 /****  formulaire d'inscription jpo  ***/
 function inscriptionJPO()
 {
-//    var_dump($_POST);
-//    die();
+  var_dump($_POST);
+  $client=$_SESSION['client'];
+  var_dump($_POST['centre']);
+  $results = $client->call(array("service" => "communication","method" => "centerInformationMeetingsList", "centerId" => $_POST['centre']));
+  var_dump($results);
+  //die();
 }
 add_action('template_redirect', 'inscriptionJPO');
 

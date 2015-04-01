@@ -22,6 +22,7 @@
                 <h1 class="h1_tall">Journée portes ouvertes du <?php echo $date->format('d/m/Y'); ?></h1>
                  <form method="post" action="#">
                        <?php wp_nonce_field('jpo', 'inscriptionJPO'); ?>  <!-- pour verifier que les reponse du formulaire proviennet bien de notre site -->
+                       <input type="text" name="date" value="<?php echo $jpoDate; ?>" hidden>
                     <div class="form-group">
                         <label for="nom">Nom *</label>
                         <input type="text" name="nom" class='form-control' id="firstname" required>

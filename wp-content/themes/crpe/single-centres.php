@@ -39,30 +39,37 @@ Récuperation du header
              
                
                     <h2 class="h2_tall">Actualité</h2>
-
-                        <div class="col-sm-4">
-                            <h3 class="h3_tall"><strong>jusqu'au </strong><strong class="centre_texte_red">
-                                <?php  
-                                    $datJpo=get_field('date_de_la_jpo');
-                                    $date = new DateTime($datJpo);
-                                    echo $date->format('d/m/Y')
-                                   ?>
-                                </strong></h3>
-                            <h4 class="h4_tall"><strong><?php the_field('nom_de_la_jpo');?></strong></h4>
-                            <p class="text-justify"><?php the_field('presentation_de_la_jpo');?></p>
-                            <!--<a href="http://localhost/galien_crpe/?p=151" >s'inscrire</a>-->
-                            <a href="http://localhost/galien_crpe/?p=151&centre=<?php the_field('adresse_-_ville')?>&jpoDate=<?php the_field('date_de_la_jpo')?>" >Inscription</a>
-                        </div>
-
-                    <div class="col-sm-4">
-                        <h3 class="h3_tall"><strong class="centre_texte_red">
-                            <?php  $date=the_field('date_de_la_jpo');
-                                        echo $date; ?></strong></h3>
-                        <h4 class="h4_tall"><strong><?php the_field('nom_de_la_jpo');?></strong></h4>
-                        <p class="text-justify"><?php the_field('presentation_de_la_jpo');?></p>
-                        <a href="http://localhost/galien_crpe/?p=151" >s'inscrire</a>
-                    </div>
-           
+                    <!--/*** si il existe une JPO */-->
+                         <?php      $datJpo=get_field('date_de_la_jpo');  ?>
+                          <?php  if ($datJpo!=""): ?>
+                                <div class="col-sm-4">
+                                    <h3 class="h3_tall"><strong>journée portes ouverte </strong><strong class="centre_texte_red">
+                                                <?php
+                                                    $date = new DateTime($datJpo);
+                                                     echo $date->format('d/m/Y');
+                                                ?>
+                                            </strong></h3>
+                                                <h4 class="h4_tall"><strong><?php the_field('nom_de_la_jpo');?></strong></h4>
+                                                <p class="text-justify"><?php the_field('presentation_de_la_jpo');?></p>
+                                                <a href="http://localhost/galien_crpe/?p=173&centre=<?php the_field('adresse_-_ville')?>&jpoDate=<?php the_field('date_de_la_jpo')?>" >Inscription</a>
+                                          
+                                </div>
+                          <?php endif ?>
+                    <!-- si il existe un evenement -->
+                    <?php      $dateven=get_field('date_de_levenement');  ?>
+                     <?php  if ($dateven!=""): ?>
+                                <div class="col-sm-4">
+                                    <h3 class="h3_tall"><strong class="centre_texte_red">
+                                        <?php
+                                                    $date = new DateTime($dateven);
+                                                     echo $date->format('d/m/Y');
+                                                ?>
+                                        </strong></h3>
+                                    <h4 class="h4_tall"><strong><?php the_field('nom_de_levenement');?></strong></h4>
+                                    <p class="text-justify"><?php the_field('presentation_de_levenement');?></p>
+                                
+                                </div>
+                         <?php endif ?>
                
             </div>
         </div>
