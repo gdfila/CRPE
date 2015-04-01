@@ -10,10 +10,17 @@
         $post_thumbnail_id = get_post_thumbnail_id($post->ID);
         $post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
     ?>
+    <?php
+        global $wp_query;
+            $centre = 'Galien ' .$wp_query->query_vars['centre'];
+            $jpoDate= $wp_query->query_vars['jpoDate'];
+          $date = new DateTime($jpoDate);
+            
+    ?>
         <section class="accroche">
             <div class="container">
-                <h1 class="h1_tall">Inscrire aux journée portes ouvertes</h1>
-                 <form method="post" action=#">
+                <h1 class="h1_tall">Journée portes ouvertes du <?php echo $date->format('d/m/Y'); ?></h1>
+                 <form method="post" action="#">
                        <?php wp_nonce_field('jpo', 'inscriptionJPO'); ?>  <!-- pour verifier que les reponse du formulaire proviennet bien de notre site -->
                     <div class="form-group">
                         <label for="nom">Nom *</label>
@@ -40,7 +47,11 @@
                         <select class="form-control input-lg" name="centre">
 
                              <?php foreach($_SESSION['centre'] as $nom):  ?>
-                              <option  value="<?php echo $nom['id']; ?>"><?php echo $nom['name']; ?></option>
+                                <?php if($nom['name']==$centre): ?>
+                            <option  value="<?php echo $nom['id']; ?>" selected><?php echo $nom['name']; ?></option>
+                                 <?php else: ?>
+                                           <option  value="<?php echo $nom['id']; ?>"><?php echo $nom['name']; ?></option>
+                                  <?php endif ?>
                             <?php endforeach ?>
                         </select>
                      </div>

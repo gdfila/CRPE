@@ -187,6 +187,8 @@ a:hover {
 ************** Section Accroche ****************
 ***********************************************/
 
+#container_prepa .accroche .col-sm-3 img {
+    max-width: 100%;}
 .accroche h2 {
     color: #777; text-transform: inherit;}
 
@@ -219,50 +221,30 @@ a:hover {
     background: url('../img/images/296_MG_9554.jpg') center center / 100%; background-size: cover;}
 
 /***********************************************
-************** Section Graduate ****************
-***********************************************/
-
-.graduate {
-    background: url('../img/images/DSC_0206-2.jpg') center center / 100%; background-size: cover;}
-.graduate h1, .graduate p {
-    color: #fff;}
-.graduate h1 {
-    font-size: 4em;}
-.graduate p {
-    font-size: 1.6em;}
-
-/***********************************************
 ********* Section Equipe pédagogique ***********
 ***********************************************/
 
 .equipe_pedagogique {
     background-color: rgba(241,97,80, 0.3);}
+.equipe_pedagogique img {
+    max-width: 100%;}
 
 /***********************************************
 **************** Section Test ******************
 ***********************************************/
 
-.admission {
-    background-color: rgba(241,97,80, 0.3);}
-.admission h2 {
+.condition_exam h2 {
     margin-bottom: 20px;}
-.admission .cercle-3 {
+.condition_exam .row {
+    margin-top: 50px;}
+.condition_exam .cercle-3 {
     background-color: rgba(241,97,80, 1);}
-.admission .cercle-3 p {
+.condition_exam .cercle-3 p {
     font-size: 2.3em; color: #fff;}
-.admission .cercle-3 p span {
+.condition_exam .cercle-3 p span {
     line-height: normal;}
-.admission .demi_cercle {
+.condition_exam .demi_cercle {
     background-color: rgba(255,255,255, 0.3);}
-
-/***********************************************
-************ Section Perspective ***************
-***********************************************/
-
-.perspective h2 {
-    margin-bottom: 20px;}
-.perspective ul {
-    margin-bottom: 50px;}
 
 /***********************************************
 **************** Section Jpo *******************
@@ -277,7 +259,6 @@ a:hover {
 
 .equipement .col-sm-6>div {
     text-align: left;}
-
 
 /***********************************************
 ************* Section  Formules ****************
@@ -296,6 +277,48 @@ a:hover {
 .formules img {
     max-width: 100%; margin-bottom: 25px;}
 .formules .info_sup {
+    display: none;}
+
+/***********************************************
+********** Section Perspective ****************
+***********************************************/
+
+.perspective {
+    background-color: rgba(241,97,80, 0.3);}
+.perspective .col-sm-6 { 
+    padding: 0;}
+.perspective .col-sm-6 > div {
+    width: 75%; min-height: 540px; margin: auto; padding-bottom: 20px;
+    background-color: #fff; border: 2px solid #f0f0f0;
+    text-align: center;
+    -moz-box-shadow: 1px 1px 1px 0px #999; -webkit-box-shadow: 1px 1px 1px 0px #999; -o-box-shadow: 1px 1px 1px 0px #999; box-shadow: 1px 1px 1px 0px #999;}
+.perspective h2 { 
+    background-color: #f0f0f0;}
+.perspective h2, .perspective > div > p, .perspective .info { 
+    margin: 0; padding: 20px;}
+.perspective img {
+    max-width: 100%; margin-bottom: 25px;}
+.perspective .info_sup {
+    display: none;}
+
+/***********************************************
+************ Section Graduate ******************
+***********************************************/
+
+.graduate .col-sm-6 { 
+    padding: 0;}
+.graduate .col-sm-6 > div {
+    width: 75%; min-height: 540px; margin: auto; padding-bottom: 20px;
+    background-color: #fff; border: 2px solid #f0f0f0;
+    text-align: center;
+    -moz-box-shadow: 1px 1px 1px 0px #999; -webkit-box-shadow: 1px 1px 1px 0px #999; -o-box-shadow: 1px 1px 1px 0px #999; box-shadow: 1px 1px 1px 0px #999;}
+.graduate h2 { 
+    background-color: #f0f0f0;}
+.graduate h2, .perspective > div > p, .perspective .info { 
+    margin: 0; padding: 20px;}
+.graduate img {
+    max-width: 100%; margin-bottom: 25px;}
+.graduate .info_sup {
     display: none;}
 
 /***********************************************

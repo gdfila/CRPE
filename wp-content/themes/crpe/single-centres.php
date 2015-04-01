@@ -1,4 +1,3 @@
-
 <!--
 Récuperation du header
  -->
@@ -33,11 +32,28 @@ Récuperation du header
     <!--
     Section journée portes ouverts
      -->
+       <?php   if(get_fields('nom_de_la_jpo')!=null || get_field('nom_de_levenement')!=null): ?>
     <section class="jpo">
         <div class="container ">
             <div class="row">
-                <h2 class="h2_tall">Actualité</h2>
-                <?php  // if( the_field('nom_de_la_jpo')!=null || the_field('nom_de_levenement')!=null): ?>
+             
+               
+                    <h2 class="h2_tall">Actualité</h2>
+
+                        <div class="col-sm-4">
+                            <h3 class="h3_tall"><strong>jusqu'au </strong><strong class="centre_texte_red">
+                                <?php  
+                                    $datJpo=get_field('date_de_la_jpo');
+                                    $date = new DateTime($datJpo);
+                                    echo $date->format('d/m/Y')
+                                   ?>
+                                </strong></h3>
+                            <h4 class="h4_tall"><strong><?php the_field('nom_de_la_jpo');?></strong></h4>
+                            <p class="text-justify"><?php the_field('presentation_de_la_jpo');?></p>
+                            <!--<a href="http://localhost/galien_crpe/?p=151" >s'inscrire</a>-->
+                            <a href="http://localhost/galien_crpe/?p=151&centre=<?php the_field('adresse_-_ville')?>&jpoDate=<?php the_field('date_de_la_jpo')?>" >Inscription</a>
+                        </div>
+
                     <div class="col-sm-4">
                         <h3 class="h3_tall"><strong class="centre_texte_red">
                             <?php  $date=the_field('date_de_la_jpo');
@@ -46,11 +62,12 @@ Récuperation du header
                         <p class="text-justify"><?php the_field('presentation_de_la_jpo');?></p>
                         <a href="http://localhost/galien_crpe/?p=151" >s'inscrire</a>
                     </div>
-                <?php //endif ?>
+           
+               
             </div>
         </div>
     </section>
-   
+        <?php endif ?>
     <!--
     Section présentant le lieu et ses valeurs
      -->
@@ -106,7 +123,7 @@ Récuperation du header
         <?php endif; ?>
 
     </section>
-    
+
 <?php endwhile;else :?>
         <p>desolé pas de centres pour l'instant...</p>
 <?php endif; ?>

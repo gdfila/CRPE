@@ -28,12 +28,30 @@ Récuperation du header
      -->
     <section class="accroche">
         <div class="container">
-            <h1 class="h1_tall">Notre expérience</h1>
-            <p>Comme tout changement, le passage du lycée à la fac est souvent compliqué (nouvelles méthodes de travail, échéance très rapide des concours, niveau d’études et de connaissances de plus en plus élevé, sélection de plus en plus sévère, etc.). Et ça, Galien l’a bien compris. C’est pourquoi, depuis près de 30 ans, Galien accompagne les étudiants qui souhaitent réussir leur concours. Galien est aujourd’hui LE spécialiste dans la préparation des concours PACES, paramédicaux et sociaux.</p>
-            <h2 class="h2_medium">Un cadre propice</h2>
-            <p>Les centres Galien sont situés à proximité de votre fac, très accessibles en transport en commun afin de vous faire gagner du temps dans vos révisions. Les horaires de nos cours sont établis en fonction de ceux de votre fac.</p>
-            <h2 class="h2_medium">L'encadrement</h2>
-            <p>Chaque responsable de centre Galien, secondé par une équipe administrative et pédagogique, est garant de la qualité pédagogique. Il est là pour vous et vos parents tout au long de l’année. Il vous accompagne et répond à vos questions pour que vous ne soyez jamais seul face à vos difficultés.</p>
+            <div class="row">
+                <h1 class="h1_tall">Adoptez l'esprit Galien !</h1>
+                <div class="col-sm-3">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
+                    <h2 class="h2_small"><strong>Partage</strong></h2>
+                    <p>Nos professeurs spécialistes partagent leurs connaissances et vous donnent leurs astuces pour réussir le jour J.</p>
+                </div><!-- /col-sm-3 -->
+                <div class="col-sm-3">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
+                    <h2 class="h2_small"><strong>Progression</strong></h2>
+                    <p>Elle repose sur trois étapes essentielles qui mènent vers le succès : entraînement, méthode et encadrement.</p>
+                </div><!-- /col-sm-3 -->
+                <div class="col-sm-3">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
+                    <h2 class="h2_small"><strong>Cohésion</strong></h2>
+                    <p>Il ne peut y avoir de partage sans cohésion. Toutes nos équipes sont focalisées sur un seul objectif : votre réussite.</p>
+                </div><!-- /col-sm-3 -->
+                <div class="col-sm-3">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
+                    <h2 class="h2_small"><strong>Réussite</strong></h2>
+                    <p>Ultime étape des efforts fournis et pour laquelle nous vous accompagnons chaque jour grâce à une stratégie.</p>
+                    </div>
+                </div><!-- /col-sm-3 -->
+            </div><!-- /row -->
         </div><!-- /container -->
     </section>
 
@@ -50,7 +68,7 @@ Récuperation du header
                         <div class="item active">
                             <div class="col-sm-6">
                                 <div class="embed-responsive embed-responsive-16by9 col-sm-9">
-                                    <img src="../img/images/aModifier.jpg" alt="Photo de ...">
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="Photo de ...">
                                 </div>
                             </div>
                             <div class="col-sm-6 temoignage_back">
@@ -68,84 +86,53 @@ Récuperation du header
     </section>
 
     <!--
-    Section présentant les cours
-     -->
-    <section class="classes">
-        <div class="container">
-            <h1 class="h1_tall">Le déroulé des cours</h1>
-            <p>Le programme est élaboré par les enseignants spécialistes de la discipline. Il est conforme aux épreuves du concours et aux préconisations ministérielles inscrites dans le décret n°2013-768 du 23 août 2013.</p>
-            <h2 class="h2_medium">Les horaires</h2>
-            <p>Nous vous proposons une préparation intensive de 90 heures en deux temps. Les cours ont lieu le samedi en petits effectifs. Votre formation s’étale donc sur 30 semaines, et comprend au total 240 heures de cours en face à face avec des enseignants, auxquelles s’ajoutent 32 heures de concours blancs. </p>
-        </div><!-- /container -->
-    </section> 
-    
-
-    <!--
-    Section présentant les épreuves
-     -->
-    <section class="admission">
+    Section présentant les préparations
+    -->  
+    <section class="graduate">
         <div class="container">
             <div class="row">
+                <h1 class="h1_medium">Le déroulé des cours</h1>
                 <div class="col-sm-6">
-                    <h2 class="h2_medium">Préparation aux examens d’Admissibilité</h2>
-                    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.</p>
-                    <div class="col-sm-6">
-                        <div class=" cercle-3">
-                            <p>45h</p>
+                    <div>
+                        <h2 class="h2_medium">Préparation aux examens d'admissibilité</h2>
+                        <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
+                        <p>1. Postes offerts à la session 2015</p>
+                        <div class="info">
+                            <p class="button active"><em>En savoir <span>+</span></em></p>
+                            <div class="info_sup">
+                                <ul>
+                                    <li>À la session 2015, 11 960 postes sont offerts</li>
+                                    <li>11 281 aux concours externes,</li>
+                                    <li>447 au troisième concours,</li>
+                                    <li>192 aux seconds concours internes,</li>
+                                    <li>40 à l'examen professionnalisé réservé. </li>
+                                    <li>De plus, 500 postes sont offerts dans le cadre du recrutement externe supplémentaire pour l'enseignement public, organisé au titre de la session 2015 dans l'académie de Créteil</li>
+                                </ul>
+                            </div>
                         </div>
-                        <p><strong>Français</strong><br />
-                        préparation aux 3 épreuves</p>
-                    </div><!-- /col-sm-3 -->
-                    <div class="col-sm-6">
-                        <div class="cercle-3">
-                            <p>45h</p>
-                        </div>
-                        <p><strong>Mathématiques</strong><br />
-                        préparation aux 3 épreuves</p>
-                    </div><!-- /col-sm-3 -->
-                </div><!-- /col-sm-6 -->
+                        <button class="btn btn-primary center-block" data-toggle="modal" data-target="#signin_form">Inscrivez-vous</button>
+                    </div>
+                </div>
                 <div class="col-sm-6">
-                    <h2 class="h2_medium">Préparation aux examens d’Admission</h2>
-                    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.</p>
-                    <div class="col-sm-6">
-                        <div class="cercle-3 demi_cercle-container">
-                            <p>30h</p>
-                            <p class="demi_cercle">20h</p>
+                    <div>
+                        <h2 class="h2_medium">Préparation aux examens d'admission</h2>
+                        <img src="<?php bloginfo('template_directory'); ?>/img/images/DSC_0191-2.jpg" alt="">
+                        <p>1. Postes offerts à la session 2015</p>
+                        <div class="info">
+                            <p class="button active"><em>En savoir <span>+</span></em></p>
+                            <div class="info_sup">
+                                <ul>
+                                    <li>Pour les concours de l'enseignement privé sous contrat, 1 360 contrats sont offerts :</li>
+                                    <li>850 aux concours externes et au troisième concours,</li>
+                                    <li>510 à l'examen professionnalisé réservé.</li>
+                                </ul>
+                            </div>
                         </div>
-                        <p><strong>Séquence pédagogique</strong><br />
-                        système éducatif<br />
-                        didactique / pédagogie</p>
-                        <p><strong>Système éducatif français</strong><br />
-                        système éducatif<br />
-                        didactique / pédagogie</p>
-                    </div><!-- /col-sm-3 -->
-                    <div class="col-sm-6">
-                        <div class="cercle-3 demi_cercle-container">
-                            <p>20h</p>
-                            <p class="demi_cercle">20h</p>
-                        </div>
-                        <p><strong>Fondements scientifiques</strong><br />
-                        apports scientifiques</p>
-                        <p><strong>Education physique</strong><br />
-                        pratique de la classe</p>
-                    </div><!-- /col-sm-3 -->
+                        <button class="btn btn-primary center-block" data-toggle="modal" data-target="#form">Inscrivez-vous</button>
+                    </div>
                 </div><!-- /col-sm-6 -->
             </div><!-- /row -->
         </div><!-- /container -->
-    </section> 
-
-    <!--
-    Section présentant les cours
-     -->
-    <section class="price">
-        <div class="container">
-            <h1 class="h1_tall">Tarifs</h1>
-            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-            <h2 class="h2_medium">Financement</h2>
-            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-        </div><!-- /container -->
     </section>
-
-</div>
     
 <?php get_footer(); ?>
