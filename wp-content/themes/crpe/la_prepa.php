@@ -61,7 +61,7 @@ Récuperation du header
      -->
     <section class="equipe_pedagogique">
         <div class="container">
-            <h1 class="h1_small">"Je prépare les candidats du CRPE à l’épreuve d’admissibilité de français depuis plus de 10 ans. Ce concours sélectif et difficile exige des savoirs précis et spécifiques."</h1>
+            <blockquote><h1 class="h1_small">Je prépare les candidats du CRPE à l’épreuve d’admissibilité de français depuis plus de 10 ans. Ce concours sélectif et difficile exige des savoirs précis et spécifiques.</h1></blockquote>
             <div class="row">
                 <div class="col-sm-10 col-sm-offset-1">
                     <div class="col-sm-4">
