@@ -51,7 +51,7 @@ Récuperation du header
                                             </strong></h3>
                                                 <h4 class="h4_tall"><strong><?php the_field('nom_de_la_jpo');?></strong></h4>
                                                 <p class="text-justify"><?php the_field('presentation_de_la_jpo');?></p>
-                                                <a href="http://localhost/galien_crpe/?p=173&centre=<?php the_field('adresse_-_ville')?>&jpoDate=<?php the_field('date_de_la_jpo')?>" >Inscription</a>
+                                                <a href="http://localhost/galien_crpe/?p=180&centre=<?php the_field('adresse_-_ville')?>&jpoDate=<?php the_field('date_de_la_jpo')?>" >Inscription</a>
                                           
                                 </div>
                           <?php endif ?>

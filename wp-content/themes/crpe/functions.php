@@ -75,7 +75,7 @@ function add_my_rewrite() {
   global $wp_rewrite;
   add_rewrite_tag('%centre%','([^&]+)');
   add_rewrite_tag('%jpoDate%','([^&]+)');
-    $wp_rewrite->add_rule('inscriptionJPO/([^/]+)/([^/]+)/([^/]+)','index.php?p=173&centre=$matches[1]&jpoDate=$matches[2],top');
+    $wp_rewrite->add_rule('inscriptionJPO/([^/]+)/([^/]+)/([^/]+)','index.php?p=180&centre=$matches[1]&jpoDate=$matches[2],top');
 
   $wp_rewrite->flush_rules();
 }
@@ -113,6 +113,12 @@ function remplirListe()
 add_action('template_redirect', 'remplirListe');
 
 
+
+
+/**
+ * --------------------------------------------------------  formulaire brochure----------------------------------------------------------------
+ */
+
 //**----------------------------- verif les champs du formulaire -----------------**/
 function verifForm()
 {
@@ -139,9 +145,6 @@ function verifForm()
      
 }
 
-/**
- * formulaire brochure
- */
 function traitementFormBrochure() {
      $_GET['erreur']="";
     $_GET['sucess']="";
@@ -216,7 +219,7 @@ function traitementFormBrochure() {
 add_action('template_redirect', 'traitementFormBrochure');
 
 
-/*------------------------------------------  demande de rappel telephonique --------------------------*/
+/* demande de rappel telephonique */
 function rappel($client)
 {
      if($_POST['rappel']==true)
@@ -242,8 +245,10 @@ function rappel($client)
                  }
 }
 
+
+
 /**
- * formulaire Rappel
+ * -------------------------------------------------------------- formulaire Rappel  -----------------------------------------------------------------------
  */
 function traitementFormRappel() {
      $_GET['erreur']="";
@@ -275,19 +280,28 @@ function traitementFormRappel() {
 }
 add_action('template_redirect', 'traitementFormRappel');
 
-/****  formulaire d'inscription jpo  ***/
+/*----------------------------------------------------------------  formulaire d'inscription jpo ------------------------------------------*/
 function inscriptionJPO()
 {
-  var_dump($_POST);
-  $client=$_SESSION['client'];
-  var_dump($_POST['centre']);
-  $results = $client->call(array("service" => "communication","method" => "centerInformationMeetingsList", "centerId" => $_POST['centre']));
-  var_dump($results);
-  //die();
+     if (isset($_POST['valider']) && isset($_POST['inscriptionJPO']))  
+   {
+      if (wp_verify_nonce($_POST['inscriptionJPO'], 'jpo')) 
+      {
+            var_dump($_POST);
+            $client=$_SESSION['client'];
+        
+            $results = $client->call(array("service" => "communication","method" => "centerInformationMeetingsList", "centerId" => $_POST['centre']));
+           var_dump($results);
+            //die();
+        }
+   }
 }
 add_action('template_redirect', 'inscriptionJPO');
 
-/**** formulaire de contact ****/
+
+
+
+/****------------------------------------------------------------ formulaire de contact ----------------------------------------------****/
 function traitementFormContact()
 {
      if (isset($_POST['valider']) && isset($_POST['contact-verif']))  
@@ -303,17 +317,15 @@ function traitementFormContact()
 add_action('template_redirect', 'traitementFormContact');
 
 
-add_action('acf_data_selector/data', 'selectJPO');
+/*--------------------------------------------------------    */
 function selectJPO($data) 
-        {
-var_dump($data);
-	$data['jpo_thalamus'] = array(
-		'label' => 'Countries',
+{
+//var_dump($data)
+    $data['jpo_thalamus'] = array('label' => 'Countries',
 		'data' => array(
 			'US' => 'United States',
-			'UK' => 'United Kingdom'
-		)
-	);
+			'UK' => 'United Kingdom')
+                                                    );
 
 //	$data['rooms'] = array(
 //		'label' => 'Rooms',
@@ -345,5 +357,5 @@ var_dump($data);
 //	);
 
 	return $data;
-
-}
+   }
+add_action('acf_data_selector/data', 'selectJPO');
