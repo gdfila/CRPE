@@ -301,3 +301,49 @@ function traitementFormContact()
             
 }
 add_action('template_redirect', 'traitementFormContact');
+
+
+add_action('acf_data_selector/data', 'selectJPO');
+function selectJPO($data) 
+        {
+var_dump($data);
+	$data['jpo_thalamus'] = array(
+		'label' => 'Countries',
+		'data' => array(
+			'US' => 'United States',
+			'UK' => 'United Kingdom'
+		)
+	);
+
+//	$data['rooms'] = array(
+//		'label' => 'Rooms',
+//		'data' => array(
+//			'101' => array(
+//				'label' => 'Meeting Room',
+//				'room_number' => '101',
+//				'floor' => '1',
+//				'telephone' => '100'
+//			),
+//			'102' => array(
+//				'label' => 'Stock Room',
+//				'room_number' => '102',
+//				'floor' => '1',
+//				'telephone' => '102'
+//			),
+//			'202' => array(
+//				'label' => 'Manager Room 1',
+//				'room_number' => '202',
+//				'floor' => '2',
+//				'telephone' => '202'
+//			),
+//		)
+//	);
+
+//	$data['regions'] = array(
+//		'label' => 'Regions',
+//		'data' => json_decode(file_get_contents('/data/regions.json'), TRUE)
+//	);
+
+	return $data;
+
+}
