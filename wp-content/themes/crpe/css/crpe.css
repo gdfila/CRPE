@@ -338,6 +338,12 @@ a:hover {
 textarea {
     max-width: 100%;}
     
+    /*********** Rappel **********/   
+    .contact .picto_title_phone {
+        padding-top: 120px;
+        background: url('../img/picto/picto_phone_grey.png') no-repeat top center;
+        text-transform: inherit;}
+
     /*********** Brochure **********/   
     .contact .picto_title_doc {
         padding-top: 100px;
