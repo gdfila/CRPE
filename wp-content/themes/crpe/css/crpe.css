@@ -187,10 +187,20 @@ a:hover {
 ************** Section Accroche ****************
 ***********************************************/
 
-#container_prepa .accroche .col-sm-3 img {
-    max-width: 100%;}
 .accroche h2 {
     color: #777; text-transform: inherit;}
+
+    /********** Prepa **********/
+    #container_prepa .accroche .h2_medium {
+        margin-bottom: 50px;}
+    #container_prepa .accroche .col-sm-3 {
+        max-height: 395px; padding: 0 30px;
+        overflow: hidden;}
+    #container_prepa .accroche .col-sm-3 img {
+        max-width: 100%;
+        margin-bottom: 25px;}
+    #container_prepa .accroche .col-sm-3 p {
+        text-align: justify;}
 
 /***********************************************
 ************ Section Valeurs *******************
@@ -225,9 +235,21 @@ a:hover {
 ***********************************************/
 
 .equipe_pedagogique {
-    background-color: rgba(241,97,80, 0.3);}
+    background-color: rgba(241,97,80, 0.3);
+    text-align: left;}
+.equipe_pedagogique blockquote {
+  padding-left: 48px;
+  background: url('../img/picto/blockquote.png') no-repeat;}
+.equipe_pedagogique h1 {
+    font-style: italic; text-transform: initial;}  
+.equipe_pedagogique h1 span {
+    font-size: 4em;}
 .equipe_pedagogique img {
     max-width: 100%;}
+.equipe_pedagogique .equipe_peda_prez .equipe_peda_prez_title {
+    margin: 5px 0;}
+.equipe_pedagogique .equipe_peda_prez p + p {
+    font-size: 0.80em;}
 
 /***********************************************
 **************** Section Test ******************
@@ -238,7 +260,7 @@ a:hover {
 .condition_exam .row {
     margin-top: 50px;}
 .condition_exam .cercle-3 {
-    background-color: rgba(241,97,80, 1);}
+    background-color: rgba(241,97,80, 0.6);}
 .condition_exam .cercle-3 p {
     font-size: 2.3em; color: #fff;}
 .condition_exam .cercle-3 p span {
@@ -493,14 +515,7 @@ footer div div div:nth-child(4) ul li:nth-child(5) a {
     ***********************************************/
 
     .back_img {
-        position: relative;
-        padding: 150px 50px 100px;}
-    .back_img h1 {
-        position: absolute; top: 50px; left: 0;
-        width: 100%;
-        background-color: rgba(255,255,255, 0.5);}
-
-
+        padding: 50px;}
 
 /***********************************************
 ****************** Slider temoignage *******************

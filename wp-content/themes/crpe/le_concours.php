@@ -28,10 +28,8 @@ Récuperation du header
      -->
     <section class="accroche">
         <div class="container">
-            <h1 class="h1_tall">Définition du concours</h1>
-            <p>Le concours de recrutement de professeur des écoles (CRPE1), est le concours sur lequel s'appuie en France le Ministère de l'Éducation nationale pour recruter les professeurs des écoles, exerçant dans le primaire (sans distinction dans les écoles maternelles et dans les écoles élémentaires).</p>
-            <h1 class="h2_tall">Le diplôme</h1>
-            <p>La maîtrise théorique et pratique des domaines disciplinaires, la connaissance des programmes de l’école maternelle et élémentaire, l’approche pédagogique et didactique de toutes les disciplines enseignées à l’école font de ce concours de recrutement des professeurs des écoles un concours difficile et sélectif, qui exige des savoirs pluridisciplinaires, une méthode de travail efficace et une bonne organisation du temps.</p>
+            <h1 class="h1_tall">Le concours</h1>
+            <p class="h2_medium">En 2015, 11 960 postes d’enseignants du primaire sont à pourvoir au CRPE (Concours de Recrutement de Professeurs des Ecoles) dont 11 281 postes au concours externe.Vous êtes inscrit en première année d’études en vue de l’obtention d’un master (M1) ou vous êtes titulaire d’un master (M2) reconnu par le ministère de l’éducation et vous souhaitez enseigner à l’école primaire … C’est donc le moment de préparer avec sérieux et rigueur le Concours de Recrutement de Professeurs des Ecoles.</p>
         </div><!-- /container -->
     </section>
 
@@ -41,12 +39,12 @@ Récuperation du header
     <section class="perspective">
         <div class="container">
             <div class="row">
-                <h1 class="h1_medium">Decouvrez vos perspectives</h1>
+                <h1 class="h1_medium">De nombreuses perspectives</h1>
                 <div class="col-sm-6">
                     <div>
                         <h2 class="h2_medium">Dans le public</h2>
-                        <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
-                        <p>1. Postes offerts à la session 2015</p>
+                        <img src="<?php bloginfo('template_directory'); ?>/img/images/prof_primaire.jpg" alt="">
+                        <h3>11 960 postes</h3>
                         <div class="info">
                             <p class="button active"><em>En savoir <span>+</span></em></p>
                             <div class="info_sup">
@@ -66,8 +64,8 @@ Récuperation du header
                 <div class="col-sm-6">
                     <div>
                         <h2 class="h2_medium">Dans le privée</h2>
-                        <img src="<?php bloginfo('template_directory'); ?>/img/images/DSC_0191-2.jpg" alt="">
-                        <p>1. Postes offerts à la session 2015</p>
+                        <img src="<?php bloginfo('template_directory'); ?>/img/images/fotolia_39401382.jpg" alt="">
+                        <h3>1658 postes</h3>
                         <div class="info">
                             <p class="button active"><em>En savoir <span>+</span></em></p>
                             <div class="info_sup">
@@ -91,7 +89,7 @@ Récuperation du header
     <section class="condition_exam">
         <div class="container">
             <h1 class="h1_medium">Les conditions d'examen</h1>
-            <p>Condition de titre ou de diplôme à la date de publication des résultats d'admissibilité L'une de ses 3 conditions remplie permet de se présenter au concours externe : une inscription en M1 en vue de l'obtention d'un master ou d'un titre ou diplôme reconnu équivalent par le ministre chargé de l'éducation, un M2 ou d'un titre ou diplôme reconnu équivalent par le ministre chargé de l'éducation (titre ou diplôme classé au niveau I du répertoire national des certifications professionnelles ou sanctionnant un cycle d'études post secondaires d'au moins cinq années) Dispense du  diplôme pour les mères ou pères d'au moins trois enfants ou sportif de haut niveau à la date de publication des résultats d'admissibilité.</p>
+            <p>Condition de titre ou de diplôme à la date de publication des résultats d'admissibilité L'une de ses 3 conditions remplie permet de se présenter au concours externe : une inscription en M1 en vue de l'obtention d'un master ou d'un titre ou diplôme reconnu équivalent par le ministre chargé de l'éducation, un M2 ou d'un titre ou diplôme reconnu équivalent par le ministre chargé de l'éducation (titre ou diplôme classé au </p>
             <div class="row">
                 <div class="col-sm-6">
                     <h2 class="h2_medium">Epreuve d'admissibilité</h2>
