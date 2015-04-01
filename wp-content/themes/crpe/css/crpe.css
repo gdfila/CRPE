@@ -197,7 +197,7 @@ a:hover {
 ***********************************************/
 
 .valeurs {
-    background: url('../img/images//WEB_galien_03.jpg') center center / 100%; background-size: cover;}
+    background: url('../img/images/index_back_1.jpg') center center / 100%; background-size: cover;}
 .valeurs .cercle-3 {
     padding: 48px 10px 10px;
     background-repeat: no-repeat; background-position: 50% 8px;
@@ -338,6 +338,12 @@ a:hover {
 textarea {
     max-width: 100%;}
     
+    /*********** Rappel **********/   
+    .contact .picto_title_phone {
+        padding-top: 120px;
+        background: url('../img/picto/picto_phone_grey.png') no-repeat top center;
+        text-transform: inherit;}
+
     /*********** Brochure **********/   
     .contact .picto_title_doc {
         padding-top: 100px;

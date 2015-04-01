@@ -46,12 +46,12 @@ Récuperation du header
         <div class="container">
             <div class="row">
                 <div class="col-sm-3 picto_title_mail">
-                    <h1 class="h1_small">Laissez vos coordonnées, Cours Galien vous rappelle</h1>
+                    <h1 class="h1_small">Téléchargez les brochures d’information Galien</h1>
                 </div>
                 <div class="col-sm-6 col-sm-offset-1">
                     <form method="post" action="#">
-                        <h2 class="h2_tall">Laissez vos coordonnées, Cours Galien vous rappelle</h2>
-                           <?php wp_nonce_field('contact', 'contact-verif'); ?>  <!-- pour verifier que les reponse du formulaire proviennet bien de notre site -->
+                        <h2 class="h2_tall">Téléchargez les brochures d’information Galien</h2>
+                        <?php wp_nonce_field('contact', 'contact-verif'); ?>  <!-- pour verifier que les reponse du formulaire proviennet bien de notre site -->
                         <div class="form-group">
                             <label for="nom">Nom *</label>
                             <input type="text" name="nom" class='form-control' id="firstname" required>
