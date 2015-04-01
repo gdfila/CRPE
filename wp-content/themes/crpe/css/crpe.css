@@ -356,6 +356,16 @@ textarea {
         background: url('../img/picto/picto_contact_grey.png') no-repeat top center;
         text-transform: inherit;}
 
+/***********************************************
+***************** Google map *******************
+***********************************************/
+
+.map {
+    position: relative;
+    height: 400px;}
+.acf-map {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;}
 
 /***********************************************
 ***************** Scroll top *******************
