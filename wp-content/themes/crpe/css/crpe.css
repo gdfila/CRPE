@@ -116,10 +116,10 @@ a:hover {
 ***********************************************/
 
 .img_prez {
-    position:relative; overflow: hidden;}
+    position: relative; overflow: hidden;}
 .img_prez, .img_prez img { 
     width: 100%;}
-.carousel-inner, .carousel-inner .item , .img_prez { 
+.carousel-inner, .carousel-inner .item, .img_prez { 
     max-height: 450px;}
 .carousel:before, .carousel:after, .img_prez:before, .img_prez:after {
     position: absolute; content: "";
@@ -132,6 +132,34 @@ a:hover {
     bottom: -16px; left: 0; z-index: 14;
     height: 100px;
     background: url('../img/bottom_incurve.png') no-repeat; background-size: 100% 100%;}
+
+/***********************************************
+******************* Centre *********************
+***********************************************/
+
+#container_centre .img_prez {
+    min-height: 450px;
+    text-align: center;}
+#container_centre .img_prez h1, #container_centre .img_prez h2 {
+    color: #fff; text-shadow: 0 1px 15px rgba(0,0,0,0.4);}
+#container_centre .img_prez h1 {
+    display: inline-block; margin: 35px 0 0; padding-bottom: 10px;
+    font-size: 4em;
+    border-bottom: 1px solid #fff;}
+#container_centre .img_prez h2 {
+    margin-top: 10px;}
+#container_centre .img_prez img {
+    position: absolute; top: 0; left: 0; z-index: -1;}
+.descriptif, .jpo .col-sm-8 {
+    text-align: left;}
+.descriptif h1, .descriptif h2, .descriptif h3, .descriptif ul {
+    margin-bottom: 10px;}
+.descriptif ul li {
+    margin-left: 20px;
+    list-style-type: square;}
+.descriptif .encart_contact {
+    padding: 20px;
+    background-color: rgba(241,97,80, 0.3);}
 
 /***********************************************
 **************** plugin jpo ********************
@@ -189,18 +217,6 @@ a:hover {
 
 .accroche h2 {
     color: #777; text-transform: inherit;}
-
-    /********** Prepa **********/
-    #container_prepa .accroche .h2_medium {
-        margin-bottom: 50px;}
-    #container_prepa .accroche .col-sm-3 {
-        max-height: 395px; padding: 0 30px;
-        overflow: hidden;}
-    #container_prepa .accroche .col-sm-3 img {
-        max-width: 100%;
-        margin-bottom: 25px;}
-    #container_prepa .accroche .col-sm-3 p {
-        text-align: justify;}
 
 /***********************************************
 ************ Section Valeurs *******************
@@ -344,6 +360,10 @@ a:hover {
     display: none;}
 
 /***********************************************
+*********** Section Descriptif *****************
+***********************************************/
+
+/***********************************************
 ********* Section Contact (formulaire) *********
 ***********************************************/
 
@@ -382,12 +402,10 @@ textarea {
 ***************** Google map *******************
 ***********************************************/
 
-.map {
-    position: relative;
-    height: 400px;}
 .acf-map {
-    position: absolute; top: 0; left: 0;
-    width: 100%; height: 100%;}
+    width: 100%; height: 300px;}
+.acf-map div[title="Cliquer pour effectuer un zoom"], .acf-map div[title="Faire glisser le curseur pour zoomer"] { 
+    display: none;}
 
 /***********************************************
 ***************** Scroll top *******************
