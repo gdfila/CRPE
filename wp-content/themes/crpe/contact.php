@@ -19,7 +19,8 @@ Récuperation du header
     Affiche une image de présentation pour la page
      --> 
     <div class="img_prez img_prez_aplat img_prez_incurve">
-        <img src="<?php echo $post_thumbnail_url; ?>" />
+        <!-- <img src="<?php echo $post_thumbnail_url; ?>" /> -->
+        <img class="back_img" src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
     </div>
     <?php
     //affichage message d'erreur
