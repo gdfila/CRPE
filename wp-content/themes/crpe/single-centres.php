@@ -76,6 +76,7 @@ Récuperation du header
                 <p>Cours Galien Bordeaux</p>
                 <p>190 rue Lecocq  </p>
                 <p>33000 Bordeaux</p>
+                <a class="button" href="#"><!-- Faire un lien vers le formulaire brochure avec le centre préselectionné -->Demande d'infos</a>
             </div><!-- /col-sm-4 -->
          </div><!-- /container -->
     </section>
