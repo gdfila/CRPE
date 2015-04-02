@@ -46,6 +46,8 @@ a:hover {
     text-decoration: none;}
 .button { 
     cursor: pointer;}
+img {
+    max-width: 100%;}
 
 /***********************************************
 *********** Menu navigation ********************
@@ -118,7 +120,7 @@ a:hover {
 .img_prez {
     position: relative; overflow: hidden;}
 .carousel-inner, .carousel-inner .item, .img_prez { 
-    max-height: 450px;}
+    height: 450px;}
 .img_prez, .img_prez .back_img { 
     width: 100%;}
 .img_prez .back_img {
@@ -140,7 +142,6 @@ a:hover {
 ***********************************************/
 
 #container_centre .img_prez {
-    min-height: 450px;
     text-align: center;}
 #container_centre .img_prez h1, #container_centre .img_prez h2 {
     color: #fff; text-shadow: 0 1px 15px rgba(0,0,0,0.4);}
@@ -150,8 +151,6 @@ a:hover {
     border-bottom: 1px solid #fff;}
 #container_centre .img_prez h2 {
     margin-top: 10px;}
-#container_centre .img_prez img {
-    position: absolute; top: 0; left: 0; z-index: -1;}
 .descriptif, .jpo .col-sm-8 {
     text-align: left;}
 .descriptif h1, .descriptif h2, .descriptif h3, .descriptif ul {

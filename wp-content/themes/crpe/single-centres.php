@@ -18,7 +18,7 @@ Récuperation du header
     <div class="img_prez img_prez_aplat img_prez_incurve">
         <div class="container">
             <!-- <img src="<?php echo $post_thumbnail_url; ?>"> -->
-            <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
+            <img class="back_img" src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
             <h1 class="h1_tall"><?php the_field('adresse_-_ville');?></h1>
             <h2 class="h2_medium">Prépa concours bordeaux</h2>
         </div><!-- /container -->
