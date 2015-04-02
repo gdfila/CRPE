@@ -117,10 +117,12 @@ a:hover {
 
 .img_prez {
     position: relative; overflow: hidden;}
-.img_prez, .img_prez img { 
-    width: 100%;}
 .carousel-inner, .carousel-inner .item, .img_prez { 
     max-height: 450px;}
+.img_prez, .img_prez .back_img { 
+    width: 100%;}
+.img_prez .back_img {
+    position: absolute; top: 0; left: 0; z-index: -1;}
 .carousel:before, .carousel:after, .img_prez:before, .img_prez:after {
     position: absolute; content: "";
     width: 100%;}
@@ -166,19 +168,10 @@ a:hover {
 ***********************************************/
 
 .carousel-caption {
-    position: absolute;
-    left: 15%;
-    bottom: 70px;
+    position: absolute; left: 15%; bottom: 70px; z-index: 1500;
+    width: 400px; padding: 15px 15px 15px 50px;
     background-color: rgba(22,64,91,0.7);
-    padding: 15px 15px 15px 50px;
-    color: #fff;
-    width: 400px;
-    box-sizing: border-box;
-    line-height: 20px;
-    font-size: 15px;
-    z-index: 1500;
-    text-align: left;
-}
+    font-size: 15px; color: #fff; text-align: left; line-height: 20px;}
 .carousel-caption:after {
     position: absolute; content: ""; top: 15px; left: 15px;
     width: 24px; height: 24px;
@@ -222,8 +215,6 @@ a:hover {
 ************ Section Valeurs *******************
 ***********************************************/
 
-.valeurs {
-    background: url('../img/images/index_back_1.jpg') center center / 100%; background-size: cover;}
 .valeurs .cercle-3 {
     padding: 48px 10px 10px;
     background-repeat: no-repeat; background-position: 50% 8px;
@@ -238,13 +229,6 @@ a:hover {
     background-image: url('../img/picto/cohesion.png');}
 .valeurs div div:nth-child(5) .cercle-3 { 
     background-image: url('../img/picto/reussite.png');}
-
-/***********************************************
-*********** Section Statistiques ***************
-***********************************************/
-
-.statistiques {
-    background: url('../img/images/296_MG_9554.jpg') center center / 100%; background-size: cover;}
 
 /***********************************************
 ********* Section Equipe pédagogique ***********
@@ -527,13 +511,6 @@ footer div div div:nth-child(4) ul li:nth-child(5) a {
     .underline {
         padding-bottom: 10px; margin-bottom: 10px;
         border-bottom: 1px solid #f16150;}
-
-    /***********************************************
-    ************** Background image ****************
-    ***********************************************/
-
-    .back_img {
-        padding: 50px;}
 
 /***********************************************
 ****************** Slider temoignage *******************

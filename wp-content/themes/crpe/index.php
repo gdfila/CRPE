@@ -28,7 +28,8 @@ Récuperation du header
     Section présentant les valeurs de l'école
     Max <p> => 120 caractères
      -->
-    <section class="valeurs back_img">
+    <section class="valeurs img_prez img_prez_aplat">
+        <img class="back_img" src="<?php bloginfo('template_directory'); ?>/img/images/index_back_1.jpg" alt="">
         <div class="container">
             <div class="row">
                 <h1 class="h1_tall">Adoptez l'esprit Galien !</h1>
@@ -139,7 +140,8 @@ Récuperation du header
     <!--
     Section présentant les chiffres de l'école
      --> 
-    <section class="statistiques back_img">
+    <section class="statistiques img_prez img_prez_aplat">
+        <img class="back_img" src="<?php bloginfo('template_directory'); ?>/img/images/296_MG_9554.jpg" alt="">
         <div class="container">
                 <div class="row">
                     <h1 class="h1_tall">Galien en chiffres !</h1>
