@@ -49,6 +49,24 @@ $(document).ready(function() {
         }
     });
 
+    // Lire la suite
+    $('.lire_suite').click(function() {
+        $(this).prev('.savoir_faire_texte').css({
+            'overflow': 'visible',
+            'height': '100%'});
+        $(this).css('display', 'none');
+        $(this).next('.lire_moins').css('display', 'block');
+    });
+
+    // Lire moins
+    $('.lire_moins').click(function() {
+        $(this).parent('.savoir_faire_texte').css({
+            'overflow': 'hidden',
+            'height': '105px'});
+        $(this).prev('.lire_suite').css('display', 'block');
+        $(this).css('display', 'none');
+    });
+
     // Compteur
     $('.counter').counterUp({
         delay: 40,
