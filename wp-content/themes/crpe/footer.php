@@ -48,7 +48,6 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/jquery.counterup.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/js/form.js"></script>
     <?php wp_footer(); ?>
 
 </body>
