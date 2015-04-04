@@ -262,13 +262,35 @@ section.temoignages {
     display: none;}
 
 /***********************************************
-**************** Section Test ******************
+******** Section Condition examen **************
 ***********************************************/
 
-.condition_exam .container {
-    background: url('../img/aSupprimer.jpg') no-repeat;
-    background-size: cover;
-    height: 1000px;}
+.condition_exam .col-sm-6 { 
+    padding: 0;}
+.contenu_exam {
+    position: relative;
+    width: 340px; margin: auto; padding-bottom: 20px;
+    border: 1px solid #f16150; border-radius: 20px;
+    text-align: center;}
+.contenu_exam h2 { 
+    margin: 0; padding: 40px 20px;
+    background-color: #f16150; border-radius: 15px;
+    color: #fff;}
+.contenu_exam strong { 
+    display: block; margin: 10px 0; padding-bottom: 10px;
+    border-bottom: 1px dashed #f16150;}
+.contenu_exam p {
+    padding: 10px 20px 0;
+    text-align: left;}
+.contenu_exam span {
+    display: block; margin-right: 20px;
+    font-size: 0.85em; text-align: right;}
+.coeff_exam { 
+    position: absolute; top: -40px; left: -80px;
+    padding: 20px;
+    background-color: #fff; border: 1px solid #f16150; border-radius: 20px; 
+    /* CSS3 */
+    -moz-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); -webkit-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); -o-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3);}
 
 /***********************************************
 ****** Section titre_classe_inconnu ************
@@ -358,7 +380,7 @@ section.temoignages {
 ************* Centre mini jpo ******************
 ***********************************************/
 
-.centre_titre {
+.min_jpo_container {
     position: relative; float: none;
     margin: auto;}
 .min_jpo {
@@ -368,7 +390,13 @@ section.temoignages {
 .min_jpo .col-sm-6 {
     height: 50px; margin-bottom: 5px; padding: 0;
     background-color: rgb(241,97,80); border-right: 1px solid #fff;
-    color: #fff; line-height: 50px;}
+    color: #fff;}
+.min_jpo .min_jpo_date {
+    padding-top: 5px;}
+.min_jpo .min_jpo_date strong {
+    font-size: 2em;}
+.min_jpo .min_jpo_date span {
+    text-transform: uppercase;}
 .min_jpo .col-sm-6 a {
     display: block; width: 100%; height: 100%;
     background: url('../img/picto/picto_contact.png') no-repeat center;
@@ -393,7 +421,7 @@ section.temoignages {
     display: none;}
 
 /***********************************************
-************** Section Déscriptif **************
+************** Section Descriptif **************
 ***********************************************/
 
 .descriptif, .jpo .col-sm-8 {
@@ -437,6 +465,13 @@ section.temoignages {
     color: #333;}
 .jpo .row:hover .btn {
     background-color: #3497db;}
+.jpo .big_jpo_date {
+    text-align: right;}
+.jpo .big_jpo_date  strong {
+    font-size: 5em;}
+.jpo .big_jpo_date  span {
+    margin-right: 15px;
+    font-size: 1.5em; text-transform: uppercase;}
 
 /***********************************************
 ********* Section Contact (formulaire) *********

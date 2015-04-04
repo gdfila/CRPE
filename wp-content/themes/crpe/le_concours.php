@@ -74,7 +74,34 @@ Récuperation du header
         <div class="container">
             <h1 class="h1_medium">Les modalités d'examen</h1>
             <div class="row">
-                
+                <div class="col-sm-6">
+                    <div class="contenu_exam">
+                        <div class="coeff_exam">
+                            40 points/80
+                        </div>
+                        <h2 class="h2_medium">Français</h2>
+                        <strong>3 épreuves</strong>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum aperiam, eius tempora vel quis neque impedit tempore voluptate saepe corrupti assumenda, dolores eligendi vero repellat, molestias numquam ipsum mollitia architecto!</p>
+                        <span>11 points</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam culpa incidunt vitae cupiditate voluptatum eligendi nobis impedit, commodi fugiat repudiandae asperiores temporibus similique id itaque magnam praesentium aspernatur suscipit in.</p>
+                        <span>11 points</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, aut, sint! Nihil consectetur at, dicta deleniti dolore odio voluptates soluta reiciendis enim nesciunt quae magni et, asperiores laudantium sunt minus.</p><span>11 points</span>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="contenu_exam">
+                        <div class="coeff_exam">
+                            40 points/80
+                        </div>
+                        <h2 class="h2_medium">Mathématique</h2>
+                        <strong>3 épreuves</strong>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum aperiam, eius tempora vel quis neque impedit tempore voluptate saepe corrupti assumenda, dolores eligendi vero repellat, molestias numquam ipsum mollitia architecto!</p>
+                        <span>11 points</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam culpa incidunt vitae cupiditate voluptatum eligendi nobis impedit, commodi fugiat repudiandae asperiores temporibus similique id itaque magnam praesentium aspernatur suscipit in.</p>
+                        <span>11 points</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, aut, sint! Nihil consectetur at, dicta deleniti dolore odio voluptates soluta reiciendis enim nesciunt quae magni et, asperiores laudantium sunt minus.</p><span>11 points</span>
+                    </div>
+                </div><!-- /col-sm-6 -->
             </div><!-- /row -->
         </div><!-- /container -->
     </section>

@@ -1,6 +1,5 @@
 $(document).ready(function() {
-
-     
+  
     $(window).scroll(function(){ 
         // Nav fixed
         pos = $('.top_content').first().offset().top;
