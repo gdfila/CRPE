@@ -91,12 +91,13 @@ function remplirListe()
       $centersList = $client->call(array("service" => "formation","method" => "centersListByFormation","formationId" => 400));
    //  plage horaire
     $horaireList = $client->call(array("service" => "prospect","method" => "callBackTimesList"));
+    
       $_SESSION['horaireList']=$horaireList;
       $_SESSION['client']=$client;
      $data=[];
   
   // $results = $client->call(array("service" => "communication","method" => "centerInformationMeetingsList", "centerId" => 11));
- var_dump($centersList);
+ 
        if(!empty($centersList))
      {
          foreach ($centersList->datas as $centre)
@@ -110,7 +111,7 @@ function remplirListe()
      }
      $_SESSION['centre']=$data;
 }
-//add_action('template_redirect', 'remplirListe');
+add_action('template_redirect', 'remplirListe');
 
 
 
@@ -119,7 +120,7 @@ function remplirListe()
  * --------------------------------------------------------  formulaire brochure----------------------------------------------------------------
  */
 
-//**----------------------------- verif les champs du formulaire -----------------**/
+//**----------------------------- verif les champs du formulaire brocure-----------------**/
 function verifForm()
 {
       if (wp_verify_nonce($_POST['brochure-verif'], 'brochure')) 
@@ -132,7 +133,6 @@ function verifForm()
               }
      }
               /*  envoie brochure par courrier */
-            
         if($_POST['brochure']==true )
          {
                     if (empty($_POST['adress']) || empty($_POST['cp']) || empty($_POST['ville']))
@@ -141,10 +141,16 @@ function verifForm()
                                require_once ABSPATH . 'wp-content/themes/crpe/brochure.php';
                                  exit();
                     }
-           }
+           } 
+           if (empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['email']))
+              {
+                   $_GET['erreur']="vide";
+                   require_once ABSPATH . 'wp-content/themes/crpe/brochure.php';
+                     exit();
+              }
      
 }
-
+/*      ----------------------------------- traitement formuylaire brochure  ----------------------------------*/
 function traitementFormBrochure() {
      $_GET['erreur']="";
     $_GET['sucess']="";
@@ -154,18 +160,16 @@ function traitementFormBrochure() {
      if (isset($_POST['valider']) && isset($_POST['brochure-verif']))  
    {
             verifform(); // verif formulaire
-            
-                    include_once "api/Thalamus_init.php";
+            $client=$_SESSION['client'];
+                 //   include_once "api/Thalamus_init.php";
               //*-----------------  demande d'envoi de documentation --------*/
                     if(empty($_POST['telephone']))   { $tel="0000000000"; }
                      else { $tel=$_POST['telephone'] ; }
                    
                      $centre= explode("/",$_POST['centre']);
-                     var_dump($centre);
-                     
-                     $idcentre=$centre[0];
+                      $idcentre=$centre[0];
                      $nomCentre=explode(" ",$centre[1]);
-                     
+                     $etreRappeler=$_POST['rappel'];
                  // envoi de brochure par courrier    
               if($_POST['brochure']==true)
               {$documentationRequest = $client->call(array(
@@ -173,9 +177,9 @@ function traitementFormBrochure() {
                     "method" => "documentationRequest",
                     "centerId" => $idcentre,
                     "formationId" => 400,
-                    "callBackTimeId" => 1,
+                    "callBackTimeId" =>$_POST['horaire'],
                     "booklet" => True,  /*  envoi par courrier  */
-                    "callBack" => True,
+                    "callBack" => $etreRappeler,
                     "lastName" => $_POST['nom'],
                     "firstName" => $_POST['prenom'],
                     "email" => $_POST['email'],
@@ -190,9 +194,9 @@ function traitementFormBrochure() {
                     "method" => "documentationRequest",
                     "centerId" => $idcentre,
                     "formationId" => 400,
-                    "callBackTimeId" => 1,
+                    "callBackTimeId" => $_POST['horaire'],
                     "booklet" => false,
-                    "callBack" => True,
+                    "callBack" => $etreRappeler,
                     "lastName" => $_POST['nom'],
                     "firstName" => $_POST['prenom'],
                     "email" => $_POST['email'],
@@ -202,8 +206,7 @@ function traitementFormBrochure() {
                     "city" =>""
                 ));
             }
-         //   var_dump($documentationRequest);
-          //  die();
+         
                if ($documentationRequest->success !=true)
                     {
                           $_GET['erreur']='brochure';
@@ -211,9 +214,9 @@ function traitementFormBrochure() {
                             require_once ABSPATH . 'wp-content/themes/crpe/brochure.php';
                                  exit();
                     }
-                    rappel($client) ;// demande de rappel telephonique
+                  //  rappel($client) ;// demande de rappel telephonique
                     $_GET['centre']=strtolower($nomCentre[1]);
-                  
+              
                       require_once ABSPATH . 'wp-content/themes/crpe/telechargement_brochure.php'; 
                            exit();
           
@@ -222,38 +225,11 @@ function traitementFormBrochure() {
     }
 add_action('template_redirect', 'traitementFormBrochure');
 
-
-/* demande de rappel telephonique */
-function rappel($client)
-{
-     if($_POST['rappel']==true)
-               {    
-                   $callBack = $client->call(array(
-                            "service" => "prospect",
-                            "method" => "callBackRequest",
-                            "centerId" => $_POST['centre'],
-                            "formationId" => 400,
-                            "lastName" =>  $_POST['nom'],
-                            "firstName" =>  $_POST['prenom'],
-                            "email" => $_POST['email'],
-                            "phoneNumber" => $_POST['telephone'],
-                             "callBackTimeId" => $_POST['horaire']
-                        ));
-               
-                    if ($callBack->success!=true)   {
-                          $_GET['erreur']='rappel';
-                          $_GET['mess']=$callBack->errorMessage;
-                            require_once ABSPATH . 'wp-content/themes/crpe/brochure.php';
-                                 exit();
-                    }
-                 }
-}
-
-
-
 /**
  * -------------------------------------------------------------- formulaire Rappel  -----------------------------------------------------------------------
  */
+
+/**  verification des champs*/
 function traitementFormRappel() {
      $_GET['erreur']="";
     $_GET['sucess']="";
@@ -270,19 +246,62 @@ function traitementFormRappel() {
                  require_once ABSPATH . 'wp-content/themes/crpe/rappel.php';
                   exit();
               }
+              if (empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['email']))
+              {
+                   $_GET['erreur']="vide";
+                 require_once ABSPATH . 'wp-content/themes/crpe/rappel.php';
+                  exit();
+              }
                 include_once "api/Thalamus_init.php";
-                    rappel($client);
-                    
-                          $_GET['erreur']='success';
+                     $result=rappel();
+                     if ($result==true)
+                     { $_GET['erreur']='success'; }
                        
                             require_once ABSPATH . 'wp-content/themes/crpe/rappel.php';
                              exit();
-                       }
+        }
             
    }
    
 }
 add_action('template_redirect', 'traitementFormRappel');
+
+
+
+/* demande de rappel telephonique */
+function rappel()
+{
+    $client=$_SESSION['client'];
+        $centre= explode("/",$_POST['centre']);
+       $idcentre=$centre[0];
+       $callBack = $client->call(array(
+                            "service" => "prospect",
+                            "method" => "callBackRequest",
+                            "centerId" => $idcentre,
+                            "formationId" => 400,
+                            "lastName" =>  $_POST['nom'],
+                            "firstName" =>  $_POST['prenom'],
+                            "email" => $_POST['email'],
+                            "phoneNumber" => $_POST['telephone'],
+                             "callBackTimeId" => $_POST['horaire']
+                        ));
+                                 
+                    if ($callBack->success!=true)   {
+                          $_GET['erreur']='rappel';
+                          $_GET['mess']=$callBack->errorMessage;
+                            require_once ABSPATH . 'wp-content/themes/crpe/brochure.php';
+                                 exit();
+                    }
+                    else
+                        {
+                
+                            return true;
+                        }
+                   
+}
+
+
+
 
 /*----------------------------------------------------------------  formulaire d'inscription jpo ------------------------------------------*/
 function inscriptionJPO()
@@ -292,7 +311,7 @@ function inscriptionJPO()
       if (wp_verify_nonce($_POST['inscriptionJPO'], 'jpo')) 
       {
              $client=$_SESSION['client'];
-        $results=listAllJPO();
+              $results=listAllJPO();
         var_dump($results);
 //            $results = $client->call(array("service" => "communication","method" => "centerInformationMeetingsList", "centerId" => 22));
 //           var_dump($results->datas);
@@ -320,8 +339,8 @@ function traitementFormContact()
    {
       if (wp_verify_nonce($_POST['contact-verif'], 'contact')) 
       {
-          var_dump($_POST);
-          die();
+//          var_dump($_POST);
+//          die();
       }  
    }
             

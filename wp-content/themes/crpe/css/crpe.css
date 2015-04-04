@@ -24,7 +24,7 @@ body, a { font-size: 0.95em;}
 .logo { 
     max-width: 120px;}
 section { 
-    padding: 50px;
+    padding: 50px 50px 0;
     text-align: center;}
 h1, h2, h3, h4, h5, h6 { 
      color: #333; text-transform: uppercase;}
@@ -138,31 +138,6 @@ img {
     background: url('../img/bottom_incurve.png') no-repeat; background-size: 100% 100%;}
 
 /***********************************************
-******************* Centre *********************
-***********************************************/
-
-#container_centre .img_prez {
-    text-align: center;}
-#container_centre .img_prez h1, #container_centre .img_prez h2 {
-    color: #fff; text-shadow: 0 1px 15px rgba(0,0,0,0.4);}
-#container_centre .img_prez h1 {
-    display: inline-block; margin: 35px 0 0; padding-bottom: 10px;
-    font-size: 4em;
-    border-bottom: 1px solid #fff;}
-#container_centre .img_prez h2 {
-    margin-top: 10px;}
-.descriptif, .jpo .col-sm-8 {
-    text-align: left;}
-.descriptif h1, .descriptif h2, .descriptif h3, .descriptif ul {
-    margin-bottom: 10px;}
-.descriptif ul li {
-    margin-left: 20px;
-    list-style-type: square;}
-.descriptif .encart_contact {
-    padding: 20px;
-    background-color: rgba(241,97,80, 0.3);}
-
-/***********************************************
 **************** plugin jpo ********************
 ***********************************************/
 
@@ -230,56 +205,37 @@ img {
     background-image: url('../img/picto/reussite.png');}
 
 /***********************************************
-********* Section Equipe pédagogique ***********
+************* Slider temoignage ****************
 ***********************************************/
 
-.equipe_pedagogique {
-    background-color: rgba(241,97,80, 0.3);
-    text-align: left;}
-.equipe_pedagogique blockquote {
-  padding-left: 48px;
-  background: url('../img/picto/blockquote.png') no-repeat;}
-.equipe_pedagogique h1 {
-    font-style: italic; text-transform: initial;}  
-.equipe_pedagogique h1 span {
-    font-size: 4em;}
-.equipe_pedagogique img {
-    max-width: 100%;}
-.equipe_pedagogique .equipe_peda_prez .equipe_peda_prez_title {
-    margin: 5px 0;}
-.equipe_pedagogique .equipe_peda_prez p + p {
-    font-size: 0.80em;}
-
-/***********************************************
-**************** Section Test ******************
-***********************************************/
-
-.condition_exam h2 {
-    margin-bottom: 20px;}
-.condition_exam .row {
-    margin-top: 50px;}
-.condition_exam .cercle-3 {
-    background-color: rgba(241,97,80, 0.6);}
-.condition_exam .cercle-3 p {
-    font-size: 2.3em; color: #fff;}
-.condition_exam .cercle-3 p span {
-    line-height: normal;}
-.condition_exam .demi_cercle {
-    background-color: rgba(255,255,255, 0.3);}
-
-/***********************************************
-**************** Section Jpo *******************
-***********************************************/
-
-.jpo {
-    background-color: rgba(241,97,80, 0.3);}
-
-/***********************************************
-************ Section Equipements ***************
-***********************************************/
-
-.equipement .col-sm-6>div {
-    text-align: left;}
+section.temoignages {
+     padding: 80px 50px 100px;}
+.temoignage_slider {
+    position: relative;
+    max-height: 246px;
+    overflow-y: hidden;}
+.temoignage_slider_inner, .temoignage_slider-caption {
+    width: 80%; margin: auto;}
+.temoignage_slider_inner .temoignage_back {
+    height: 246px;
+    background-color: #fff;}
+.temoignage_slider-caption {
+    position: relative;
+    padding-top: 30px;  
+    text-align: justify;}
+.temoignage_slider-caption .h2_small {
+    margin-bottom: 0;}
+.embed-responsive {
+    width: 100%;}
+.controllers .right {
+    float: right;}
+.controllers {
+    position: absolute; top: 45%;
+    width: 100%;}
+.controllers .left {
+    float: left;}
+.glyphicon {
+    font-size: 3em; color: #777;}
 
 /***********************************************
 ************* Section  Formules ****************
@@ -301,50 +257,181 @@ img {
     display: none;}
 
 /***********************************************
-********** Section Perspective ****************
+**************** Section Test ******************
 ***********************************************/
 
-.perspective {
-    background-color: rgba(241,97,80, 0.3);}
-.perspective .col-sm-6 { 
-    padding: 0;}
-.perspective .col-sm-6 > div {
-    width: 75%; min-height: 540px; margin: auto; padding-bottom: 20px;
-    background-color: #fff; border: 2px solid #f0f0f0;
-    text-align: center;
-    -moz-box-shadow: 1px 1px 1px 0px #999; -webkit-box-shadow: 1px 1px 1px 0px #999; -o-box-shadow: 1px 1px 1px 0px #999; box-shadow: 1px 1px 1px 0px #999;}
-.perspective h2 { 
-    background-color: #f0f0f0;}
-.perspective h2, .perspective > div > p, .perspective .info { 
-    margin: 0; padding: 20px;}
-.perspective img {
-    max-width: 100%; margin-bottom: 25px;}
-.perspective .info_sup {
+.condition_exam .container {
+    background: url('../img/aSupprimer.jpg') no-repeat;
+    background-size: cover;
+    height: 1000px;}
+
+/***********************************************
+****** Section titre_classe_inconnu ************
+***********************************************/
+
+.titre_classe_inconnu .h3_medium {
+    margin: 10px 0;}
+.titre_classe_inconnu .col-sm-3 {
+    padding: 0 20px 20px;}
+.titre_classe_inconnu .col-sm-3 p {
+    margin: 0;
+    text-align: justify;
+    overflow: hidden;}
+.titre_classe_inconnu .col-sm-3 span {
+    float: right;
+    font-size: 0.80em; font-style: italic;
+    cursor: pointer;}
+.titre_classe_inconnu .col-sm-3 .lire_moins {
     display: none;}
 
 /***********************************************
-************ Section Graduate ******************
+************ Section Savoir faire **************
 ***********************************************/
 
-.graduate .col-sm-6 { 
-    padding: 0;}
-.graduate .col-sm-6 > div {
-    width: 75%; min-height: 540px; margin: auto; padding-bottom: 20px;
-    background-color: #fff; border: 2px solid #f0f0f0;
-    text-align: center;
-    -moz-box-shadow: 1px 1px 1px 0px #999; -webkit-box-shadow: 1px 1px 1px 0px #999; -o-box-shadow: 1px 1px 1px 0px #999; box-shadow: 1px 1px 1px 0px #999;}
-.graduate h2 { 
-    background-color: #f0f0f0;}
-.graduate h2, .perspective > div > p, .perspective .info { 
-    margin: 0; padding: 20px;}
-.graduate img {
-    max-width: 100%; margin-bottom: 25px;}
-.graduate .info_sup {
+.savoir_faire .h3_medium {
+    margin: 10px 0;}
+.savoir_faire .col-sm-3 {
+    padding: 0 20px 20px;}
+.savoir_faire .col-sm-3 p {
+    height: 105px; margin: 0;
+    text-align: justify;
+    overflow: hidden;}
+.savoir_faire .col-sm-3 span {
+    float: right;
+    font-size: 0.80em; font-style: italic;
+    cursor: pointer;}
+.savoir_faire .col-sm-3 .lire_moins {
     display: none;}
 
 /***********************************************
-*********** Section Descriptif *****************
+************* Section pédagogique **************
 ***********************************************/
+
+.outil_pedagogique h1 span {
+    font-size: 4em;}
+.outil_pedagogique .col-sm-4 {
+    padding: 0 20px;}
+.outil_pedagogique .h3_casse_couille {
+    text-transform: initial;}
+.outil_pedagogique .col-sm-4 p {
+    text-align: justify;}
+.outil_pedagogique a {
+    width: 100%;}
+.equipe_temoignage {
+    margin-top: 50px;
+    background-color: #fff;
+    text-align: left;}
+.equipe_temoignage .col-sm-3 {
+    padding-left: 0;}
+.equipe_temoignage img {
+    max-width: 100%;}
+.equipe_temoignage .equipe_temoignage_title {
+    margin: 5px 0;
+    font-size: 0.80em;}
+.equipe_temoignage .equipe_temoignage_title strong {
+    font-size: 1.2em;}
+.equipe_temoignage blockquote {
+  padding-left: 48px;
+  background: url('../img/picto/blockquote.png') no-repeat;} 
+
+/***********************************************
+********* Centre image presentation ************
+***********************************************/
+
+#container_centre .img_prez {
+    text-align: center;}
+#container_centre .img_prez h1, #container_centre .img_prez h2 {
+    color: #fff; text-shadow: 0 1px 15px rgba(0,0,0,0.4);}
+#container_centre .img_prez h1 {
+    display: inline-block; margin: 35px 0 0; padding-bottom: 10px;
+    font-size: 4em;
+    border-bottom: 1px solid #fff;}
+#container_centre .img_prez h2 {
+    margin: 10px 0;}
+
+/***********************************************
+************* Centre mini jpo ******************
+***********************************************/
+
+.min_jpo_container {
+    position: relative; float: none;
+    margin: auto;}
+.min_jpo {
+    position: absolute; z-index: 2000;
+    padding: 10px 20px 20px;
+    background-color: #fff;}
+.min_jpo .col-sm-6 {
+    height: 50px; margin-bottom: 5px; padding: 0;
+    background-color: rgb(241,97,80); border-right: 1px solid #fff;
+    color: #fff; line-height: 50px;}
+.min_jpo .col-sm-6 a {
+    display: block; width: 100%; height: 100%;
+    background: url('../img/picto/picto_contact.png') no-repeat center;
+    color: #fff; text-indent: -9999px;}
+.min_jpo h4 {
+    margin: 5px;
+    font-size: 1em;}
+.min_jpo p {
+    height: 65px;
+    font-size: 0.8em;
+    overflow: hidden;}
+.min_jpo .btn {
+    width: 100%;}
+
+/***********************************************
+***************** Google map *******************
+***********************************************/
+
+.acf-map {
+    width: 100%; height: 300px; margin-top: 30px;}
+.acf-map div[title="Cliquer pour effectuer un zoom"], .acf-map div[title="Faire glisser le curseur pour zoomer"] { 
+    display: none;}
+
+/***********************************************
+************** Section Déscriptif **************
+***********************************************/
+
+.descriptif, .jpo .col-sm-8 {
+    text-align: left;}
+.descriptif h1, .descriptif h2, .descriptif h3, .descriptif ul {
+    margin-bottom: 10px;}
+.descriptif ul li {
+    margin-left: 20px;
+    list-style-type: square;}
+.descriptif .encart_contact {
+    padding: 20px;
+    background-color: rgb(241,97,80);
+    color: #fff;}
+.descriptif .encart_contact h3, .descriptif .encart_contact h4 { 
+    color: #fff;}
+.descriptif .encart_contact h4 {
+    margin: 10px 0; padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255, 0.8)}
+.descriptif .encart_contact p {
+    color: rgba(255,255,255, 0.8);}
+.descriptif .encart_contact a {
+    width: 100%;
+    background-color: #ff6446;}
+
+/***********************************************
+**************** Section Jpo *******************
+***********************************************/
+
+.jpo .row {
+    padding: 30px;
+    background-color: rgb(241,97,80);
+    color: #fff; text-align: left;}
+.jpo .row h3, .jpo .row h4 {
+    color: #fff;}
+.jpo .row .btn {
+    background-color: #ff6446;}
+.jpo .row:hover {
+    background-color: #fff;
+    color: #777;}
+.jpo .row:hover h3, .jpo .row:hover h4 {
+    color: #333;}
+.jpo .row:hover .btn {
+    background-color: #3497db;}
 
 /***********************************************
 ********* Section Contact (formulaire) *********
@@ -382,15 +469,6 @@ textarea {
         text-transform: inherit;}
 
 /***********************************************
-***************** Google map *******************
-***********************************************/
-
-.acf-map {
-    width: 100%; height: 300px;}
-.acf-map div[title="Cliquer pour effectuer un zoom"], .acf-map div[title="Faire glisser le curseur pour zoomer"] { 
-    display: none;}
-
-/***********************************************
 ***************** Scroll top *******************
 ***********************************************/
 
@@ -410,7 +488,7 @@ textarea {
 
 /* Fil d'ariane */
 #ariane {
-    width: 100%; padding: 10px 0;
+    width: 100%; margin-top: 50px; padding: 10px 0;
     background-color: #f16150;}
 #ariane a {
     color: #fff; text-transform: uppercase;}
@@ -455,6 +533,14 @@ footer div div div:nth-child(4) ul li:nth-child(5) a {
 ***********************************************/
 
     /***********************************************
+    ************** Separation Section **************
+    ***********************************************/
+
+    hr {
+        margin-top: 50px;
+        border-bottom: 1px solid rgb(241,97,80);}
+
+    /***********************************************
     ****************** Cercle /4 *******************
     ***********************************************/
 
@@ -490,54 +576,3 @@ footer div div div:nth-child(4) ul li:nth-child(5) a {
     .cercle-4 p {
         display: block; width: 50%; margin: auto;
         font-size: 1.05em; color: #333;}
-
-    /***********************************************
-    ***************** Demi-Cercle ******************
-    ***********************************************/
-    
-    .demi_cercle-container {
-        line-height: 92px;}
-    .demi_cercle { 
-        position: absolute; bottom: 0;
-        width:100%; height:50%;}
-    p.demi_cercle {
-        margin: 0;}
-
-    /***********************************************
-    ****************** Underline *******************
-    ***********************************************/
-
-    .underline {
-        padding-bottom: 10px; margin-bottom: 10px;
-        border-bottom: 1px solid #f16150;}
-
-/***********************************************
-****************** Slider temoignage *******************
-***********************************************/
-
-.temoignage_slider {
-    position: relative;
-    max-height: 246px;
-    overflow-y: hidden;}
-.temoignage_slider_inner, .temoignage_slider-caption {
-    width: 80%; margin: auto;}
-.temoignage_slider_inner .temoignage_back {
-    height: 246px;
-    background-color: #fff;}
-.temoignage_slider-caption {
-    position: relative;
-    padding-top: 30px;  
-    text-align: justify;}
-.temoignage_slider-caption .h2_small {
-    margin-bottom: 0;}
-.embed-responsive {
-    width: 100%;}
-.controllers .right {
-    float: right;}
-.controllers {
-    position: absolute; top: 45%;
-    width: 100%;}
-.controllers .left {
-    float: left;}
-.glyphicon {
-    font-size: 3em; color: #777;}

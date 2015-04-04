@@ -10,7 +10,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-3 picto_title_doc">
-                    <h1 class="h1_small">la brochure</h1>
+                    <h2 class="h1_small">la brochure</h2>
                 </div>
                 <div class="col-sm-6 col-sm-offset-1">
               <?php

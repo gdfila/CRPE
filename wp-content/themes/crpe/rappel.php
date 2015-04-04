@@ -36,6 +36,9 @@ Récuperation du header
                 case 'rappel' :
                     echo $_GET['mess'];
                     break;
+                case 'vide' :
+                    echo 'Merci de remplir tous les champs suivie d\'un *';
+                    break;
                 case 'success':
                     echo 'Votre demande a bien été enregistré';
                     break;

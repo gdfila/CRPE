@@ -17,7 +17,6 @@
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/centre.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/concours.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/anne.css">
     
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.corr.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/crpe.css">
@@ -58,9 +57,6 @@
         <a href="http://www.studius.fr">Studius</a>
     </div>
 
-    <!-- 
-    Modal : système de pop-up de bootstrap
-    -->
     <!-- 
     Modal : Pop up rappelez-moi
     -->

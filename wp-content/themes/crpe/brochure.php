@@ -42,6 +42,9 @@ Récuperation du header
                 case 'rappel' :
                       echo $_GET['mess'];
                      break;
+                  case 'vide' :
+                    echo 'merci de remplir tous les champs suivie d\'un *';
+                    break;
             }
             echo '</div>';
     }
@@ -55,6 +58,7 @@ Récuperation du header
                       echo '</div>';
                 }
             }
+             
     ?>
     
     <section class="contact">
