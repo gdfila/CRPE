@@ -96,7 +96,7 @@ function remplirListe()
      $data=[];
   
   // $results = $client->call(array("service" => "communication","method" => "centerInformationMeetingsList", "centerId" => 11));
- 
+ var_dump($centersList);
        if(!empty($centersList))
      {
          foreach ($centersList->datas as $centre)
@@ -110,7 +110,7 @@ function remplirListe()
      }
      $_SESSION['centre']=$data;
 }
-add_action('template_redirect', 'remplirListe');
+//add_action('template_redirect', 'remplirListe');
 
 
 
@@ -161,6 +161,8 @@ function traitementFormBrochure() {
                      else { $tel=$_POST['telephone'] ; }
                    
                      $centre= explode("/",$_POST['centre']);
+                     var_dump($centre);
+                     
                      $idcentre=$centre[0];
                      $nomCentre=explode(" ",$centre[1]);
                      
@@ -200,7 +202,9 @@ function traitementFormBrochure() {
                     "city" =>""
                 ));
             }
-               if ($documentationRequest->success!=true)
+         //   var_dump($documentationRequest);
+          //  die();
+               if ($documentationRequest->success !=true)
                     {
                           $_GET['erreur']='brochure';
                           $_GET['mess']=$documentationRequest->errorMessage;
@@ -287,12 +291,20 @@ function inscriptionJPO()
    {
       if (wp_verify_nonce($_POST['inscriptionJPO'], 'jpo')) 
       {
-            var_dump($_POST);
-            $client=$_SESSION['client'];
-        
-            $results = $client->call(array("service" => "communication","method" => "centerInformationMeetingsList", "centerId" => $_POST['centre']));
-           var_dump($results);
-            //die();
+             $client=$_SESSION['client'];
+        $results=listAllJPO();
+        var_dump($results);
+//            $results = $client->call(array("service" => "communication","method" => "centerInformationMeetingsList", "centerId" => 22));
+//           var_dump($results->datas);
+//          foreach ( $results->datas as $res)
+//       {
+//           $select[]=array('id'=>$res->id,
+//                                        'titre'=>$res->title,
+//                                        'date'=>$res->startDate,
+//                                        'presentation'=>$res->description
+//               );
+//       }
+//            var_dump($select);
         }
    }
 }
@@ -317,45 +329,94 @@ function traitementFormContact()
 add_action('template_redirect', 'traitementFormContact');
 
 
-/*--------------------------------------------------------    */
-function selectJPO($data) 
-{
-//var_dump($data)
-    $data['jpo_thalamus'] = array('label' => 'Countries',
+/*-------------------------------------------------------- ACF Centre JPO champ dynamique -------   */
+
+add_action('acf_data_selector/data','champJPO');
+ function champJPO($data) 
+  {
+           //$results=listAllJPO();
+   // var_dump($results);
+                 
+                       $data['jpo_thalamus'] = array(
+                   		'label' => 'jpoThalamus',
+                                              'data' => array(
+                                                                    '101' => array(
+				'label' => 'Meeting Room',
+				'room_number' => '101',
+				'floor' => '1',
+				'telephone' => '100'
+			),
+			'102' => array(
+				'label' => 'Stock Room',
+				'room_number' => '102',
+				'floor' => '1',
+				'telephone' => '102'
+			),
+			'202' => array(
+				'label' => 'Manager Room 1',
+				'room_number' => '202',
+				'floor' => '2',
+				'telephone' => '202'
+			)
+                                                  )
+                                                            
+		);
+     
+                 $data['rooms'] = array(
+		'label' => 'Rooms',
 		'data' => array(
-			'US' => 'United States',
-			'UK' => 'United Kingdom')
-                                                    );
-
-//	$data['rooms'] = array(
-//		'label' => 'Rooms',
-//		'data' => array(
-//			'101' => array(
-//				'label' => 'Meeting Room',
-//				'room_number' => '101',
-//				'floor' => '1',
-//				'telephone' => '100'
-//			),
-//			'102' => array(
-//				'label' => 'Stock Room',
-//				'room_number' => '102',
-//				'floor' => '1',
-//				'telephone' => '102'
-//			),
-//			'202' => array(
-//				'label' => 'Manager Room 1',
-//				'room_number' => '202',
-//				'floor' => '2',
-//				'telephone' => '202'
-//			),
-//		)
-//	);
-
-//	$data['regions'] = array(
-//		'label' => 'Regions',
-//		'data' => json_decode(file_get_contents('/data/regions.json'), TRUE)
-//	);
-
+			'101' => array(
+				'label' => 'Meeting Room',
+				'room_number' => '101',
+				'floor' => '1',
+				'telephone' => '100'
+			),
+			'102' => array(
+				'label' => 'Stock Room',
+				'room_number' => '102',
+				'floor' => '1',
+				'telephone' => '102'
+			),
+			'202' => array(
+				'label' => 'Manager Room 1',
+				'room_number' => '202',
+				'floor' => '2',
+				'telephone' => '202'
+			)
+                                                                           
+                                                                
+		)
+	);
+              //   var_dump($data);
 	return $data;
-   }
-add_action('acf_data_selector/data', 'selectJPO');
+
+}
+
+
+function listAllJPO()
+{
+      include_once "api/Thalamus_init.php";
+        $centersList = $client->call(array("service" => "formation","method" => "centersListByFormation","formationId" => 400));
+        $results=[];
+        foreach ($centersList->datas as $centre)
+        {
+                 
+            $jpo= $client->call(array("service" => "communication","method" => "centerInformationMeetingsList","centerId" => $centre->id));
+              
+                 foreach($jpo->datas as $UnJpo)
+                 {
+                      //  var_dump($UnJpo);
+                       $donnee=array($UnJpo->id=>array(  'label'=>$centre->name,
+                                                    'id'=>$UnJpo->id,
+                                                    'titre'=>$UnJpo->title,
+                                                    'date'=>$UnJpo->startDate));
+                 //     array_push( $results, $donnee);
+                //      array_push($donnee, $UnJpo)                                        
+                                               
+                     
+                 }
+                 
+        }
+        
+         return $donnee;
+}

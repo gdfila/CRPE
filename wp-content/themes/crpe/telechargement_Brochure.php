@@ -6,8 +6,13 @@
 
 <?php get_header(); ?>
 
-<div class="row">
-      <div class="col-sm-6 form_left">
+ <section class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 picto_title_doc">
+                    <h1 class="h1_small">la brochure</h1>
+                </div>
+                <div class="col-sm-6 col-sm-offset-1">
               <?php
             if(!isset($_GET['centre']) )
             {
@@ -26,8 +31,9 @@
  
           
     
-         
+                </div>
     
       </div>
 </div>
+ </section>
 <?php get_footer(); ?>

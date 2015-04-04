@@ -11,7 +11,7 @@ Récuperation du header
     ?>
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
+  
     <!--
     Affiche une image de présentation pour la page
      --> 
@@ -47,6 +47,7 @@ Récuperation du header
     <!--
     Section présentant le lieu et ses valeurs
      -->
+     
     <section class="descriptif">
         <div class="container">
             <div class="col-sm-8">
@@ -88,6 +89,11 @@ Récuperation du header
         <section class="jpo">
             <div class="container ">
                 <div class="row">
+                   <?php $jpo=get_field('jpo_thalamus');
+                   var_dump($jpo);
+                 
+                   ?>
+                    <h2 class="h2_tall">test <?php   echo $jpo['titre'] ?></h2>
                     <h2 class="h2_tall">L'agenda de Prépa concours <?php the_field('adresse_-_ville');?></h2>
                     <!--/*** si il existe une JPO */-->
                     <?php $datJpo=get_field('date_de_la_jpo'); ?>
