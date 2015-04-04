@@ -54,7 +54,7 @@
         <a data-toggle="modal" data-target="#modalRappel" data-whatever="rappelez-moi">Rappelez-moi</a>
         <a data-toggle="modal" data-target="#modalContact" data-whatever="contact">Contact</a>
         <a data-toggle="modal" data-target="#modalBrochure" data-whatever="telecharger brochure">Brochure</a>
-        <a href="http://www.studius.fr">Studius</a>
+        <a href="http://www.studius.fr" target="_blank">Studius</a>
     </div>
 
     <!-- 

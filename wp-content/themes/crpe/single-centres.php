@@ -19,22 +19,24 @@ Récuperation du header
         <div class="container">
             <!-- <img src="<?php echo $post_thumbnail_url; ?>"> -->
             <img class="back_img" src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
-            <h1 class="h1_tall"><?php the_field('adresse_-_ville');?></h1>
-            <h2 class="h2_medium">Prépa concours bordeaux</h2>
-            <div class="col-sm-3 min_jpo_container">
-                <div class="min_jpo">
-                    <div class="col-sm-6">
-                        <?php
-                            $date = new DateTime($datJpo);
-                            echo $date->format('d/m/Y');
-                        ?>
+            <div class="col-sm-4 centre_titre">
+                <h1 class="h1_tall text_shadow"><?php the_field('adresse_-_ville');?></h1>
+                <h2 class="h2_medium text_shadow">Prépa concours bordeaux</h2>
+                <div class="col-sm-10 col-sm-offset-1 min_jpo_container">
+                    <div class="min_jpo">
+                        <div class="col-sm-6">
+                            <?php
+                                $date = new DateTime($datJpo);
+                                echo $date->format('d/m/Y');
+                            ?>
+                        </div>
+                        <div class="col-sm-6">
+                            <a href="#">Contact</a>
+                        </div>
+                        <h4 class=""><strong><?php the_field('nom_de_la_jpo');?></strong></h4>
+                        <p class="text-justify"><?php the_field('presentation_de_la_jpo');?></p>
+                        <a class="btn btn-primary" href="#liste_jpo">Lire la suite</a>
                     </div>
-                    <div class="col-sm-6">
-                        <a href="#">Contact</a>
-                    </div>
-                    <h4 class=""><strong><?php the_field('nom_de_la_jpo');?></strong></h4>
-                    <p class="text-justify"><?php the_field('presentation_de_la_jpo');?></p>
-                    <a class="btn btn-primary" href="#liste_jpo">Lire la suite</a>
                 </div>
             </div>
         </div><!-- /container -->

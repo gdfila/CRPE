@@ -31,7 +31,7 @@ Récuperation du header
         <img class="back_img" src="<?php bloginfo('template_directory'); ?>/img/images/index_back_1.jpg" alt="">
         <div class="container">
             <div class="row">
-                <h1 class="h1_tall">Adoptez l'esprit Galien !</h1>
+                <h1 class="h1_tall text_shadow">Adoptez l'esprit Galien !</h1>
                 <div class="col-sm-3">
                     <div class=" cercle-3">
                         <h2 class="h2_small"><strong>Partage</strong></h2>
@@ -143,7 +143,7 @@ Récuperation du header
         <img class="back_img" src="<?php bloginfo('template_directory'); ?>/img/images/296_MG_9554.jpg" alt="">
         <div class="container">
                 <div class="row">
-                    <h1 class="h1_tall">Galien en chiffres !</h1>
+                    <h1 class="h1_tall text_shadow">Galien en chiffres !</h1>
                     <div class="col-sm-4">
                         <div class="cercle-4">
                             <strong class="counter">98</strong><span>%</span>

@@ -73,7 +73,9 @@ img {
 .nav_header .content_nav .logo_nav {  
     position: absolute; top: 0; z-index: 1;
     width: 140px; height: 115%; padding-top: 70px;
-    background-color: #3497db; -webkit-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.085); -moz-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.085); -ms-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.085); box-shadow: 0 0px 10px 1px rgba(0,0,0,0.085);}
+    background-color: #3497db; 
+    /* CSS3 */
+    -moz-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.1); -webkit-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.1); -o-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.1); box-shadow: 0 0px 10px 1px rgba(0,0,0,0.1);}
 .nav_header .content_nav .logo_nav .logo {  
     position: absolute; left: 10px; bottom: 15px;}
 .nav_header nav > ul li a { 
@@ -119,6 +121,8 @@ img {
 
 .img_prez {
     position: relative; overflow: hidden;}
+.img_prez h1 {
+    color: #fff;}
 .carousel-inner, .carousel-inner .item, .img_prez { 
     height: 450px;}
 .img_prez, .img_prez .back_img { 
@@ -247,7 +251,8 @@ section.temoignages {
     width: 340px; min-height: 540px; margin: auto; padding-bottom: 20px;
     border: 2px solid #f0f0f0;
     text-align: center;
-    -moz-box-shadow: 1px 1px 1px 0px #999; -webkit-box-shadow: 1px 1px 1px 0px #999; -o-box-shadow: 1px 1px 1px 0px #999; box-shadow: 1px 1px 1px 0px #999;}
+    /* CSS3 */
+    -moz-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.1); -webkit-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.1); -o-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.1); box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.1);}
 .formules h2 { 
     margin: 0; padding: 20px;
     background-color: #f0f0f0;}
@@ -340,8 +345,8 @@ section.temoignages {
 
 #container_centre .img_prez {
     text-align: center;}
-#container_centre .img_prez h1, #container_centre .img_prez h2 {
-    color: #fff; text-shadow: 0 1px 15px rgba(0,0,0,0.4);}
+#container_centre .img_prez h2 {
+    color: #fff;}
 #container_centre .img_prez h1 {
     display: inline-block; margin: 35px 0 0; padding-bottom: 10px;
     font-size: 4em;
@@ -353,12 +358,12 @@ section.temoignages {
 ************* Centre mini jpo ******************
 ***********************************************/
 
-.min_jpo_container {
+.centre_titre {
     position: relative; float: none;
     margin: auto;}
 .min_jpo {
     position: absolute; z-index: 2000;
-    padding: 10px 20px 20px;
+    margin-left: -20px; padding: 10px 20px 20px;
     background-color: #fff;}
 .min_jpo .col-sm-6 {
     height: 50px; margin-bottom: 5px; padding: 0;
@@ -532,10 +537,11 @@ footer div div div:nth-child(4) ul li:nth-child(5) a {
 ******************** Etat **********************
 ***********************************************/
 
-    /***********************************************
-    ************** Separation Section **************
-    ***********************************************/
-
+    /* Ombre porté sur texte */
+    .text_shadow {
+        text-shadow: 0 1px 15px rgba(0,0,0,0.4);}
+    
+    /* Séparation couleur "corail" à mettre avant la fermeture de la balise ayant la classe container */
     hr {
         margin-top: 50px;
         border-bottom: 1px solid rgb(241,97,80);}
