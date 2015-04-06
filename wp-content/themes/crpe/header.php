@@ -25,16 +25,12 @@
 </head>
 
 <body>
-
-<!--NAV-->
-
-    <!--header class="nav_header nav_header_fixed container-fluid"-->
     <header class="nav_header hidden-xs">
         <div class="top_nav">
             <div class="container">
                 <p>formation au concours de recrutement de professeur des écoles</p>
-            </div>
-        </div>
+            </div><!-- /container -->
+        </div><!-- /top_nav -->
         <div class="content_nav">
             <div class="container">
                 <a class="logo_nav" href="/galien_crpe/">
@@ -47,15 +43,15 @@
                         'container' => 'navbar-header', ]);
                     ?>
                 </nav>
-            </div>
-        </div>
+            </div><!-- /container -->
+        </div><!-- /content_nav -->
     </header>
     <div id="action">
         <a data-toggle="modal" data-target="#modalRappel" data-whatever="rappelez-moi">Rappelez-moi</a>
         <a data-toggle="modal" data-target="#modalContact" data-whatever="contact">Contact</a>
         <a data-toggle="modal" data-target="#modalBrochure" data-whatever="telecharger brochure">Brochure</a>
         <a href="http://www.studius.fr" target="_blank">Studius</a>
-    </div>
+    </div><!-- /action -->
 
     <!-- 
     Modal : Pop up rappelez-moi
