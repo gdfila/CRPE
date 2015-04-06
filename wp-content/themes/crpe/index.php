@@ -25,7 +25,6 @@ Récuperation du header
 
     <!--
     Section présentant les valeurs de l'école
-    Max <p> => 120 caractères
      -->
     <section class="valeurs img_prez img_prez_aplat">
         <img class="back_img" src="<?php bloginfo('template_directory'); ?>/img/images/index_back_1.jpg" alt="">

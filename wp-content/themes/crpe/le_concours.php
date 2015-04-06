@@ -22,7 +22,7 @@ Récuperation du header
     <div class="img_prez img_prez_aplat img_prez_incurve">
         <!-- <img src="<?php echo $post_thumbnail_url; ?>"> -->
         <img class="back_img" src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
-    </div>
+    </div><!-- /img_prez -->
 
     <!--
     Section pour mettre en avant le texte, exemple : l'accroche. Un h1 pour le titre général de la page et un texte grossi
@@ -31,9 +31,8 @@ Récuperation du header
         <div class="container">
             <h1 class="h1_tall">Le concours</h1>
             <p class="h2_medium">En 2015, 11 960 postes d’enseignants du primaire sont à pourvoir au CRPE (Concours de Recrutement de Professeurs des Ecoles) dont 11 281 postes au concours externe.Vous êtes inscrit en première année d’études en vue de l’obtention d’un master (M1) ou vous êtes titulaire d’un master (M2) reconnu par le ministère de l’éducation et vous souhaitez enseigner à l’école primaire … C’est donc le moment de préparer avec sérieux et rigueur le Concours de Recrutement de Professeurs des Ecoles.</p>
-            <hr>
-        </div><!-- /container -->
-    </section>
+            <hr><!-- /separation-->
+    </section><!-- /accroche -->
 
     <!--
     Section présentant les reperes concours
@@ -63,9 +62,9 @@ Récuperation du header
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur perspiciatis alias praesentium doloribus necessitatibus, officiis tenetur at minima nulla labore rerum, soluta ex. Minima nihil id ipsum consequuntur, illo, libero.</p>
                 </div><!-- /col-sm-3 -->
             </div><!-- /row -->
-            <hr>
+            <hr><!-- /separation -->
         </div><!-- /container -->
-    </section>
+    </section><!-- /reperes -->
 
     <!--
     Section présentant les conditions d'examen
@@ -86,8 +85,8 @@ Récuperation du header
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam culpa incidunt vitae cupiditate voluptatum eligendi nobis impedit, commodi fugiat repudiandae asperiores temporibus similique id itaque magnam praesentium aspernatur suscipit in.</p>
                         <span>11 points</span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, aut, sint! Nihil consectetur at, dicta deleniti dolore odio voluptates soluta reiciendis enim nesciunt quae magni et, asperiores laudantium sunt minus.</p><span>11 points</span>
-                    </div>
-                </div>
+                    </div><!-- /contenu_exam -->
+                </div><!-- /col-sm-6 -->
                 <div class="col-sm-6">
                     <div class="contenu_exam">
                         <div class="coeff_exam">
@@ -100,11 +99,11 @@ Récuperation du header
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam culpa incidunt vitae cupiditate voluptatum eligendi nobis impedit, commodi fugiat repudiandae asperiores temporibus similique id itaque magnam praesentium aspernatur suscipit in.</p>
                         <span>11 points</span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, aut, sint! Nihil consectetur at, dicta deleniti dolore odio voluptates soluta reiciendis enim nesciunt quae magni et, asperiores laudantium sunt minus.</p><span>11 points</span>
-                    </div>
+                    </div><!-- /contenu_exam -->
                 </div><!-- /col-sm-6 -->
             </div><!-- /row -->
         </div><!-- /container -->
-    </section>
+    </section><!-- /condition_exam -->
 
 </div><!-- /container_concours -->
 
