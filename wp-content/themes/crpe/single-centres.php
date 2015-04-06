@@ -19,35 +19,35 @@ Récuperation du header
         <div class="container">
             <!-- <img src="<?php echo $post_thumbnail_url; ?>"> -->
             <img class="back_img" src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
-                    <div class="min_jpo_container">
-                        <h1 class="h1_tall text_shadow"><?php the_field('adresse_-_ville');?></h1>
-                        <h2 class="h2_medium text_shadow">Prépa concours <?php the_field('adresse_-_ville');?></h2>
-                        <?php   if(get_field('nom_de_la_jpo')!=null): ?>
-                            <?php $datJpo=get_field('date_de_la_jpo'); ?>
-                            <div class="min_jpo">
-                                <div class="col-sm-6 min_jpo_date">
-                                    <?php  if ($datJpo!=""): ?>
-                                    <?php
-                                       $mois = array(1=>'janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre');
-                                        $date = new DateTime($datJpo);
-                                    //    echo $mois[$date->format('n')];
-                                       echo '<strong>'.$date->format('j').' </strong><span>'.$mois[$date->format('n')].'</span>';
-                                    ?>
-                                    <?php endif ?>
-                                </div>
-                                <div class="col-sm-6 min_jpo_contact">
-                                    <a href="#">Contact</a>
-                                </div>
-                                <div>
-                                    <h4 class=""><strong><?php the_field('nom_de_la_jpo');?></strong></h4>
-                                    <p class="text-justify"><?php the_field('presentation_de_la_jpo');?></p>
-                                    <a class="btn btn-primary" href="#liste_jpo">Lire la suite</a>
-                                </div>
+                <div class="min_jpo_container">
+                    <h1 class="h1_tall text_shadow"><?php the_field('adresse_-_ville');?></h1>
+                    <h2 class="h2_medium text_shadow">Prépa concours <?php the_field('adresse_-_ville');?></h2>
+                    <?php   if(get_field('nom_de_la_jpo')!=null): ?>
+                        <?php $datJpo=get_field('date_de_la_jpo'); ?>
+                        <div class="min_jpo">
+                            <div class="col-sm-6 min_jpo_date">
+                                <?php  if ($datJpo!=""): ?>
+                                <?php
+                                   $mois = array(1=>'janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre');
+                                    $date = new DateTime($datJpo);
+                                //    echo $mois[$date->format('n')];
+                                   echo '<strong>'.$date->format('j').' </strong><span>'.$mois[$date->format('n')].'</span>';
+                                ?>
+                                <?php endif ?>
+                            </div><!-- /col-sm-6 -->
+                            <div class="col-sm-6 min_jpo_contact">
+                                <a href="#">Contact</a>
+                            </div><!-- /col-sm-6 -->
+                            <div>
+                                <h4 class=""><strong><?php the_field('nom_de_la_jpo');?></strong></h4>
+                                <p class="text-justify"><?php the_field('presentation_de_la_jpo');?></p>
+                                <a class="btn btn-primary" href="#liste_jpo">Lire la suite</a>
                             </div>
-                    </div>
+                        </div><!-- /min_jpo -->
+                </div><!-- /min_jpo_container -->
             <?php endif ?>
         </div><!-- /container -->
-    </div>
+    </div><!-- /img_prez -->
     
     <!--
     Affichage de la google map
@@ -59,14 +59,14 @@ Récuperation du header
             <div class="row">
                 <div class="col-sm-4">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
-                </div>
+                </div><!-- /col-sm-4 -->
                 <div class="col-sm-4">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
-                </div>
+                </div><!-- /col-sm-4 -->
                 <div class="col-sm-4">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
-                </div>
-            </div>
+                </div><!-- /col-sm-4 -->
+            </div><!-- /row -->
             <?php
         
             $location = get_field('localisation');
@@ -75,10 +75,10 @@ Récuperation du header
             ?>
                 <div class="acf-map">
                     <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
-                </div>
+                </div><!-- /acf-map -->
             <?php endif; ?>
-        </div>
-    </section>
+        </div><!-- /container -->
+    </section><!-- /map -->
 
     <!--
     Section présentant le lieu et ses valeurs
@@ -116,10 +116,10 @@ Récuperation du header
                     <p>33000 Bordeaux</p>
                     <a class="btn btn-primary" href="#"><!-- Faire un lien vers le formulaire brochure avec le centre préselectionné -->Demande d'infos</a>
                 </div><!-- /col-sm-4 -->
-            </div>
-            <hr>
+            </div><!-- /col-sm-8 -->
+            <hr><!-- /separation -->
          </div><!-- /container -->
-    </section>
+    </section><!-- /descriptif -->
 
     <!--
     Section journée portes ouverts
@@ -137,7 +137,7 @@ Récuperation du header
                               $date = new DateTime($datJpo);
                               echo '<strong>'.$date->format('j').' </strong><br /><span>'.$mois[$date->format('n')].'</span>';
                             ?>
-                        </div>
+                        </div><!-- /col-sm-3 -->
                         <div class="col-sm-9">
                             <h3 class="h3_tall"><strong>journée portes ouverte </strong>
                                 <strong class="centre_texte_red">
@@ -151,7 +151,7 @@ Récuperation du header
                             <h4 class="h4_tall"><strong><?php the_field('nom_de_la_jpo');?></strong></h4>
                             <p class="text-justify"><?php the_field('presentation_de_la_jpo');?></p>
                             <a class="btn btn-primary" href="http://localhost/galien_crpe/?p=180&centre=<?php the_field('adresse_-_ville')?>&jpoDate=<?php the_field('date_de_la_jpo')?>" >Inscription</a>      
-                        </div>
+                        </div><!-- /col-sm-9 -->
                     <?php endif ?>
                     <!-- si il existe un evenement -->
                     <?php $dateven=get_field('date_de_levenement'); ?>
@@ -161,7 +161,7 @@ Récuperation du header
                                 $date = new DateTime($dateven);
                                 echo $date->format('d/m/Y');
                             ?>
-                        </div>
+                        </div><!-- /col-sm-4 -->
                         <div class="col-sm-8">
                             <h3 class="h3_tall">
                                 <strong class="centre_texte_red">
@@ -173,18 +173,18 @@ Récuperation du header
                             </h3>
                             <h4 class="h4_tall"><strong><?php the_field('nom_de_levenement');?></strong></h4>
                             <p class="text-justify"><?php the_field('presentation_de_levenement');?></p>
-                        </div>
+                        </div><!-- /col-sm-8 -->
                     <?php endif ?>
                 </div><!-- /row -->
             </div><!-- /container -->
-        </section>
+        </section><!-- /jpo -->
     <?php endif ?>    
 
     <?php endwhile;else :?>
             <p>desolé pas de centres pour l'instant...</p>
     <?php endif; ?>
 
-</div><!-- /container-centre -->
+</div><!-- /container_centre -->
 
 <!--
 Récuperation du footer
