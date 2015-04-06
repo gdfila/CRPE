@@ -218,12 +218,12 @@ section.temoignages {
     position: relative;
     max-height: 246px;
     overflow-y: hidden;}
-.temoignage_slider_inner, .temoignage_slider-caption {
+.temoignage_slider_inner, .temoignage_slider_caption {
     width: 80%; margin: auto;}
 .temoignage_slider_inner .temoignage_back {
     height: 246px;
     background-color: #fff;}
-.temoignage_slider-caption {
+.temoignage_slider_caption {
     position: relative;
     padding-top: 30px;  
     text-align: justify;}
