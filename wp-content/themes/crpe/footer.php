@@ -1,10 +1,8 @@
     <div id="ariane">
         <div class="container">
-            <div class="col-sm-12">
-                <a href="/galien_crpe/">Accueil</a>
-            </div>
-        </div>
-    </div>
+            <a href="/galien_crpe/">Accueil</a>
+        </div><!-- /container -->
+    </div><!-- /ariane -->
     <footer>
         <div class="container">
             <div class="row">
@@ -18,7 +16,7 @@
                         <li><a href="http://www.centredeformationjuridique.com/">Centre de Formation Juridique</a></li>
                         <li><a href="http://www.assisteal-formation.fr">Assistéal Formation</a></li>
                     </ul>
-                </div>
+                </div><!-- /col-sm-3 -->
                 <div class="col-sm-3">
                     <h2 class="h2_small">Infos pratiques</h2>
                     <ul>
@@ -26,7 +24,7 @@
                         <li><a href="http://www.studius.fr">Studius</a></li>
                         <li><a href="#">Mentions légales</a></li>
                     </ul>
-                </div>
+                </div><!-- /col-sm-3 -->
                 <div class="col-sm-3">
                     <h2 class="h2_small">Suivez-nous</h2>
                     <ul>
@@ -36,10 +34,10 @@
                         <li><a href="#">Linkedin</a></li>
                         <li><a href="#">Linkedin</a></li>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+                </div><!-- /col-sm-3 -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+    </footer><!-- /footer -->
 
     <!-- scroll top -->
     <a href="#" id="scroll_up">^</a>
