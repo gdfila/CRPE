@@ -35,7 +35,7 @@ Récuperation du header
                                     ?>
                                     <?php endif ?>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-6 min_jpo_contact">
                                     <a href="#">Contact</a>
                                 </div>
                                 <div>
@@ -87,7 +87,7 @@ Récuperation du header
     <section class="descriptif">
         <div class="container">
             <div class="row">
-                <div class="col-sm-8">
+                <div class="col-sm-8 descriptif_detail">
                     <h1 class="h1_medium">Cours Galien <?php the_field('adresse_-_ville');?></h1>
                     <p>Nos enseignants sont tous des spécialistes de leur discipline et ont l’expérience, pour la plupart, des jurys de concours ou d’examens auxquels ils préparent. Ils sont à la disposition des étudiants pour leur prodiguer des conseils méthodologiques et les aider à organiser leur travail. Des supports de cours et de révisions, actualisés chaque année, sont mis à disposition des étudiants pour faciliter leur travail personnel.</p>
                     <h2 class="h2_medium">Equipements</h2>

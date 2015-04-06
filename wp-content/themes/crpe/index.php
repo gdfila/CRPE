@@ -173,7 +173,7 @@ Récuperation du header
         <div class="container">
             <div class="row">
                 <h1 class="h1_medium">Decouvrez nos formules</h1>
-                <div class="col-sm-6">
+                <div class="col-sm-6 formules_container">
                     <div>
                         <h2 class="h2_medium">Pack entrainement</h2>
                         <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
@@ -189,7 +189,7 @@ Récuperation du header
                         <button class="btn btn-primary center-block" data-toggle="modal" data-target="#signin_form">Inscrivez-vous</button>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 formules_container">
                     <div>
                         <h2 class="h2_medium">Pack complet</h2>
                         <img src="<?php bloginfo('template_directory'); ?>/img/images/DSC_0191-2.jpg" alt="">

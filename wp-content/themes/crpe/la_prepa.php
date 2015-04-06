@@ -42,28 +42,28 @@ Récuperation du header
     <section class="savoir_faire">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-3 savoir_faire_container">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/fotolia_51467210.jpg" alt="">
                     <h3 class="h3_medium"><strong>L'expérience</strong></h3>
                     <p class="savoir_faire_texte">Le défi que les cours Galien relèvent chaque jour repose sur des valeurs qui sont fondamentales à l’accomplissement de notre mission : celle de vous accompagner tout au long de cette année dans votre préparation aux concours. Ces valeurs sont portées par chaque membre des Cours Galien, professeurs, équipes administratives, dirigeants, et aussi et surtout les étudiants.</p>
                     <span class="lire_suite">Lire la suite</span>
                     <span class="lire_moins">Réduire</span>
                 </div><!-- /col-sm-3 -->
-                <div class="col-sm-3">
+                <div class="col-sm-3 savoir_faire_container">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/130783-fotolia-56047028-s-_x450.jpg" alt="">
                     <h3 class="h3_medium"><strong>La méthode</strong></h3>
                     <p class="savoir_faire_texte">Notre méthode s’articule autour des marches de la réussite. Elle s’accompagne de nombreux outils  mis à votre disposition pour vous accompagner vers la réussite : Evaluations régulières pour valider vos acquis Mises en situation réelles et sous forme de concours blancs Classement par rapport aux autres étudiants Corrections interactives et phase d’approfondissement Supports pédagogiques : programmes pédagogiques conçus pour présenter les concours (spécificités et réformes prises en compte) ; polycopiés et résumés de cours ; fiches de synthèse ; annales e-outils : espace web dédié ; QCM interactifs ; annales ; plannings ; mail dédié ; facebook… services « plus Galien » : salles de travail 7j/7 ; wifi ; espace cafet’ ; calendrier des dates des concours…</p>
                     <span class="lire_suite">Lire la suite</span>
                     <span class="lire_moins">Réduire</span>
                 </div><!-- /col-sm-3 -->
-                <div class="col-sm-3">
+                <div class="col-sm-3 savoir_faire_container">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/fotolia_54990513.jpg" alt="">
                     <h3 class="h3_medium"><strong>L'encadrement</strong></h3>
                     <p class="savoir_faire_texte">Chaque enseignant des Cours Galien est spécialiste de la matière qu’il enseigne, et connait nécessairement les exigences du concours. Il vous aide ainsi à maîtriser les durées et la diversité des épreuves, les difficultés, les pièges à éviter et les astuces qui feront la différence.</p>
                     <span class="lire_suite">Lire la suite</span>
                     <span class="lire_moins">Réduire</span>
                 </div><!-- /col-sm-3 -->
-                <div class="col-sm-3">
+                <div class="col-sm-3 savoir_faire_container">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/fotolia_44583729.jpg" alt="">
                     <h3 class="h3_medium"><strong>Le cadre</strong></h3>
                     <p class="savoir_faire_texte">Soucieux de vous apporter un environnement de travail propice à la réussite de votre concours, les Cours Galien mettent à votre disposition des salles d’études. Vous bénéficiez d’un fonds documentaire pour continuer à vous entraîner après les cours : annales, ouvrages de référence… Des espaces détente, foyer et cuisine sont aussi des lieux d’échange avec les profs. Nos centres sont aussi équipés de wifi.</p>
@@ -78,27 +78,27 @@ Récuperation du header
     <!--
     Section présentant les témoignages sous slider
      -->
-    <section class="equipe_pedagogique">
+    <section class="pedagogie">
         <div class="container outil_pedagogique">
             <h1 class="h1_medium">Nos outils pédagogique</h1>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4 outil_pedagogique_container">
                     <h3 class="h3_medium"><strong><a class="btn btn-primary" href="#">Studius</a></strong></h3>
                     <p class="savoir_faire_texte">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt vel, in veritatis quisquam architecto officia quidem officiis natus excepturi quis sequi et, dignissimos consectetur laboriosam harum minus consequuntur iste eaque!</p>
                 </div><!-- /col-sm-4 -->
-                <div class="col-sm-4">
+                <div class="col-sm-4 outil_pedagogique_container">
                     <h3 class="h3_medium"><strong><a class="btn btn-primary" href="#">Nos Supports</a></strong></h3>
                     <p class="savoir_faire_texte">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi odio, ullam sit deserunt. Labore voluptate incidunt, quam itaque eligendi perspiciatis odit voluptas, pariatur at magni earum exercitationem ipsum. Reiciendis, corporis.</p>
                 </div><!-- /col-sm-4 -->
-                <div class="col-sm-4">
-                    <h3 class="h3_medium h3_casse_couille"><strong><a class="btn btn-primary" href="#">Le sMOOC</a></strong></h3>
+                <div class="col-sm-4 outil_pedagogique_container">
+                    <h3 class="h3_medium h3_text_normal"><strong><a class="btn btn-primary" href="#">Le sMOOC</a></strong></h3>
                     <p class="savoir_faire_texte">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem eum non rem deserunt tempore reiciendis quidem facilis nulla odio alias iure repellendus praesentium, ad nobis dolor commodi asperiores ullam aut!</p>
                 </div><!-- /col-sm-4 -->
             </div><!-- /row -->
         </div><!-- /container -->
         <div class="container equipe_temoignage">
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-3 equipe_temoignage_img">
                     <div>
                         <img src="<?php bloginfo('template_directory'); ?>/img/images/467694-emilie-clement.jpg" alt="Photo de ...">
                     </div>
@@ -123,7 +123,7 @@ Récuperation du header
         <div class="container">
             <div class="row">
                 <h1 class="h1_medium">Decouvrez nos formules</h1>
-                <div class="col-sm-6">
+                <div class="col-sm-6 formules_container">
                     <div>
                         <h2 class="h2_medium">Pack entrainement</h2>
                         <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
@@ -139,7 +139,7 @@ Récuperation du header
                         <button class="btn btn-primary center-block" data-toggle="modal" data-target="#signin_form">Inscrivez-vous</button>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 formules_container">
                     <div>
                         <h2 class="h2_medium">Pack complet</h2>
                         <img src="<?php bloginfo('template_directory'); ?>/img/images/DSC_0191-2.jpg" alt="">

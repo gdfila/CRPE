@@ -36,31 +36,31 @@ Récuperation du header
     </section>
 
     <!--
-    Section présentant le ????
+    Section présentant les reperes concours
      -->
-    <section class="titre_classe_inconnu">
+    <section class="reperes">
         <div class="container">
             <h1 class="h1_medium">Titre !!</h1>
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-3 reperes_container">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/fotolia_51467210.jpg" alt="">
                     <h3 class="h3_medium"><strong>Condition d'accés</strong></h3>
-                    <p class="savoir_faire_texte">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita asperiores sunt voluptatum, aspernatur labore modi voluptates dignissimos dolores nisi, eum cumque ea a, amet perspiciatis, aut saepe eos cupiditate. Consectetur!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita asperiores sunt voluptatum, aspernatur labore modi voluptates dignissimos dolores nisi, eum cumque ea a, amet perspiciatis, aut saepe eos cupiditate. Consectetur!</p>
                 </div><!-- /col-sm-3 -->
-                <div class="col-sm-3">
+                <div class="col-sm-3 reperes_container">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/130783-fotolia-56047028-s-_x450.jpg" alt="">
                     <h3 class="h3_medium"><strong>Date</strong></h3>
-                    <p class="savoir_faire_texte">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id officiis nemo eum mollitia a illo harum, incidunt ipsum, quis libero provident consectetur enim et, repudiandae ullam unde vero autem qui.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id officiis nemo eum mollitia a illo harum, incidunt ipsum, quis libero provident consectetur enim et, repudiandae ullam unde vero autem qui.</p>
                 </div><!-- /col-sm-3 -->
-                <div class="col-sm-3">
+                <div class="col-sm-3 reperes_container">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/fotolia_54990513.jpg" alt="">
                     <h3 class="h3_medium"><strong>Perspective</strong></h3>
-                    <p class="savoir_faire_texte">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora quos laboriosam iure numquam, veniam fugit asperiores explicabo, eius tempore, itaque illum impedit! Suscipit numquam recusandae, labore ea quisquam quaerat reprehenderit!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora quos laboriosam iure numquam, veniam fugit asperiores explicabo, eius tempore, itaque illum impedit! Suscipit numquam recusandae, labore ea quisquam quaerat reprehenderit!</p>
                 </div><!-- /col-sm-3 -->
-                <div class="col-sm-3">
+                <div class="col-sm-3 reperes_container">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/fotolia_44583729.jpg" alt="">
                     <h3 class="h3_medium"><strong>Lien externes</strong></h3>
-                    <p class="savoir_faire_texte">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur perspiciatis alias praesentium doloribus necessitatibus, officiis tenetur at minima nulla labore rerum, soluta ex. Minima nihil id ipsum consequuntur, illo, libero.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur perspiciatis alias praesentium doloribus necessitatibus, officiis tenetur at minima nulla labore rerum, soluta ex. Minima nihil id ipsum consequuntur, illo, libero.</p>
                 </div><!-- /col-sm-3 -->
             </div><!-- /row -->
             <hr>
