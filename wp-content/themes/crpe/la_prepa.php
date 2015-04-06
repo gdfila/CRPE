@@ -22,7 +22,7 @@ Récuperation du header
     <div class="img_prez img_prez_aplat img_prez_incurve">
         <!-- <img src="<?php echo $post_thumbnail_url; ?>"> -->
         <img class="back_img" src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
-    </div>
+    </div><!-- /img_prez -->
 
     <!--
     Section pour mettre en avant le texte, exemple : l'accroche. Un h1 pour le titre général de la page et un texte grossi
@@ -34,7 +34,7 @@ Récuperation du header
                 <p class="h2_medium">Découvrez les raisons principales : Une expérience de plus de 20 ans dans la préparation de aux concours. Une méthode qui fait ses preuves chaque année autour des marches de la réussite. Une équipe d’enseignants spécialiste des matières enseignées. Un encadrement personnalisé. Une organisation parfaitement adaptée à vos horaires. Et un espace de vie propice aux études.</p>
             </div><!-- /row -->
         </div><!-- /container -->
-    </section>
+    </section><!-- /accroche -->
 
     <!--
     Section présentant le savoir faire de Galien
@@ -71,9 +71,9 @@ Récuperation du header
                     <span class="lire_moins">Réduire</span>
                 </div><!-- /col-sm-3 -->
             </div><!-- /row -->
-            <hr>
+            <hr><!-- /separation -->
         </div><!-- /container -->
-    </section>
+    </section><!-- /savoir_faire -->
 
     <!--
     Section présentant les témoignages sous slider
@@ -102,7 +102,7 @@ Récuperation du header
                     <div>
                         <img src="<?php bloginfo('template_directory'); ?>/img/images/467694-emilie-clement.jpg" alt="Photo de ...">
                     </div>
-                </div>
+                </div><!-- /col-sm-3 -->
                 <div class="col-sm-9">
                     <div>
                         <p class="equipe_temoignage_title"><strong>Mme Gauthier</strong> - Institutrice pendant 12 ans et diplômée en Lettres et en linguistique.</p>
@@ -110,11 +110,11 @@ Récuperation du header
                             <p>Je fournis à mes étudiants tous les outils et supports nécessaires pour qu’ils puissent travailler efficacement et développer une véritable culture de l’école. Notre objectif commun est de revoir les bases, d’approfondir les notions et de nous familiariser avec les concepts nouveaux, tout en tenant compte des acquis, des rythmes et de la personnalité de chacun, et en nous appuyant sur mes compétences disciplinaires et mes expériences de classe auprès des enfants, autant d’éléments indispensables pour suivre avec le plus de bénéfice possible une préparation intense, des contenus lourds et un rythme soutenu.</p>
                         </blockquote>
                     </div>
-                </div>
+                </div><!-- /col-sm-9 -->
             </div><!-- /row -->
-            <hr>
+            <hr><!-- /separation -->
         </div><!-- /container -->
-    </section>
+    </section><!-- /pedagogie -->
 
     <!--
     Section présentant les formuless de l'école
@@ -134,10 +134,10 @@ Récuperation du header
                             <p class="button active"><em>En savoir <span>+</span></em></p>
                             <div class="info_sup">
                                 <p>Voila des infos supplémentaires</p>
-                            </div>
-                        </div>
+                            </div><!-- /info_sup -->
+                        </div><!-- /info -->
                         <button class="btn btn-primary center-block" data-toggle="modal" data-target="#signin_form">Inscrivez-vous</button>
-                    </div>
+                    </div><!-- /col-sm-6 -->
                 </div>
                 <div class="col-sm-6 formules_container">
                     <div>
@@ -151,13 +151,17 @@ Récuperation du header
                             <p class="button active"><em>En savoir <span>+</span></em></p>
                             <div class="info_sup">
                                 <p>Voila des infos supplémentaires</p>
-                            </div>
-                        </div>
+                            </div><!-- /info_sup -->
+                        </div><!-- /info -->
                         <button class="btn btn-primary center-block" data-toggle="modal" data-target="#form">Inscrivez-vous</button>
                     </div>
                 </div><!-- /col-sm-6 -->
             </div><!-- /row -->
         </div><!-- /container -->
-    </section>
-    
+    </section><!-- /formules -->
+</div><!-- /container_prepa -->
+
+<!--
+Récuperation du footer
+ -->  
 <?php get_footer(); ?>
