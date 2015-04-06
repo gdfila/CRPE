@@ -139,13 +139,18 @@ img {
     width: 100%;}
 .carousel:before, 
 .img_prez_aplat:before {
-    top: 0; left: 0; z-index: 13;
+    top: 0; left: 0; z-index: 1;
     height: 100%;
     background-color: rgba(22,64,91, 0.01);}
 .carousel:after, .img_prez_incurve:after {
-    bottom: -16px; left: 0; z-index: 14;
+    bottom: -16px; left: 0; z-index: 3;
     height: 100px;
     background: url('../img/bottom_incurve.png') no-repeat; background-size: 100% 100%;}
+.carousel-inner {
+    z-index: 3;}
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+    position: absolute; top: 0; left: 0; z-index: -1;}  
 
 /***********************************************
 ************ plugin jpo slider *****************
