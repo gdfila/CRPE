@@ -21,7 +21,7 @@ Récuperation du header
     <div class="img_prez img_prez_aplat img_prez_incurve">
         <!-- <img src="<?php echo $post_thumbnail_url; ?>" /> -->
         <img class="back_img" src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
-    </div>
+    </div><!-- /img_prez -->
     <?php
     //affichage message d'erreur
     if (isset($_GET['erreur']))
@@ -48,7 +48,7 @@ Récuperation du header
             <div class="row">
                 <div class="col-sm-3 picto_title_mail">
                     <h1 class="h1_small">Téléchargez les brochures d’information Galien</h1>
-                </div>
+                </div><!-- /col-sm-3 -->
                 <div class="col-sm-6 col-sm-offset-1">
                     <form method="post" action="#">
                         <h2 class="h2_tall">Téléchargez les brochures d’information Galien</h2>
@@ -56,23 +56,23 @@ Récuperation du header
                         <div class="form-group">
                             <label for="nom">Nom *</label>
                             <input type="text" name="nom" class='form-control' id="firstname" required>
-                        </div>
+                        </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="prenom">Prénom *</label>
                             <input type="text" name="prenom" class="form-control" id="exampleInputFirstname" required>
-                        </div>
+                        </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="emai1">Email *</label>
                             <input type="email" name="email" class="form-control" id="email" required>
-                        </div>
+                        </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="telephone">Télephone</label>
                             <input type="tel" name="telephone" class="form-control" placeholder="exemple: 0102030405">
-                        </div>
+                        </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="message">Message</label>
                             <textarea name="message"   rows="2" cols="85"></textarea>
-                        </div>
+                        </div><!-- /form-group -->
               
                         <div class="form-group">
                             <label for="centres">Centre</label>
@@ -81,13 +81,13 @@ Récuperation du header
                                     <option  value="<?php echo $nom['id']; ?>"><?php echo $nom['name']; ?></option>
                                 <?php endforeach ?>
                             </select>
-                        </div>
+                        </div><!-- /form-groupe -->
                         <input type="submit" class="btn btn-lg btn-primary" name="valider" value="Envoyer"><br><br>
                     </form > 
                 </div><!-- /col-sm-6 -->
             </div><!-- /row -->
         </div><!-- /container -->
-    </section>
+    </section><!-- /contact -->
 </div><!-- /container_brochure -->
 
 <!--

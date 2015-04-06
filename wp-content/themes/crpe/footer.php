@@ -8,9 +8,9 @@
             <div class="row">
                 <div class="col-sm-3">
                     <h1><a href="/galien_crpe/"><img class="logo" src="<?php bloginfo('template_directory'); ?>/img/logo.png "></a></h1>
-                </div>
+                </div><!-- /col-sm-3 -->
                 <div class="col-sm-3">
-                    <h2 class="h2_small">Le groupe Galien</h2>
+                    <h2 class="small">Le groupe Galien</h2>
                     <ul>
                         <li><a href="http://www.cours-galien.fr/">Cours Galien</a></li>
                         <li><a href="http://www.centredeformationjuridique.com/">Centre de Formation Juridique</a></li>
@@ -18,7 +18,7 @@
                     </ul>
                 </div><!-- /col-sm-3 -->
                 <div class="col-sm-3">
-                    <h2 class="h2_small">Infos pratiques</h2>
+                    <h2 class="small">Infos pratiques</h2>
                     <ul>
                         <li><a href="#">Galien recrute</a></li>
                         <li><a href="http://www.studius.fr">Studius</a></li>
@@ -26,7 +26,7 @@
                     </ul>
                 </div><!-- /col-sm-3 -->
                 <div class="col-sm-3">
-                    <h2 class="h2_small">Suivez-nous</h2>
+                    <h2 class="small">Suivez-nous</h2>
                     <ul>
                         <li><a href="https://www.facebook.com/CoursGalien.Officiel">Facebook</a></li>
                         <li><a href="#">Twitter</a></li>

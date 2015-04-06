@@ -21,7 +21,7 @@ Récuperation du header
     <div class="img_prez img_prez_aplat img_prez_incurve">
         <!-- <img src="<?php echo $post_thumbnail_url; ?>" /> -->
         <img class="back_img" src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
-    </div>
+    </div><!-- /img_prez -->
     <?php 
     //affichage message d'erreur
     if (isset($_GET['erreur']))
@@ -65,28 +65,28 @@ Récuperation du header
         <div class="container">
             <div class="row">
                 <div class="col-sm-3 picto_title_doc">
-                    <h1 class="h1_small">Téléchargez les brochures d’information Galien</h1>
-                </div>
+                    <h1 class="medium">Téléchargez les brochures d’information Galien</h1>
+                </div><!-- /col-sm-3 -->
                 <div class="col-sm-6 col-sm-offset-1">
                     <form method="post" action="#">
-                        <h2 class="h2_tall">Téléchargez les brochures d’information Galien</h2>
+                        <h2 class="large">Téléchargez les brochures d’information Galien</h2>
                         <?php wp_nonce_field('brochure', 'brochure-verif'); ?>  <!-- pour verifier que les reponse du formulaire proviennet bien de notre site -->
                         <div class="form-group">
                             <label for="nom">Nom *</label>
                             <input type="text" name="nom" class="form-control" id="exampleInputName1" >
-                        </div>
+                        </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="prenom">Prénom *</label>
                             <input type="text" name="prenom" class="form-control" id="exampleInputFirstname" >
-                        </div>
+                        </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="Email1">Email *</label>
                             <input type="email" name="email" class="form-control" id="exampleInputEmail1" >
-                        </div>
+                        </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="telephone">Télephone</label>
                             <input type="tel" name="telephone" class="form-control" placeholder="exemple: 0102030405">
-                        </div>  
+                        </div> <!-- /form-group --> 
                         <div class="checkbox">
                             <p><label>
                                 <input type="checkbox" name="rappel" id='rappel'> Demander à être rappelé
@@ -102,9 +102,9 @@ Récuperation du header
                                                 <?php endforeach ?>
                                     <?php endforeach ?>
                                 </select>
-                           </div>
+                           </div><!-- /horaire -->
 
-                        </div>
+                        </div><!-- /checkbox -->
                         <div class="checkbox">
                             <p><label>
                                 <input type="checkbox" name="brochure" id="brochure"> Recevoir la brochure par courrier
@@ -115,18 +115,18 @@ Récuperation du header
                                 <div class="form-group">
                                     <label for="adress">Adresse</label>
                                     <input type="text" name="adress" class="form-control" >
-                                </div>
+                                </div><!-- /form-group -->
                                 <div class="form-group">
                                     <label for="code postal">Code postal</label>
                                     <input type="number" name="cp" class="form-control"  >
-                                </div>
+                                </div><!-- /form-group -->
                                 <div class="form-group">
                                     <label for="ville">Ville</label>
                                     <input type="text" name="ville" class="form-control"  >
-                                </div>
-                            </div>
+                                </div><!-- /form-group -->
+                            </div><!-- /adressEnvoi -->
 
-                        </div>
+                        </div><!-- /checkbox -->
                         <div class="form-group">
                             <label for="centre">Centre *</label>
                             <select class="form-control input-lg" name="centre">
@@ -134,13 +134,13 @@ Récuperation du header
                                     <option  value="<?php echo $nom['id']."/".$nom['name']; ?>"><?php echo $nom['name']; ?></option>
                                 <?php endforeach ?>
                             </select>
-                        </div>
+                        </div><!-- /form-group -->
                         <input type="submit" class="btn btn-primary" name="valider" value="Envoyer"><br><br>
                     </form>
                 </div><!-- /col-sm-6 -->
             </div><!-- /row -->
         </div><!-- /container -->
-    </section>
+    </section><!-- /contact -->
 </div><!-- /container_brochure -->
 
 <!--

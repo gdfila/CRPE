@@ -30,16 +30,16 @@ h1, h2, h3, h4, h5, h6 {
      color: #333; text-transform: uppercase;}
 h1, h2 {
     margin-bottom: 50px;}
-.h1_tall { 
+.x-large { 
     font-size: 3em;}
-.h1_medium, .h2_tall { 
+.large { 
     font-size: 2.3em;}
-.h1_small, .h2_medium, .h3_tall { 
+.medium { 
     font-size: 1.6em;}
-.h2_small, .h3_medium, .h4_tall { 
+.small { 
     margin-bottom: 25px;
     font-size: 1.2em;}
-.h3_small, .h4_medium { 
+.x-small { 
     margin-bottom: 25px;
     font-size: 1.1em;}
 a:hover { 
