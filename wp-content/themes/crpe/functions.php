@@ -169,7 +169,17 @@ function traitementFormBrochure() {
                      $centre= explode("/",$_POST['centre']);
                       $idcentre=$centre[0];
                      $nomCentre=explode(" ",$centre[1]);
-                     $etreRappeler=$_POST['rappel'];
+                      if($_POST['rappel']==true)
+                     { 
+                         $etreRappeler=true; 
+                      } 
+                     else { 
+                         $etreRappeler=false ;
+                         
+                     }
+                     $etreRappeler=($_POST['rappel']==true)?true:false;
+                 
+                     var_dump($etreRappeler);
                  // envoi de brochure par courrier    
               if($_POST['brochure']==true)
               {$documentationRequest = $client->call(array(
@@ -194,7 +204,7 @@ function traitementFormBrochure() {
                     "method" => "documentationRequest",
                     "centerId" => $idcentre,
                     "formationId" => 400,
-                    "callBackTimeId" => $_POST['horaire'],
+                    "callBackTimeId" =>intval( $_POST['horaire']),
                     "booklet" => false,
                     "callBack" => $etreRappeler,
                     "lastName" => $_POST['nom'],
@@ -252,7 +262,7 @@ function traitementFormRappel() {
                  require_once ABSPATH . 'wp-content/themes/crpe/rappel.php';
                   exit();
               }
-                include_once "api/Thalamus_init.php";
+           //     include_once "api/Thalamus_init.php";
                      $result=rappel();
                      if ($result==true)
                      { $_GET['erreur']='success'; }
@@ -271,9 +281,11 @@ add_action('template_redirect', 'traitementFormRappel');
 /* demande de rappel telephonique */
 function rappel()
 {
+    var_dump($_POST);
     $client=$_SESSION['client'];
         $centre= explode("/",$_POST['centre']);
        $idcentre=$centre[0];
+     //  var_dump(intval($_POST['horaire']));
        $callBack = $client->call(array(
                             "service" => "prospect",
                             "method" => "callBackRequest",
@@ -283,9 +295,9 @@ function rappel()
                             "firstName" =>  $_POST['prenom'],
                             "email" => $_POST['email'],
                             "phoneNumber" => $_POST['telephone'],
-                             "callBackTimeId" => $_POST['horaire']
+                             "callBackTimeId" => intval($_POST['horaire'])
                         ));
-                                 
+      //                      var_dump($callBack)    ;
                     if ($callBack->success!=true)   {
                           $_GET['erreur']='rappel';
                           $_GET['mess']=$callBack->errorMessage;
@@ -339,8 +351,70 @@ function traitementFormContact()
    {
       if (wp_verify_nonce($_POST['contact-verif'], 'contact')) 
       {
-//          var_dump($_POST);
-//          die();
+        var_dump($_POST);
+//         $header = "From: lganne93@gmail.com\n";
+//            $header .= "Reply-To: lganne93@gmail.com\n";
+//            $header .= "Content-Type: text/html; charset=\"iso-8859-1\"";
+//          $destinataire = 'lganne2@yahoo.fr';
+//          $objet = 'Salut mon ami!';
+//          $message = 'Ce message a été expédié en un tournemain! WordPress a tout fait.';
+//          $email = wp_mail($destinataire, $objet, $message);
+//       var_dump($email);
+//        var_dump($destinataire);
+//            if($email) echo 'Votre email a bien été envoyé'; 
+//            die();
+         //    ini_set('PORT',587);
+       //     ini_set( 'SMTP', 'smtp.mandrillapp.com' );
+//             $header = "From: lganne93@gmail.com\n";
+//            $header .= "Reply-To: lganne93@gmail.com\n";
+//            $header .= "Content-Type: text/html; charset=\"iso-8859-1\"";
+//          $message="<html>Ce message vous a été envoyé par : <br>"
+//                    ."<p>".$_POST['prenom']." ".$_POST['nom']."<br>"
+//                    . "Adresse E mail:".$_POST['email']."<br>Pour le centre :".$_POST['centre']."</p><br>"
+//                    . "Contenu du message : <br> "
+//                    . "<p> ".$_POST['message']." </p></html>";
+//            $destinataire = "lganne3@yahoo.fr";
+//               $sujet="test email";
+//           
+//            $envoi=mail( $destinataire, "test email 1", $message,$header);
+//            if($envoi) echo "Ce script envoie un mail à <u>". $destinataire."</u>";
+//            var_dump($envoi);
+//          die(); 
+  //    require ABSPATH . 'wp-content\themes\crpe\PHPMailer\_lib\class.phpmailer.php';
+   //   include_once "PHPMailer/_lib/class.phpmailer.php";
+require('PHPMailer/_lib/class.phpmailer.php');
+$mail = new PHPMailer();
+$mail->IsSMTP(); // send via SMTP
+////IsSMTP(); // send via SMTP
+$mail->SMTPAuth = true; // turn on SMTP authentication
+$mail->Username="lganne93@gmail.com";
+$mail->Password="gmail93*";
+$webmaster_email = "lganne93@gmail.com"; //Reply to this email ID
+$email="lganne3@yahoo.fr"; // Recipients email ID
+$name="name"; // Recipient's name
+$mail->From = $webmaster_email;
+$mail->FromName = "Webmaster";
+$mail->AddAddress($email,$name);
+$mail->AddReplyTo($webmaster_email,"Webmaster");
+$mail->WordWrap = 50; // set word wrap
+////$mail->AddAttachment("/var/tmp/file.tar.gz"); // attachment
+////$mail->AddAttachment("/tmp/image.jpg", "new.jpg"); // attachment
+$mail->IsHTML(true); // send as HTML
+$mail->Subject = "This is the subject";
+$mail->Body = "Hi,
+//This is the HTML BODY "; //HTML Body
+$mail->AltBody = "This is the body when user views in plain text format"; //Text Body
+if(!$mail->Send())
+{
+echo "Mailer Error: " . $mail->ErrorInfo;
+}
+else
+{
+echo "Message has been sent";
+}
+
+//mail($mail,$sujet,$message,$header);
+
       }  
    }
             
