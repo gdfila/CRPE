@@ -61,12 +61,12 @@ img {
         background-color: #17405c;
         color: #fff; text-transform: uppercase;}
     .nav_header .top_nav div {
-        padding: 25px 0 15px 30px;}
-    .nav_header .top_nav p {
-        padding-left: 20px;  
-        background: url('../img/picto/arrow.png') no-repeat; background-position-y: 5px;
-        letter-spacing: 0.04em;}
-    .nav_header .top_nav p, .nav_header .content_nav nav {
+        padding: 25px 0 25px 30px;}
+    .nav_header .top_nav h1 {
+        margin: 0; padding-left: 20px;  
+        background: url('../img/picto/arrow.png') no-repeat; background-position-y: 3px;
+        font-size: 0.95em; color: #fff; letter-spacing: 0.04em;}
+    .nav_header .top_nav h1, .nav_header .content_nav nav {
         margin-left: 200px;}
     .nav_header .content_nav { 
         background-color: #f16150;}
@@ -177,20 +177,22 @@ img {
 
 #action {
     position: fixed; top: 200px; right: 0; z-index: 9997;}
-#action a {
+#action li {
     display: block; width: 70px; height: 70px;
     line-height: 125px; font-size: 0.65em; color: #fff; text-align: center;
     cursor: pointer;}
-#action a:nth-child(1) {
+#action li:nth-child(1) {
     background: #17405c url('../img/picto/picto_phone.png') no-repeat center 10px;}
-#action a:nth-child(2) {
+#action li:nth-child(2) {
     background: #17405c url('../img/picto/picto_contact.png') no-repeat center 20px;}
-#action a:nth-child(3) {
+#action li:nth-child(3) {
     background: #17405c url('../img/picto/picto_documentation.png') no-repeat center 17px;}
-#action a:nth-child(4) {
+#action li:nth-child(4) {
     background: #17405c url('../img/picto/picto_espace_etudiant.png') no-repeat center 13px;}
-#action a:nth-child(1):hover, #action a:nth-child(2):hover, #action a:nth-child(3):hover, #action a:nth-child(4):hover {
+#action li:nth-child(1):hover, #action li:nth-child(2):hover, #action li:nth-child(3):hover, #action li:nth-child(4):hover {
     background-color: #f16150;}
+#action li a { 
+    color: #fff;}
 
 /***********************************************
 ************** Section Accroche ****************
@@ -638,9 +640,11 @@ textarea {
 @media (max-width: 992px) {
 
     /* Nav */
-    .top_nav p {
+    .nav_header .top_nav h1 {
+          background-position-y: 2px;
         font-size: 0.85em;}
-    .nav_header .top_nav p, .nav_header .content_nav nav {
+    .nav_header .top_nav h1, 
+    .nav_header .content_nav nav {
         margin-left: 140px;}
     .nav_header nav > ul li a {
         padding: 13px;

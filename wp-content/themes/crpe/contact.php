@@ -45,15 +45,12 @@ Récuperation du header
     <section class="contact">
         <div class="container">
             <div class="row">
-
-
                 <div class="col-sm-3 hidden-xs hidden-sm picto_title_mail">
                     <h1 class="medium">Contactez-nous</h1>
                 </div><!-- /col-sm-3 -->
                 <div class="col-sm-6 col-sm-offset-1">
                     <form method="post" action="#">
                         <h2 class="large">Contactez-nous</h2>
-
                         <?php wp_nonce_field('contact', 'contact-verif'); ?>  <!-- pour verifier que les reponse du formulaire proviennet bien de notre site -->
                         <div class="form-group">
                             <label for="nom">Nom *</label>

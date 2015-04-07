@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Le concours de recrutement des professeurs des écoles</title>
-    <meta name="description" content="">
+    <meta name="description" content="Le concours de recrutement des professeurs des écoles">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     
     <script src="<?php bloginfo('template_url'); ?>/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -40,7 +40,7 @@
         <div id="navbar" class="navbar-collapse collapse">
             <div class="hidden-xs top_nav">
                 <div class="container">
-                    <p>formation au concours de recrutement de professeur des écoles</p>
+                    <h1 class="x-small">formation au concours de recrutement de professeur des écoles</h1>
                 </div><!-- /container -->
             </div><!-- /top_nav -->
             <div class="content_nav">
@@ -59,12 +59,12 @@
             </div><!-- /content_nav -->
         </div>
     </header>
-    <div id="action">
-        <a data-toggle="modal" data-target="#modalRappel" data-whatever="rappelez-moi">Rappelez-moi</a>
-        <a data-toggle="modal" data-target="#modalContact" data-whatever="contact">Contact</a>
-        <a data-toggle="modal" data-target="#modalBrochure" data-whatever="telecharger brochure">Brochure</a>
-        <a href="http://www.studius.fr" target="_blank">Studius</a>
-    </div><!-- /action -->
+    <ul id="action">
+        <li data-toggle="modal" data-target="#modalRappel" data-whatever="rappelez-moi">Rappelez-moi</li>
+        <li data-toggle="modal" data-target="#modalContact" data-whatever="contact">Contact</li>
+        <li data-toggle="modal" data-target="#modalBrochure" data-whatever="telecharger brochure">Brochure</li>
+        <li><a href="http://www.studius.fr" target="_blank">Studius</a></li>
+    </ul><!-- /action -->
 
     <!-- 
     Modal : Pop up rappelez-moi
