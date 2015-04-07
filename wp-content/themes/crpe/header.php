@@ -6,18 +6,15 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
+    <title>Le concours de recrutement des professeurs des écoles</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    
     <script src="<?php bloginfo('template_url'); ?>/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <script>(function(){document.documentElement.className='js'})();</script>
     <script src="<?php bloginfo('template_url'); ?>/js/vendor/jquery-1.11.2.js"></script>
 
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/centre.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/concours.css">
-    
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.corr.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/crpe.css">
 
@@ -25,29 +22,41 @@
 </head>
 
 <body>
-
-<!--NAV-->
-
-    <!--header class="nav_header nav_header_fixed container-fluid"-->
-    <header class="nav_header hidden-xs">
-        <div class="top_nav">
-            <div class="container">
-                <p>formation au concours de recrutement de professeur des écoles</p>
-            </div>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <header class="nav_header">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="logo_nav" href="/galien_crpe/">
+                <img class="logo" src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt="" />
+            </a>
         </div>
-        <div class="content_nav">
-            <div class="container">
-                <a class="logo_nav" href="/galien_crpe/">
-                    <img class="logo" src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt="" />
-                </a>
-                <nav>
-                    <?php
-                        wp_nav_menu([ 
-                        'theme_location' => 'nav',
-                        'container' => 'navbar-header', ]);
-                    ?>
-                </nav>
-            </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <div class="hidden-xs top_nav">
+                <div class="container">
+                    <p>formation au concours de recrutement de professeur des écoles</p>
+                </div><!-- /container -->
+            </div><!-- /top_nav -->
+            <div class="content_nav">
+                <div class="container">
+                    <a class="hidden-xs logo_nav" href="/galien_crpe/">
+                        <img class="logo" src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt="" />
+                    </a>
+                    <nav>
+                        <?php
+                            wp_nav_menu([ 
+                            'theme_location' => 'nav',
+                            'container' => 'navbar-header', ]);
+                        ?>
+                    </nav>
+                </div><!-- /container -->
+            </div><!-- /content_nav -->
         </div>
     </header>
     <div id="action">
@@ -55,7 +64,7 @@
         <a data-toggle="modal" data-target="#modalContact" data-whatever="contact">Contact</a>
         <a data-toggle="modal" data-target="#modalBrochure" data-whatever="telecharger brochure">Brochure</a>
         <a href="http://www.studius.fr" target="_blank">Studius</a>
-    </div>
+    </div><!-- /action -->
 
     <!-- 
     Modal : Pop up rappelez-moi

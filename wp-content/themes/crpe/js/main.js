@@ -1,6 +1,5 @@
 $(document).ready(function() {
-
-     
+  
     $(window).scroll(function(){ 
         // Nav fixed
         pos = $('.top_content').first().offset().top;
@@ -90,4 +89,9 @@ $(document).ready(function() {
             $('#horaire').slideUp();
          }        
     });
+
+    // Masque la jpo du slider en dessous de 1024px
+    if ($(window).width() < 1024){
+        $('.carousel-caption').addClass('hidden-xs');
+    };
 });

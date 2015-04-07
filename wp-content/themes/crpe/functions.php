@@ -312,8 +312,12 @@ function rappel()
                    
 }
 
-
-
+function centreJPO()
+{
+    var_dump();
+    
+}
+add_action('template_redirect', 'centreJPO');
 
 /*----------------------------------------------------------------  formulaire d'inscription jpo ------------------------------------------*/
 function inscriptionJPO()
@@ -324,7 +328,7 @@ function inscriptionJPO()
       {
              $client=$_SESSION['client'];
               $results=listAllJPO();
-        var_dump($results);
+            var_dump($results);
 //            $results = $client->call(array("service" => "communication","method" => "centerInformationMeetingsList", "centerId" => 22));
 //           var_dump($results->datas);
 //          foreach ( $results->datas as $res)
@@ -352,68 +356,18 @@ function traitementFormContact()
       if (wp_verify_nonce($_POST['contact-verif'], 'contact')) 
       {
         var_dump($_POST);
-//         $header = "From: lganne93@gmail.com\n";
-//            $header .= "Reply-To: lganne93@gmail.com\n";
-//            $header .= "Content-Type: text/html; charset=\"iso-8859-1\"";
-//          $destinataire = 'lganne2@yahoo.fr';
-//          $objet = 'Salut mon ami!';
-//          $message = 'Ce message a été expédié en un tournemain! WordPress a tout fait.';
-//          $email = wp_mail($destinataire, $objet, $message);
-//       var_dump($email);
-//        var_dump($destinataire);
-//            if($email) echo 'Votre email a bien été envoyé'; 
-//            die();
-         //    ini_set('PORT',587);
-       //     ini_set( 'SMTP', 'smtp.mandrillapp.com' );
-//             $header = "From: lganne93@gmail.com\n";
-//            $header .= "Reply-To: lganne93@gmail.com\n";
-//            $header .= "Content-Type: text/html; charset=\"iso-8859-1\"";
-//          $message="<html>Ce message vous a été envoyé par : <br>"
-//                    ."<p>".$_POST['prenom']." ".$_POST['nom']."<br>"
-//                    . "Adresse E mail:".$_POST['email']."<br>Pour le centre :".$_POST['centre']."</p><br>"
-//                    . "Contenu du message : <br> "
-//                    . "<p> ".$_POST['message']." </p></html>";
-//            $destinataire = "lganne3@yahoo.fr";
-//               $sujet="test email";
-//           
-//            $envoi=mail( $destinataire, "test email 1", $message,$header);
-//            if($envoi) echo "Ce script envoie un mail à <u>". $destinataire."</u>";
-//            var_dump($envoi);
-//          die(); 
-  //    require ABSPATH . 'wp-content\themes\crpe\PHPMailer\_lib\class.phpmailer.php';
-   //   include_once "PHPMailer/_lib/class.phpmailer.php";
-require('PHPMailer/_lib/class.phpmailer.php');
-$mail = new PHPMailer();
-$mail->IsSMTP(); // send via SMTP
-////IsSMTP(); // send via SMTP
-$mail->SMTPAuth = true; // turn on SMTP authentication
-$mail->Username="lganne93@gmail.com";
-$mail->Password="gmail93*";
-$webmaster_email = "lganne93@gmail.com"; //Reply to this email ID
-$email="lganne3@yahoo.fr"; // Recipients email ID
-$name="name"; // Recipient's name
-$mail->From = $webmaster_email;
-$mail->FromName = "Webmaster";
-$mail->AddAddress($email,$name);
-$mail->AddReplyTo($webmaster_email,"Webmaster");
-$mail->WordWrap = 50; // set word wrap
-////$mail->AddAttachment("/var/tmp/file.tar.gz"); // attachment
-////$mail->AddAttachment("/tmp/image.jpg", "new.jpg"); // attachment
-$mail->IsHTML(true); // send as HTML
-$mail->Subject = "This is the subject";
-$mail->Body = "Hi,
-//This is the HTML BODY "; //HTML Body
-$mail->AltBody = "This is the body when user views in plain text format"; //Text Body
-if(!$mail->Send())
-{
-echo "Mailer Error: " . $mail->ErrorInfo;
-}
-else
-{
-echo "Message has been sent";
-}
-
-//mail($mail,$sujet,$message,$header);
+         $header = "From: lganne93@gmail.com\n";
+            $header .= "Reply-To: lganne93@gmail.com\n";
+            $header .= "Content-Type: text/html; charset=\"iso-8859-1\"";
+          $destinataire = 'lganne2@yahoo.fr';
+          $objet = 'Salut mon ami!';
+          $message = 'Ce message a été expédié en un tournemain! WordPress a tout fait.';
+          $email = wp_mail($destinataire, $objet, $message);
+       var_dump($email);
+        var_dump($destinataire);
+            if($email) echo 'Votre email a bien été envoyé'; 
+            die();
+       
 
       }  
    }
@@ -427,9 +381,12 @@ add_action('template_redirect', 'traitementFormContact');
 add_action('acf_data_selector/data','champJPO');
  function champJPO($data) 
   {
-           //$results=listAllJPO();
-   // var_dump($results);
-                 
+     
+//           $results=listAllJPO();
+//         var_dump($results);
+//                 
+    //var_dump($data);
+//     die();
                        $data['jpo_thalamus'] = array(
                    		'label' => 'jpoThalamus',
                                               'data' => array(
@@ -489,6 +446,9 @@ add_action('acf_data_selector/data','champJPO');
 function listAllJPO()
 {
       include_once "api/Thalamus_init.php";
+      
+         var_dump(get_post_type( $post ));
+         die();
         $centersList = $client->call(array("service" => "formation","method" => "centersListByFormation","formationId" => 400));
         $results=[];
         foreach ($centersList->datas as $centre)
