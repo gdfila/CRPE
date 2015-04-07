@@ -19,8 +19,8 @@ Récuperation du header
         <div class="container">
             <img class="hidden-xs hidden-sm back_img" src="<?php echo $post_thumbnail_url; ?>" alt="">
             <div class="min_jpo_container">
-                <h1 class="x-large text_shadow"><?php the_field('adresse_-_ville');?></h1>
-                <h2 class="medium text_shadow">Prépa concours <?php the_field('adresse_-_ville');?></h2>
+                <h1 class="x-large text_shadow"><?php the_field('nom_du_centre');?></h1>
+                <h2 class="medium text_shadow">Prépa concours <?php the_field('nom_du_centre');?></h2>
                 <?php   if(get_field('nom_de_la_jpo')!=null): ?>
                     <?php $datJpo=get_field('date_de_la_jpo'); ?>
                     <div class="min_jpo">
@@ -38,7 +38,7 @@ Récuperation du header
                             <a href="#">Contact</a>
                         </div><!-- /col-sm-6 -->
                         <div>
-                            <h4 class=""><strong><?php the_field('nom_de_la_jpo');?></strong></h4>
+                            <h3 class=""><strong><?php the_field('nom_de_la_jpo');?></strong></h3>
                             <p class="text-justify"><?php the_field('presentation_de_la_jpo');?></p>
                             <a class="btn btn-primary" href="#liste_jpo">Lire la suite</a>
                         </div>
@@ -54,7 +54,7 @@ Récuperation du header
     <section class="map">
         <div class="container">
             <h1 class="x-large">Découvrir le centre</h1>
-            <h2 class="medium">Cours Galien <?php the_field('adresse_-_ville');?>, lieu d'études, d'échanges et de vie</h2>
+            <h2 class="medium">Cours Galien <?php the_field('nom_du_centre');?>, lieu d'études, d'échanges et de vie</h2>
             <div class="hidden-xs row">
                 <div class="col-sm-4">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
@@ -87,7 +87,7 @@ Récuperation du header
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 descriptif_detail">
-                    <h1 class="large">Cours Galien <?php the_field('adresse_-_ville');?></h1>
+                    <h1 class="large">Cours Galien <?php the_field('nom_du_centre');?></h1>
                     <p><?php the_field('nom_du_centre');?></p>
                     <h2 class="medium">Equipements</h2>
                     <ul>
@@ -105,14 +105,12 @@ Récuperation du header
                     </ul>
                 </div><!-- /col-sm-8 -->
                 <div class="col-sm-4 encart_contact">
-                    <h3 class="medium">Contactez-nous !</h3>
+                    <h2 class="medium">Contactez-nous !</h2>
                     <p>8h30 - 12h30 et 14h00 à 18h30, du lundi au jeudi 8h30 - 12h30 et 13h30 - 18h00 le vendredi ______</p>
                     <p>Sollicitez votre rendez-vous individuel par mail à bordeaux@cours-galien.fr ou par téléphone au : </p>
-                    <h4 class="small"><strong>05 56 48 30 00</strong></h4>
+                    <h3 class="small"><strong>05 56 48 30 00</strong></h3>
                     <strong>Notre adresse :</strong>
-                    <p>Cours Galien Bordeaux</p>
-                    <p>190 rue Lecocq  </p>
-                    <p>33000 Bordeaux</p>
+                    <p>Cours Galien Bordeaux<br />190 rue Lecocq<br />33000 Bordeaux</p>
                     <a class="btn btn-primary" href="#"><!-- Faire un lien vers le formulaire brochure avec le centre préselectionné -->Demande d'infos</a>
                 </div><!-- /col-sm-4 -->
             </div><!-- /col-sm-8 -->
