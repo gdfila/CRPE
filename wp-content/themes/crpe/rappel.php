@@ -48,7 +48,7 @@ Récuperation du header
     <section class="contact">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3 picto_title_phone">
+                <div class="col-sm-3 hidden-xs picto_title_phone">
                     <h1 class="medium">Laissez vos coordonnées, Cours Galien vous rappelle</h1>
                 </div><!-- /col-sm-3 -->
                 <div class="col-sm-6 col-sm-offset-1">

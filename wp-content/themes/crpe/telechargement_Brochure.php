@@ -11,7 +11,7 @@ Récuperation du header
 <section class="contact">
     <div class="container">
         <div class="row">
-            <div class="col-sm-3 picto_title_doc">
+            <div class="col-sm-3 hidden-xs picto_title_doc">
                 <h1 class="medium">Telechargement de la brochure Galien</h1>
             </div><!-- /col-sm-3 -->
             <div class="col-sm-6 col-sm-offset-1">

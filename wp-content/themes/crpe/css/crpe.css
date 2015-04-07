@@ -19,7 +19,7 @@ html {
     font-size: 100%;}
 body { 
     position: relative;
-    font-family: 'robotoregular', helvetica, sans-serif; color: #777;}
+    font-family: 'robotoregular', helvetica, sans-serif; color: #777; word-wrap: break-word;}
 body, a { font-size: 0.95em;}
 .logo { 
     max-width: 120px;}
