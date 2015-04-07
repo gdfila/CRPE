@@ -18,7 +18,7 @@ Récuperation du header
     <!--
     Affiche une image de présentation pour la page
      --> 
-    <div class="hidden-xs img_prez img_prez_aplat img_prez_incurve">
+    <div class="hidden-xs hidden-sm img_prez img_prez_aplat img_prez_incurve">
         <!-- <img src="<?php echo $post_thumbnail_url; ?>" /> -->
         <img class="back_img" src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
     </div><!-- /img_prez -->
@@ -47,11 +47,11 @@ Récuperation du header
         <div class="container">
             <div class="row">
                 <div class="col-sm-3 hidden-xs hidden-sm picto_title_mail">
-                    <h1 class="medium">Téléchargez les brochures d’information Galien</h1>
+                    <h1 class="medium">Contactez-nous</h1>
                 </div><!-- /col-sm-3 -->
                 <div class="col-sm-6 col-sm-offset-1">
                     <form method="post" action="#">
-                        <h2 class="large">Téléchargez les brochures d’information Galien</h2>
+                        <h2 class="large">Contactez-nous</h2>
                         <?php wp_nonce_field('contact', 'contact-verif'); ?>  <!-- pour verifier que les reponse du formulaire proviennet bien de notre site -->
                         <div class="form-group">
                             <label for="nom">Nom *</label>

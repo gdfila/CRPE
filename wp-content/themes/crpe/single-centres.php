@@ -17,34 +17,33 @@ Récuperation du header
      --> 
     <div class="img_prez img_prez_aplat img_prez_incurve">
         <div class="container">
-            <!-- <img src="<?php echo $post_thumbnail_url; ?>"> -->
-            <img class="hidden-xs back_img" src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
-                <div class="min_jpo_container">
-                    <h1 class="x-large text_shadow"><?php the_field('adresse_-_ville');?></h1>
-                    <h2 class="medium text_shadow">Prépa concours <?php the_field('adresse_-_ville');?></h2>
-                    <?php   if(get_field('nom_de_la_jpo')!=null): ?>
-                        <?php $datJpo=get_field('date_de_la_jpo'); ?>
-                        <div class="min_jpo">
-                            <div class="col-sm-6 min_jpo_date">
-                                <?php  if ($datJpo!=""): ?>
-                                <?php
-                                   $mois = array(1=>'janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre');
-                                    $date = new DateTime($datJpo);
-                                //    echo $mois[$date->format('n')];
-                                   echo '<strong>'.$date->format('j').' </strong><span>'.$mois[$date->format('n')].'</span>';
-                                ?>
-                                <?php endif ?>
-                            </div><!-- /col-sm-6 -->
-                            <div class="col-sm-6 min_jpo_contact">
-                                <a href="#">Contact</a>
-                            </div><!-- /col-sm-6 -->
-                            <div>
-                                <h4 class=""><strong><?php the_field('nom_de_la_jpo');?></strong></h4>
-                                <p class="text-justify"><?php the_field('presentation_de_la_jpo');?></p>
-                                <a class="btn btn-primary" href="#liste_jpo">Lire la suite</a>
-                            </div>
-                        </div><!-- /min_jpo -->
-                </div><!-- /min_jpo_container -->
+            <img class="hidden-xs hidden-sm back_img" src="<?php echo $post_thumbnail_url; ?>" alt="">
+            <div class="min_jpo_container">
+                <h1 class="x-large text_shadow"><?php the_field('adresse_-_ville');?></h1>
+                <h2 class="medium text_shadow">Prépa concours <?php the_field('adresse_-_ville');?></h2>
+                <?php   if(get_field('nom_de_la_jpo')!=null): ?>
+                    <?php $datJpo=get_field('date_de_la_jpo'); ?>
+                    <div class="min_jpo">
+                        <div class="col-sm-6 min_jpo_date">
+                            <?php  if ($datJpo!=""): ?>
+                            <?php
+                               $mois = array(1=>'janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre');
+                                $date = new DateTime($datJpo);
+                            //    echo $mois[$date->format('n')];
+                               echo '<strong>'.$date->format('j').' </strong><span>'.$mois[$date->format('n')].'</span>';
+                            ?>
+                            <?php endif ?>
+                        </div><!-- /col-sm-6 -->
+                        <div class="col-sm-6 min_jpo_contact">
+                            <a href="#">Contact</a>
+                        </div><!-- /col-sm-6 -->
+                        <div>
+                            <h4 class=""><strong><?php the_field('nom_de_la_jpo');?></strong></h4>
+                            <p class="text-justify"><?php the_field('presentation_de_la_jpo');?></p>
+                            <a class="btn btn-primary" href="#liste_jpo">Lire la suite</a>
+                        </div>
+                    </div><!-- /min_jpo -->
+            </div><!-- /min_jpo_container -->
             <?php endif ?>
         </div><!-- /container -->
     </div><!-- /img_prez -->

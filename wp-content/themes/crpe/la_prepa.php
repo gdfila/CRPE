@@ -19,9 +19,8 @@ Récuperation du header
     <!--
     Affiche une image de présentation pour la page
      --> 
-    <div class="hidden-xs img_prez img_prez_aplat img_prez_incurve">
-        <!-- <img src="<?php echo $post_thumbnail_url; ?>"> -->
-        <img class="back_img" src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
+    <div class="hidden-xs hidden-sm img_prez img_prez_aplat img_prez_incurve">
+        <img class="back_img" src="<?php echo $post_thumbnail_url; ?>" alt="">
     </div><!-- /img_prez -->
 
     <!--
@@ -136,7 +135,7 @@ Récuperation du header
                                 <p>Voila des infos supplémentaires</p>
                             </div><!-- /info_sup -->
                         </div><!-- /info -->
-                        <button class="btn btn-primary center-block" data-toggle="modal" data-target="#signin_form">Inscrivez-vous</button>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#signin_form">Inscrivez-vous</button>
                     </div><!-- /col-sm-6 -->
                 </div>
                 <div class="col-sm-6 formules_container">
@@ -153,7 +152,7 @@ Récuperation du header
                                 <p>Voila des infos supplémentaires</p>
                             </div><!-- /info_sup -->
                         </div><!-- /info -->
-                        <button class="btn btn-primary center-block" data-toggle="modal" data-target="#form">Inscrivez-vous</button>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#form">Inscrivez-vous</button>
                     </div>
                 </div><!-- /col-sm-6 -->
             </div><!-- /row -->

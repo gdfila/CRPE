@@ -27,29 +27,29 @@ Récuperation du header
     Section présentant les valeurs de l'école
      -->
     <section class="valeurs img_prez img_prez_aplat">
-        <img class="hidden-xs back_img" src="<?php bloginfo('template_directory'); ?>/img/images/index_back_1.jpg" alt="">
+        <img class="hidden-xs hidden-sm back_img" src="<?php bloginfo('template_directory'); ?>/img/images/index_back_1.jpg" alt="">
         <div class="container">
             <div class="row">
                 <h1 class="x-large text_shadow">Adoptez l'esprit Galien !</h1>
-                <div class="col-sm-3">
+                <div class="col-xs-6 col-sm-6 col-md-3">
                     <div class="cercle-3">
                         <h2 class="small"><strong>Partage</strong></h2>
                         <p>Nos professeurs spécialistes partagent leurs connaissances et vous donnent leurs astuces pour réussir le jour J.</p>
                     </div><!-- /cercle-3 -->
                 </div><!-- /col-sm-3 -->
-                <div class="col-sm-3">
+                <div class="col-xs-6 col-sm-6 col-md-3">
                     <div class="cercle-3">
                         <h2 class="small"><strong>Progression</strong></h2>
                         <p>Elle repose sur trois étapes essentielles qui mènent vers le succès : entraînement, méthode et encadrement.</p>
                     </div><!-- /cercle-3 -->
                 </div><!-- /col-sm-3 -->
-                <div class="col-sm-3">
+                <div class="col-xs-6 col-sm-6 col-md-3">
                     <div class="cercle-3">
                         <h2 class="small"><strong>Cohésion</strong></h2>
                         <p>Il ne peut y avoir de partage sans cohésion. Toutes nos équipes sont focalisées sur un seul objectif : votre réussite.</p>
                     </div><!-- /cercle-3 -->
                 </div><!-- /col-sm-3 -->
-                <div class="col-sm-3">
+                <div class="col-xs-6 col-sm-6 col-md-3">
                     <div class="cercle-3">
                         <h2 class="small"><strong>Réussite</strong></h2>
                         <p>Ultime étape des efforts fournis et pour laquelle nous vous accompagnons chaque jour grâce à une stratégie de concours précise.</p>
@@ -138,7 +138,7 @@ Récuperation du header
     Section présentant les chiffres de l'école
      --> 
     <section class="statistiques img_prez img_prez_aplat">
-        <img class="hidden-xs back_img" src="<?php bloginfo('template_directory'); ?>/img/images/296_MG_9554.jpg" alt="">
+        <img class="hidden-xs hidden-sm back_img" src="<?php bloginfo('template_directory'); ?>/img/images/296_MG_9554.jpg" alt="">
         <div class="container">
                 <div class="row">
                     <h1 class="x-large text_shadow">Galien en chiffres !</h1>
@@ -184,7 +184,7 @@ Récuperation du header
                                 <p>Voila des infos supplémentaires</p>
                             </div><!-- /info_sup -->
                         </div><!-- /info -->
-                        <button class="btn btn-primary center-block" data-toggle="modal" data-target="#signin_form">Inscrivez-vous</button>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#signin_form">Inscrivez-vous</button>
                     </div>
                 </div><!-- /col-sm-6 -->
                 <div class="col-sm-6 formules_container">
@@ -201,7 +201,7 @@ Récuperation du header
                                 <p>Voila des infos supplémentaires</p>
                             </div><!-- /info_sup -->
                         </div><!-- /info -->
-                        <button class="btn btn-primary center-block" data-toggle="modal" data-target="#form">Inscrivez-vous</button>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#form">Inscrivez-vous</button>
                     </div>
                 </div><!-- /col-sm-6 -->
             </div><!-- /row -->

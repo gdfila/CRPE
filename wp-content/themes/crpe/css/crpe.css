@@ -278,7 +278,7 @@ img {
 
 .contenu_exam {
     position: relative;
-    width: 340px; margin: auto; padding-bottom: 20px;
+    width: 340px; margin: 50px auto; padding-bottom: 20px;
     border: 1px solid #f16150; border-radius: 20px;
     text-align: center;}
 .contenu_exam h2 { 
@@ -305,7 +305,7 @@ img {
 ********* Section Reperes Concours *************
 ***********************************************/
 
-.reperes .h3_medium {
+.reperes h3 {
     margin: 10px 0;}
 .reperes .reperes_container {
     padding: 0 20px 20px;}
@@ -318,7 +318,7 @@ img {
 ************ Section Savoir faire **************
 ***********************************************/
 
-.savoir_faire .h3_medium {
+.savoir_faire h3 {
     margin: 10px 0;}
 .savoir_faire .savoir_faire_container {
     padding: 0 20px 20px;}
@@ -635,7 +635,7 @@ textarea {
         display: block; width: 50%; margin: auto;
         font-size: 1.05em; color: #333;}
 
-@media (max-width: 960px) {
+@media (max-width: 992px) {
 
     /* Nav */
     .top_nav p {
@@ -649,9 +649,37 @@ textarea {
         max-width: 85px;}
     .nav_header .content_nav .sub-menu li a {
         padding: 8px 12px;}
+    .img_prez {
+        height: inherit;}
+
+    /* Action */
+    #action a:nth-child(1), #action a:nth-child(2), #action a:nth-child(3), #action a:nth-child(4) {
+        background-color: rgba(23,64,92,0.5);}
+
+    /* Img prez */
+    .img_prez h1 {
+        color: #333;}
+
+    /* Valeurs */
+    .valeurs .cercle-3 {
+        background-color: #777;}
+    .valeurs .cercle-3 p {
+        color: #fff;}
+
+    /* Statistiques */
+    .statistiques .cercle-4 {
+        background-color: #777;}
+    .statistiques .cercle-4 p {
+        color: #fff;}
+
+    /* Centre */
+    #container_centre .img_prez h1 {
+    border-bottom: 1px solid #333;}
+    #container_centre .img_prez h2 {
+    color: #333;}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     /* Nav */
     .nav_header .content_nav {
@@ -674,10 +702,24 @@ textarea {
     .nav_header .content_nav .sub-menu li a:hover {
         background-color: #777;
         color: #fff;}
+    
+    /* Savoir faire */
+    .savoir_faire .savoir_faire_container p {
+        height: inherit;}
+    .savoir_faire .savoir_faire_container span {
+        display: none;}
 
-    /* Action */
-    #action a:nth-child(1), #action a:nth-child(2), #action a:nth-child(3), #action a:nth-child(4) {
-        background-color: rgba(23,64,92,0.5);}
+    /* Formules */
+    .formules .formules_container {
+        margin-top: 20px;}
+
+    /* Jpo */
+    .jpo .big_jpo_date {
+        text-align: left;}
+
+    /* Footer */
+    .reseaux_sociaux {
+        margin-top: 20px;}
 }
 
   

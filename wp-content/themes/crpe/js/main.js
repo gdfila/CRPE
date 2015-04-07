@@ -90,8 +90,16 @@ $(document).ready(function() {
          }        
     });
 
-    // Masque la jpo du slider en dessous de 1024px
+    // Modification Html et Css sous 1024px
     if ($(window).width() < 1024){
         $('.carousel-caption').addClass('hidden-xs');
+    };
+
+    // Modification Html et Css sous 992px
+    if ($(window).width() < 992){
+        $('h1').removeClass('text_shadow');
+        $('h2').removeClass('text_shadow');
+        $('#container_centre > div').removeClass('img_prez_aplat').removeClass('img_prez_incurve');
+        $('#container_centre > div').css('height', '450px');
     };
 });
