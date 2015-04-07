@@ -1,6 +1,7 @@
 /***********************************************
 ******* Modification de bootstrap **************
 ***********************************************/
+
 h1, h2, h3, h4, h5, h6, ul, ol { 
 	margin: 0; padding: 0;}
 .modal { 
@@ -14,6 +15,19 @@ h1, h2, h3, h4, h5, h6, ul, ol {
 	background-color: #308bca;}
 .carousel-indicators {
 	bottom: 50px;}
+
+	/* Nav */
+	.navbar-header {
+		background-color: #f16150;}
+	.navbar-toggle .icon-bar {
+		height: 4px;
+		background-color: #fff;}
+	.navbar-toggle .icon-bar+.icon-bar {
+	    margin-top: 5px;}
+	.navbar-collapse {
+		padding: 0;
+		border-top: none;}
+
 @media screen and (min-width: 768px) {
 .carousel-indicators {
   bottom: 20px;
@@ -25,3 +39,14 @@ blockquote {
   border-left: none;
 }
 hr {margin: 0;}
+
+	/* Nav */
+	.navbar-header {
+	  display: none;
+	}
+
+@media screen and (min-width: 960px) {
+	.carousel-indicators {
+	  bottom: 20px;
+	}
+}

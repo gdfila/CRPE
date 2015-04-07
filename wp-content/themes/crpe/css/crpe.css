@@ -389,7 +389,9 @@ img {
 .min_jpo {
     position: absolute; z-index: 2000;
     width: 100%; padding: 10px 20px 20px;
-    background-color: #fff;}
+    background-color: #fff;
+    /* CSS3 */
+    -moz-box-shadow: 1px 1px 10px 0px rgba(0,0,0, 0.3); -webkit-box-shadow: 1px 1px 10px 0px rgba(0,0,0, 0.3); -o-box-shadow: 1px 1px 10px 0px rgba(0,0,0, 0.3); box-shadow: 1px 1px 10px 0px rgba(0,0,0, 0.3);}
 .min_jpo .min_jpo_date,
 .min_jpo .min_jpo_contact {
     height: 50px; margin-bottom: 5px; padding: 0;
@@ -632,3 +634,50 @@ textarea {
     .cercle-4 p {
         display: block; width: 50%; margin: auto;
         font-size: 1.05em; color: #333;}
+
+@media (max-width: 960px) {
+
+    /* Nav */
+    .top_nav p {
+        font-size: 0.85em;}
+    .nav_header .top_nav p, .nav_header .content_nav nav {
+        margin-left: 140px;}
+    .nav_header nav > ul li a {
+        padding: 13px;
+        font-size: 0.85em;}
+    .nav_header .nav_fixed .logo_nav .logo {
+        max-width: 85px;}
+    .nav_header .content_nav .sub-menu li a {
+        padding: 8px 12px;}
+}
+
+@media (max-width: 768px) {
+
+    /* Nav */
+    .nav_header .content_nav {
+        padding-bottom: 10px;}
+    .logo_nav {
+        display: block; width: 100px; height: 100%; margin-left: 25px; padding: 9px 0;}
+    .logo {
+        max-width: 100px;}
+    .nav_header .content_nav nav {
+        margin-left: 0;}
+    .nav_header nav ul li, 
+    .nav_header nav ul li ul li {
+        display: block;
+        border-top: 1px solid #fff;}
+    .nav_header nav .sub-menu {
+        position: inherit;}
+    .nav_header .content_nav .sub-menu li a {
+        background-color: #fff;
+        color: #777; text-align: left;}
+    .nav_header .content_nav .sub-menu li a:hover {
+        background-color: #777;
+        color: #fff;}
+
+    /* Action */
+    #action a:nth-child(1), #action a:nth-child(2), #action a:nth-child(3), #action a:nth-child(4) {
+        background-color: rgba(23,64,92,0.5);}
+}
+
+  

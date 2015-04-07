@@ -18,7 +18,7 @@ Récuperation du header
     <!--
     Affiche une image de présentation pour la page
      --> 
-    <div class="img_prez img_prez_aplat img_prez_incurve">
+    <div class="hidden-xs img_prez img_prez_aplat img_prez_incurve">
         <!-- <img src="<?php echo $post_thumbnail_url; ?>" /> -->
         <img class="back_img" src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
     </div><!-- /img_prez -->
@@ -64,7 +64,7 @@ Récuperation du header
     <section class="contact">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3 hidden-xs picto_title_doc">
+                <div class="col-sm-3 hidden-xs hidden-sm picto_title_doc">
                     <h1 class="medium">Téléchargez les brochures d’information Galien</h1>
                 </div><!-- /col-sm-3 -->
                 <div class="col-sm-6 col-sm-offset-1">

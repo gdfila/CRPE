@@ -18,7 +18,7 @@ Récuperation du header
     <div class="img_prez img_prez_aplat img_prez_incurve">
         <div class="container">
             <!-- <img src="<?php echo $post_thumbnail_url; ?>"> -->
-            <img class="back_img" src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
+            <img class="hidden-xs back_img" src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
                 <div class="min_jpo_container">
                     <h1 class="x-large text_shadow"><?php the_field('adresse_-_ville');?></h1>
                     <h2 class="medium text_shadow">Prépa concours <?php the_field('adresse_-_ville');?></h2>
@@ -56,7 +56,7 @@ Récuperation du header
         <div class="container">
             <h1 class="x-large">Découvrir le centre</h1>
             <h2 class="medium">Cours Galien <?php the_field('adresse_-_ville');?>, lieu d'études, d'échanges et de vie</h2>
-            <div class="row">
+            <div class="hidden-xs row">
                 <div class="col-sm-4">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
                 </div><!-- /col-sm-4 -->

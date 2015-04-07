@@ -9,7 +9,7 @@
     <title>Le concours de recrutement des professeurs des écoles</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-
+    
     <script src="<?php bloginfo('template_url'); ?>/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <script>(function(){document.documentElement.className='js'})();</script>
     <script src="<?php bloginfo('template_url'); ?>/js/vendor/jquery-1.11.2.js"></script>
@@ -22,26 +22,42 @@
 </head>
 
 <body>
-    <header class="nav_header hidden-xs">
-        <div class="top_nav">
-            <div class="container">
-                <p>formation au concours de recrutement de professeur des écoles</p>
-            </div><!-- /container -->
-        </div><!-- /top_nav -->
-        <div class="content_nav">
-            <div class="container">
-                <a class="logo_nav" href="/galien_crpe/">
-                    <img class="logo" src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt="" />
-                </a>
-                <nav>
-                    <?php
-                        wp_nav_menu([ 
-                        'theme_location' => 'nav',
-                        'container' => 'navbar-header', ]);
-                    ?>
-                </nav>
-            </div><!-- /container -->
-        </div><!-- /content_nav -->
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <header class="nav_header">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="logo_nav" href="/galien_crpe/">
+                <img class="logo" src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt="" />
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <div class="hidden-xs top_nav">
+                <div class="container">
+                    <p>formation au concours de recrutement de professeur des écoles</p>
+                </div><!-- /container -->
+            </div><!-- /top_nav -->
+            <div class="content_nav">
+                <div class="container">
+                    <a class="hidden-xs logo_nav" href="/galien_crpe/">
+                        <img class="logo" src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt="" />
+                    </a>
+                    <nav>
+                        <?php
+                            wp_nav_menu([ 
+                            'theme_location' => 'nav',
+                            'container' => 'navbar-header', ]);
+                        ?>
+                    </nav>
+                </div><!-- /container -->
+            </div><!-- /content_nav -->
+        </div>
     </header>
     <div id="action">
         <a data-toggle="modal" data-target="#modalRappel" data-whatever="rappelez-moi">Rappelez-moi</a>
