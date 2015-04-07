@@ -18,9 +18,8 @@ Récuperation du header
     <!--
     Affiche une image de présentation pour la page
      --> 
-    <div class="hidden-xs img_prez img_prez_aplat img_prez_incurve">
-        <!-- <img src="<?php echo $post_thumbnail_url; ?>" /> -->
-        <img class="back_img" src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
+    <div class="hidden-xs hidden-sm img_prez img_prez_aplat img_prez_incurve">
+        <img class="back_img" src="<?php echo $post_thumbnail_url; ?>" alt="">
     </div><!-- /img_prez -->
     <?php
     //affichage message d'erreur
@@ -46,12 +45,15 @@ Récuperation du header
     <section class="contact">
         <div class="container">
             <div class="row">
-                <div class="hidden-xs hidden-sm col-sm-3 picto_title_mail">
-                    <h1 class="medium">Envoyer nous un message</h1>
-                </div>
+
+
+                <div class="col-sm-3 hidden-xs hidden-sm picto_title_mail">
+                    <h1 class="medium">Contactez-nous</h1>
+                </div><!-- /col-sm-3 -->
                 <div class="col-sm-6 col-sm-offset-1">
                     <form method="post" action="#">
-                        <h2 class="large">Envoyer nous un message</h2>
+                        <h2 class="large">Contactez-nous</h2>
+
                         <?php wp_nonce_field('contact', 'contact-verif'); ?>  <!-- pour verifier que les reponse du formulaire proviennet bien de notre site -->
                         <div class="form-group">
                             <label for="nom">Nom *</label>

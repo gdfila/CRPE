@@ -314,7 +314,7 @@ function rappel()
 
 function centreJPO()
 {
-    var_dump();
+    //var_dump();
     
 }
 add_action('template_redirect', 'centreJPO');
