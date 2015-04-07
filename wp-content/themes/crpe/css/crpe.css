@@ -307,7 +307,7 @@ img {
 ********* Section Reperes Concours *************
 ***********************************************/
 
-.reperes h3 {
+.reperes h2 {
     margin: 10px 0;}
 .reperes .reperes_container {
     padding: 0 20px 20px;}
@@ -320,7 +320,7 @@ img {
 ************ Section Savoir faire **************
 ***********************************************/
 
-.savoir_faire h3 {
+.savoir_faire h2 {
     margin: 10px 0;}
 .savoir_faire .savoir_faire_container {
     padding: 0 20px 20px;}
@@ -343,7 +343,7 @@ img {
     font-size: 4em;}
 .outil_pedagogique .outil_pedagogique_container {
     padding: 0 20px;}
-.outil_pedagogique .h3_text_normal {
+.outil_pedagogique .text_normal {
     text-transform: initial;}
 .outil_pedagogique .outil_pedagogique_container p {
     text-align: justify;}
@@ -447,10 +447,10 @@ img {
     padding: 20px;
     background-color: rgb(241,97,80);
     color: #fff;}
-.descriptif .encart_contact h3, 
-.descriptif .encart_contact h4 { 
+.descriptif .encart_contact h2, 
+.descriptif .encart_contact h3 { 
     color: #fff;}
-.descriptif .encart_contact h4 {
+.descriptif .encart_contact h3 {
     margin: 10px 0; padding-bottom: 10px;
     border-bottom: 1px solid rgba(255,255,255, 0.8)}
 .descriptif .encart_contact p {

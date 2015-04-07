@@ -90,7 +90,7 @@ Récuperation du header
                     <p class="savoir_faire_texte">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi odio, ullam sit deserunt. Labore voluptate incidunt, quam itaque eligendi perspiciatis odit voluptas, pariatur at magni earum exercitationem ipsum. Reiciendis, corporis.</p>
                 </div><!-- /col-sm-4 -->
                 <div class="col-sm-4 outil_pedagogique_container">
-                    <h2 class="small h3_text_normal"><strong><a class="btn btn-primary" href="#">Le sMOOC</a></strong></h2>
+                    <h2 class="small text_normal"><strong><a class="btn btn-primary" href="#">Le sMOOC</a></strong></h2>
                     <p class="savoir_faire_texte">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem eum non rem deserunt tempore reiciendis quidem facilis nulla odio alias iure repellendus praesentium, ad nobis dolor commodi asperiores ullam aut!</p>
                 </div><!-- /col-sm-4 -->
             </div><!-- /row -->
