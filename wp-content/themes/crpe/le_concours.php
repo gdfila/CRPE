@@ -30,7 +30,7 @@ Récuperation du header
         <div class="container">
             <h1 class="x-large">Le concours</h1>
             <p class="medium">En 2015, 11 960 postes d’enseignants du primaire sont à pourvoir au CRPE (Concours de Recrutement de Professeurs des Ecoles) dont 11 281 postes au concours externe.Vous êtes inscrit en première année d’études en vue de l’obtention d’un master (M1) ou vous êtes titulaire d’un master (M2) reconnu par le ministère de l’éducation et vous souhaitez enseigner à l’école primaire … C’est donc le moment de préparer avec sérieux et rigueur le Concours de Recrutement de Professeurs des Ecoles.</p>
-            <hr><!-- /separation-->
+        </div>
     </section><!-- /accroche -->
 
     <!--
@@ -38,7 +38,6 @@ Récuperation du header
      -->
     <section class="reperes">
         <div class="container">
-            <h1 class="large">Titre !!</h1>
             <div class="row">
                 <div class="col-sm-3 reperes_container">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/fotolia_51467210.jpg" alt="">

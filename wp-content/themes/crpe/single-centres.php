@@ -38,7 +38,7 @@ Récuperation du header
                             <a href="#">Contact</a>
                         </div><!-- /col-sm-6 -->
                         <div>
-                            <h3 class=""><strong><?php the_field('nom_de_la_jpo');?></strong></h3>
+                            <h3 class="small"><strong><?php the_field('nom_de_la_jpo');?></strong></h3>
                             <p class="text-justify"><?php the_field('presentation_de_la_jpo');?></p>
                             <a class="btn btn-primary" href="#liste_jpo">Lire la suite</a>
                         </div>
@@ -128,49 +128,50 @@ Récuperation du header
                 <div class="row">
 
                     <!--/*** si il existe une JPO */-->
-                     <?php  if ($datJpo!=""): ?>
-                        <div class="col-sm-3 big_jpo_date">
-                            <?php
-                              $date = new DateTime($datJpo);
-                              echo '<strong>'.$date->format('j').' </strong><br /><span>'.$mois[$date->format('n')].'</span>';
-                            ?>
-                        </div><!-- /col-sm-3 -->
-                        <div class="col-sm-9">
-                            <h3 class="medium"><strong>journée portes ouverte </strong>
-                                <strong class="centre_texte_red">
-                                    <?php
-                                         
-                                        $date = new DateTime($datJpo);
-                                        echo '<strong>'.$date->format('j').' </strong><span>'.$mois[$date->format('n')].'</span>';
-                                    ?>
-                                </strong>
-                            </h3>
-                            <h4 class="small"><strong><?php the_field('nom_de_la_jpo');?></strong></h4>
-                            <p class="text-justify"><?php the_field('presentation_de_la_jpo');?></p>
-                            <a class="btn btn-primary" href="http://localhost/galien_crpe/?p=180&centre=<?php the_field('adresse_-_ville')?>&jpoDate=<?php the_field('date_de_la_jpo')?>" >Inscription</a>      
-                        </div><!-- /col-sm-9 -->
-                    <?php endif ?>
-                    <!-- si il existe un evenement -->
-                    <?php $dateven=get_field('date_de_levenement'); ?>
-                    <?php  if ($dateven!=""): ?>
-                        <div class="col-sm-4">
-                            <?php
-                                $date = new DateTime($dateven);
-                                echo $date->format('d/m/Y');
-                            ?>
-                        </div><!-- /col-sm-4 -->
-                        <div class="col-sm-8">
-                            <h3 class="medium">
-                                <strong class="centre_texte_red">
-                                    <?php
-                                        $date = new DateTime($dateven);
-                                       echo $date->format('d/m/Y');
-                                    ?>
-                                </strong>
-                            </h3>
-                            <h4 class="small"><strong><?php the_field('nom_de_levenement');?></strong></h4>
-                            <p class="text-justify"><?php the_field('presentation_de_levenement');?></p>
-                        </div><!-- /col-sm-8 -->
+                    <?php  if ($datJpo!=""): ?>
+                        <div class="col-sm-12 big_jpo">
+                            <div class="col-sm-3 big_jpo_date">
+                                <?php
+                                  $date = new DateTime($datJpo);
+                                  echo '<strong>'.$date->format('j').' </strong><br /><span>'.$mois[$date->format('n')].'</span>';
+                                ?>
+                            </div><!-- /col-sm-3 -->
+                            <div class="col-sm-9">
+                                <h3 class="medium"><strong>journée portes ouverte </strong>
+                                    <strong class="centre_texte_red">
+                                        <?php
+                                             
+                                            $date = new DateTime($datJpo);
+                                            echo '<strong>'.$date->format('j').' </strong><span>'.$mois[$date->format('n')].'</span>';
+                                        ?>
+                                    </strong>
+                                </h3>
+                                <p class="text-justify"><?php the_field('presentation_de_la_jpo');?></p>
+                                <a class="btn btn-primary" href="http://localhost/galien_crpe/?p=180&centre=<?php the_field('adresse_-_ville')?>&jpoDate=<?php the_field('date_de_la_jpo')?>" >Inscription</a>      
+                            </div><!-- /col-sm-9 -->
+                        <?php endif ?>
+                        <!-- si il existe un evenement -->
+                        <?php $dateven=get_field('date_de_levenement'); ?>
+                        <?php  if ($dateven!=""): ?>
+                            <div class="col-sm-4">
+                                <?php
+                                    $date = new DateTime($dateven);
+                                    echo $date->format('d/m/Y');
+                                ?>
+                            </div><!-- /col-sm-4 -->
+                            <div class="col-sm-8">
+                                <h3 class="medium">
+                                    <strong class="centre_texte_red">
+                                        <?php
+                                            $date = new DateTime($dateven);
+                                           echo $date->format('d/m/Y');
+                                        ?>
+                                    </strong>
+                                </h3>
+                                <h4 class="small"><strong><?php the_field('nom_de_levenement');?></strong></h4>
+                                <p class="text-justify"><?php the_field('presentation_de_levenement');?></p>
+                            </div><!-- /col-sm-8 -->
+                        </div>
                     <?php endif ?>
                 </div><!-- /row -->
             </div><!-- /container -->

@@ -28,8 +28,10 @@ section {
     text-align: center;}
 h1, h2, h3, h4, h5, h6 { 
      color: #333; text-transform: uppercase;}
-h1, h2 {
+h1 {
     margin-bottom: 50px;}
+h2, h3, h4 {
+    margin-bottom: 25px;}
 .x-large { 
     font-size: 3em;}
 .large { 
@@ -37,10 +39,8 @@ h1, h2 {
 .medium { 
     font-size: 1.6em;}
 .small { 
-    margin-bottom: 25px;
     font-size: 1.2em;}
 .x-small { 
-    margin-bottom: 25px;
     font-size: 1.1em;}
 a:hover { 
     text-decoration: none;}
@@ -409,7 +409,7 @@ img {
     display: block; width: 100%; height: 100%;
     background: url('../img/picto/picto_contact.png') no-repeat center;
     color: #fff; text-indent: -9999px;}
-.min_jpo h4 {
+.min_jpo h3 {
     margin: 5px;
     font-size: 1em;}
 .min_jpo p {
@@ -418,6 +418,8 @@ img {
     overflow: hidden;}
 .min_jpo .btn {
     width: 100%;}
+.min_jpo .btn-primary {
+    background-color: #17405c;}
 
 /***********************************************
 ***************** Google map *******************
@@ -445,7 +447,7 @@ img {
     list-style-type: square;}
 .descriptif .encart_contact {
     padding: 20px;
-    background-color: rgb(241,97,80);
+    background-color: #17405c;
     color: #fff;}
 .descriptif .encart_contact h2, 
 .descriptif .encart_contact h3 { 
@@ -463,23 +465,23 @@ img {
 **************** Section Jpo *******************
 ***********************************************/
 
-.jpo .row {
+.jpo .big_jpo {
     padding: 30px;
     background-color: rgb(241,97,80);
     color: #fff; text-align: left;}
-.jpo .row h3, 
-.jpo .row h4 {
+.jpo .big_jpo h3, 
+.jpo .big_jpo h4 {
     color: #fff;}
-.jpo .row .btn {
-    background-color: #ff6446;}
-.jpo .row:hover {
+.jpo .big_jpo .btn {
+    background-color: #17405c;}
+.jpo .big_jpo:hover {
     background-color: #fff;
     color: #777;}
-.jpo .row:hover h3, 
-.jpo .row:hover h4 {
+.jpo .big_jpo:hover h3, 
+.jpo .big_jpo:hover h4 {
     color: #333;}
-.jpo .row:hover .btn {
-    background-color: #3497db;}
+.jpo .big_jpo:hover .btn {
+    background-color: #f16150;}
 .jpo .big_jpo_date {
     text-align: right;}
 .jpo .big_jpo_date  strong {
