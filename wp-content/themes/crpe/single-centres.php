@@ -35,7 +35,7 @@ Récuperation du header
                             <?php endif ?>
                         </div><!-- /col-sm-6 -->
                         <div class="col-sm-6 min_jpo_contact">
-                            <a href="#">Contact</a>
+                            <a href="http://localhost/galien_crpe/contact/contact/">Contact</a>
                         </div><!-- /col-sm-6 -->
                         <div>
                             <h3 class="small"><strong><?php the_field('nom_de_la_jpo');?></strong></h3>
