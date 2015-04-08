@@ -277,7 +277,7 @@ img {
     border: 2px solid #f0f0f0;
     text-align: center;
     /* CSS3 */
-    -moz-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.1); -webkit-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.1); -o-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.1); box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.1);}
+    -moz-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); -webkit-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); -o-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3);}
 .formules h2 { 
     margin: 0; padding: 20px;
     background-color: #f0f0f0;}
@@ -473,8 +473,7 @@ img {
 .descriptif .encart_contact p {
     color: rgba(255,255,255, 0.8);}
 .descriptif .encart_contact a {
-    width: 100%;
-    background-color: #ff6446;}
+    width: 100%;}
 
 /***********************************************
 **************** Section Jpo *******************

@@ -31,10 +31,10 @@ Récuperation du header
     <div class="img_prez img_prez_aplat img_prez_incurve">
         <div class="container">
             <img class="hidden-xs hidden-sm back_img" src="<?php echo $post_thumbnail_url; ?>" alt="">
-            <div class="min_jpo_container">
-                <h1 class="x-large text_shadow"><?php the_field('nom_du_centre');?></h1>
-                <h2 class="medium text_shadow">Prépa concours <?php the_field('nom_du_centre');?></h2>
-                <?php   if($dataJPO==true): ?>
+            <h1 class="x-large text_shadow"><?php the_field('nom_du_centre');?></h1>
+            <h2 class="medium text_shadow">Prépa concours <?php the_field('nom_du_centre');?></h2>
+            <?php   if($dataJPO==true): ?>
+                <div class="min_jpo_container">
                     <div class="min_jpo">
                         <div class="col-sm-6 min_jpo_date">
                             <?php  $datJpo=$dataJPO[0]->startDate ; ?>
@@ -56,8 +56,8 @@ Récuperation du header
                             <a class="btn btn-primary" href="#liste_jpo">Lire la suite</a>
                         </div>
                     </div><!-- /min_jpo -->
-                <?php endif ?>
-            </div><!-- /min_jpo_container -->
+                </div><!-- /min_jpo_container -->
+            <?php endif ?>
         </div><!-- /container -->
     </div><!-- /img_prez -->
     
@@ -146,14 +146,11 @@ Récuperation du header
                         <div class="col-sm-12 big_jpo">
                             <div class="col-sm-3 big_jpo_date">
                                 <?php
-                                  echo '<strong>'.intval($dat[0]).' </strong><span>'.$mois[intval($dat[1])].'</span>';
+                                  echo '<strong>'.intval($dat[0]).' </strong><br /><span>'.$mois[intval($dat[1])].'</span>';
                                 ?>
                             </div><!-- /col-sm-3 -->
                             <div class="col-sm-9">
                                 <h3 class="medium"><strong><?php echo $dataJPO[0]->title; ?> </strong>
-<!--                                    <strong class="centre_texte_red">
-                                   
-                                    </strong>-->
                                 </h3>
                                 <p class="text-justify"><?php echo $dataJPO[0]->description;?></p>
                                 <a class="btn btn-primary" href="http://localhost/galien_crpe/?p=180&centre=<?php the_field('adresse_-_ville')?>&jpoDate=<?php the_field('date_de_la_jpo')?>" >Inscription</a>      
@@ -167,20 +164,12 @@ Récuperation du header
                             <div class="col-sm-3  big_jpo_date">
                                 <?php
                                     $date = new DateTime($dateven);
-                                    echo '<strong>'.$date->format('j').' </strong><span> '.$mois[$date->format('n')].'</span>';
+                                    echo '<strong>'.$date->format('j').' </strong><br /><span> '.$mois[$date->format('n')].'</span>';
                                 ?>
                                 
                             </div><!-- /col-sm-4 -->
                             <div class="col-sm-9">
                                 <h3 class="medium"><strong><?php  the_field('nom_de_levenement'); ?> </strong>
-                                <h3 class="medium">
-<!--                                    <strong class="centre_texte_red">
-                                        <?php
-//                                            $date = new DateTime($dateven);
-//                                              echo '<strong>'.$date->format('j').' </strong><span> '.$mois[$date->format('n')].'</span>';
-                                        ?>
-                                    </strong>-->
-                                </h3>
                                 <p class="text-justify"><?php the_field('presentation_de_levenement');?></p>
                             </div><!-- /col-sm-8 -->
                         </div><!-- /col-sm-12 -->
