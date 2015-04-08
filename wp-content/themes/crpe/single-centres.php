@@ -31,10 +31,10 @@ Récuperation du header
     <div class="img_prez img_prez_aplat img_prez_incurve">
         <div class="container">
             <img class="hidden-xs hidden-sm back_img" src="<?php echo $post_thumbnail_url; ?>" alt="">
-            <div class="min_jpo_container">
-                <h1 class="x-large text_shadow"><?php the_field('nom_du_centre');?></h1>
-                <h2 class="medium text_shadow">Prépa concours <?php the_field('nom_du_centre');?></h2>
-                <?php   if($dataJPO==true): ?>
+            <h1 class="x-large text_shadow"><?php the_field('nom_du_centre');?></h1>
+            <h2 class="medium text_shadow">Prépa concours <?php the_field('nom_du_centre');?></h2>
+            <?php   if($dataJPO==true): ?>
+                <div class="min_jpo_container">
                     <div class="min_jpo">
                         <div class="col-sm-6 min_jpo_date">
                             <?php  $datJpo=$dataJPO[0]->startDate ; ?>
@@ -56,8 +56,8 @@ Récuperation du header
                             <a class="btn btn-primary" href="#liste_jpo">Lire la suite</a>
                         </div>
                     </div><!-- /min_jpo -->
-                <?php endif ?>
-            </div><!-- /min_jpo_container -->
+                </div><!-- /min_jpo_container -->
+            <?php endif ?>
         </div><!-- /container -->
     </div><!-- /img_prez -->
     
