@@ -21,36 +21,39 @@ Récuperation du header
     <div class="hidden-xs hidden-sm img_prez img_prez_aplat img_prez_incurve">
         <img class="back_img" src="<?php echo $post_thumbnail_url; ?>" alt="">
     </div><!-- /img_prez -->
-    <?php
-    //affichage message d'erreur
-    if (isset($_GET['erreur']))
-    {
-        echo '<div class="alert">';
- 
-            switch ($_GET['erreur'])
-            {
-                case 'telephone' :
-                    echo 'Vous devez indiquer un numéro de téléphone pour être rappeler.';
-                    break;
-                case 'rappel' :
-                    echo $_GET['mess'];
-                    break;
-                case 'success':
-                    echo 'Votre demande a bien été enregistré';
-                    break;
-            }
-          echo '</div>';
-    } ?>
+    
 
     <section class="contact">
         <div class="container">
             <div class="row">
                 <div class="col-sm-3 hidden-xs hidden-sm picto_title_mail">
-                    <h1 class="medium">Contactez-nous</h1>
+                       <h1 class="medium">Contactez-nous</h1>
                 </div><!-- /col-sm-3 -->
                 <div class="col-sm-6 col-sm-offset-1">
                     <form method="post" action="#">
                         <h2 class="large">Contactez-nous</h2>
+                           <?php
+                                //affichage message d'erreur
+                              
+                                if (isset($_GET['erreur']))
+                                {
+                                    echo '<div class="alert">';
+
+                                        switch ($_GET['erreur'])
+                                        {
+                                            case 'telephone' :
+                                                echo 'Vous devez indiquer un numéro de téléphone pour être rappeler.';
+                                                break;
+                                            case 'rappel' :
+                                                echo $_GET['mess'];
+                                                break;
+                                            case 'success':
+                                                echo 'Votre message a bien été envoyé';
+                                                break;
+                                        }
+
+                                      echo '</div>';
+                                } ?>
                         <?php wp_nonce_field('contact', 'contact-verif'); ?>  <!-- pour verifier que les reponse du formulaire proviennet bien de notre site -->
                         <div class="form-group">
                             <label for="nom">Nom *</label>
@@ -77,7 +80,7 @@ Récuperation du header
                             <label for="centres">Centre</label>
                             <select class="form-control input-lg" name="centre">
                                 <?php foreach($_SESSION['centre'] as $nom):  ?>
-                                    <option  value="<?php echo $nom['id']; ?>"><?php echo $nom['name']; ?></option>
+                                    <option  value="<?php echo $nom['id']."/".$nom['name']; ?>"><?php echo $nom['name']; ?></option>
                                 <?php endforeach ?>
                             </select>
                         </div><!-- /form-groupe -->

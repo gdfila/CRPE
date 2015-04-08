@@ -11,7 +11,22 @@ Récuperation du header
     ?>
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-  
+  <?php
+ 
+   //   correspondance id centre dans wordpress avec id centre dans thalamus
+       $tabId=[32=>22,37=>11,43=>7,39=>3,40=>1,71=>16,41=>5,42=>15];
+       $idcentre=$post->ID;
+        $client=$_SESSION['client'];
+                    
+        var_dump(get_field('mise_en_ligne_jpo'));
+          if (get_field('mise_en_ligne_jpo')=='true')
+         {
+              $jpo= $client->call(array("service" => "communication","method" => "centerInformationMeetingsList","centerId" => $tabId[$idcentre]));
+              $dataJPO=$jpo->datas;
+              $datJpo=$dataJPO[0]->startDate ; 
+           }
+      ?>
+    
     <!--
     Affiche une image de présentation pour la page
      --> 
@@ -21,16 +36,17 @@ Récuperation du header
             <div class="min_jpo_container">
                 <h1 class="x-large text_shadow"><?php the_field('adresse_-_ville');?></h1>
                 <h2 class="medium text_shadow">Prépa concours <?php the_field('adresse_-_ville');?></h2>
-                <?php   if(get_field('nom_de_la_jpo')!=null): ?>
-                    <?php $datJpo=get_field('date_de_la_jpo'); ?>
+                <?php   if($dataJPO==true): ?>
+                    <?php //$datJpo=get_field('date_de_la_jpo'); ?>
                     <div class="min_jpo">
                         <div class="col-sm-6 min_jpo_date">
-                            <?php  if ($datJpo!=""): ?>
+                            <?php  $datJpo=$dataJPO[0]->startDate ; ?>
+                           <?php   if ($datJpo!=""): ?>
                             <?php
                                $mois = array(1=>'janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre');
-                                $date = new DateTime($datJpo);
-                            //    echo $mois[$date->format('n')];
-                               echo '<strong>'.$date->format('j').' </strong><span>'.$mois[$date->format('n')].'</span>';
+                               $dat=explode("/",$datJpo);
+                               echo '<strong>'.intval($dat[0]).' </strong><span>'.$mois[intval($dat[1])].'</span>';
+                            
                             ?>
                             <?php endif ?>
                         </div><!-- /col-sm-6 -->
@@ -38,8 +54,8 @@ Récuperation du header
                             <a href="#">Contact</a>
                         </div><!-- /col-sm-6 -->
                         <div>
-                            <h4 class=""><strong><?php the_field('nom_de_la_jpo');?></strong></h4>
-                            <p class="text-justify"><?php the_field('presentation_de_la_jpo');?></p>
+                            <h4 class=""><strong><?php  echo $dataJPO[0]->tittle //the_field('nom_de_la_jpo');?></strong></h4>
+                            <p class="text-justify"><?php echo $dataJPO[0]->description//the_field('presentation_de_la_jpo');?></p>
                             <a class="btn btn-primary" href="#liste_jpo">Lire la suite</a>
                         </div>
                     </div><!-- /min_jpo -->
@@ -133,23 +149,20 @@ Récuperation du header
                      <?php  if ($datJpo!=""): ?>
                         <div class="col-sm-3 big_jpo_date">
                             <?php
-                              $date = new DateTime($datJpo);
-                              echo '<strong>'.$date->format('j').' </strong><br /><span>'.$mois[$date->format('n')].'</span>';
+                              echo '<strong>'.intval($dat[0]).' </strong><span>'.$mois[intval($dat[1])].'</span>';
                             ?>
                         </div><!-- /col-sm-3 -->
                         <div class="col-sm-9">
                             <h3 class="medium"><strong>journée portes ouverte </strong>
                                 <strong class="centre_texte_red">
                                     <?php
-                                         
-                                        $date = new DateTime($datJpo);
-                                        echo '<strong>'.$date->format('j').' </strong><span>'.$mois[$date->format('n')].'</span>';
+                                              echo '<strong>'.intval($dat[0]).' </strong><span>'.$mois[intval($dat[1])].'</span>';
                                     ?>
                                 </strong>
                             </h3>
-                            <h4 class="small"><strong><?php the_field('nom_de_la_jpo');?></strong></h4>
-                            <p class="text-justify"><?php the_field('presentation_de_la_jpo');?></p>
-                            <a class="btn btn-primary" href="http://localhost/galien_crpe/?p=180&centre=<?php the_field('adresse_-_ville')?>&jpoDate=<?php the_field('date_de_la_jpo')?>" >Inscription</a>      
+                            <h4 class="small"><strong><?php echo $dataJPO[0]->tittle //the_field('nom_de_la_jpo');?></strong></h4>
+                            <p class="text-justify"><?php  echo $dataJPO[0]->description//the_field('presentation_de_la_jpo');?></p>
+                            <a class="btn btn-primary" href="http://localhost/galien_crpe/?p=180&centre=<?php echo $centre?>&jpoid=<?php echo $dataJPO[0]->id ?>" >Inscription</a>      
                         </div><!-- /col-sm-9 -->
                     <?php endif ?>
                     <!-- si il existe un evenement -->

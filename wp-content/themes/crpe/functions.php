@@ -150,7 +150,7 @@ function verifForm()
               }
      
 }
-/*      ----------------------------------- traitement formuylaire brochure  ----------------------------------*/
+/*      ----------------------------------- traitement formulaire brochure  ----------------------------------*/
 function traitementFormBrochure() {
      $_GET['erreur']="";
     $_GET['sucess']="";
@@ -161,25 +161,29 @@ function traitementFormBrochure() {
    {
             verifform(); // verif formulaire
             $client=$_SESSION['client'];
-                 //   include_once "api/Thalamus_init.php";
-              //*-----------------  demande d'envoi de documentation --------*/
-                    if(empty($_POST['telephone']))   { $tel="0000000000"; }
-                     else { $tel=$_POST['telephone'] ; }
-                   
-                     $centre= explode("/",$_POST['centre']);
-                      $idcentre=$centre[0];
-                     $nomCentre=explode(" ",$centre[1]);
-                      if($_POST['rappel']==true)
-                     { 
-                         $etreRappeler=true; 
-                      } 
-                     else { 
-                         $etreRappeler=false ;
-                         
-                     }
-                     $etreRappeler=($_POST['rappel']==true)?true:false;
+            //*-----------------  demande d'envoi de documentation --------*/
+             if(empty($_POST['telephone'])) 
+                 { 
+                 $tel="0000000000";
+                 }
+             else { 
+                 $tel=$_POST['telephone'] ; 
                  
-                     var_dump($etreRappeler);
+                 }
+                   
+                $centre= explode("/",$_POST['centre']);
+                 $idcentre=$centre[0];
+                $nomCentre=explode(" ",$centre[1]);
+                 if($_POST['rappel']==true)
+                { 
+                    $etreRappeler=true; 
+                 } 
+                else { 
+                    $etreRappeler=false ;
+
+                }
+                $etreRappeler=($_POST['rappel']==true)?true:false;
+                 var_dump($etreRappeler);
                  // envoi de brochure par courrier    
               if($_POST['brochure']==true)
               {$documentationRequest = $client->call(array(
@@ -285,7 +289,7 @@ function rappel()
     $client=$_SESSION['client'];
         $centre= explode("/",$_POST['centre']);
        $idcentre=$centre[0];
-     //  var_dump(intval($_POST['horaire']));
+      var_dump(intval($_POST['horaire']));
        $callBack = $client->call(array(
                             "service" => "prospect",
                             "method" => "callBackRequest",
@@ -297,7 +301,7 @@ function rappel()
                             "phoneNumber" => $_POST['telephone'],
                              "callBackTimeId" => intval($_POST['horaire'])
                         ));
-      //                      var_dump($callBack)    ;
+                          var_dump($callBack)    ;
                     if ($callBack->success!=true)   {
                           $_GET['erreur']='rappel';
                           $_GET['mess']=$callBack->errorMessage;
@@ -349,27 +353,41 @@ add_action('template_redirect', 'inscriptionJPO');
 
 
 /****------------------------------------------------------------ formulaire de contact ----------------------------------------------****/
+
+//pour envoyer le mail au format html
+add_filter('wp_mail_content_type','set_content_type');
+function set_content_type($content_type){
+    return 'text/html';
+}
+
 function traitementFormContact()
 {
+     $_GET['erreur']="";
      if (isset($_POST['valider']) && isset($_POST['contact-verif']))  
    {
       if (wp_verify_nonce($_POST['contact-verif'], 'contact')) 
       {
-        var_dump($_POST);
-         $header = "From: lganne93@gmail.com\n";
-            $header .= "Reply-To: lganne93@gmail.com\n";
-            $header .= "Content-Type: text/html; charset=\"iso-8859-1\"";
-          $destinataire = 'lganne2@yahoo.fr';
-          $objet = 'Salut mon ami!';
-          $message = 'Ce message a été expédié en un tournemain! WordPress a tout fait.';
-          $email = wp_mail($destinataire, $objet, $message);
-       var_dump($email);
-        var_dump($destinataire);
-            if($email) echo 'Votre email a bien été envoyé'; 
-            die();
-       
-
-      }  
+            $centre= explode("/",$_POST['centre']);
+           $centre=$centre[1];
+           $header = "From: lganne93@gmail.com\n";
+            $header .= "Reply-To: ".$_POST['email']."\n";
+            $destinataire = 'lganne2@yahoo.fr';
+            $objet = 'Contact';
+            $message = "<html><p>nom: ".$_POST['nom']." <br>prenom : ".$_POST['prenom']."<br> E mail :".$_POST['email']."<br>"
+                    ."centre :".$centre."<br>".$_POST['message']."</p></html>";
+            $email = wp_mail($destinataire, $objet, $message);
+            if($email) 
+            {    
+              $_GET['erreur']= 'success';
+            }
+            else
+            {
+                $_GET['erreur']='rappel';
+                 $_GET['mess']= 'Un probleme est survenu empechant l\'envoi de votre message';
+            }
+             require_once ABSPATH . 'wp-content/themes/crpe/contact.php';
+             exit();
+         }  
    }
             
 }
