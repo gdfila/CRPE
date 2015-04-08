@@ -524,19 +524,19 @@ textarea {
     max-width: 100%;}
     
     /*********** Rappel **********/   
-    .contact .picto_title_phone {
+    .picto_title_phone {
         padding-top: 120px;
         background: url('../img/picto/picto_phone_grey.png') no-repeat top center;
         text-transform: inherit;}
 
     /*********** Brochure **********/   
-    .contact .picto_title_doc {
+    .picto_title_doc {
         padding-top: 100px;
         background: url('../img/picto/picto_documentation_grey.png') no-repeat top center;
         text-transform: inherit;}
 
     /*********** Contact **********/   
-    .contact .picto_title_mail {
+    .picto_title_mail {
         padding-top: 100px;
         background: url('../img/picto/picto_contact_grey.png') no-repeat top center;
         text-transform: inherit;}

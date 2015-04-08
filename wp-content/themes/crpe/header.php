@@ -70,87 +70,90 @@
     Modal : Pop up rappelez-moi
     -->
    <div class="modal fade" id="modalRappel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="exampleModalLabel">Formulaire rappelez-moi</h4>
-                </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Fermer &times;</span></button>
+                </div><!-- /modal-header -->
                 <div class="modal-body">
                     <?php
-                    //affichage message d'erreur
-                    if (isset($_GET['erreur']))
-                    {
-                        echo '<div class="alert">';
-                     
-                            switch ($_GET['erreur'])
-                            {
-                                case 'telephone' :
-                                    echo 'Vous devez indiquer un numéro de téléphone pour être rappeler.';
-                                    break;
-                                case 'rappel' :
-                                    echo $_GET['mess'];
-                                    break;
-                                case 'success':
-                                    echo 'Votre demande a bien été enregistré';
-                                    break;
-                             }
-                              echo '</div>';
-                    } ?>
-                    <form method="post" action="#">
-                        <?php wp_nonce_field('rappel', 'rappel-verif'); ?>   <!--pour verifier que les reponse du formulaire proviennet bien de notre site -->
-                        <div class="form-group">
-                            <label for="nom">Nom *</label>
-                            <input type="text" name="nom" class='form-control' id="firstname" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="prenom">Prénom *</label>
-                            <input type="text" name="prenom" class="form-control" id="exampleInputFirstname" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="emai1">Email *</label>
-                            <input type="email" name="email" class="form-control" id="email" required >
-                        </div>
-                        <div class="form-group">
-                            <label for="telephone">Télephone *</label>
-                            <input type="tel" name="telephone" class="form-control" placeholder="exemple: 0102030405" required>
-                        </div> 
+                        //affichage message d'erreur
+                        if (isset($_GET['erreur']))
+                        {
+                            echo '<div class="alert">';
+                         
+                                switch ($_GET['erreur'])
+                                {
+                                    case 'telephone' :
+                                        echo 'Vous devez indiquer un numéro de téléphone pour être rappeler.';
+                                        break;
+                                    case 'rappel' :
+                                        echo $_GET['mess'];
+                                        break;
+                                    case 'success':
+                                        echo 'Votre demande a bien été enregistré';
+                                        break;
+                                 }
+                                  echo '</div>';
+                        } ?>
+                    <div class="row">
+                        <div class="col-sm-3 hidden-xs hidden-sm picto_title_doc">
+                        </div><!-- /col-sm-3 -->
+                        <form class="col-sm-7 col-sm-offset-1" method="post" action="#">
+                            <h2 class="medium" id="exampleModalLabel">Laissez vos coordonnées, Cours Galien vous rappelle</h2>
+                            <?php wp_nonce_field('rappel', 'rappel-verif'); ?>   <!--pour verifier que les reponse du formulaire proviennet bien de notre site -->
+                            <div class="form-group">
+                                <label for="nom">Nom *</label>
+                                <input type="text" name="nom" class='form-control' id="firstname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="prenom">Prénom *</label>
+                                <input type="text" name="prenom" class="form-control" id="exampleInputFirstname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="emai1">Email *</label>
+                                <input type="email" name="email" class="form-control" id="email" required >
+                            </div>
+                            <div class="form-group">
+                                <label for="telephone">Télephone *</label>
+                                <input type="tel" name="telephone" class="form-control" placeholder="exemple: 0102030405" required>
+                            </div> 
 
-                         <!--plage horaire--> 
-                        <label for="plage horaire">Plage horaire souhaitée</label>
-                        <select class="form-control input-lg" name="horaire">
-                             <?php foreach($_SESSION['horaireList'] as $horaire):  ?>
-                                       <?php  foreach($horaire as $heure):  ?>
-                                            <option  value="<?php echo $heure->id; ?>"><?php echo $heure->name; ?></option>
-                                        <?php endforeach ?>
-                            <?php endforeach ?>
-                        </select>
-
-                        <div class="form-group">
-                            <label for="centre">Centre *</label>
-                            <select class="form-control input-lg" name="centre">
-                                <?php foreach($_SESSION['centre'] as $nom):  ?>
-                                    <option  value="<?php echo $nom['id']."/".$nom['name']; ?>"><?php echo $nom['name']; ?></option>
+                             <!--plage horaire--> 
+                            <label for="plage horaire">Plage horaire souhaitée</label>
+                            <select class="form-control input-lg" name="horaire">
+                                 <?php foreach($_SESSION['horaireList'] as $horaire):  ?>
+                                           <?php  foreach($horaire as $heure):  ?>
+                                                <option  value="<?php echo $heure->id; ?>"><?php echo $heure->name; ?></option>
+                                            <?php endforeach ?>
                                 <?php endforeach ?>
                             </select>
-                        </div>
-                        <input type="submit" class="btn btn-lg btn-primary" name="valider" value="Envoyer"><br><br>
-                    </form > 
-                </div>
-            </div>
-        </div>
-    </div>
+
+                            <div class="form-group">
+                                <label for="centre">Centre *</label>
+                                <select class="form-control input-lg" name="centre">
+                                    <?php foreach($_SESSION['centre'] as $nom):  ?>
+                                        <option  value="<?php echo $nom['id']."/".$nom['name']; ?>"><?php echo $nom['name']; ?></option>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
+                            <input type="submit" class="btn btn-lg btn-primary" name="valider" value="Envoyer"><br><br>
+                        </form >
+                    </div><!-- /row -->
+                </div><!-- /modal-body -->
+            </div><!-- /modal-content -->
+        </div><!-- /modal-dialog -->
+    </div><!-- /modal -->
 
      
     <!--Modal : Pop up contact-->
     
     <div class="modal fade" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="exampleModalLabel">Formulaire contact</h4>
-                </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Fermer &times;</span></button>
+                </div><!-- /modal-header -->
                 <div class="modal-body">
                     <?php
                      //affichage message d'erreur
@@ -172,54 +175,58 @@
                             }
                           echo '</div>';
                     } ?>
-                    <form method="post" action="#">
-                        <?php wp_nonce_field('contact', 'contact-verif'); ?>  <!-- pour verifier que les reponse du formulaire proviennet bien de notre site -->
-                        <div class="form-group">
-                            <label for="nom">Nom *</label>
-                            <input type="text" name="nom" class='form-control' id="firstname" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="prenom">Prénom *</label>
-                            <input type="text" name="prenom" class="form-control" id="exampleInputFirstname" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="emai1">Email *</label>
-                            <input type="email" name="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="telephone">Télephone</label>
-                            <input type="tel" name="telephone" class="form-control" placeholder="exemple: 0102030405">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea name="message"   rows="2" cols="85"></textarea>
-                        </div>
-              
-                        <div class="form-group">
-                            <label for="centres">Centre</label>
-                            <select class="form-control input-lg" name="centre">
-                                <?php foreach($_SESSION['centre'] as $nom):  ?>
-                                    <option  value="<?php echo $nom['id']; ?>"><?php echo $nom['name']; ?></option>
-                                <?php endforeach ?>
-                            </select>
-                        </div>
-                        <input type="submit" class="btn btn-lg btn-primary" name="valider" value="Envoyer"><br><br>
-                    </form > 
-                </div>
-            </div>
-        </div>
-    </div>
+                    <div class="row">
+                        <div class="col-sm-3 hidden-xs hidden-sm picto_title_doc">
+                        </div><!-- /col-sm-3 -->
+                        <form class="col-sm-7 col-sm-offset-1" method="post" action="#">
+                            <h2 class="medium" id="exampleModalLabel">Contactez-nous</h2>
+                            <?php wp_nonce_field('contact', 'contact-verif'); ?>  <!-- pour verifier que les reponse du formulaire proviennet bien de notre site -->
+                            <div class="form-group">
+                                <label for="nom">Nom *</label>
+                                <input type="text" name="nom" class='form-control' id="firstname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="prenom">Prénom *</label>
+                                <input type="text" name="prenom" class="form-control" id="exampleInputFirstname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="emai1">Email *</label>
+                                <input type="email" name="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telephone">Télephone</label>
+                                <input type="tel" name="telephone" class="form-control" placeholder="exemple: 0102030405">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea name="message"   rows="2" cols="85"></textarea>
+                            </div>
+                  
+                            <div class="form-group">
+                                <label for="centres">Centre</label>
+                                <select class="form-control input-lg" name="centre">
+                                    <?php foreach($_SESSION['centre'] as $nom):  ?>
+                                        <option  value="<?php echo $nom['id']; ?>"><?php echo $nom['name']; ?></option>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
+                            <input type="submit" class="btn btn-lg btn-primary" name="valider" value="Envoyer"><br><br>
+                        </form > 
+                    </div><!-- /row -->
+                </div><!-- /modal-body -->
+            </div><!-- /modal-content -->
+        </div><!-- /modal-dialog -->
+    </div><!-- /modal -->
 
      
     <!--Modal : Pop up brochure-->
     
     <div class="modal fade" id="modalBrochure" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="exampleModalLabel">Formulaire téléchargement brochure</h4>
-                </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Fermer &times;</span></button>
+                </div><!-- /modal-header -->
                 <div class="modal-body">
                     <?php 
                     //affichage message d'erreur
@@ -255,77 +262,80 @@
                                 }
                             }
                     ?>
-                    
-                    <form method="post" action="#">
-                        <?php wp_nonce_field('brochure', 'brochure-verif'); ?>   <!--pour verifier que les reponse du formulaire proviennet bien de notre site -->
-                        <div class="form-group">
-                            <label for="nom">Nom *</label>
-                            <input type="text" name="nom" class="form-control" id="exampleInputName1" >
-                        </div>
-                        <div class="form-group">
-                            <label for="prenom">Prénom *</label>
-                            <input type="text" name="prenom" class="form-control" id="exampleInputFirstname" >
-                        </div>
-                        <div class="form-group">
-                            <label for="Email1">Email *</label>
-                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" >
-                        </div>
-                        <div class="form-group">
-                            <label for="telephone">Télephone</label>
-                            <input type="tel" name="telephone" class="form-control" placeholder="exemple: 0102030405">
-                        </div>  
-                        <div class="checkbox">
-                            <p><label>
-                                <input type="checkbox" name="rappel" id='rappel'> Demander à être rappelé
-                            </label></p>
-
-                           <!--  plage horaire -->
-                            <div id="horaire" class="form-group">
-                                <label for="horaire">Plage horaire souhaitée</label>
-                                <select class="form-control input-lg" name="horaire">
-                                     <?php foreach($_SESSION['horaireList'] as $horaire):  ?>
-                                               <?php foreach($horaire as $heure):  ?>
-                                                    <option  value="<?php echo $heure->id; ?>"><?php echo $heure->name; ?></option>
-                                                <?php endforeach ?>
-                                    <?php endforeach ?>
-                                </select>
-                           </div>
-
-                        </div>
-                        <div class="checkbox">
-                            <p><label>
-                                <input type="checkbox" name="brochure" id="brochure"> Recevoir la brochure par courrier
-                            </label></p>
-
-                         <!--   adresse d'envoie-->
-                            <div id="adressEnvoi">
-                                <div class="form-group">
-                                    <label for="adress">Adresse</label>
-                                    <input type="text" name="adress" class="form-control" >
-                                </div>
-                                <div class="form-group">
-                                    <label for="code postal">Code postal</label>
-                                    <input type="number" name="cp" class="form-control"  >
-                                </div>
-                                <div class="form-group">
-                                    <label for="ville">Ville</label>
-                                    <input type="text" name="ville" class="form-control"  >
-                                </div>
+                    <div class="row">
+                        <div class="col-sm-3 hidden-xs hidden-sm picto_title_doc">
+                        </div><!-- /col-sm-3 -->
+                        <form class="col-sm-7 col-sm-offset-1" method="post" action="#">
+                            <h2 class="medium" id="exampleModalLabel">Téléchargez les brochures d’information Galien</h2>
+                            <?php wp_nonce_field('brochure', 'brochure-verif'); ?>   <!--pour verifier que les reponse du formulaire proviennet bien de notre site -->
+                            <div class="form-group">
+                                <label for="nom">Nom *</label>
+                                <input type="text" name="nom" class="form-control" id="exampleInputName1" >
                             </div>
+                            <div class="form-group">
+                                <label for="prenom">Prénom *</label>
+                                <input type="text" name="prenom" class="form-control" id="exampleInputFirstname" >
+                            </div>
+                            <div class="form-group">
+                                <label for="Email1">Email *</label>
+                                <input type="email" name="email" class="form-control" id="exampleInputEmail1" >
+                            </div>
+                            <div class="form-group">
+                                <label for="telephone">Télephone</label>
+                                <input type="tel" name="telephone" class="form-control" placeholder="exemple: 0102030405">
+                            </div>  
+                            <div class="checkbox">
+                                <p><label>
+                                    <input type="checkbox" name="rappel" id='rappel'> Demander à être rappelé
+                                </label></p>
 
-                        </div>
-                        <div class="form-group">
-                            <label for="centre">Centre *</label>
-                            <select class="form-control input-lg" name="centre">
-                                <?php foreach($_SESSION['centre'] as $nom):  ?>
-                                    <option  value="<?php echo $nom['id']."/".$nom['name']; ?>"><?php echo $nom['name']; ?></option>
-                                <?php   endforeach ?>
-                            </select>
-                        </div>
-                        <input type="submit" class="btn btn-primary" name="valider" value="Envoyer"><br><br>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-  
+                               <!--  plage horaire -->
+                                <div id="horaire" class="form-group">
+                                    <label for="horaire">Plage horaire souhaitée</label>
+                                    <select class="form-control input-lg" name="horaire">
+                                         <?php foreach($_SESSION['horaireList'] as $horaire):  ?>
+                                                   <?php foreach($horaire as $heure):  ?>
+                                                        <option  value="<?php echo $heure->id; ?>"><?php echo $heure->name; ?></option>
+                                                    <?php endforeach ?>
+                                        <?php endforeach ?>
+                                    </select>
+                               </div>
+
+                            </div>
+                            <div class="checkbox">
+                                <p><label>
+                                    <input type="checkbox" name="brochure" id="brochure"> Recevoir la brochure par courrier
+                                </label></p>
+
+                             <!--   adresse d'envoie-->
+                                <div id="adressEnvoi">
+                                    <div class="form-group">
+                                        <label for="adress">Adresse</label>
+                                        <input type="text" name="adress" class="form-control" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="code postal">Code postal</label>
+                                        <input type="number" name="cp" class="form-control"  >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ville">Ville</label>
+                                        <input type="text" name="ville" class="form-control"  >
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="centre">Centre *</label>
+                                <select class="form-control input-lg" name="centre">
+                                    <?php foreach($_SESSION['centre'] as $nom):  ?>
+                                        <option  value="<?php echo $nom['id']."/".$nom['name']; ?>"><?php echo $nom['name']; ?></option>
+                                    <?php   endforeach ?>
+                                </select>
+                            </div>
+                            <input type="submit" class="btn btn-primary" name="valider" value="Envoyer"><br><br>
+                        </form>
+                    </div><!-- /row -->
+                </div><!-- /modal-body -->
+            </div><!-- /modal-content -->
+        </div><!-- /modal-dialog -->
+    </div><!-- /modal -->
