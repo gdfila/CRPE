@@ -21,44 +21,7 @@ Récuperation du header
     <div class="hidden-xs hidden-sm img_prez img_prez_aplat img_prez_incurve">
         <img class="back_img" src="<?php echo $post_thumbnail_url; ?>" alt="">
     </div><!-- /img_prez -->
-    <?php 
-    //affichage message d'erreur
-    if (isset($_GET['erreur']))
-    {
-        echo '<div class="alert">';
-     
-            switch ($_GET['erreur'])
-            {
-                case 'telephone' :
-                    echo 'Vous devez indiquer un numéro de téléphone pour être rappeler.';
-                    break;
-                case 'courrier' :
-                    echo 'Votre adresse pour l\'envoie de la brochure est imcomplete.';
-                    break;
-                case 'brochure':
-                      echo $_GET['mess'];
-                    break;
-                case 'rappel' :
-                      echo $_GET['mess'];
-                     break;
-                  case 'vide' :
-                    echo 'merci de remplir tous les champs suivie d\'un *';
-                    break;
-            }
-            echo '</div>';
-    }
-            if (isset($_GET['sucess']))
-            {
-                 switch ($_GET['success'])
-            {
-                case 'brochure' :
-                    echo '<div class="alert">';
-                     echo 'La demande a bien été enregistré';
-                      echo '</div>';
-                }
-            }
-             
-    ?>
+   
     
     <section class="contact">
         <div class="container">
@@ -69,6 +32,44 @@ Récuperation du header
                 <div class="col-sm-6 col-sm-offset-1">
                     <form method="post" action="#">
                         <h2 class="large">Téléchargez les brochures d’information Galien</h2>
+                         <?php 
+                        //affichage message d'erreur
+                        if (isset($_GET['erreur']))
+                        {
+                            echo '<div class="alert">';
+
+                                switch ($_GET['erreur'])
+                                {
+                                    case 'telephone' :
+                                        echo 'Vous devez indiquer un numéro de téléphone pour être rappeler.';
+                                        break;
+                                    case 'courrier' :
+                                        echo 'Votre adresse pour l\'envoie de la brochure est imcomplete.';
+                                        break;
+                                    case 'brochure':
+                                          echo $_GET['mess'];
+                                        break;
+                                    case 'rappel' :
+                                          echo $_GET['mess'];
+                                         break;
+                                      case 'vide' :
+                                        echo 'merci de remplir tous les champs suivie d\'un *';
+                                        break;
+                                }
+                               echo '</div>';
+                        }
+                                if (isset($_GET['sucess']))
+                                {
+                                     switch ($_GET['success'])
+                                {
+                                    case 'brochure' :
+                                        echo '<div class="alert">';
+                                         echo 'La demande a bien été enregistré';
+                                          echo '</div>';
+                                    }
+                                }
+
+                        ?>
                         <?php wp_nonce_field('brochure', 'brochure-verif'); ?>  <!-- pour verifier que les reponse du formulaire proviennet bien de notre site -->
                         <div class="form-group">
                             <label for="nom">Nom *</label>
