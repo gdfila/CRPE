@@ -151,9 +151,6 @@ Récuperation du header
                             </div><!-- /col-sm-3 -->
                             <div class="col-sm-9">
                                 <h3 class="medium"><strong><?php echo $dataJPO[0]->title; ?> </strong>
-<!--                                    <strong class="centre_texte_red">
-                                   
-                                    </strong>-->
                                 </h3>
                                 <p class="text-justify"><?php echo $dataJPO[0]->description;?></p>
                                 <a class="btn btn-primary" href="http://localhost/galien_crpe/?p=180&centre=<?php the_field('adresse_-_ville')?>&jpoDate=<?php the_field('date_de_la_jpo')?>" >Inscription</a>      
@@ -173,14 +170,6 @@ Récuperation du header
                             </div><!-- /col-sm-4 -->
                             <div class="col-sm-9">
                                 <h3 class="medium"><strong><?php  the_field('nom_de_levenement'); ?> </strong>
-                                <h3 class="medium">
-<!--                                    <strong class="centre_texte_red">
-                                        <?php
-//                                            $date = new DateTime($dateven);
-//                                              echo '<strong>'.$date->format('j').' </strong><span> '.$mois[$date->format('n')].'</span>';
-                                        ?>
-                                    </strong>-->
-                                </h3>
                                 <p class="text-justify"><?php the_field('presentation_de_levenement');?></p>
                             </div><!-- /col-sm-8 -->
                         </div><!-- /col-sm-12 -->

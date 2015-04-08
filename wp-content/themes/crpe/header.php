@@ -137,10 +137,6 @@
                         <input type="submit" class="btn btn-lg btn-primary" name="valider" value="Envoyer"><br><br>
                     </form > 
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                    <button type="button" class="btn btn-primary">Envoyer</button>
-                </div>
             </div>
         </div>
     </div>
