@@ -59,7 +59,7 @@ $(document).ready(function() {
 
     // Lire moins
     $('.lire_moins').click(function() {
-        $(this).parent('.savoir_faire_texte').css({
+        $(this).prevAll('.savoir_faire_texte').css({
             'overflow': 'hidden',
             'height': '105px'});
         $(this).prev('.lire_suite').css('display', 'block');

@@ -69,7 +69,7 @@
     <!-- 
     Modal : Pop up rappelez-moi
     -->
-<!--    <div class="modal fade" id="modalRappel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal fade" id="modalRappel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -98,7 +98,7 @@
                               echo '</div>';
                     } ?>
                     <form method="post" action="#">
-                        <?php wp_nonce_field('rappel', 'rappel-verif'); ?>   pour verifier que les reponse du formulaire proviennet bien de notre site 
+                        <?php wp_nonce_field('rappel', 'rappel-verif'); ?>   <!--pour verifier que les reponse du formulaire proviennet bien de notre site -->
                         <div class="form-group">
                             <label for="nom">Nom *</label>
                             <input type="text" name="nom" class='form-control' id="firstname" required>
@@ -116,22 +116,22 @@
                             <input type="tel" name="telephone" class="form-control" placeholder="exemple: 0102030405" required>
                         </div> 
 
-                         plage horaire 
+                         <!--plage horaire--> 
                         <label for="plage horaire">Plage horaire souhaitée</label>
                         <select class="form-control input-lg" name="horaire">
-                             <?php //foreach($_SESSION['horaireList'] as $horaire):  ?>
-                                       <?php //foreach($horaire as $heure):  ?>
-                                            <option  value="<?php //echo $heure->id; ?>"><?php //echo $heure->name; ?></option>
-                                        <?php //endforeach ?>
-                            <?php //endforeach ?>
+                             <?php foreach($_SESSION['horaireList'] as $horaire):  ?>
+                                       <?php  foreach($horaire as $heure):  ?>
+                                            <option  value="<?php echo $heure->id; ?>"><?php echo $heure->name; ?></option>
+                                        <?php endforeach ?>
+                            <?php endforeach ?>
                         </select>
 
                         <div class="form-group">
                             <label for="centre">Centre *</label>
                             <select class="form-control input-lg" name="centre">
-                                <?php //foreach($_SESSION['centre'] as $nom):  ?>
-                                    <option  value="<?php //echo $nom['id']."/".$nom['name']; ?>"><?php //echo $nom['name']; ?></option>
-                                <?php //endforeach ?>
+                                <?php foreach($_SESSION['centre'] as $nom):  ?>
+                                    <option  value="<?php echo $nom['id']."/".$nom['name']; ?>"><?php echo $nom['name']; ?></option>
+                                <?php endforeach ?>
                             </select>
                         </div>
                         <input type="submit" class="btn btn-lg btn-primary" name="valider" value="Envoyer"><br><br>
@@ -146,7 +146,7 @@
     </div>
 
      
-    Modal : Pop up contact
+    <!--Modal : Pop up contact-->
     
     <div class="modal fade" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -157,7 +157,7 @@
                 </div>
                 <div class="modal-body">
                     <?php
-                    //affichage message d'erreur
+                     //affichage message d'erreur
                     if (isset($_GET['erreur']))
                     {
                         echo '<div class="alert">';
@@ -177,7 +177,7 @@
                           echo '</div>';
                     } ?>
                     <form method="post" action="#">
-                        <?php wp_nonce_field('contact', 'contact-verif'); ?>   pour verifier que les reponse du formulaire proviennet bien de notre site 
+                        <?php wp_nonce_field('contact', 'contact-verif'); ?>  <!-- pour verifier que les reponse du formulaire proviennet bien de notre site -->
                         <div class="form-group">
                             <label for="nom">Nom *</label>
                             <input type="text" name="nom" class='form-control' id="firstname" required>
@@ -202,9 +202,9 @@
                         <div class="form-group">
                             <label for="centres">Centre</label>
                             <select class="form-control input-lg" name="centre">
-                                <?php //foreach($_SESSION['centre'] as $nom):  ?>
-                                    <option  value="<?php //echo $nom['id']; ?>"><?php echo $nom['name']; ?></option>
-                                <?php //endforeach ?>
+                                <?php foreach($_SESSION['centre'] as $nom):  ?>
+                                    <option  value="<?php echo $nom['id']; ?>"><?php echo $nom['name']; ?></option>
+                                <?php endforeach ?>
                             </select>
                         </div>
                         <input type="submit" class="btn btn-lg btn-primary" name="valider" value="Envoyer"><br><br>
@@ -215,7 +215,7 @@
     </div>
 
      
-    Modal : Pop up brochure
+    <!--Modal : Pop up brochure-->
     
     <div class="modal fade" id="modalBrochure" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -261,7 +261,7 @@
                     ?>
                     
                     <form method="post" action="#">
-                        <?php wp_nonce_field('brochure', 'brochure-verif'); ?>   pour verifier que les reponse du formulaire proviennet bien de notre site 
+                        <?php wp_nonce_field('brochure', 'brochure-verif'); ?>   <!--pour verifier que les reponse du formulaire proviennet bien de notre site -->
                         <div class="form-group">
                             <label for="nom">Nom *</label>
                             <input type="text" name="nom" class="form-control" id="exampleInputName1" >
@@ -283,15 +283,15 @@
                                 <input type="checkbox" name="rappel" id='rappel'> Demander à être rappelé
                             </label></p>
 
-                             plage horaire 
+                           <!--  plage horaire -->
                             <div id="horaire" class="form-group">
                                 <label for="horaire">Plage horaire souhaitée</label>
                                 <select class="form-control input-lg" name="horaire">
-                                     <?php //foreach($_SESSION['horaireList'] as $horaire):  ?>
-                                               <?php //foreach($horaire as $heure):  ?>
-                                                    <option  value="<?php //echo $heure->id; ?>"><?php //echo $heure->name; ?></option>
-                                                <?php //endforeach ?>
-                                    <?php //endforeach ?>
+                                     <?php foreach($_SESSION['horaireList'] as $horaire):  ?>
+                                               <?php foreach($horaire as $heure):  ?>
+                                                    <option  value="<?php echo $heure->id; ?>"><?php echo $heure->name; ?></option>
+                                                <?php endforeach ?>
+                                    <?php endforeach ?>
                                 </select>
                            </div>
 
@@ -301,7 +301,7 @@
                                 <input type="checkbox" name="brochure" id="brochure"> Recevoir la brochure par courrier
                             </label></p>
 
-                            adresse d'envoie
+                         <!--   adresse d'envoie-->
                             <div id="adressEnvoi">
                                 <div class="form-group">
                                     <label for="adress">Adresse</label>
@@ -321,9 +321,9 @@
                         <div class="form-group">
                             <label for="centre">Centre *</label>
                             <select class="form-control input-lg" name="centre">
-                                <?php //foreach($_SESSION['centre'] as $nom):  ?>
-                                    <option  value="<?php // echo $nom['id']."/".$nom['name']; ?>"><?php //echo $nom['name']; ?></option>
-                                <?php   //endforeach ?>
+                                <?php foreach($_SESSION['centre'] as $nom):  ?>
+                                    <option  value="<?php echo $nom['id']."/".$nom['name']; ?>"><?php echo $nom['name']; ?></option>
+                                <?php   endforeach ?>
                             </select>
                         </div>
                         <input type="submit" class="btn btn-primary" name="valider" value="Envoyer"><br><br>
@@ -332,4 +332,4 @@
             </div>
         </div>
     </div>
-  -->
+  

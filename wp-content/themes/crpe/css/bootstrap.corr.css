@@ -10,9 +10,14 @@ h1, h2, h3, h4, h5, h6, ul, ol {
 	padding: 10px 30px;
 	border-radius: 0; -webkit-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.1); -moz-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.1); -ms-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.1); box-shadow: 0 0px 10px 1px rgba(0,0,0,0.1);}
 .btn-primary { 
-	background-color: #3497db; border: none;}
-.btn-primary:hover { 
-	background-color: #308bca;}
+	background-color: #f16150; border: none;}
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary.focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.open>.dropdown-toggle.btn-primary {
+ 	background-color: #f16150; border-color: none;}
 .carousel-indicators {
 	bottom: 50px;}
 

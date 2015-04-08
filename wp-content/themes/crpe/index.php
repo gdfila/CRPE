@@ -19,7 +19,7 @@ Récuperation du header
     <section class="accroche">
         <div class="container">
             <h1 class="x-large">Preparez le concours de recrutement de professeur des écoles</h1>
-            <h2 class="medium">Rejoindre le Cours Galien, c’est la garantie d’une préparation sérieuse et adaptée, vous permettant d’aborder en toute confiance le Concours de Recrutement de Professeur des Ecoles.</h2>
+            <p class="medium">Rejoindre le Cours Galien, c’est la garantie d’une préparation sérieuse et adaptée, vous permettant d’aborder en toute confiance le Concours de Recrutement de Professeur des Ecoles.</p>
         </div><!-- /container -->
     </section><!-- /accroche -->
 
@@ -78,8 +78,7 @@ Récuperation du header
                             <div class="col-sm-5 temoignage_back">
                               <div class="temoignage_slider_caption">
                                   <p class="small"><strong>Antoine</strong></p>
-                                  <p>1ere année medecine</p>
-                                  <p>Ma marraine me soutient constamment tout au long de mon année et aujourd’hui mes résultats sont probants. Je me sens en confiance, et je garderai un bon souvenir dans ma Prépa.</p>
+                                  <p>1ere année medecine<br />Ma marraine me soutient constamment tout au long de mon année et aujourd’hui mes résultats sont probants. Je me sens en confiance, et je garderai un bon souvenir dans ma Prépa.</p>
                               </div><!-- /temoignage_slider_caption -->
                             </div><!-- /col-sm-5 -->
                         </div>
@@ -92,8 +91,7 @@ Récuperation du header
                             <div class="col-sm-5 temoignage_back">
                                 <div class="temoignage_slider_caption">
                                     <p class="small"><strong>Antoine</strong></p>
-                                    <p>1ere année medecine</p>
-                                    <p>Ma marraine me soutient constamment tout au long de mon année et aujourd’hui mes résultats sont probants. Je me sens en confiance, et je garderai un bon souvenir dans ma Prépa.</p>
+                                    <p>1ere année medecine<br />Ma marraine me soutient constamment tout au long de mon année et aujourd’hui mes résultats sont probants. Je me sens en confiance, et je garderai un bon souvenir dans ma Prépa.</p>
                                 </div><!-- /temoignage_slider_caption -->
                             </div><!-- /col-sm-5 -->
                         </div>
@@ -106,8 +104,7 @@ Récuperation du header
                             <div class="col-sm-5 temoignage_back">
                                 <div class="temoignage_slider_caption">
                                     <p class="small"><strong>Antoine</strong></p>
-                                    <p>1ere année medecine</p>
-                                    <p>Ma marraine me soutient constamment tout au long de mon année et aujourd’hui mes résultats sont probants. Je me sens en confiance, et je garderai un bon souvenir dans ma Prépa.</p>
+                                    <p>1ere année medecine<br />Ma marraine me soutient constamment tout au long de mon année et aujourd’hui mes résultats sont probants. Je me sens en confiance, et je garderai un bon souvenir dans ma Prépa.</p>
                                 </div><!-- /temoignage_slider_caption -->
                             </div><!-- /col-sm-5 -->
                         </div>
@@ -175,9 +172,7 @@ Récuperation du header
                     <div>
                         <h2 class="medium">Pack entrainement</h2>
                         <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
-                        <p>4 concours blancs</p>
-                        <p><strong>Epreuve</strong><br />en conditions réelles</p>
-                        <p>000H/400€</p>
+                        <p>4 concours blancs<br />Epreuve<br />en conditions réelles<br />000H/400€</p>
                         <div class="info">
                             <p class="button active"><em>En savoir <span>+</span></em></p>
                             <div class="info_sup">
@@ -191,10 +186,7 @@ Récuperation du header
                     <div>
                         <h2 class="medium">Pack complet</h2>
                         <img src="<?php bloginfo('template_directory'); ?>/img/images/DSC_0191-2.jpg" alt="">
-                        <p>Préparation aux épreuves</p>
-                        <p>4 concours blancs</p>
-                        <p><strong>Modules de remise à niveau inclus</strong></p>
-                        <p>272H/1950€</p>
+                        <p>4 concours blancs<br />Epreuve<br />en conditions réelles<br />272H/1950€</p>
                         <div class="info">
                             <p class="button active"><em>En savoir <span>+</span></em></p>
                             <div class="info_sup">
