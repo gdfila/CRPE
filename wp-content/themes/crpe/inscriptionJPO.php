@@ -39,19 +39,19 @@ Récuperation du header
                        <input type="text" name="date" value="<?php echo $jpoDate; ?>" hidden>
                         <div class="form-group">
                             <label for="nom">Nom *</label>
-                            <input type="text" name="nom" class='form-control' id="firstname" required>
+                            <input type="text" name="nom" class='form-control' id="firstname" value="<?php echo $_POST['nom'] ;?>"  maxlength="100" required>
                         </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="prenom">Prénom *</label>
-                            <input type="text" name="prenom" class="form-control" id="exampleInputFirstname" required>
+                            <input type="text" name="prenom" class="form-control" id="exampleInputFirstname" value="<?php echo $_POST['prenom'] ;?>"  maxlength="100" required>
                         </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="emai1">Email *</label>
-                            <input type="email" name="email" class="form-control" id="email" required>
+                            <input type="email" name="email" class="form-control" id="email"  value="<?php echo $_POST['email'] ;?>"  maxlength="200" required>
                         </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="telephone">Télephone</label>
-                            <input type="tel" name="telephone" class="form-control" placeholder="exemple: 0102030405">
+                            <input type="tel" name="telephone" class="form-control" value="<?php echo $_POST['telephone'] ;?>" placeholder="exemple: 0102030405" maxlength="20">
                         </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="accompagnants">Nombre d'accompagnants *</label>

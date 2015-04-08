@@ -34,7 +34,7 @@ Récuperation du header
                         <h2 class="large">Téléchargez les brochures d’information Galien</h2>
                          <?php 
                         //affichage message d'erreur
-                        if (isset($_GET['erreur']))
+                        if (!empty($_GET['erreur']))
                         {
                             echo '<div class="alert">';
 
@@ -55,6 +55,9 @@ Récuperation du header
                                       case 'vide' :
                                         echo 'merci de remplir tous les champs suivie d\'un *';
                                         break;
+                                    case 'email':
+                                        echo 'L\'adresse e mail est invalide';
+                                        break;
                                 }
                                echo '</div>';
                         }
@@ -73,19 +76,19 @@ Récuperation du header
                         <?php wp_nonce_field('brochure', 'brochure-verif'); ?>  <!-- pour verifier que les reponse du formulaire proviennet bien de notre site -->
                         <div class="form-group">
                             <label for="nom">Nom *</label>
-                            <input type="text" name="nom" class="form-control" id="exampleInputName1" >
+                            <input type="text" name="nom" class="form-control" id="exampleInputName1" maxlength="100"  value="<?php echo $_POST['nom'] ;?>" required >
                         </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="prenom">Prénom *</label>
-                            <input type="text" name="prenom" class="form-control" id="exampleInputFirstname" >
+                            <input type="text" name="prenom" class="form-control" id="exampleInputFirstname" value="<?php echo $_POST['prenom']; ?>" maxlength="100"required>
                         </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="Email1">Email *</label>
-                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" >
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" value="<?php echo $_POST['email']; ?>" maxlength="200" required >
                         </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="telephone">Télephone</label>
-                            <input type="tel" name="telephone" class="form-control" placeholder="exemple: 0102030405">
+                            <input type="tel" name="telephone" class="form-control" value="<?php echo $_POST['telephone']; ?>"  placeholder="exemple: 0102030405">
                         </div> <!-- /form-group --> 
                         <div class="checkbox">
                             <p><label>

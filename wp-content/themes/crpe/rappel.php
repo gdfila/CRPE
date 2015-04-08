@@ -48,6 +48,9 @@ Récuperation du header
                                             case 'vide' :
                                                 echo 'Merci de remplir tous les champs suivie d\'un *';
                                                 break;
+                                            case 'email':
+                                                      echo 'L\'adresse e mail est invalide';
+                                                     break;
                                             case 'success':
                                                 echo 'Votre demande a bien été enregistré';
                                                 break;
@@ -57,19 +60,19 @@ Récuperation du header
                         <?php wp_nonce_field('rappel', 'rappel-verif'); ?>  <!-- pour verifier que les reponse du formulaire proviennet bien de notre site -->
                         <div class="form-group">
                             <label for="nom">Nom *</label>
-                            <input type="text" name="nom" class='form-control' id="firstname" required>
+                            <input type="text" name="nom" class='form-control' id="firstname" maxlength="100" value="<?php echo $_POST['nom'] ;?>" required>
                         </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="prenom">Prénom *</label>
-                            <input type="text" name="prenom" class="form-control" id="exampleInputFirstname" required>
+                            <input type="text" name="prenom" class="form-control" id="exampleInputFirstname" maxlength="100" value="<?php echo $_POST['prenom'] ;?>" required>
                         </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="emai1">Email *</label>
-                            <input type="email" name="email" class="form-control" id="email" required >
+                            <input type="email" name="email" class="form-control" id="email"  value="<?php echo $_POST['email'] ;?>" maxlength="200" required >
                         </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="telephone">Télephone *</label>
-                            <input type="tel" name="telephone" class="form-control" placeholder="exemple: 0102030405" required>
+                            <input type="tel" name="telephone" class="form-control" value="<?php echo $_POST['telephone'] ;?>" placeholder="exemple: 0102030405" required>
                         </div> <!-- /form-group -->
 
                         <!-- plage horaire -->

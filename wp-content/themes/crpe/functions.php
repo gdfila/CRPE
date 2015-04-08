@@ -24,7 +24,6 @@ function my_toolbars( $toolbars )
 	{
 	    unset( $toolbars['Full' ][2][$key] );
 	}
-
 	// remove the 'Basic' toolbar completely
 	unset( $toolbars['Basic' ] );
 
@@ -148,7 +147,29 @@ function verifForm()
                    require_once ABSPATH . 'wp-content/themes/crpe/brochure.php';
                      exit();
               }
+           if(verifEmail()==false)
+           {
+               $_GET['erreur']='email';
+                 require_once ABSPATH . 'wp-content/themes/crpe/brochure.php';
+                     exit();
+           }
      
+}
+
+function verifEmail()
+{
+            if(isset($_POST['email']))
+        {
+                $email = stripslashes(htmlentities($_POST['email']));
+                if(preg_match('#^(([a-z0-9!\#$%&\\\'*+/=?^_`{|}~-]+\.?)*[a-z0-9!\#$%&\\\'*+/=?^_`{|}~-]+)@(([a-z0-9-_]+\.?)*[a-z0-9-_]+)\.[a-z]{2,}$#i',str_replace('&amp;','&',$email)))
+                {
+                      return true;
+                }
+                else
+                {
+                       return false;
+                }
+        }
 }
 /*      ----------------------------------- traitement formulaire brochure  ----------------------------------*/
 function traitementFormBrochure() {
@@ -266,6 +287,13 @@ function traitementFormRappel() {
                  require_once ABSPATH . 'wp-content/themes/crpe/rappel.php';
                   exit();
               }
+               if(verifEmail()==false)
+           {
+               $_GET['erreur']='email';
+                 require_once ABSPATH . 'wp-content/themes/crpe/rappel.php';
+                     exit();
+           }
+              
            //     include_once "api/Thalamus_init.php";
                      $result=rappel();
                      if ($result==true)
@@ -285,11 +313,11 @@ add_action('template_redirect', 'traitementFormRappel');
 /* demande de rappel telephonique */
 function rappel()
 {
-    var_dump($_POST);
+  //  var_dump($_POST);
     $client=$_SESSION['client'];
         $centre= explode("/",$_POST['centre']);
        $idcentre=$centre[0];
-      var_dump(intval($_POST['horaire']));
+ //     var_dump(intval($_POST['horaire']));
        $callBack = $client->call(array(
                             "service" => "prospect",
                             "method" => "callBackRequest",
@@ -301,7 +329,7 @@ function rappel()
                             "phoneNumber" => $_POST['telephone'],
                              "callBackTimeId" => intval($_POST['horaire'])
                         ));
-                          var_dump($callBack)    ;
+                       //   var_dump($callBack)    ;
                     if ($callBack->success!=true)   {
                           $_GET['erreur']='rappel';
                           $_GET['mess']=$callBack->errorMessage;
@@ -332,7 +360,7 @@ function inscriptionJPO()
       {
              $client=$_SESSION['client'];
               $results=listAllJPO();
-            var_dump($results);
+        //    var_dump($results);
 //            $results = $client->call(array("service" => "communication","method" => "centerInformationMeetingsList", "centerId" => 22));
 //           var_dump($results->datas);
 //          foreach ( $results->datas as $res)
@@ -367,23 +395,29 @@ function traitementFormContact()
    {
       if (wp_verify_nonce($_POST['contact-verif'], 'contact')) 
       {
+            if(verifEmail()==false)
+           {
+               $_GET['erreur']='email';
+                 require_once ABSPATH . 'wp-content/themes/crpe/contact.php';
+                     exit();
+           }
             $centretab= explode(" ",$_POST['centre']);
            $centre=$centretab[1];
-           var_dump($centre);
+      //     var_dump($centre);
            $arg=array('name' =>$centre,'post_type'=>'centres');
             $query = new WP_Query($arg); 
             if($query->have_posts()) : while($query->have_posts()) : $query->the_post();
                 $destinataire=  get_field('email');
                 endwhile;
             endif;
-                       var_dump($destinataire);
+              //         var_dump($destinataire);
   
       //    die();
            $header = "From: lganne93@gmail.com\n";
             $header .= "Reply-To: ".$_POST['email']."\n";
        //     $destinataire = 'lganne2@yahoo.fr';
             $objet = 'Formulaire de contact via wordpress pour le CRPE';
-            $message = "<html><p>Prospect <br><strong>Nom : </strong>".$_POST['nom']." <br>"
+            $message = "<html><p>Prospect CRPE<br><strong>Nom : </strong>".$_POST['nom']." <br>"
                     . "<strong>Prénom : </strong>".$_POST['prenom']."<br>"
                     . " <strong>E mail : </strong>".$_POST['email']."<br>"
                     ." <strong>Téléphone : </strong>".$_POST['telephone']."<br>"

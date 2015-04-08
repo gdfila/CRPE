@@ -47,6 +47,9 @@ Récuperation du header
                                             case 'rappel' :
                                                 echo $_GET['mess'];
                                                 break;
+                                            case 'email':
+                                                echo 'L\'adresse e mail est invalide';
+                                                 break;
                                             case 'success':
                                                 echo 'Votre message a bien été envoyé';
                                                 break;
@@ -57,23 +60,23 @@ Récuperation du header
                         <?php wp_nonce_field('contact', 'contact-verif'); ?>  <!-- pour verifier que les reponse du formulaire proviennet bien de notre site -->
                         <div class="form-group">
                             <label for="nom">Nom *</label>
-                            <input type="text" name="nom" class='form-control' id="firstname" required>
+                            <input type="text" name="nom" class='form-control' id="firstname" value="<?php echo $_POST['nom'] ;?>"  required>
                         </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="prenom">Prénom *</label>
-                            <input type="text" name="prenom" class="form-control" id="exampleInputFirstname" required>
+                            <input type="text" name="prenom" class="form-control" id="exampleInputFirstname" value="<?php echo $_POST['prenom'] ;?>" required>
                         </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="emai1">Email *</label>
-                            <input type="email" name="email" class="form-control" id="email" required>
+                            <input type="email" name="email" class="form-control" id="email"  value="<?php echo $_POST['email'] ;?>" required>
                         </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="telephone">Télephone</label>
-                            <input type="tel" name="telephone" class="form-control" placeholder="exemple: 0102030405">
+                            <input type="tel" name="telephone" class="form-control" value="<?php echo $_POST['nom'] ;?>" placeholder="exemple: 0102030405">
                         </div><!-- /form-group -->
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea name="message"   rows="2" cols="85"></textarea>
+                            <textarea name="message"   rows="2" cols="85" required></textarea>
                         </div><!-- /form-group -->
               
                         <div class="form-group">
