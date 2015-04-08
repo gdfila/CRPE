@@ -146,7 +146,7 @@ Récuperation du header
                         <div class="col-sm-12 big_jpo">
                             <div class="col-sm-3 big_jpo_date">
                                 <?php
-                                  echo '<strong>'.intval($dat[0]).' </strong><span>'.$mois[intval($dat[1])].'</span>';
+                                  echo '<strong>'.intval($dat[0]).' </strong><br /><span>'.$mois[intval($dat[1])].'</span>';
                                 ?>
                             </div><!-- /col-sm-3 -->
                             <div class="col-sm-9">
@@ -164,7 +164,7 @@ Récuperation du header
                             <div class="col-sm-3  big_jpo_date">
                                 <?php
                                     $date = new DateTime($dateven);
-                                    echo '<strong>'.$date->format('j').' </strong><span> '.$mois[$date->format('n')].'</span>';
+                                    echo '<strong>'.$date->format('j').' </strong><br /><span> '.$mois[$date->format('n')].'</span>';
                                 ?>
                                 
                             </div><!-- /col-sm-4 -->
