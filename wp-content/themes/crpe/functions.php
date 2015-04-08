@@ -383,8 +383,11 @@ function traitementFormContact()
             $header .= "Reply-To: ".$_POST['email']."\n";
        //     $destinataire = 'lganne2@yahoo.fr';
             $objet = 'Formulaire de contact via wordpress pour le CRPE';
-            $message = "<html><p>Prospect <br><strong>nom : </strong>".$_POST['nom']." <br><strong>prenom : </strong>".$_POST['prenom']."<br> <strong>E mail : </strong>".$_POST['email']."<br>"
-                    ."centre :".$centre."</p><p><strong> Message : </strong> <br>".$_POST['message']."</p></html>";
+            $message = "<html><p>Prospect <br><strong>Nom : </strong>".$_POST['nom']." <br>"
+                    . "<strong>Prénom : </strong>".$_POST['prenom']."<br>"
+                    . " <strong>E mail : </strong>".$_POST['email']."<br>"
+                    ." <strong>Téléphone : </strong>".$_POST['telephone']."<br>"
+                    ."<strong>Centre : </strong>".$centre."</p><p><strong> Message : </strong> <br>".$_POST['message']."</p></html>";
             $email = wp_mail($destinataire, $objet, $message);
             if($email) 
             {    
