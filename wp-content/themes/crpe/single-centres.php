@@ -168,7 +168,6 @@ Récuperation du header
                                         ?>
                                     </strong>
                                 </h3>
-                                <h4 class="small"><strong><?php the_field('nom_de_levenement');?></strong></h4>
                                 <p class="text-justify"><?php the_field('presentation_de_levenement');?></p>
                             </div><!-- /col-sm-8 -->
                         </div>
