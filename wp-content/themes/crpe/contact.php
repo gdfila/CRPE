@@ -80,7 +80,7 @@ Récuperation du header
                             <label for="centres">Centre</label>
                             <select class="form-control input-lg" name="centre">
                                 <?php foreach($_SESSION['centre'] as $nom):  ?>
-                                    <option  value="<?php echo $nom['id']."/".$nom['name']; ?>"><?php echo $nom['name']; ?></option>
+                                    <option  value="<?php echo $nom['name']; ?>"><?php echo $nom['name']; ?></option>
                                 <?php endforeach ?>
                             </select>
                         </div><!-- /form-groupe -->

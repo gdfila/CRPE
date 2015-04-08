@@ -367,14 +367,24 @@ function traitementFormContact()
    {
       if (wp_verify_nonce($_POST['contact-verif'], 'contact')) 
       {
-            $centre= explode("/",$_POST['centre']);
-           $centre=$centre[1];
+            $centretab= explode(" ",$_POST['centre']);
+           $centre=$centretab[1];
+           var_dump($centre);
+           $arg=array('name' =>$centre,'post_type'=>'centres');
+            $query = new WP_Query($arg); 
+            if($query->have_posts()) : while($query->have_posts()) : $query->the_post();
+                $destinataire=  get_field('email');
+                endwhile;
+            endif;
+                       var_dump($destinataire);
+  
+      //    die();
            $header = "From: lganne93@gmail.com\n";
             $header .= "Reply-To: ".$_POST['email']."\n";
-            $destinataire = 'lganne2@yahoo.fr';
-            $objet = 'Contact';
-            $message = "<html><p>nom: ".$_POST['nom']." <br>prenom : ".$_POST['prenom']."<br> E mail :".$_POST['email']."<br>"
-                    ."centre :".$centre."<br>".$_POST['message']."</p></html>";
+       //     $destinataire = 'lganne2@yahoo.fr';
+            $objet = 'Formulaire de contact via wordpress pour le CRPE';
+            $message = "<html><p>Prospect <br><strong>nom : </strong>".$_POST['nom']." <br><strong>prenom : </strong>".$_POST['prenom']."<br> <strong>E mail : </strong>".$_POST['email']."<br>"
+                    ."centre :".$centre."</p><p><strong> Message : </strong> <br>".$_POST['message']."</p></html>";
             $email = wp_mail($destinataire, $objet, $message);
             if($email) 
             {    

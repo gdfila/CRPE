@@ -135,7 +135,7 @@ Récuperation du header
     <!--
     Section journée portes ouverts
      -->
-    <?php   if(get_field('nom_de_la_jpo')!=null || get_field('nom_de_levenement')!=null): ?>
+    <?php   if($dataJPO==true || get_field('nom_de_levenement')!=null): ?>
         <section id="liste_jpo" class="jpo">
             <div class="container ">
                 <h2 class="large">L'agenda de Prépa concours <?php the_field('adresse_-_ville');?></h2>
@@ -143,7 +143,7 @@ Récuperation du header
 
                     <!--/*** si il existe une JPO */-->
 
-                    <?php  if ($datJpo!=""): ?>
+                    <?php  if($dataJPO==true): ?>
                         <div class="col-sm-12 big_jpo">
                             <div class="col-sm-3 big_jpo_date">
                                 <?php
@@ -168,7 +168,7 @@ Récuperation du header
                             <div class="col-sm-4">
                                 <?php
                                     $date = new DateTime($dateven);
-                                    echo $date->format('d/m/Y');
+                                    echo '<strong>'.$date->format('j').' </strong><span> '.$mois[$date->format('n')].'</span>';
                                 ?>
                             </div><!-- /col-sm-4 -->
                             <div class="col-sm-8">
@@ -176,7 +176,7 @@ Récuperation du header
                                     <strong class="centre_texte_red">
                                         <?php
                                             $date = new DateTime($dateven);
-                                           echo $date->format('d/m/Y');
+                                              echo '<strong>'.$date->format('j').' </strong><span> '.$mois[$date->format('n')].'</span>';
                                         ?>
                                     </strong>
                                 </h3>
