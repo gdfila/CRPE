@@ -11,9 +11,9 @@ Récuperation du header
     ?>
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-  <?php
- 
-   //   correspondance id centre dans wordpress avec id centre dans thalamus
+    <?php
+
+    //   correspondance id centre dans wordpress avec id centre dans thalamus
        $tabId=[32=>22,37=>11,43=>7,39=>3,40=>1,71=>16,41=>5,42=>15];
        $idcentre=$post->ID;
         $client=$_SESSION['client'];
@@ -32,14 +32,13 @@ Récuperation du header
         <div class="container">
             <img class="hidden-xs hidden-sm back_img" src="<?php echo $post_thumbnail_url; ?>" alt="">
             <div class="min_jpo_container">
-
-               <h1 class="x-large text_shadow"><?php the_field('nom_du_centre');?></h1>
+                <h1 class="x-large text_shadow"><?php the_field('nom_du_centre');?></h1>
                 <h2 class="medium text_shadow">Prépa concours <?php the_field('nom_du_centre');?></h2>
                 <?php   if($dataJPO==true): ?>
-                      <div class="min_jpo">
+                    <div class="min_jpo">
                         <div class="col-sm-6 min_jpo_date">
                             <?php  $datJpo=$dataJPO[0]->startDate ; ?>
-                           <?php   if ($datJpo!=""): ?>
+                            <?php   if ($datJpo!=""): ?>
                             <?php
                                $mois = array(1=>'janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre');
                                $dat=explode("/",$datJpo);
@@ -52,13 +51,13 @@ Récuperation du header
                             <a href="http://localhost/galien_crpe/contact/contact/">Contact</a>
                         </div><!-- /col-sm-6 -->
                         <div>
-                            <h3 class="small"><strong><?php  echo $dataJPO[0]->tittle ?></strong></h3>
+                            <h3 class="small"><strong><?php  echo $dataJPO[0]->title ?></strong></h3>
                             <p class="text-justify"><?php echo $dataJPO[0]->description;?></p>
                             <a class="btn btn-primary" href="#liste_jpo">Lire la suite</a>
                         </div>
                     </div><!-- /min_jpo -->
+                <?php endif ?>
             </div><!-- /min_jpo_container -->
-            <?php endif ?>
         </div><!-- /container -->
     </div><!-- /img_prez -->
     
@@ -96,7 +95,6 @@ Récuperation du header
     <!--
     Section présentant le lieu et ses valeurs
      -->
-     
     <section class="descriptif">
         <div class="container">
             <div class="row">
@@ -144,6 +142,7 @@ Récuperation du header
                     <!--/*** si il existe une JPO */-->
 
                     <?php  if($dataJPO==true): ?>
+
                         <div class="col-sm-12 big_jpo">
                             <div class="col-sm-3 big_jpo_date">
                                 <?php
@@ -151,38 +150,40 @@ Récuperation du header
                                 ?>
                             </div><!-- /col-sm-3 -->
                             <div class="col-sm-9">
-                                <h3 class="medium"><strong><?php echo $dataJPO[0]->tittle; ?> </strong>
-                                    <strong class="centre_texte_red">
-                                        <?php
-                                           echo '<strong>'.intval($dat[0]).' </strong><span>'.$mois[intval($dat[1])].'</span>';
-                                        ?>
-                                    </strong>
+                                <h3 class="medium"><strong><?php echo $dataJPO[0]->title; ?> </strong>
+<!--                                    <strong class="centre_texte_red">
+                                   
+                                    </strong>-->
                                 </h3>
                                 <p class="text-justify"><?php echo $dataJPO[0]->description;?></p>
                                 <a class="btn btn-primary" href="http://localhost/galien_crpe/?p=180&centre=<?php the_field('adresse_-_ville')?>&jpoDate=<?php the_field('date_de_la_jpo')?>" >Inscription</a>      
                             </div><!-- /col-sm-9 -->
-                        <?php endif ?>
-                        <!-- si il existe un evenement -->
-                        <?php $dateven=get_field('date_de_levenement'); ?>
-                        <?php  if ($dateven!=""): ?>
-                            <div class="col-sm-4">
+                        </div><!-- /col-sm-12 -->
+                    <?php endif ?>
+                    <!-- si il existe un evenement -->
+                    <?php $dateven=get_field('date_de_levenement'); ?>
+                    <?php  if ($dateven!=""): ?>
+                        <div class="col-sm-12 big_jpo">
+                            <div class="col-sm-3  big_jpo_date">
                                 <?php
                                     $date = new DateTime($dateven);
                                     echo '<strong>'.$date->format('j').' </strong><span> '.$mois[$date->format('n')].'</span>';
                                 ?>
+                                
                             </div><!-- /col-sm-4 -->
-                            <div class="col-sm-8">
+                            <div class="col-sm-9">
+                                <h3 class="medium"><strong><?php  the_field('nom_de_levenement'); ?> </strong>
                                 <h3 class="medium">
-                                    <strong class="centre_texte_red">
+<!--                                    <strong class="centre_texte_red">
                                         <?php
-                                            $date = new DateTime($dateven);
-                                              echo '<strong>'.$date->format('j').' </strong><span> '.$mois[$date->format('n')].'</span>';
+//                                            $date = new DateTime($dateven);
+//                                              echo '<strong>'.$date->format('j').' </strong><span> '.$mois[$date->format('n')].'</span>';
                                         ?>
-                                    </strong>
+                                    </strong>-->
                                 </h3>
                                 <p class="text-justify"><?php the_field('presentation_de_levenement');?></p>
                             </div><!-- /col-sm-8 -->
-                        </div>
+                        </div><!-- /col-sm-12 -->
                     <?php endif ?>
                 </div><!-- /row -->
             </div><!-- /container -->
