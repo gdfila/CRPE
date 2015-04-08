@@ -13,6 +13,18 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'eraserregular';
+    src: url('../fonts/EraserRegular-webfont.eot');
+    src: url('../fonts/EraserRegular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/EraserRegular-webfont.woff') format('woff'),
+         url('../fonts/EraserRegular-webfont.ttf') format('truetype'),
+         url('../fonts/EraserRegular-webfont.svg#eraserregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 *, *:before, *:after { 
     margin: 0; padding: 0; list-style: none;}
 html { 
@@ -280,14 +292,16 @@ img {
 
 .contenu_exam {
     position: relative;
-    width: 340px; margin: 50px auto; padding-bottom: 20px;
-    border: 1px solid #f16150; border-radius: 20px;
+    width: 90%; min-height: 380px; margin: 50px auto; padding-bottom: 20px;
+    border: 1px solid #f16150;
+    /* CSS3 */
+    -moz-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.1); -webkit-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.1); -o-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.1); box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.1);
     text-align: center;}
 .contenu_exam h2 { 
     margin: 0; padding: 40px 20px;
-    background-color: #f16150; border-radius: 15px;
+    background-color: #f16150;
     color: #fff;}
-.contenu_exam strong { 
+.contenu_exam strong.medium { 
     display: block; margin: 10px 0; padding-bottom: 10px;
     border-bottom: 1px dashed #f16150;}
 .contenu_exam p {
@@ -295,13 +309,14 @@ img {
     text-align: left;}
 .contenu_exam span {
     display: block; margin-right: 20px;
-    font-size: 0.85em; text-align: right;}
+    text-align: right;}
 .coeff_exam { 
-    position: absolute; top: -40px; left: -80px;
-    padding: 20px;
-    background-color: #fff; border: 1px solid #f16150; border-radius: 20px; 
+    position: absolute; top: -50px; left: -40px;
+    padding: 25px 10px;
+    background-color: #303030; border: 8px solid #C8AD7F; border-radius: 20px; 
     /* CSS3 */
-    -moz-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); -webkit-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); -o-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3);}
+    -moz-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); -webkit-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); -o-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3);
+    font-family: 'eraserregular', 'robotoregular', helvetica, sans-serif; font-size: 0.80em; color: #fff;}
 
 /***********************************************
 ********* Section Reperes Concours *************

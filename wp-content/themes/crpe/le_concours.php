@@ -71,36 +71,62 @@ Récuperation du header
         <div class="container">
             <h1 class="large">Les modalités d'examen</h1>
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="contenu_exam">
                         <div class="coeff_exam">
                             40 points/80
                         </div>
-                        <h2 class="medium">Français</h2>
-                        <strong>3 épreuves</strong>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum aperiam, eius tempora vel quis neque impedit tempore voluptate saepe corrupti assumenda, dolores eligendi vero repellat, molestias numquam ipsum mollitia architecto!</p>
-                        <span>11 points</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam culpa incidunt vitae cupiditate voluptatum eligendi nobis impedit, commodi fugiat repudiandae asperiores temporibus similique id itaque magnam praesentium aspernatur suscipit in.</p>
-                        <span>11 points</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, aut, sint! Nihil consectetur at, dicta deleniti dolore odio voluptates soluta reiciendis enim nesciunt quae magni et, asperiores laudantium sunt minus.</p>
-                        <span>11 points</span>
+                        <h2 class="small">Français</h2>
+                        <strong class="medium">3 épreuves</strong>
+                        <p>réponse à une question</p>
+                        <span class="x-small"><strong>11 points</strong></span>
+                        <p>connaissance de la langue</p>
+                        <span class="x-small"><strong>11 points</strong></span>
+                        <p>analyse d'un dossier</p>
+                        <span class="x-small"><strong>13 points</strong></span>
                     </div><!-- /contenu_exam -->
-                </div><!-- /col-sm-6 -->
-                <div class="col-sm-6">
+                </div><!-- /col-sm-3 -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="contenu_exam">
                         <div class="coeff_exam">
                             40 points/80
                         </div>
-                        <h2 class="medium">Mathématique</h2>
-                        <strong>3 épreuves</strong>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum aperiam, eius tempora vel quis neque impedit tempore voluptate saepe corrupti assumenda, dolores eligendi vero repellat, molestias numquam ipsum mollitia architecto!</p>
-                        <span>11 points</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam culpa incidunt vitae cupiditate voluptatum eligendi nobis impedit, commodi fugiat repudiandae asperiores temporibus similique id itaque magnam praesentium aspernatur suscipit in.</p>
-                        <span>11 points</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, aut, sint! Nihil consectetur at, dicta deleniti dolore odio voluptates soluta reiciendis enim nesciunt quae magni et, asperiores laudantium sunt minus.</p>
-                        <span>11 points</span>
+                        <h2 class="small">Mathématique</h2>
+                        <strong class="medium">3 épreuves</strong>
+                        <p>problème sur programme</p>
+                        <span class="x-small"><strong>13 points</strong></span>
+                        <p>exercices</p>
+                        <span class="x-small"><strong>13 points</strong></span>
+                        <p>analyse d'un dossier</p>
+                        <span class="x-small"><strong>14 points</strong></span>
                     </div><!-- /contenu_exam -->
-                </div><!-- /col-sm-6 -->
+                </div><!-- /col-sm-3 -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="contenu_exam">
+                        <div class="coeff_exam">
+                            60 points/160
+                        </div>
+                        <h2 class="small">Situation professionnelle</h2>
+                        <strong class="medium">3 épreuves</strong>
+                        <p>présentation du dossier</p>
+                        <span class="x-small"><strong>40 points</strong></span>
+                        <p>entretien avec le jury</p>
+                        <span class="x-small"><strong>20 points</strong></span>
+                    </div><!-- /contenu_exam -->
+                </div><!-- /col-sm-3 -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="contenu_exam">
+                        <div class="coeff_exam">
+                            100 points/160
+                        </div>
+                        <h2 class="small">Entretien à partir d'un dossier</h2>
+                        <strong class="medium">3 épreuves</strong>
+                        <p>activité sportive, artistique</p>
+                        <span class="x-small"><strong>40 points</strong></span>
+                        <p>situation professionnelle</p>
+                        <span class="x-small"><strong>60 points</strong></span>
+                    </div><!-- /contenu_exam -->
+                </div><!-- /col-sm-3 -->
             </div><!-- /row -->
         </div><!-- /container -->
     </section><!-- /condition_exam -->
