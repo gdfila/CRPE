@@ -2,13 +2,13 @@
 Récuperation du header
  -->
 <?php get_header(); ?>
-    
+
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <div id="accueil" class="top_content">
     <!--
     Affiche un slider automatique sur toute la largeur de la page
-     -->            
+     -->
     <div class="container_slider">
         <?php echo do_shortcode('[image-carousel showcaption="true"]'); ?>
     </div><!-- /container_slider -->
@@ -18,8 +18,8 @@ Récuperation du header
      -->
     <section class="accroche">
         <div class="container">
-            <h1 class="x-large">Preparez le concours de recrutement de professeur des écoles</h1>
-            <p class="medium">Rejoindre le Cours Galien, c’est la garantie d’une préparation sérieuse et adaptée, vous permettant d’aborder en toute confiance le Concours de Recrutement de Professeur des Ecoles.</p>
+            <h1 class="x-large"><?php the_field('titre_general'); ?></h1>
+            <p class="medium"><?php the_field('paragraphe_titre_general'); ?></p>
         </div><!-- /container -->
     </section><!-- /accroche -->
 
@@ -30,41 +30,41 @@ Récuperation du header
         <img class="hidden-xs hidden-sm back_img" src="<?php bloginfo('template_directory'); ?>/img/images/index_back_1.jpg" alt="">
         <div class="container">
             <div class="row">
-                <h1 class="x-large text_shadow">Adoptez l'esprit Galien !</h1>
+                <h1 class="x-large text_shadow"><?php the_field('titre_valeurs_de_lecole'); ?></h1>
                 <div class="col-xs-6 col-sm-6 col-md-3">
                     <div class="cercle-3">
-                        <h2 class="small"><strong>Partage</strong></h2>
-                        <p>Nos professeurs spécialistes partagent leurs connaissances et vous donnent leurs astuces pour réussir le jour J.</p>
+                        <h2 class="small"><strong><?php the_field('1er_titre_valeurs_de_lecole'); ?></strong></h2>
+                        <p><?php the_field('1er_paragraphe_valeurs_de_lecole'); ?></p>
                     </div><!-- /cercle-3 -->
                 </div><!-- /col-sm-3 -->
                 <div class="col-xs-6 col-sm-6 col-md-3">
                     <div class="cercle-3">
-                        <h2 class="small"><strong>Progression</strong></h2>
-                        <p>Elle repose sur trois étapes essentielles qui mènent vers le succès : entraînement, méthode et encadrement.</p>
+                        <h2 class="small"><strong><?php the_field('2eme_titre_valeurs_de_lecole'); ?></strong></h2>
+                        <p><?php the_field('2eme_paragraphe_valeurs_de_lecole'); ?></p>
                     </div><!-- /cercle-3 -->
                 </div><!-- /col-sm-3 -->
                 <div class="col-xs-6 col-sm-6 col-md-3">
                     <div class="cercle-3">
-                        <h2 class="small"><strong>Cohésion</strong></h2>
-                        <p>Il ne peut y avoir de partage sans cohésion. Toutes nos équipes sont focalisées sur un seul objectif : votre réussite.</p>
+                        <h2 class="small"><strong><?php the_field('3eme_titre_valeurs_de_lecole'); ?></strong></h2>
+                        <p><?php the_field('3eme_paragraphe_valeurs_de_lecole'); ?></p>
                     </div><!-- /cercle-3 -->
                 </div><!-- /col-sm-3 -->
                 <div class="col-xs-6 col-sm-6 col-md-3">
                     <div class="cercle-3">
-                        <h2 class="small"><strong>Réussite</strong></h2>
-                        <p>Ultime étape des efforts fournis et pour laquelle nous vous accompagnons chaque jour grâce à une stratégie de concours précise.</p>
+                        <h2 class="small"><strong><?php the_field('4eme_titre_valeurs_de_lecole'); ?></strong></h2>
+                        <p><?php the_field('4eme_paragraphe_valeurs_de_lecole'); ?></p>
                     </div><!-- /cercle-3 -->
                 </div><!-- /col-sm-3 -->
             </div><!-- /row -->
         </div><!-- /container -->
-    </section> 
+    </section>
 
     <!--
     Section présentant les témoignages sous slider
      -->
     <section class="temoignages">
         <div class="container">
-            <h1 class="large">Ils ont choisi Galien</h1>
+            <h1 class="large"><?php the_field('titre_'); ?></h1>
             <div class="row">
                 <div id="carousel-example-generic" class="temoignage_slider slide" data-ride="carousel">
                     <!-- Wrapper for slides -->
@@ -72,39 +72,39 @@ Récuperation du header
                         <div class="item active">
                             <div class="col-sm-6 col-sm-offset-1">
                                 <div class="embed-responsive embed-responsive-16by9 col-sm-9">
-                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rk93EIqVd8g"></iframe>
+                                    <iframe class="embed-responsive-item" src="<?php the_field('youtube_1er_etudiant'); ?>"></iframe>
                                 </div>
                             </div><!-- /col-sm-6 -->
                             <div class="col-sm-5 temoignage_back">
                               <div class="temoignage_slider_caption">
-                                  <p class="small"><strong>Antoine</strong></p>
-                                  <p>1ere année medecine<br />Ma marraine me soutient constamment tout au long de mon année et aujourd’hui mes résultats sont probants. Je me sens en confiance, et je garderai un bon souvenir dans ma Prépa.</p>
+                                  <p class="small"><strong><?php the_field('nom_1er_etudiant'); ?></strong></p>
+                                  <p><?php the_field('niveau_etude_1er_etudiant'); ?><br /><?php the_field('paragraphe_1er_etudiant'); ?></p>
                               </div><!-- /temoignage_slider_caption -->
                             </div><!-- /col-sm-5 -->
                         </div>
                         <div class="item">
                             <div class="col-sm-6 col-sm-offset-1">
                                 <div class="embed-responsive embed-responsive-16by9 col-sm-9">
-                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-fmpxlpgQyM"></iframe>
+                                    <iframe class="embed-responsive-item" src="<?php the_field('youtube_2eme_etudiant'); ?>"></iframe>
                                 </div>
                             </div><!-- /col-sm-6 -->
                             <div class="col-sm-5 temoignage_back">
                                 <div class="temoignage_slider_caption">
-                                    <p class="small"><strong>Antoine</strong></p>
-                                    <p>1ere année medecine<br />Ma marraine me soutient constamment tout au long de mon année et aujourd’hui mes résultats sont probants. Je me sens en confiance, et je garderai un bon souvenir dans ma Prépa.</p>
+                                    <p class="small"><strong><?php the_field('nom_2eme_etudiant'); ?></strong></p>
+                                    <p><?php the_field('niveau_etude_2eme_etudiant'); ?><br /><?php the_field('paragraphe_2eme_etudiant'); ?></p>
                                 </div><!-- /temoignage_slider_caption -->
                             </div><!-- /col-sm-5 -->
                         </div>
                         <div class="item">
                             <div class="col-sm-6 col-sm-offset-1">
                                 <div class="embed-responsive embed-responsive-16by9 col-sm-9">
-                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2cKztlWH_wE"></iframe>
+                                    <iframe class="embed-responsive-item" src="<?php the_field('youtube_3eme_etudiant'); ?>"></iframe>
                                 </div>
                             </div><!-- /col-sm-6 -->
                             <div class="col-sm-5 temoignage_back">
                                 <div class="temoignage_slider_caption">
-                                    <p class="small"><strong>Antoine</strong></p>
-                                    <p>1ere année medecine<br />Ma marraine me soutient constamment tout au long de mon année et aujourd’hui mes résultats sont probants. Je me sens en confiance, et je garderai un bon souvenir dans ma Prépa.</p>
+                                    <p class="small"><strong><?php the_field('nom_3eme_etudiant'); ?></strong></p>
+                                    <p><?php the_field('niveau_etude_3eme_etudiant'); ?><br /><?php the_field('paragraphe_3eme_etudiant'); ?></p>
                                 </div><!-- /temoignage_slider_caption -->
                             </div><!-- /col-sm-5 -->
                         </div>
@@ -133,28 +133,28 @@ Récuperation du header
 
     <!--
     Section présentant les chiffres de l'école
-     --> 
+     -->
     <section class="statistiques img_prez img_prez_aplat">
         <img class="hidden-xs hidden-sm back_img" src="<?php bloginfo('template_directory'); ?>/img/images/296_MG_9554.jpg" alt="">
         <div class="container">
                 <div class="row">
-                    <h1 class="x-large text_shadow">Galien en chiffres !</h1>
+                    <h1 class="x-large text_shadow"><?php the_field('titre_chiffre'); ?></h1>
                     <div class="col-sm-4">
                         <div class="cercle-4">
-                            <strong class="counter">98</strong><span>%</span>
-                            <p>d'étudiants satisfaits de nos formations</p>
+                            <strong class="counter"><?php the_field('1er_chiffre'); ?></strong><span>%</span>
+                            <p><?php the_field('paragraphe_1er_chiffre'); ?></p>
                         </div><!-- /cercle-4 -->
                     </div><!-- /col-sm-4 -->
                     <div class="col-sm-4">
                         <div class="cercle-4">
-                            <strong class="counter">66</strong><span>%</span>
-                            <p>de taux de réussite au concours</p>
+                            <strong class="counter"><?php the_field('2eme_chiffre'); ?></strong><span>%</span>
+                            <p><?php the_field('paragraphe_2eme_chiffre'); ?></p>
                         </div><!-- /cercle-4 --><!-- /cercle-4 -->
                     </div><!-- /col-sm-4 -->
                     <div class="col-sm-4">
                         <div class="cercle-4">
-                            <strong class="counter">900</strong>
-                            <p>étudiants préparés à ce concours</p>
+                            <strong class="counter"><?php the_field('3eme_chiffre'); ?></strong>
+                            <p><?php the_field('paragraphe_3eme_chiffre'); ?></p>
                         </div><!-- /cercle-4 -->
                     </div><!-- /col-sm-4 -->
                 </div><!-- /row -->
@@ -163,20 +163,20 @@ Récuperation du header
 
     <!--
     Section présentant les formuless de l'école
-    -->  
+    -->
     <section class="formules">
         <div class="container">
             <div class="row">
-                <h1 class="large">Decouvrez nos formules</h1>
+                <h1 class="large"><?php the_field('titre_formules'); ?>Decouvrez nos formules</h1>
                 <div class="col-sm-6 formules_container">
                     <div>
-                        <h2 class="medium">Pack entrainement</h2>
+                        <h2 class="medium"><?php the_field('titre_1ere_formule'); ?>Pack entrainement</h2>
                         <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
-                        <p>4 concours blancs<br />Epreuve<br />en conditions réelles<br />000H/400€</p>
+                        <p><?php the_field('1ere_formule_1er_paragraphe'); ?>4 concours blancs<br /><?php the_field('1ere_formule_2eme_paragraphe'); ?>Epreuve<br />en conditions réelles<br /><?php the_field('1ere_formule_prix'); ?>000H/400€</p>
                         <div class="info">
                             <p class="button active"><em>En savoir <span>+</span></em></p>
                             <div class="info_sup">
-                                <p>Voila des infos supplémentaires</p>
+                                <p><?php the_field('1ere_formule_savoir_+'); ?>Voila des infos supplémentaires</p>
                             </div><!-- /info_sup -->
                         </div><!-- /info -->
                         <button class="btn btn-primary" data-toggle="modal" data-target="#signin_form">Inscrivez-vous</button>
@@ -184,13 +184,13 @@ Récuperation du header
                 </div><!-- /col-sm-6 -->
                 <div class="col-sm-6 formules_container">
                     <div>
-                        <h2 class="medium">Pack complet</h2>
+                        <h2 class="medium"><?php the_field('titre_2eme_formule'); ?>Pack complet</h2>
                         <img src="<?php bloginfo('template_directory'); ?>/img/images/DSC_0191-2.jpg" alt="">
-                        <p>4 concours blancs<br />Epreuve<br />en conditions réelles<br />272H/1950€</p>
+                        <p><?php the_field('2eme_formule_1er_paragraphe'); ?>4 concours blancs<br /><?php the_field('2eme_formule_2eme_paragraphe'); ?>Epreuve<br /><?php the_field('2eme_formule_3eme_paragraphe'); ?>en conditions réelles<br /><?php the_field('2eme_formule_prix'); ?>272H/1950€</p>
                         <div class="info">
                             <p class="button active"><em>En savoir <span>+</span></em></p>
                             <div class="info_sup">
-                                <p>Voila des infos supplémentaires</p>
+                                <p><?php the_field('2eme_formule_savoir_+'); ?>Voila des infos supplémentaires</p>
                             </div><!-- /info_sup -->
                         </div><!-- /info -->
                         <button class="btn btn-primary" data-toggle="modal" data-target="#form">Inscrivez-vous</button>

@@ -567,6 +567,10 @@ textarea {
         color: #fff; text-transform: uppercase;}
     #ariane a:hover {
         text-decoration: underline;}
+    .breadcrumbs {
+        display:inline-block; color:white;
+        text-transform: uppercase; font-size: 0.8em;
+    }
 
     /* Footer logo+lien */
     footer {
@@ -751,15 +755,3 @@ textarea {
 }
 
 
-/**
- *
- * Breadcrumbs
- *
- */
-
-.breadcrumbs {
-    display:inline-block;
-    color:white;
-    text-transform: uppercase;
-    font-size: 0.8em;
-}
