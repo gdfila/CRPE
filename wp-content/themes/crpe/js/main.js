@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  
-    $(window).scroll(function(){ 
+
+    $(window).scroll(function(){
         // Nav fixed
         pos = $('.top_content').first().offset().top;
 
@@ -17,18 +17,18 @@ $(document).ready(function() {
             $("#scroll_up").fadeOut();
         }
     });
-    
+
     // Menu au clic
     $('.menu-item-has-children').click(function() {
         if (!$(this).hasClass('open')) {
             $('.menu-item-has-children').removeClass('open');
             $('.sub-menu').slideUp();
             $(this).addClass('open');
-            $(this).children('.sub-menu').slideDown();   
-        }  
+            $(this).children('.sub-menu').slideDown();
+        }
         else {
             $('.menu-item-has-children').removeClass('open');
-            $('.sub-menu').slideUp(); 
+            $('.sub-menu').slideUp();
         }
     });
 
@@ -41,10 +41,10 @@ $(document).ready(function() {
     $('.info').click(function() {
         $(this).children('.info_sup').slideToggle();
         $('.button').toggleClass('active');
-        if ($('.button').hasClass('active')){    
+        if ($('.button').hasClass('active')){
             $(this).find('span').html('+');
         }else{
-           $(this).find('span').html('-'); 
+           $(this).find('span').html('-');
         }
     });
 
@@ -75,19 +75,19 @@ $(document).ready(function() {
     // Formulaire champs chekbox caché
     $('#brochure').click(function(){
         if ($("#brochure").is(":checked") == true )
-        {        
+        {
             $('#adressEnvoi').slideDown();
         }else{
             $('#adressEnvoi').slideUp();
-         }        
+         }
     });
     $('#rappel').click(function(){
         if ($("#rappel").is(":checked") == true )
-        {        
+        {
             $('#horaire').slideDown();
         }else{
             $('#horaire').slideUp();
-         }        
+         }
     });
 
     // Modification Html et Css sous 1024px

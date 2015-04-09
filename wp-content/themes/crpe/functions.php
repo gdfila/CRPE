@@ -656,9 +656,9 @@ function my_breadcrumbs() {
         }
 
         if ( get_query_var('paged') ) {
-            if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ' (';
+            if ( is_category()) echo ' (';
             echo __('Page') . ' ' . get_query_var('paged');
-            if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
+            if ( is_category()) echo ')';
         }
 
         echo '</div><!-- .breadcrumbs -->';
