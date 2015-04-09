@@ -25,38 +25,38 @@
 
 }
 
-*, *:before, *:after { 
+*, *:before, *:after {
     margin: 0; padding: 0; list-style: none;}
-html { 
+html {
     font-size: 100%;}
-body { 
+body {
     position: relative;
     font-family: 'robotoregular', helvetica, sans-serif; color: #777; word-wrap: break-word;}
 body, a { font-size: 0.95em;}
-.logo { 
+.logo {
     max-width: 120px;}
-section { 
+section {
     padding: 50px 50px 0;
     text-align: center;}
-h1, h2, h3, h4, h5, h6 { 
+h1, h2, h3, h4, h5, h6 {
      color: #333; text-transform: uppercase;}
 h1 {
     margin-bottom: 50px;}
 h2, h3, h4 {
     margin-bottom: 25px;}
-.x-large { 
+.x-large {
     font-size: 3em;}
-.large { 
+.large {
     font-size: 2.3em;}
-.medium { 
+.medium {
     font-size: 1.6em;}
-.small { 
+.small {
     font-size: 1.2em;}
-.x-small { 
+.x-small {
     font-size: 1.1em;}
-a:hover { 
+a:hover {
     text-decoration: none;}
-.button { 
+.button {
     cursor: pointer;}
 img {
     max-width: 100%;}
@@ -67,56 +67,56 @@ img {
 
     /* Barre de navigation à l'ouverture de la page */
 
-    .nav_header { 
+    .nav_header {
         position: relative; z-index: 9998;}
-    .nav_header .top_nav {            
+    .nav_header .top_nav {
         background-color: #17405c;
         color: #fff; text-transform: uppercase;}
     .nav_header .top_nav div {
         padding: 25px 0 25px 30px;}
     .nav_header .top_nav h1 {
-        margin: 0; padding-left: 20px;  
+        margin: 0; padding-left: 20px;
         background: url('../img/picto/arrow.png') no-repeat; background-position-y: 3px;
         font-size: 0.95em; color: #fff; letter-spacing: 0.04em;}
     .nav_header .top_nav h1, .nav_header .content_nav nav {
         margin-left: 200px;}
-    .nav_header .content_nav { 
+    .nav_header .content_nav {
         background-color: #f16150;}
-    .nav_header .content_nav .logo_nav {  
+    .nav_header .content_nav .logo_nav {
         position: absolute; top: 0; z-index: 1;
         width: 140px; height: 115%; padding-top: 70px;
-        background-color: #3497db; 
+        background-color: #3497db;
         /* CSS3 */
         -moz-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.1); -webkit-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.1); -o-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.1); box-shadow: 0 0px 10px 1px rgba(0,0,0,0.1);}
-    .nav_header .content_nav .logo_nav .logo {  
+    .nav_header .content_nav .logo_nav .logo {
         position: absolute; left: 10px; bottom: 15px;}
-    .nav_header nav > ul li a { 
+    .nav_header nav > ul li a {
         display: block; padding: 15px;
         color: #fff; text-transform: uppercase;
         cursor: pointer;}
-    .nav_header nav ul li, 
-    .nav_header nav ul li ul li { 
+    .nav_header nav ul li,
+    .nav_header nav ul li ul li {
         display: inline-block;}
-    .nav_header nav li:hover > a { 
+    .nav_header nav li:hover > a {
         background-color: #3497db;}
-    .nav_header nav li:hover > .sub-menu { 
+    .nav_header nav li:hover > .sub-menu {
         display: none;}
-    .nav_header nav .sub-menu { 
+    .nav_header nav .sub-menu {
         position: absolute; left: 0; z-index: 1;
         display: none; width: 100%;
         background-color: #3497db;
         text-align: center;
         /* CSS3 */
         -moz-box-shadow: 0px -1px 1px 0px rgba(0,0,0, 0.1); -webkit-box-shadow: 0px -1px 1px 0px rgba(0,0,0, 0.1); -o-box-shadow: 0px -1px 1px 0px rgba(0,0,0, 0.1); box-shadow: 0px -1px 1px 0px rgba(0,0,0, 0.1);}
-    .nav_header .content_nav .sub-menu li a { 
+    .nav_header .content_nav .sub-menu li a {
         padding: 8px 15px;
         text-transform: none;}
-    .nav_header .content_nav .sub-menu li a:hover { 
+    .nav_header .content_nav .sub-menu li a:hover {
         background-color: rgba(22,64,91, 0.3);}
 
     /* Barre de navigation au scroll */
 
-    .nav_header .nav_fixed { 
+    .nav_header .nav_fixed {
         position: fixed; top: 0;
         width: 100%;}
     .nav_header .nav_fixed .logo_nav {
@@ -135,21 +135,21 @@ img {
     position: relative; overflow: hidden;}
 .img_prez h1 {
     color: #fff;}
-.carousel-inner, 
-.carousel-inner .item, 
-.img_prez { 
+.carousel-inner,
+.carousel-inner .item,
+.img_prez {
     height: 450px;}
-.img_prez, 
-.img_prez .back_img { 
+.img_prez,
+.img_prez .back_img {
     width: 100%;}
 .img_prez .back_img {
     position: absolute; top: -50%; left: 0; z-index: -1;}
-.carousel:before, .carousel:after, 
-.img_prez:before, 
+.carousel:before, .carousel:after,
+.img_prez:before,
 .img_prez:after {
     position: absolute; content: "";
     width: 100%;}
-.carousel:before, 
+.carousel:before,
 .img_prez_aplat:before {
     top: 0; left: 0; z-index: 1;
     height: 100%;
@@ -162,7 +162,7 @@ img {
     z-index: 3;}
 .carousel-inner>.item>img,
 .carousel-inner>.item>a>img {
-    position: absolute; top: 0; left: 0; z-index: -1;}  
+    position: absolute; top: 0; left: 0; z-index: -1;}
 
 /***********************************************
 ************ plugin jpo slider *****************
@@ -203,7 +203,7 @@ img {
     background: #17405c url('../img/picto/picto_espace_etudiant.png') no-repeat center 13px;}
 #action li:nth-child(1):hover, #action li:nth-child(2):hover, #action li:nth-child(3):hover, #action li:nth-child(4):hover {
     background-color: #f16150;}
-#action li a { 
+#action li a {
     color: #fff;}
 
 /***********************************************
@@ -223,13 +223,13 @@ img {
     line-height: normal;}
 .valeurs .cercle-3 h2 {
     margin-bottom: 5px;}
-.valeurs div div:nth-child(2) .cercle-3 { 
+.valeurs div div:nth-child(2) .cercle-3 {
     background-image: url('../img/picto/partage.png');}
-.valeurs div div:nth-child(3) .cercle-3 { 
+.valeurs div div:nth-child(3) .cercle-3 {
     background-image: url('../img/picto/progression.png');}
-.valeurs div div:nth-child(4) .cercle-3 { 
+.valeurs div div:nth-child(4) .cercle-3 {
     background-image: url('../img/picto/cohesion.png');}
-.valeurs div div:nth-child(5) .cercle-3 { 
+.valeurs div div:nth-child(5) .cercle-3 {
     background-image: url('../img/picto/reussite.png');}
 
 /***********************************************
@@ -242,7 +242,7 @@ img {
     position: relative;
     max-height: 246px;
     overflow-y: hidden;}
-.temoignage_slider_inner, 
+.temoignage_slider_inner,
 .temoignage_slider_caption {
     width: 80%; margin: auto;}
 .temoignage_slider_inner .temoignage_back {
@@ -250,7 +250,7 @@ img {
     background-color: #fff;}
 .temoignage_slider_caption {
     position: relative;
-    padding-top: 30px;  
+    padding-top: 30px;
     text-align: justify;}
 .temoignage_slider-caption .h2_small {
     margin-bottom: 0;}
@@ -270,7 +270,7 @@ img {
 ************* Section  Formules ****************
 ***********************************************/
 
-.formules .formules_container { 
+.formules .formules_container {
     padding: 0;}
 .formules .formules_container > div {
     width: 340px; min-height: 540px; margin: auto; padding-bottom: 20px;
@@ -278,7 +278,7 @@ img {
     text-align: center;
     /* CSS3 */
     -moz-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); -webkit-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); -o-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3);}
-.formules h2 { 
+.formules h2 {
     margin: 0; padding: 20px;
     background-color: #f0f0f0;}
 .formules img {
@@ -297,11 +297,11 @@ img {
     /* CSS3 */
     -moz-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.1); -webkit-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.1); -o-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.1); box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.1);
     text-align: center;}
-.contenu_exam h2 { 
+.contenu_exam h2 {
     margin: 0; padding: 40px 20px;
     background-color: #f16150;
     color: #fff;}
-.contenu_exam strong.medium { 
+.contenu_exam strong.medium {
     display: block; margin: 10px 0; padding-bottom: 10px;
     border-bottom: 1px dashed #f16150;}
 .contenu_exam p {
@@ -310,10 +310,10 @@ img {
 .contenu_exam span {
     display: block; margin-right: 20px;
     text-align: right;}
-.coeff_exam { 
+.coeff_exam {
     position: absolute; top: -50px; left: -40px;
     padding: 25px 10px;
-    background-color: #303030; border: 8px solid #C8AD7F; border-radius: 20px; 
+    background-color: #303030; border: 8px solid #C8AD7F; border-radius: 20px;
     /* CSS3 */
     -moz-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); -webkit-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); -o-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3);
     font-family: 'eraserregular', 'robotoregular', helvetica, sans-serif; font-size: 0.80em; color: #fff;}
@@ -379,7 +379,7 @@ img {
     font-size: 1.2em;}
 .equipe_temoignage blockquote {
   padding-left: 48px;
-  background: url('../img/picto/blockquote.png') no-repeat;} 
+  background: url('../img/picto/blockquote.png') no-repeat;}
 
 /***********************************************
 ********* Centre image presentation ************
@@ -442,19 +442,19 @@ img {
 
 .acf-map {
     width: 100%; height: 300px; margin-top: 30px;}
-.acf-map div[title="Cliquer pour effectuer un zoom"], .acf-map div[title="Faire glisser le curseur pour zoomer"] { 
+.acf-map div[title="Cliquer pour effectuer un zoom"], .acf-map div[title="Faire glisser le curseur pour zoomer"] {
     display: none;}
 
 /***********************************************
 ************** Section Descriptif **************
 ***********************************************/
 
-.descriptif, 
+.descriptif,
 .jpo .descriptif_detail {
     text-align: left;}
-.descriptif h1, 
-.descriptif h2, 
-.descriptif h3, 
+.descriptif h1,
+.descriptif h2,
+.descriptif h3,
 .descriptif ul {
     margin-bottom: 10px;}
 .descriptif ul li {
@@ -464,8 +464,8 @@ img {
     padding: 20px;
     background-color: #17405c;
     color: #fff;}
-.descriptif .encart_contact h2, 
-.descriptif .encart_contact h3 { 
+.descriptif .encart_contact h2,
+.descriptif .encart_contact h3 {
     color: #fff;}
 .descriptif .encart_contact h3 {
     margin: 10px 0; padding-bottom: 10px;
@@ -483,7 +483,7 @@ img {
     padding: 30px;
     background-color: rgb(241,97,80);
     color: #fff; text-align: left;}
-.jpo .big_jpo h3, 
+.jpo .big_jpo h3,
 .jpo .big_jpo h4 {
     color: #fff;}
 .jpo .big_jpo .btn {
@@ -491,7 +491,7 @@ img {
 .jpo .big_jpo:hover {
     background-color: #fff;
     color: #777;}
-.jpo .big_jpo:hover h3, 
+.jpo .big_jpo:hover h3,
 .jpo .big_jpo:hover h4 {
     color: #333;}
 .jpo .big_jpo:hover .btn {
@@ -510,7 +510,7 @@ img {
 
 .contact {
     text-align: left;}
-#adressEnvoi, 
+#adressEnvoi,
 #horaire {
     display:none;}
 #horaire label,
@@ -518,24 +518,24 @@ img {
     margin-bottom: 5px; padding-left: 0;
     font-weight: 700;}
 .contact h1 {
-    padding-left: 44px; 
+    padding-left: 44px;
     background: url('../img/picto/arrow_grey.png') no-repeat center left;}
 textarea {
     max-width: 100%;}
-    
-    /*********** Rappel **********/   
+
+    /*********** Rappel **********/
     .picto_title_phone {
         padding-top: 120px;
         background: url('../img/picto/picto_phone_grey.png') no-repeat top center;
         text-transform: inherit;}
 
-    /*********** Brochure **********/   
+    /*********** Brochure **********/
     .picto_title_doc {
         padding-top: 100px;
         background: url('../img/picto/picto_documentation_grey.png') no-repeat top center;
         text-transform: inherit;}
 
-    /*********** Contact **********/   
+    /*********** Contact **********/
     .picto_title_mail {
         padding-top: 100px;
         background: url('../img/picto/picto_contact_grey.png') no-repeat top center;
@@ -545,7 +545,7 @@ textarea {
 ***************** Scroll top *******************
 ***********************************************/
 
-#scroll_up { 
+#scroll_up {
     position: fixed; bottom: 20px; right: 20px;
     display: none; width: 38px; height: 38px;
     background: #16405b url('../img/picto/arrow_top.png') no-repeat center; background-size: 24px; border-radius: 3px;
@@ -554,7 +554,7 @@ textarea {
     -webkit-transition: background 200ms linear;
     -moz-transition: background 200ms linear;
     transition: background 200ms linear;}
-  
+
 /***********************************************
 ******************** Footer ********************
 ***********************************************/
@@ -572,14 +572,14 @@ textarea {
     footer {
         width: 100%; padding: 50px 0;
         background-color: #17405c;}
-    footer, footer h2, footer a, footer a:hover { 
+    footer, footer h2, footer a, footer a:hover {
         color: #fff;}
-    footer a { 
+    footer a {
         font-size: 0.8em;}
     footer a:hover {
         text-decoration: underline;}
-    footer div div div:nth-child(2), 
-    footer div div div:nth-child(3), 
+    footer div div div:nth-child(2),
+    footer div div div:nth-child(3),
     footer div div div:nth-child(4) {
         min-height: 120px;
         border-left: 1px solid #fff;}
@@ -608,7 +608,7 @@ textarea {
     /* Ombre porté sur texte */
     .text_shadow {
         text-shadow: 0 1px 15px rgba(0,0,0,0.4);}
-    
+
     /* Séparation couleur "corail" à mettre avant la fermeture de la balise ayant la classe container */
     hr {
         margin-top: 50px;
@@ -627,7 +627,7 @@ textarea {
     .cercle-3 strong {
         margin: 10px 0;
         text-transform: uppercase;}
-    .cercle-3 strong, 
+    .cercle-3 strong,
     .cercle-3 p {
          color: #333;}
     .cercle-3 p {
@@ -667,7 +667,7 @@ textarea {
     .nav_header .top_nav h1 {
           background-position-y: 2px;
         font-size: 0.85em;}
-    .nav_header .top_nav h1, 
+    .nav_header .top_nav h1,
     .nav_header .content_nav nav {
         margin-left: 140px;}
     .nav_header nav > ul li a {
@@ -718,7 +718,7 @@ textarea {
         max-width: 100px;}
     .nav_header .content_nav nav {
         margin-left: 0;}
-    .nav_header nav ul li, 
+    .nav_header nav ul li,
     .nav_header nav ul li ul li {
         display: block;
         border-top: 1px solid #fff;}
@@ -730,7 +730,7 @@ textarea {
     .nav_header .content_nav .sub-menu li a:hover {
         background-color: #777;
         color: #fff;}
-    
+
     /* Savoir faire */
     .savoir_faire .savoir_faire_container p {
         height: inherit;}
@@ -750,4 +750,16 @@ textarea {
         margin-top: 20px;}
 }
 
-  
+
+/**
+ *
+ * Breadcrumbs
+ *
+ */
+
+.breadcrumbs {
+    display:inline-block;
+    color:white;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}

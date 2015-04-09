@@ -1,6 +1,6 @@
     <div id="ariane">
         <div class="container">
-            <a href="/galien_crpe/">Accueil</a>
+            <?php if (function_exists('my_breadcrumbs')) my_breadcrumbs(); ?>
         </div><!-- /container -->
     </div><!-- /ariane -->
     <footer>

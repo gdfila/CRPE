@@ -6,10 +6,10 @@ function crpe_theme() {
     //img a la une
     add_theme_support('post-thumbnails');
     // menu
-    register_nav_menus([ 
+    register_nav_menus([
         'nav' => 'nav_header',
     ]);
-    
+
 }
 add_action('after_setup_theme', 'crpe_theme');
 
@@ -35,9 +35,9 @@ add_filter( 'acf/fields/wysiwyg/toolbars' , 'my_toolbars'  );
 
 
 /**
- * 
+ *
  * Google Map
- * 
+ *
  */
 
 function theme_name_scripts() {
@@ -90,23 +90,23 @@ function remplirListe()
       $centersList = $client->call(array("service" => "formation","method" => "centersListByFormation","formationId" => 400));
    //  plage horaire
     $horaireList = $client->call(array("service" => "prospect","method" => "callBackTimesList"));
-    
+
       $_SESSION['horaireList']=$horaireList;
       $_SESSION['client']=$client;
      $data=[];
-  
+
   // $results = $client->call(array("service" => "communication","method" => "centerInformationMeetingsList", "centerId" => 11));
- 
+
        if(!empty($centersList))
      {
          foreach ($centersList->datas as $centre)
             {
                          if (empty($centre))
-                    {   
+                    {
                         break ;
                      }
                         array_push($data, array( "name"=>$centre->name ,"id"=>$centre->id));
-               } 
+               }
      }
      $_SESSION['centre']=$data;
 }
@@ -122,7 +122,7 @@ add_action('template_redirect', 'remplirListe');
 //**----------------------------- verif les champs du formulaire brocure-----------------**/
 function verifForm()
 {
-      if (wp_verify_nonce($_POST['brochure-verif'], 'brochure')) 
+      if (wp_verify_nonce($_POST['brochure-verif'], 'brochure'))
      {                /* demande de rappel   */
             if($_POST['rappel']==true && empty($_POST['telephone']))
              {
@@ -136,11 +136,11 @@ function verifForm()
          {
                     if (empty($_POST['adress']) || empty($_POST['cp']) || empty($_POST['ville']))
                     {
-                               $_GET['erreur']="courrier";        
+                               $_GET['erreur']="courrier";
                                require_once ABSPATH . 'wp-content/themes/crpe/brochure.php';
                                  exit();
                     }
-           } 
+           }
            if (empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['email']))
               {
                    $_GET['erreur']="vide";
@@ -153,7 +153,7 @@ function verifForm()
                  require_once ABSPATH . 'wp-content/themes/crpe/brochure.php';
                      exit();
            }
-     
+
 }
 
 function verifEmail()
@@ -177,35 +177,35 @@ function traitementFormBrochure() {
     $_GET['sucess']="";
     $_GET['mess']="";
     $_GET['centre']="";
-   
-     if (isset($_POST['valider']) && isset($_POST['brochure-verif']))  
+
+     if (isset($_POST['valider']) && isset($_POST['brochure-verif']))
    {
             verifform(); // verif formulaire
             $client=$_SESSION['client'];
             //*-----------------  demande d'envoi de documentation --------*/
-             if(empty($_POST['telephone'])) 
-                 { 
+             if(empty($_POST['telephone']))
+                 {
                  $tel="0000000000";
                  }
-             else { 
-                 $tel=$_POST['telephone'] ; 
-                 
+             else {
+                 $tel=$_POST['telephone'] ;
+
                  }
-                   
+
                 $centre= explode("/",$_POST['centre']);
                  $idcentre=$centre[0];
                 $nomCentre=explode(" ",$centre[1]);
                  if($_POST['rappel']==true)
-                { 
-                    $etreRappeler=true; 
-                 } 
-                else { 
+                {
+                    $etreRappeler=true;
+                 }
+                else {
                     $etreRappeler=false ;
 
                 }
                 $etreRappeler=($_POST['rappel']==true)?true:false;
                  var_dump($etreRappeler);
-                 // envoi de brochure par courrier    
+                 // envoi de brochure par courrier
               if($_POST['brochure']==true)
               {$documentationRequest = $client->call(array(
                     "service" => "prospect",
@@ -241,7 +241,7 @@ function traitementFormBrochure() {
                     "city" =>""
                 ));
             }
-         
+
                if ($documentationRequest->success !=true)
                     {
                           $_GET['erreur']='brochure';
@@ -251,10 +251,10 @@ function traitementFormBrochure() {
                     }
                   //  rappel($client) ;// demande de rappel telephonique
                     $_GET['centre']=strtolower($nomCentre[1]);
-              
-                      require_once ABSPATH . 'wp-content/themes/crpe/telechargement_brochure.php'; 
+
+                      require_once ABSPATH . 'wp-content/themes/crpe/telechargement_brochure.php';
                            exit();
-          
+
       }
 
     }
@@ -270,10 +270,10 @@ function traitementFormRappel() {
     $_GET['sucess']="";
     $_GET['mess']="";
     $_GET['centre']="";
- 
-     if (isset($_POST['valider']) && isset($_POST['rappel-verif']))  
+
+     if (isset($_POST['valider']) && isset($_POST['rappel-verif']))
    {
-      if (wp_verify_nonce($_POST['rappel-verif'], 'rappel')) 
+      if (wp_verify_nonce($_POST['rappel-verif'], 'rappel'))
      {                /* demande de rappel   */
             if($_POST['rappel']==true && empty($_POST['telephone']))
              {
@@ -293,18 +293,18 @@ function traitementFormRappel() {
                  require_once ABSPATH . 'wp-content/themes/crpe/rappel.php';
                      exit();
            }
-              
+
            //     include_once "api/Thalamus_init.php";
                      $result=rappel();
                      if ($result==true)
                      { $_GET['erreur']='success'; }
-                       
+
                             require_once ABSPATH . 'wp-content/themes/crpe/rappel.php';
                              exit();
         }
-            
+
    }
-   
+
 }
 add_action('template_redirect', 'traitementFormRappel');
 
@@ -338,25 +338,25 @@ function rappel()
                     }
                     else
                         {
-                
+
                             return true;
                         }
-                   
+
 }
 
 function centreJPO()
 {
     //var_dump();
-    
+
 }
 add_action('template_redirect', 'centreJPO');
 
 /*----------------------------------------------------------------  formulaire d'inscription jpo ------------------------------------------*/
 function inscriptionJPO()
 {
-     if (isset($_POST['valider']) && isset($_POST['inscriptionJPO']))  
+     if (isset($_POST['valider']) && isset($_POST['inscriptionJPO']))
    {
-      if (wp_verify_nonce($_POST['inscriptionJPO'], 'jpo')) 
+      if (wp_verify_nonce($_POST['inscriptionJPO'], 'jpo'))
       {
              $client=$_SESSION['client'];
               $results=listAllJPO();
@@ -391,9 +391,9 @@ function set_content_type($content_type){
 function traitementFormContact()
 {
      $_GET['erreur']="";
-     if (isset($_POST['valider']) && isset($_POST['contact-verif']))  
+     if (isset($_POST['valider']) && isset($_POST['contact-verif']))
    {
-      if (wp_verify_nonce($_POST['contact-verif'], 'contact')) 
+      if (wp_verify_nonce($_POST['contact-verif'], 'contact'))
       {
             if(verifEmail()==false)
            {
@@ -405,13 +405,13 @@ function traitementFormContact()
            $centre=$centretab[1];
       //     var_dump($centre);
            $arg=array('name' =>$centre,'post_type'=>'centres');
-            $query = new WP_Query($arg); 
+            $query = new WP_Query($arg);
             if($query->have_posts()) : while($query->have_posts()) : $query->the_post();
                 $destinataire=  get_field('email');
                 endwhile;
             endif;
               //         var_dump($destinataire);
-  
+
       //    die();
            $header = "From: lganne93@gmail.com\n";
             $header .= "Reply-To: ".$_POST['email']."\n";
@@ -423,8 +423,8 @@ function traitementFormContact()
                     ." <strong>Téléphone : </strong>".$_POST['telephone']."<br>"
                     ."<strong>Centre : </strong>".$centre."</p><p><strong> Message : </strong> <br>".$_POST['message']."</p></html>";
             $email = wp_mail($destinataire, $objet, $message);
-            if($email) 
-            {    
+            if($email)
+            {
               $_GET['erreur']= 'success';
             }
             else
@@ -434,9 +434,9 @@ function traitementFormContact()
             }
              require_once ABSPATH . 'wp-content/themes/crpe/contact.php';
              exit();
-         }  
+         }
    }
-            
+
 }
 add_action('template_redirect', 'traitementFormContact');
 
@@ -444,12 +444,12 @@ add_action('template_redirect', 'traitementFormContact');
 /*-------------------------------------------------------- ACF Centre JPO champ dynamique -------   */
 
 add_action('acf_data_selector/data','champJPO');
- function champJPO($data) 
+ function champJPO($data)
   {
-     
+
 //           $results=listAllJPO();
 //         var_dump($results);
-//                 
+//
     //var_dump($data);
 //     die();
                        $data['jpo_thalamus'] = array(
@@ -474,9 +474,9 @@ add_action('acf_data_selector/data','champJPO');
 				'telephone' => '202'
 			)
                                                   )
-                                                            
+
 		);
-     
+
                  $data['rooms'] = array(
 		'label' => 'Rooms',
 		'data' => array(
@@ -498,8 +498,8 @@ add_action('acf_data_selector/data','champJPO');
 				'floor' => '2',
 				'telephone' => '202'
 			)
-                                                                           
-                                                                
+
+
 		)
 	);
               //   var_dump($data);
@@ -511,16 +511,16 @@ add_action('acf_data_selector/data','champJPO');
 function listAllJPO()
 {
       include_once "api/Thalamus_init.php";
-      
+
          var_dump(get_post_type( $post ));
          die();
         $centersList = $client->call(array("service" => "formation","method" => "centersListByFormation","formationId" => 400));
         $results=[];
         foreach ($centersList->datas as $centre)
         {
-                 
+
             $jpo= $client->call(array("service" => "communication","method" => "centerInformationMeetingsList","centerId" => $centre->id));
-              
+
                  foreach($jpo->datas as $UnJpo)
                  {
                       //  var_dump($UnJpo);
@@ -529,12 +529,143 @@ function listAllJPO()
                                                     'titre'=>$UnJpo->title,
                                                     'date'=>$UnJpo->startDate));
                  //     array_push( $results, $donnee);
-                //      array_push($donnee, $UnJpo)                                        
-                                               
-                     
+                //      array_push($donnee, $UnJpo)
+
+
                  }
-                 
+
         }
-        
+
          return $donnee;
 }
+
+
+/**
+ *
+ * Breadcrumb
+ *
+ */
+
+function my_breadcrumbs() {
+
+    /* === OPTIONS === */
+    $text['home']     = 'Accueil'; // text for the 'Home' link
+    $text['category'] = 'Archive by Category "%s"'; // text for a category page
+    $text['404']      = 'Error 404'; // text for the 404 page
+
+    $show_current   = 1; // 1 - show current post/page/category title in breadcrumbs, 0 - don't show
+    $show_on_home   = 1; // 1 - show breadcrumbs on the homepage, 0 - don't show
+    $show_home_link = 1; // 1 - show the 'Home' link, 0 - don't show
+    $show_title     = 1; // 1 - show the title for the links, 0 - don't show
+    $delimiter      = ' &raquo; '; // delimiter between crumbs
+    $before         = '<span class="current">'; // tag before the current crumb
+    $after          = '</span>'; // tag after the current crumb
+    /* === END OF OPTIONS === */
+
+    global $post;
+    $home_link    = home_url('/');
+    $link_before  = '<span typeof="v:Breadcrumb">';
+    $link_after   = '</span>';
+    $link_attr    = ' rel="v:url" property="v:title"';
+    $link         = $link_before . '<a' . $link_attr . ' href="%1$s">%2$s</a>' . $link_after;
+    $parent_id    = $parent_id_2 = $post->post_parent;
+    $frontpage_id = get_option('page_on_front');
+
+    if (is_home() || is_front_page()) {
+
+        if ($show_on_home == 1) echo '<div class="breadcrumbs"><a href="' . $home_link . '">' . $text['home'] . '</a></div>';
+
+    } else {
+
+        echo '<div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">';
+        if ($show_home_link == 1) {
+            echo '<a href="' . $home_link . '" rel="v:url" property="v:title">' . $text['home'] . '</a>';
+            if ($frontpage_id == 0 || $parent_id != $frontpage_id) echo $delimiter;
+        }
+
+        if ( is_category() ) {
+            $this_cat = get_category(get_query_var('cat'), false);
+            if ($this_cat->parent != 0) {
+                $cats = get_category_parents($this_cat->parent, TRUE, $delimiter);
+                if ($show_current == 0) $cats = preg_replace("#^(.+)$delimiter$#", "$1", $cats);
+                $cats = str_replace('<a', $link_before . '<a' . $link_attr, $cats);
+                $cats = str_replace('</a>', '</a>' . $link_after, $cats);
+                if ($show_title == 0) $cats = preg_replace('/ title="(.*?)"/', '', $cats);
+                echo $cats;
+            }
+            if ($show_current == 1) echo $before . sprintf($text['category'], single_cat_title('', false)) . $after;
+
+        }elseif ( is_single() && !is_attachment() ) {
+            if ( get_post_type() != 'post' ) {
+                $post_type = get_post_type_object(get_post_type());
+                $slug = $post_type->rewrite;
+                printf($link, $home_link . '/' . $slug['slug'] . '/', $post_type->labels->singular_name);
+                if ($show_current == 1) echo $delimiter . $before . get_the_title() . $after;
+            } else {
+                $cat = get_the_category(); $cat = $cat[0];
+                $cats = get_category_parents($cat, TRUE, $delimiter);
+                if ($show_current == 0) $cats = preg_replace("#^(.+)$delimiter$#", "$1", $cats);
+                $cats = str_replace('<a', $link_before . '<a' . $link_attr, $cats);
+                $cats = str_replace('</a>', '</a>' . $link_after, $cats);
+                if ($show_title == 0) $cats = preg_replace('/ title="(.*?)"/', '', $cats);
+                echo $cats;
+                if ($show_current == 1) echo $before . get_the_title() . $after;
+            }
+
+        } elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {
+            $post_type = get_post_type_object(get_post_type());
+            echo $before . $post_type->labels->singular_name . $after;
+
+        } elseif ( is_attachment() ) {
+            $parent = get_post($parent_id);
+            $cat = get_the_category($parent->ID); $cat = $cat[0];
+            $cats = get_category_parents($cat, TRUE, $delimiter);
+            $cats = str_replace('<a', $link_before . '<a' . $link_attr, $cats);
+            $cats = str_replace('</a>', '</a>' . $link_after, $cats);
+            if ($show_title == 0) $cats = preg_replace('/ title="(.*?)"/', '', $cats);
+            echo $cats;
+            printf($link, get_permalink($parent), $parent->post_title);
+            if ($show_current == 1) echo $delimiter . $before . get_the_title() . $after;
+
+        } elseif ( is_page() && !$parent_id ) {
+            if ($show_current == 1) echo $before . get_the_title() . $after;
+
+        } elseif ( is_page() && $parent_id ) {
+            if ($parent_id != $frontpage_id) {
+                $breadcrumbs = array();
+                while ($parent_id) {
+                    $page = get_page($parent_id);
+                    if ($parent_id != $frontpage_id) {
+                        $breadcrumbs[] = sprintf($link, get_permalink($page->ID), get_the_title($page->ID));
+                    }
+                    $parent_id = $page->post_parent;
+                }
+                $breadcrumbs = array_reverse($breadcrumbs);
+                for ($i = 0; $i < count($breadcrumbs); $i++) {
+                    echo $breadcrumbs[$i];
+                    if ($i != count($breadcrumbs)-1) echo $delimiter;
+                }
+            }
+            if ($show_current == 1) {
+                if ($show_home_link == 1 || ($parent_id_2 != 0 && $parent_id_2 != $frontpage_id)) echo $delimiter;
+                echo $before . get_the_title() . $after;
+            }
+
+        } elseif ( is_404() ) {
+            echo $before . $text['404'] . $after;
+        }
+
+        if ( get_query_var('paged') ) {
+            if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ' (';
+            echo __('Page') . ' ' . get_query_var('paged');
+            if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
+        }
+
+        echo '</div><!-- .breadcrumbs -->';
+
+    }
+}
+
+
+
+
