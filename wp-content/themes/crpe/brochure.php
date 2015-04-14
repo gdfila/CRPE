@@ -104,11 +104,11 @@ Récuperation du header
                         </div> <!-- /form-group --> 
                         <div class="checkbox">
                             <p><label>
-                                <input type="checkbox" name="rappel" id='rappel'> Demander à être rappelé
+                                <input type="checkbox" name="rappel" id='rappel' class="rappel_effect"> Demander à être rappelé
                             </label></p>
 
                             <!-- plage horaire -->
-                            <div id="horaire" class="form-group">
+                            <div id="horaire" class="form-group slide_rappel">
                                 <label for="horaire">Plage horaire souhaitée</label>
                                 <select class="form-control input-lg" name="horaire">
                                      <?php foreach($_SESSION['horaireList'] as $horaire):  ?>
@@ -122,11 +122,11 @@ Récuperation du header
                         </div><!-- /checkbox -->
                         <div class="checkbox">
                             <p><label>
-                                <input type="checkbox" name="brochure" id="brochure"> Recevoir la brochure par courrier
+                                <input type="checkbox" name="brochure" id="brochure" class="brochure_effect"> Recevoir la brochure par courrier
                             </label></p>
 
                             <!--adresse d'envoie-->
-                            <div id="adressEnvoi">
+                            <div id="adressEnvoi" class=" slide_brochure">
                                 <div class="form-group">
                                     <label for="adress">Adresse</label>
                                     <input type="text" name="adress" class="form-control" >

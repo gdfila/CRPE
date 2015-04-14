@@ -73,20 +73,20 @@ $(document).ready(function() {
     });
 
     // Formulaire champs chekbox caché
-    $('#brochure').click(function(){
-        if ($("#brochure").is(":checked") == true )
+    $('.rappel_effect').click(function(){
+        if ($(".rappel_effect").is(":checked") == true )
         {
-            $('#adressEnvoi').slideDown();
+            $('.slide_rappel').slideDown();
         }else{
-            $('#adressEnvoi').slideUp();
+            $('.slide_rappel').slideUp();
          }
     });
-    $('#rappel').click(function(){
-        if ($("#rappel").is(":checked") == true )
+    $('.brochure_effect').click(function(){
+        if ($(".brochure_effect").is(":checked") == true )
         {
-            $('#horaire').slideDown();
+            $('.slide_brochure').slideDown();
         }else{
-            $('#horaire').slideUp();
+            $('.slide_brochure').slideUp();
          }
     });
 
