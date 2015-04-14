@@ -32,7 +32,8 @@ html {
 body {
     position: relative;
     font-family: 'robotoregular', helvetica, sans-serif; color: #777; word-wrap: break-word;}
-body, a { font-size: 0.95em;}
+body, a { 
+    font-size: 0.95em;}
 .logo {
     max-width: 120px;}
 section {
@@ -293,6 +294,7 @@ img {
     display: none;}
 .tarif{    
     font-size: 1.5em; }
+
 /***********************************************
 ******** Section Condition examen **************
 ***********************************************/
@@ -422,7 +424,7 @@ img {
     color: #fff; text-indent: -9999px;}
 .min_jpo h3 {
     margin: 5px;
-    font-size: 1em;}
+    font-size: 1em; color: #f16150;}
 .min_jpo p {
     height: 65px;
     font-size: 0.8em;
@@ -742,6 +744,10 @@ textarea {
         background-color: #777;
         color: #fff;}
 
+    /* slider */
+    .carousel-inner {
+        height: 350px;}
+
     /* Savoir faire */
     .savoir_faire .savoir_faire_container p {
         height: inherit;}
@@ -761,4 +767,21 @@ textarea {
         margin-top: 20px;}
 }
 
+@media (max-width: 560px) {
 
+    body, a { 
+        font-size: 0.85em;}
+    .x-large {
+        font-size: 2em;}
+    .large {
+        font-size: 1.8em;}
+    .medium {
+        font-size: 1.4em;}
+    .small {
+        font-size: 1.1em;}
+    .x-small {
+        font-size: 1em;}
+    /* slider */
+    .carousel-inner {
+        height: 255px;}
+}
