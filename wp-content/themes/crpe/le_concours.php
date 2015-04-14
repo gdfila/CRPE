@@ -37,13 +37,13 @@ La première étape pour devenir professeur des écoles est de réussir un conco
     <!--
     Section présentant les reperes concours
      -->
-    <section class="reperes">
+    <section class="reperes  prez_com">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3 reperes_container">
+                <div class="col-sm-3 prez_com_container">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/conditions_acces.jpg" alt="conditions d'acces">
                     <h2 class="small"><strong>Conditions d'accès</strong></h2>
-                    <p>Pour présenter le concours, l’une des conditions suivantes est à remplir, à la date de
+                    <p class="prez_com_texte">Pour présenter le concours, l’une des conditions suivantes est à remplir, à la date de
                         publication des résultats d'admissibilité :<br>
 - une inscription en M1 en vue de l'obtention d'un master ou d'un titre ou diplôme
 reconnu équivalent par le ministre de l'éducation,<br>
@@ -57,11 +57,13 @@ Par ailleurs, le candidat doit justifier des deux qualifications suivantes au pl
 publication des résultats d’admissibilité :<br>
 - une attestation en secourisme reconnue de niveau au moins égal à celui de l'unité
 d'enseignement "prévention et secours civiques de niveau 1" (PSC1)</p>
+                    <span class="lire_suite">Lire la suite</span>
+                    <span class="lire_moins">Réduire</span>
                 </div><!-- /col-sm-3 -->
-                <div class="col-sm-3 reperes_container">
+                <div class="col-sm-3 prez_com_container">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/calendrier.jpg" alt="calendrier">
                     <h2 class="small"><strong>Calendrier</strong></h2>
-                    <p>Les inscriptions au concours de la session 2015 ont été enregistrées du 11 septembre au 21
+                    <p class="prez_com_texte">Les inscriptions au concours de la session 2015 ont été enregistrées du 11 septembre au 21
 octobre 2014 et du 3 février au 3 mars 2015 pour le concours externe supplémentaire de
 l’académie de Créteil.<br>
 Les épreuves d'admissibilité :<br>
@@ -71,11 +73,13 @@ Les épreuves d'admission se déroulent en juin 2015.<br><br>
 Pour le concours supplémentaire de Créteil,<br> les épreuves d'admissibilité :<br>
 - Français : mardi 19 mai 2015 de 13 heures à 17 heures<br>
 - Mathématiques : mercredi 20 mai 2015 de 9 heures à 13 heures.</p>
+                    <span class="lire_suite">Lire la suite</span>
+                    <span class="lire_moins">Réduire</span>
                 </div><!-- /col-sm-3 -->
-                <div class="col-sm-3 reperes_container">
+                <div class="col-sm-3 prez_com_container">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/debouche.jpg" alt="débouchés">
                     <h2 class="small"><strong>Débouchés</strong></h2>
-                    <p>En 2015, 11 281 postes d’enseignants du primaire sont à pourvoir au concours externe. A ces
+                    <p class="prez_com_texte">En 2015, 11 281 postes d’enseignants du primaire sont à pourvoir au concours externe. A ces
 postes s’ajoutent les 500 postes supplémentaires ouverts exceptionnellement sur l’académie de
 Créteil.<br>
 Une fois le concours réussi, les étudiants deviennent des fonctionnaires stagiaires en
@@ -90,15 +94,19 @@ de base : sciences et technologie, histoire-géographie, éducation civique, éd
 et éducation physique et sportive. Toutefois, le professeur dispose d'une certaine liberté pour
 organiser ses cours ainsi que les différentes activités intellectuelles, artistiques et sportives.
 Le professeur des écoles doit assurer chaque semaine 26 heures d'enseignement.</p>
+                    <span class="lire_suite">Lire la suite</span>
+                    <span class="lire_moins">Réduire</span>
                 </div><!-- /col-sm-3 -->
-                <div class="col-sm-3 reperes_container">
+                <div class="col-sm-3 prez_com_container">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/referentiel.jpg" alt="référentiel">
                     <h2 class="small"><strong>référentiels</strong></h2>
-                    <p>Pour plus de détails sur les conditions d’accès au concours, les affectations de poste par
+                    <p class="prez_com_texte">Pour plus de détails sur les conditions d’accès au concours, les affectations de poste par
 académie, les sujets d’épreuves et les rapports de jury, le parcours de formation…, nous vous
 recommandons les sites suivants : <a href="http://www.education.gouv.fr">www.education.gouv.fr</a>, <a href="http://www.siec.education.fr">www.siec.education.fr</a> , mais aussi
 les sites des ESPE (Écoles supérieures du professorat et de l'éducation) et des différentes
 académies.</p>
+                    <span class="lire_suite">Lire la suite</span>
+                    <span class="lire_moins">Réduire</span>
                 </div><!-- /col-sm-3 -->
             </div><!-- /row -->
             <hr><!-- /separation -->
@@ -121,19 +129,28 @@ académies.</p>
                             40/80<br>points
                         </div>
                         <h2 class="small">Français</h2>
-                        
-                        <p><strong>Partie 1 :</strong> Réponse, construite et
-rédigée à une question portant surun ou plusieurs textes littéraires ou documentaires</p>
-                        <span class="x-small"><strong>11 points</strong></span>
-                        <p><strong>Partie 2 :</strong> Connaissance de la
-langue : grammaire, orthographe, lexique et système phonologique</p>
-                        <span class="x-small"><strong>11 points</strong></span>
-                        <p><strong>Partie 3 :</strong>Analyse d'un dossier
-composé d'un ou plusieurs supports d'enseignement du français</p>
-                        <span class="x-small"><strong>13 points</strong></span>
-                        <p>Correction syntaxique et qualité
-écrite de la production</p>
-                        <span class="x-small"><strong>5 points</strong></span>
+                        <table>
+                            <tr>
+                                <td><p><strong>Partie 1 :</strong> Réponse, construite et
+    rédigée à une question portant surun ou plusieurs textes littéraires ou documentaires</p></td>
+                                <td><strong class="x-small">11 points</strong></td>
+                            </tr>
+                            <tr>
+                                <td><p><strong>Partie 2 :</strong> Connaissance de la
+langue : grammaire, orthographe, lexique et système phonologique</p></td>
+                                <td><strong class="x-small">11 points</strong></td>
+                            </tr>
+                            <tr>
+                                <td><p><strong>Partie 3 :</strong>Analyse d'un dossier
+composé d'un ou plusieurs supports d'enseignement du français</p></td>
+                                <td><p><strong class="x-small">13 points</strong></td>
+                            </tr>
+                            <tr>
+                                <td><p>Correction syntaxique et qualité
+écrite de la production</p></td>
+                                <td><strong class="x-small">5 points</strong></td>
+                            </tr>
+                        </table>
                     </div><!-- /contenu_exam -->
                 </div><!-- /col-sm-6 -->
                 <div class="col-xs-12 col-sm-6">
@@ -142,17 +159,27 @@ composé d'un ou plusieurs supports d'enseignement du français</p>
                             40/80<br>points
                         </div>
                         <h2 class="small">Mathématique</h2>
-                         <p><strong>Partie 1 :</strong> Problème sur des domaines
-des programmes de l'école ou du collège, ou sur le socle commun</p>
-                        <span class="x-small"><strong>13 points</strong></span>
-                        <p><strong>Partie 2 :</strong>Exercices indépendants et
-complémentaires : QCM, réponses construites, productions d’élèves</p>
-                        <span class="x-small"><strong>13 points</strong></span>
-                        <p><strong>Partie 3 :</strong>Analyse d'un dossier
-composé d'un ou plusieurs supports d'enseignement des mathématiques</p>
-                        <span class="x-small"><strong>14 points</strong></span>
-                        <p><i>Attention : la correction syntaxique et qualité écrite
-de la production peut être pénalisante – jusqu’à -5 points</i></p>
+                        <table>
+                            <tr>
+                                <td><p><strong>Partie 1 :</strong> Problème sur des domaines
+des programmes de l'école ou du collège, ou sur le socle commun</p></td>
+                                <td><strong class="x-small">13 points</strong></td>
+                            </tr>
+                            <tr>
+                                <td><p><strong>Partie 2 :</strong>Exercices indépendants et
+complémentaires : QCM, réponses construites, productions d’élèves</p></td>
+                                <td><strong class="x-small">13 points</strong></td>
+                            </tr>
+                            <tr>
+                                <td><p><strong>Partie 3 :</strong>Analyse d'un dossier
+composé d'un ou plusieurs supports d'enseignement des mathématiques</p></td>
+                                <td><strong class="x-small">14 points</strong></td>
+                            </tr>
+                            <tr>
+                                <td><p><i>Attention : la correction syntaxique et qualité écrite
+de la production peut être pénalisante – jusqu’à -5 points</i></p></td>
+                            </tr>
+                        </table>
                      </div><!-- /contenu_exam -->
                 </div><!-- /col-sm-6 -->
             </div>
@@ -169,13 +196,20 @@ laissé au candidat.</p>
                         <div class="coeff_exam">
                             60/160<br>points
                         </div>
-                        <h2 class="small">mise en situation professionnelle</h2>
-                        <strong class="medium">3 épreuves</strong>
+                        <h2 class="small">mise en situation professionnelle</h2>   
                         <p>Le candidat remet au jury un dossier de 10 pages,
 portant sur le sujet qu'il a choisi parmi lesdomaines suivants : sciences et technologie,
-histoire, géographie, histoires des arts, arts visuels,éducation musicale ou enseignements moral et civique</p>
-                        <p>Présentation du dosseir</p>
-                        <span class="x-small"><strong>20 points</strong></span>
+histoire, géographie, histoires des arts, arts visuels,éducation musicale ou enseignements moral et civique</p>                     
+                        <table>
+                            <tr>
+                                <td><p>Présentation du dossier - 20 min</p></td>
+                                <td><strong class="x-small">20 points</strong></td>
+                            </tr>
+                            <tr>
+                                <td><p>Entretien avec le jury - 40 min</p></td>
+                                <td><strong class="x-small">40 points</strong></td>
+                            </tr>
+                        </table>
                     </div><!-- /contenu_exam -->
                 </div><!-- /col-sm-6 -->
                 <div class="col-xs-12 col-sm-6">
@@ -184,11 +218,16 @@ histoire, géographie, histoires des arts, arts visuels,éducation musicale ou e
                             100/160<br>points
                         </div>
                         <h2 class="small">Entretien à partir d'un dossier</h2>
-                        <strong class="medium">3 épreuves</strong>
-                        <p>activité sportive, artistique</p>
-                        <span class="x-small"><strong>40 points</strong></span>
-                        <p>situation professionnelle</p>
-                        <span class="x-small"><strong>60 points</strong></span>
+                        <table>
+                            <tr>
+                                <td><p><strong>Partie 1 :</strong>activité sportive, artistique :<br />- Exposé - 10 min<br />- Entretien avec le jury - 30 min</p></td>
+                                <td><strong class="x-small">40 points</strong></td>
+                            </tr>
+                            <tr>
+                                <td><p><strong>Partie 2 :</strong>situation professionnelle :<br />- Exposé - 15 min<br />- Entretien - 30 min<br /><i>L’entretien porte sur les acquis des élèves, les conditions d’exercice du métier et les valeurs de la République.</i></p></td>
+                                <td><strong class="x-small">60 points</strong></td>
+                            </tr>
+                        </table>
                     </div><!-- /contenu_exam -->
                 </div><!-- /col-sm-6 -->
             </div><!-- /row -->

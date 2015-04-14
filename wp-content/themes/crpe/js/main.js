@@ -50,7 +50,7 @@ $(document).ready(function() {
 
     // Lire la suite
     $('.lire_suite').click(function() {
-        $(this).prev('.savoir_faire_texte').css({
+        $(this).prev('.prez_com_texte').css({
             'overflow': 'visible',
             'height': '100%'});
         $(this).css('display', 'none');
@@ -59,7 +59,7 @@ $(document).ready(function() {
 
     // Lire moins
     $('.lire_moins').click(function() {
-        $(this).prevAll('.savoir_faire_texte').css({
+        $(this).prevAll('.prez_com_texte').css({
             'overflow': 'hidden',
             'height': '105px'});
         $(this).prev('.lire_suite').css('display', 'block');

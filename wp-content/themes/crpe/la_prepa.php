@@ -38,34 +38,34 @@ Récuperation du header
     <!--
     Section présentant le savoir faire de Galien
      -->
-    <section class="savoir_faire">
+    <section class="savoir_faire prez_com">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3 savoir_faire_container">
+                <div class="col-sm-3 prez_com_container">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/experience.jpg" alt="experience">
                     <h2 class="small"><strong>L'expérience</strong></h2>
-                    <p class="savoir_faire_texte">Le défi que les cours Galien relèvent chaque jour repose sur des valeurs qui sont fondamentales à l’accomplissement de notre mission : celle de vous accompagner tout au long de cette année dans votre préparation aux concours. Ces valeurs sont portées par chaque membre des Cours Galien, professeurs, équipes administratives, dirigeants, et aussi et surtout les étudiants.</p>
+                    <p class="prez_com_texte">Le défi que les cours Galien relèvent chaque jour repose sur des valeurs qui sont fondamentales à l’accomplissement de notre mission : celle de vous accompagner tout au long de cette année dans votre préparation aux concours. Ces valeurs sont portées par chaque membre des Cours Galien, professeurs, équipes administratives, dirigeants, et aussi et surtout les étudiants.</p>
                     <span class="lire_suite">Lire la suite</span>
                     <span class="lire_moins">Réduire</span>
                 </div><!-- /col-sm-3 -->
-                <div class="col-sm-3 savoir_faire_container">
+                <div class="col-sm-3 prez_com_container">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/methode.jpg" alt="la méthode">
                     <h2 class="small"><strong>La méthode</strong></h2>
-                    <p class="savoir_faire_texte">Notre méthode s’articule autour des marches de la réussite. Elle s’accompagne de nombreux outils  mis à votre disposition pour vous accompagner vers la réussite : Evaluations régulières pour valider vos acquis Mises en situation réelles et sous forme de concours blancs Classement par rapport aux autres étudiants Corrections interactives et phase d’approfondissement Supports pédagogiques : programmes pédagogiques conçus pour présenter les concours (spécificités et réformes prises en compte) ; polycopiés et résumés de cours ; fiches de synthèse ; annales e-outils : espace web dédié ; QCM interactifs ; annales ; plannings ; mail dédié ; facebook… services « plus Galien » : salles de travail 7j/7 ; wifi ; espace cafet’ ; calendrier des dates des concours…</p>
+                    <p class="prez_com_texte">Notre méthode s’articule autour des marches de la réussite. Elle s’accompagne de nombreux outils  mis à votre disposition pour vous accompagner vers la réussite : Evaluations régulières pour valider vos acquis Mises en situation réelles et sous forme de concours blancs Classement par rapport aux autres étudiants Corrections interactives et phase d’approfondissement Supports pédagogiques : programmes pédagogiques conçus pour présenter les concours (spécificités et réformes prises en compte) ; polycopiés et résumés de cours ; fiches de synthèse ; annales e-outils : espace web dédié ; QCM interactifs ; annales ; plannings ; mail dédié ; facebook… services « plus Galien » : salles de travail 7j/7 ; wifi ; espace cafet’ ; calendrier des dates des concours…</p>
                     <span class="lire_suite">Lire la suite</span>
                     <span class="lire_moins">Réduire</span>
                 </div><!-- /col-sm-3 -->
-                <div class="col-sm-3 savoir_faire_container">
+                <div class="col-sm-3 prez_com_container">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/encadrement.jpg" alt="l'encadrement">
                     <h2 class="small"><strong>L'encadrement</strong></h2>
-                    <p class="savoir_faire_texte">Chaque enseignant des Cours Galien est spécialiste de la matière qu’il enseigne, et connait nécessairement les exigences du concours. Il vous aide ainsi à maîtriser les durées et la diversité des épreuves, les difficultés, les pièges à éviter et les astuces qui feront la différence.</p>
+                    <p class="prez_com_texte">Chaque enseignant des Cours Galien est spécialiste de la matière qu’il enseigne, et connait nécessairement les exigences du concours. Il vous aide ainsi à maîtriser les durées et la diversité des épreuves, les difficultés, les pièges à éviter et les astuces qui feront la différence.</p>
                     <span class="lire_suite">Lire la suite</span>
                     <span class="lire_moins">Réduire</span>
                 </div><!-- /col-sm-3 -->
-                <div class="col-sm-3 savoir_faire_container">
+                <div class="col-sm-3 prez_com_container">
                     <img src="<?php bloginfo('template_directory'); ?>/img/images/pedago.jpg" alt="face à face pédgogique">
                     <h2 class="small"><strong>face à face pédagogique</strong></h2>
-                    <p class="savoir_faire_texte">Soucieux de vous apporter un environnement de travail propice à la réussite de votre concours, les Cours Galien mettent à votre disposition des salles d’études. Vous bénéficiez d’un fonds documentaire pour continuer à vous entraîner après les cours : annales, ouvrages de référence… Des espaces détente, foyer et cuisine sont aussi des lieux d’échange avec les profs. Nos centres sont aussi équipés de wifi.</p>
+                    <p class="prez_com_texte">Soucieux de vous apporter un environnement de travail propice à la réussite de votre concours, les Cours Galien mettent à votre disposition des salles d’études. Vous bénéficiez d’un fonds documentaire pour continuer à vous entraîner après les cours : annales, ouvrages de référence… Des espaces détente, foyer et cuisine sont aussi des lieux d’échange avec les profs. Nos centres sont aussi équipés de wifi.</p>
                     <span class="lire_suite">Lire la suite</span>
                     <span class="lire_moins">Réduire</span>
                 </div><!-- /col-sm-3 -->
