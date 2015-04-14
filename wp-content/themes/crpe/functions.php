@@ -237,7 +237,7 @@ function traitementFormBrochure() {
             if ($documentationRequest->success !=true)
                     {
                           $_GET['erreur']='brochure';
-                          $_GET['mess']=$documentationRequest->errorMessage;
+                          $_GET['mess']='un probleme est survenu lors de l\'enregistrement du formulaire, veuillez recommencé';    //$documentationRequest->errorMessage;
                             require_once ABSPATH . 'wp-content/themes/crpe/brochure.php';
                                  exit();
                     }
@@ -258,13 +258,15 @@ add_action('template_redirect', 'traitementFormBrochure');
 
 /**  verification des champs*/
 function traitementFormRappel() {
-     $_GET['erreur']="";
+    $_GET['erreur']="";
     $_GET['sucess']="";
     $_GET['mess']="";
     $_GET['centre']="";
 
-    if (isset($_POST['valider']) && isset($_POST['rappel-verif'])) {
-            if (wp_verify_nonce($_POST['rappel-verif'], 'rappel')) { /* demande de rappel   */
+    if (isset($_POST['valider']) && isset($_POST['rappel-verif']))
+    {     
+        if (wp_verify_nonce($_POST['rappel-verif'], 'rappel')) { /* demande de rappel   */
+    
                 if ($_POST['rappel'] == true && empty($_POST['telephone'])) {
                     $_GET['erreur'] = "telephone";
                     require_once ABSPATH . 'wp-content/themes/crpe/rappel.php';
@@ -285,12 +287,15 @@ function traitementFormRappel() {
                 {
                     $_GET['erreur'] = 'success';
                 }
+          
                 require_once ABSPATH . 'wp-content/themes/crpe/rappel.php';
                 exit();
-            }
+                
+            
 
    }
 
+}
 }
 add_action('template_redirect', 'traitementFormRappel');
 
@@ -298,27 +303,32 @@ add_action('template_redirect', 'traitementFormRappel');
 
 /* demande de rappel telephonique */
 function rappel()
-{
-  
-    $client=$_SESSION['client'];
-        $centre= explode("/",$_POST['centre']);
-       $idcentre=$centre[0];
+    {
+        if (verifEmail() == false)
+        {
+            $_GET['erreur'] = 'email';
+            require_once ABSPATH . 'wp-content/themes/crpe/rappel.php';
+            ;
+        }
+        $client = $_SESSION['client'];
+        $centre = explode("/", $_POST['centre']);
+        $idcentre = $centre[0];
         $callBack = $client->call(array(
-                            "service" => "prospect",
-                            "method" => "callBackRequest",
-                            "centerId" => $idcentre,
-                            "formationId" => 400,
-                            "lastName" =>  $_POST['nom'],
-                            "firstName" =>  $_POST['prenom'],
-                            "email" => $_POST['email'],
-                            "phoneNumber" => $_POST['telephone'],
-                             "callBackTimeId" => intval($_POST['horaire'])
-                        ));
-         if ($callBack->success != true)
+            "service" => "prospect",
+            "method" => "callBackRequest",
+            "centerId" => $idcentre,
+            "formationId" => 400,
+            "lastName" => $_POST['nom'],
+            "firstName" => $_POST['prenom'],
+            "email" => $_POST['email'],
+            "phoneNumber" => $_POST['telephone'],
+            "callBackTimeId" => intval($_POST['horaire'])
+        ));
+        if ($callBack->success != true)
         {
             $_GET['erreur'] = 'rappel';
-            $_GET['mess'] = $callBack->errorMessage;
-            require_once ABSPATH . 'wp-content/themes/crpe/brochure.php';
+            $_GET['mess'] = 'un probleme est survenu lors de l\'enregistrement du formulaire, veuillez recommencé'; //$callBack->errorMessage;
+            require_once ABSPATH . 'wp-content/themes/crpe/rappel.php';
             exit();
         }
         else
@@ -327,12 +337,7 @@ function rappel()
         }
     }
 
-function centreJPO()
-{
-    //var_dump();
-
-}
-add_action('template_redirect', 'centreJPO');
+ 
 
 /*----------------------------------------------------------------  formulaire d'inscription jpo ------------------------------------------*/
 function inscriptionJPO()

@@ -78,23 +78,29 @@
                 <div class="modal-body">
                     <?php
                         //affichage message d'erreur
-                        if (isset($_GET['erreur']))
+                        if (!empty($_GET['erreur']))
                         {
                             echo '<div class="alert">';
                          
                                 switch ($_GET['erreur'])
                                 {
                                     case 'telephone' :
-                                        echo 'Vous devez indiquer un numéro de téléphone pour être rappeler.';
+                                          echo '<div class="alert red">';
+                                        echo 'Vous devez indiquer un numéro de téléphone pour être rappelé.';
+                                         echo '</div>';
                                         break;
                                     case 'rappel' :
+                                        echo '<div class="alert red">';
                                         echo $_GET['mess'];
+                                         echo '</div>';
                                         break;
                                     case 'success':
+                                         echo '<div class="alert">';
                                         echo 'Votre demande a bien été enregistré';
+                                         echo '</div>';
                                         break;
                                  }
-                                  echo '</div>';
+                                 
                         } ?>
                     <div class="row">
                         <div class="col-sm-3 hidden-xs hidden-sm picto_title_doc">
@@ -157,23 +163,27 @@
                 <div class="modal-body">
                     <?php
                      //affichage message d'erreur
-                    if (isset($_GET['erreur']))
+                    if (!empty($_GET['erreur']))
                     {
-                        echo '<div class="alert">';
-                 
-                            switch ($_GET['erreur'])
+                        switch ($_GET['erreur'])
                             {
                                 case 'telephone' :
+                                     echo '<div class="alert red">';
                                     echo 'Vous devez indiquer un numéro de téléphone pour être rappeler.';
+                                    echo '</div>';
                                     break;
                                 case 'rappel' :
+                                     echo '<div class="alert red">';
                                     echo $_GET['mess'];
+                                    echo '</div>';
                                     break;
                                 case 'success':
+                                    echo '<div class="alert">';
                                     echo 'Votre demande a bien été enregistré';
+                                    echo '</div>';
                                     break;
                             }
-                          echo '</div>';
+                          
                     } ?>
                     <div class="row">
                         <div class="col-sm-3 hidden-xs hidden-sm picto_title_doc">
@@ -230,26 +240,33 @@
                 <div class="modal-body">
                     <?php 
                     //affichage message d'erreur
-                    if (isset($_GET['erreur']))
+                    if (!empty($_GET['erreur']))
                     {
-                        echo '<div class="alert">';
-                     
+                                           
                             switch ($_GET['erreur'])
                             {
                                 case 'telephone' :
-                                    echo 'Vous devez indiquer un numéro de téléphone pour être rappeler.';
+                                    echo '<div class="alert red">';
+                                    echo 'Vous devez indiquer un numéro de téléphone pour être rappelé.';
+                                    echo '</div>';
                                     break;
                                 case 'courrier' :
-                                    echo 'Votre adresse pour l\'envoie de la brochure est imcomplete.';
+                                    echo '<div class="alert red">';
+                                    echo 'Votre adresse pour l\'envoie de la brochure est incomplete.';
+                                    echo '</div>';
                                     break;
                                 case 'brochure':
+                                    echo '<div class="alert red">';
                                       echo $_GET['mess'];
+                                      echo '</div>';
                                     break;
                                 case 'rappel' :
-                                      echo $_GET['mess'];
+                                     echo '<div class="alert red">';
+                                     echo $_GET['mess'];
+                                     echo '</div>';
                                      break;
                             }
-                            echo '</div>';
+                            
                     }
                             if (isset($_GET['sucess']))
                             {
@@ -264,10 +281,10 @@
                     ?>
                     <div class="row">
                         <div class="col-sm-3 hidden-xs hidden-sm picto_title_doc">
-                        </div><!-- /col-sm-3 -->
+                        </div>
                         <form class="col-sm-7 col-sm-offset-1" method="post" action="#">
                             <h2 class="medium" id="exampleModalLabel">Téléchargez les brochures d’information Galien</h2>
-                            <?php wp_nonce_field('brochure', 'brochure-verif'); ?>   <!--pour verifier que les reponse du formulaire proviennet bien de notre site -->
+                            <?php wp_nonce_field('brochure', 'brochure-verif'); ?>   pour verifier que les reponse du formulaire proviennet bien de notre site 
                             <div class="form-group">
                                 <label for="nom">Nom *</label>
                                 <input type="text" name="nom" class="form-control" id="exampleInputName1" >
@@ -289,7 +306,7 @@
                                     <input type="checkbox" name="rappel" id='rappel'> Demander à être rappelé
                                 </label></p>
 
-                               <!--  plage horaire -->
+                                 plage horaire 
                                 <div id="horaire" class="form-group">
                                     <label for="horaire">Plage horaire souhaitée</label>
                                     <select class="form-control input-lg" name="horaire">
@@ -307,7 +324,7 @@
                                     <input type="checkbox" name="brochure" id="brochure"> Recevoir la brochure par courrier
                                 </label></p>
 
-                             <!--   adresse d'envoie-->
+                                adresse d'envoie
                                 <div id="adressEnvoi">
                                     <div class="form-group">
                                         <label for="adress">Adresse</label>

@@ -35,12 +35,11 @@ Récuperation du header
                                 //affichage message d'erreur
                                 if (!empty($_GET['erreur']))
                                 {
-                                  
                                         switch ($_GET['erreur'])
                                         {
                                             case 'telephone' :
                                                 echo '<div class="alert red">';
-                                                echo 'Vous devez indiquer un numéro de téléphone pour être rappeler.';
+                                                echo 'Vous devez indiquer un numéro de téléphone pour être rappelé.';
                                                 echo '</div>';
                                                 break;
                                             case 'rappel' :
@@ -50,7 +49,7 @@ Récuperation du header
                                                 break;
                                             case 'vide' :
                                                  echo '<div class="alert red">';
-                                                echo 'Merci de remplir tous les champs suivie d\'un *';
+                                                echo 'Merci de remplir tous les champs suivis d\'un *';
                                                 echo '</div>';
                                                 break;
                                             case 'email':

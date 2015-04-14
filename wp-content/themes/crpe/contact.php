@@ -43,7 +43,7 @@ Récuperation du header
                                         {
                                             case 'telephone' :
                                                  echo '<div class="alert red">';
-                                                echo 'Vous devez indiquer un numéro de téléphone pour être rappeler.';
+                                                echo 'Vous devez indiquer un numéro de téléphone pour être rappelé.';
                                                 echo '</div>';
                                                 break;
                                             case 'rappel' :
