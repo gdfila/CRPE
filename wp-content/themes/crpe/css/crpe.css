@@ -138,7 +138,7 @@ img {
 .carousel-inner,
 .carousel-inner .item,
 .img_prez {
-    height: 450px;}
+    height: 515px;}
 .img_prez,
 .img_prez .back_img {
     width: 100%;}
@@ -269,7 +269,9 @@ img {
 /***********************************************
 ************* Section  Formules ****************
 ***********************************************/
-
+.formules{
+   color:black;
+   font-weight: bold;}
 .formules .formules_container {
     padding: 0;}
 .formules .formules_container > div {
@@ -281,11 +283,16 @@ img {
 .formules h2 {
     margin: 0; padding: 20px;
     background-color: #f0f0f0;}
+.presentation-pack{
+    color: #f16150;}
+.formules p {
+    padding: 15px;}
 .formules img {
     max-width: 100%; margin-bottom: 25px;}
 .formules .info_sup {
     display: none;}
-
+.tarif{    
+    font-size: 1.5em; }
 /***********************************************
 ******** Section Condition examen **************
 ***********************************************/
@@ -685,7 +692,10 @@ textarea {
         height: inherit;}
 
     /* Action */
-    #action a:nth-child(1), #action a:nth-child(2), #action a:nth-child(3), #action a:nth-child(4) {
+    #action li:nth-child(1), 
+    #action li:nth-child(2), 
+    #action li:nth-child(3), 
+    #action li:nth-child(4) {
         background-color: rgba(23,64,92,0.5);}
 
     /* Img prez */

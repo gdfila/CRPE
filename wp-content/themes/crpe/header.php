@@ -78,23 +78,29 @@
                 <div class="modal-body">
                     <?php
                         //affichage message d'erreur
-                        if (isset($_GET['erreur']))
+                        if (!empty($_GET['erreur']))
                         {
                             echo '<div class="alert">';
                          
                                 switch ($_GET['erreur'])
                                 {
                                     case 'telephone' :
+                                          echo '<div class="alert red">';
                                         echo 'Vous devez indiquer un numéro de téléphone pour être rappeler.';
+                                         echo '</div>';
                                         break;
                                     case 'rappel' :
+                                        echo '<div class="alert red">';
                                         echo $_GET['mess'];
+                                         echo '</div>';
                                         break;
                                     case 'success':
+                                         echo '<div class="alert">';
                                         echo 'Votre demande a bien été enregistré';
+                                         echo '</div>';
                                         break;
                                  }
-                                  echo '</div>';
+                                 
                         } ?>
                     <div class="row">
                         <div class="col-sm-3 hidden-xs hidden-sm picto_title_doc">
@@ -157,23 +163,27 @@
                 <div class="modal-body">
                     <?php
                      //affichage message d'erreur
-                    if (isset($_GET['erreur']))
+                    if (!empty($_GET['erreur']))
                     {
-                        echo '<div class="alert">';
-                 
-                            switch ($_GET['erreur'])
+                        switch ($_GET['erreur'])
                             {
                                 case 'telephone' :
+                                     echo '<div class="alert red">';
                                     echo 'Vous devez indiquer un numéro de téléphone pour être rappeler.';
+                                    echo '</div>';
                                     break;
                                 case 'rappel' :
+                                     echo '<div class="alert red">';
                                     echo $_GET['mess'];
+                                    echo '</div>';
                                     break;
                                 case 'success':
+                                    echo '<div class="alert">';
                                     echo 'Votre demande a bien été enregistré';
+                                    echo '</div>';
                                     break;
                             }
-                          echo '</div>';
+                          
                     } ?>
                     <div class="row">
                         <div class="col-sm-3 hidden-xs hidden-sm picto_title_doc">
@@ -230,10 +240,9 @@
                 <div class="modal-body">
                     <?php 
                     //affichage message d'erreur
-                    if (isset($_GET['erreur']))
+                    if (!empty($_GET['erreur']))
                     {
-                        echo '<div class="alert">';
-                     
+                                            
                             switch ($_GET['erreur'])
                             {
                                 case 'telephone' :
