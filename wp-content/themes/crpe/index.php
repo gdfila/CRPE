@@ -19,7 +19,8 @@ Récuperation du header
     <section class="accroche">
         <div class="container">
             <h1 class="x-large"><?php the_field('titre_general'); ?></h1>
-            <p class="medium"><?php the_field('paragraphe_titre_general'); ?></p>
+<!--            <p class="medium"><?php the_field('paragraphe_titre_general'); ?></p>-->
+            <p class="medium">Rejoindre le Cours Galien, c’est la garantie d’une préparation sérieuse et adaptée, vous permettant d’aborder en toute confiance le Concours de Recrutement de Professeur des Ecoles.</p><br><br><br>
         </div><!-- /container -->
     </section><!-- /accroche -->
 
@@ -27,7 +28,7 @@ Récuperation du header
     Section présentant les valeurs de l'école
      -->
     <section class="valeurs img_prez img_prez_aplat">
-        <img class="hidden-xs hidden-sm back_img" src="<?php bloginfo('template_directory'); ?>/img/images/index_back_1.jpg" alt="">
+        <img class="hidden-xs hidden-sm back_img" src="<?php bloginfo('template_directory'); ?>/img/images/esprit_galien.jpg" alt="img valeur de l'ecole">
         <div class="container">
             <div class="row">
                 <h1 class="x-large text_shadow"><?php the_field('titre_valeurs_de_lecole'); ?></h1>
@@ -135,7 +136,7 @@ Récuperation du header
     Section présentant les chiffres de l'école
      -->
     <section class="statistiques img_prez img_prez_aplat">
-        <img class="hidden-xs hidden-sm back_img" src="<?php bloginfo('template_directory'); ?>/img/images/296_MG_9554.jpg" alt="">
+        <img class="hidden-xs hidden-sm back_img" src="<?php bloginfo('template_directory'); ?>/img/images/galien_chiffre.jpg" alt="galien en chiffres">
         <div class="container">
                 <div class="row">
                     <h1 class="x-large text_shadow"><?php the_field('titre_chiffre'); ?></h1>
@@ -170,13 +171,16 @@ Récuperation du header
                 <h1 class="large"><?php the_field('titre_formules'); ?>Decouvrez nos formules</h1>
                 <div class="col-sm-6 formules_container">
                     <div>
-                        <h2 class="medium"><?php the_field('titre_1ere_formule'); ?>Pack entrainement</h2>
+                        <h2 class="medium"><?php the_field('titre_1ere_formule'); ?>Pack <strong>entrainement</strong></h2>
                         <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
-                        <p><?php the_field('1ere_formule_1er_paragraphe'); ?>4 concours blancs<br /><?php the_field('1ere_formule_2eme_paragraphe'); ?>Epreuve<br />en conditions réelles<br /><?php the_field('1ere_formule_prix'); ?>000H/400€</p>
+                        <p class="presentation-pack"><?php the_field('1ere_formule_1er_paragraphe'); ?>Destiné à ceux qui préparent seul le concours mais qui souhaite s'entraîner en conditions réelles aux épreuves d'admissibilité.</p>
+                        <p class="tarif"><?php the_field('1ere_formule_prix'); ?>32h / 400€</p>
                         <div class="info">
                             <p class="button active"><em>En savoir <span>+</span></em></p>
                             <div class="info_sup">
-                                <p><?php the_field('1ere_formule_savoir_+'); ?>Voila des infos supplémentaires</p>
+                                <p><?php the_field('1ere_formule_savoir_+'); ?>- 4 concours blancs complets en conditions réelles (32h)</p>
+                                <p>- Copies corrigées et annotées de façon personnalisée</p>
+                                <p>- Parrainage téléphonique et électronique par des professeurs spécialistes des matières</p>
                             </div><!-- /info_sup -->
                         </div><!-- /info -->
                         <button class="btn btn-primary" data-toggle="modal" data-target="#signin_form">Inscrivez-vous</button>
@@ -184,13 +188,17 @@ Récuperation du header
                 </div><!-- /col-sm-6 -->
                 <div class="col-sm-6 formules_container">
                     <div>
-                        <h2 class="medium"><?php the_field('titre_2eme_formule'); ?>Pack complet</h2>
+                        <h2 class="medium"><?php the_field('titre_2eme_formule'); ?>Pack <strong>complet</strong></h2>
                         <img src="<?php bloginfo('template_directory'); ?>/img/images/DSC_0191-2.jpg" alt="">
-                        <p><?php the_field('2eme_formule_1er_paragraphe'); ?>4 concours blancs<br /><?php the_field('2eme_formule_2eme_paragraphe'); ?>Epreuve<br /><?php the_field('2eme_formule_3eme_paragraphe'); ?>en conditions réelles<br /><?php the_field('2eme_formule_prix'); ?>272H/1950€</p>
+                        <p class="presentation-pack"><?php the_field('1ere_formule_1er_paragraphe'); ?>Recommandé pour ceux qui veulent une préparation complète aux épreuves d'admissibilité et d'admission.</p>
+                        <p class="tarif"><?php the_field('1ere_formule_prix'); ?>272h / 1950€</p>
                         <div class="info">
                             <p class="button active"><em>En savoir <span>+</span></em></p>
                             <div class="info_sup">
-                                <p><?php the_field('2eme_formule_savoir_+'); ?>Voila des infos supplémentaires</p>
+                                <p><?php the_field('2eme_formule_savoir_+'); ?>- Cours le samedi en petits effectifs sur l'ensemble des matières (240h)</p>
+                                <p>- 4 concours blancs complets en conditions réelles (32h)</p>
+                                <p>- Copies corrigées et annotées de façon personnalisée + corrections détaillées faites en cours</p>
+                                <p>- Module de remise à niveau en français et en mathématiques transmis pendant l'été</p>
                             </div><!-- /info_sup -->
                         </div><!-- /info -->
                         <button class="btn btn-primary" data-toggle="modal" data-target="#form">Inscrivez-vous</button>

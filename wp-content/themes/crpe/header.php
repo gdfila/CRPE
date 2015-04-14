@@ -86,6 +86,7 @@
                                 {
                                     case 'telephone' :
                                           echo '<div class="alert red">';
+
                                         echo 'Vous devez indiquer un numéro de téléphone pour être rappelé.';
                                          echo '</div>';
                                         break;
@@ -242,7 +243,6 @@
                     //affichage message d'erreur
                     if (!empty($_GET['erreur']))
                     {
-                                           
                             switch ($_GET['erreur'])
                             {
                                 case 'telephone' :

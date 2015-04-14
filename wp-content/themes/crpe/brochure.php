@@ -27,11 +27,11 @@ Récuperation du header
         <div class="container">
             <div class="row">
                 <div class="col-sm-3 hidden-xs hidden-sm picto_title_doc">
-                    <h1 class="medium">Téléchargez les brochures d’information Galien</h1>
+                    <h1 class="medium">Téléchargez la brochure d’information Galien</h1>
                 </div><!-- /col-sm-3 -->
                 <div class="col-sm-6 col-sm-offset-1">
                     <form method="post" action="#">
-                        <h2 class="large">Téléchargez les brochures d’information Galien</h2>
+                        <h2 class="large">Téléchargez la brochure d’information Galien</h2>
                          <?php 
                         //affichage message d'erreur
                         if (!empty($_GET['erreur']))
@@ -99,7 +99,7 @@ Récuperation du header
                             <input type="email" name="email" class="form-control" id="exampleInputEmail1" value="<?php echo $_POST['email']; ?>" maxlength="200" required >
                         </div><!-- /form-group -->
                         <div class="form-group">
-                            <label for="telephone">Télephone</label>
+                            <label for="telephone">Téléphone</label>
                             <input type="tel" name="telephone" class="form-control" value="<?php echo $_POST['telephone']; ?>"  placeholder="exemple: 0102030405">
                         </div> <!-- /form-group --> 
                         <div class="checkbox">
