@@ -19,9 +19,12 @@ h1, h2, h3, h4, h5, h6, ul, ol {
 		opacity: 1;
 		font-size: 0.80em; font-weight: 100; text-shadow: none;}
 	.alert {
-		background-color: #3497db;
+		background-color:  #3497db;
 		color: #fff;
 	}
+                     .red{
+                                background-color:  rgb(241,97,80);  
+                     }
 
 	/* Bouton */
 	.btn {

@@ -41,25 +41,37 @@ Récuperation du header
                                 switch ($_GET['erreur'])
                                 {
                                     case 'telephone' :
+                                         echo '<div class="alert red">';
                                         echo 'Vous devez indiquer un numéro de téléphone pour être rappeler.';
+                                        echo '</div>';
                                         break;
                                     case 'courrier' :
+                                         echo '<div class="alert red">';
                                         echo 'Votre adresse pour l\'envoie de la brochure est imcomplete.';
+                                           echo '</div>';
                                         break;
                                     case 'brochure':
+                                         echo '<div class="alert red">';
                                           echo $_GET['mess'];
+                                             echo '</div>';
                                         break;
                                     case 'rappel' :
+                                         echo '<div class="alert red">';
                                           echo $_GET['mess'];
+                                             echo '</div>';
                                          break;
                                       case 'vide' :
+                                           echo '<div class="alert red">';
                                         echo 'merci de remplir tous les champs suivie d\'un *';
+                                           echo '</div>';
                                         break;
                                     case 'email':
+                                         echo '<div class="alert red">';
                                         echo 'L\'adresse e mail est invalide';
+                                           echo '</div>';
                                         break;
                                 }
-                               echo '</div>';
+                            
                         }
                                 if (isset($_GET['sucess']))
                                 {

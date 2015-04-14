@@ -33,29 +33,38 @@ Récuperation du header
                         <h2 class="large">Laissez vos coordonnées, Cours Galien vous rappelle</h2>
                           <?php
                                 //affichage message d'erreur
-                                if (isset($_GET['erreur']))
+                                if (!empty($_GET['erreur']))
                                 {
-                                    echo '<div class="alert">';
-
+                                  
                                         switch ($_GET['erreur'])
                                         {
                                             case 'telephone' :
+                                                echo '<div class="alert red">';
                                                 echo 'Vous devez indiquer un numéro de téléphone pour être rappeler.';
+                                                echo '</div>';
                                                 break;
                                             case 'rappel' :
+                                                 echo '<div class="alert red">';
                                                 echo $_GET['mess'];
+                                                echo '</div>';
                                                 break;
                                             case 'vide' :
+                                                 echo '<div class="alert red">';
                                                 echo 'Merci de remplir tous les champs suivie d\'un *';
+                                                echo '</div>';
                                                 break;
                                             case 'email':
+                                                 echo '<div class="alert red">';
                                                       echo 'L\'adresse e mail est invalide';
+                                                      echo '</div>';
                                                      break;
                                             case 'success':
+                                                 echo '<div class="alert">';
                                                 echo 'Votre demande a bien été enregistré';
+                                                echo '</div>';
                                                 break;
                                          }
-                                          echo '</div>';
+                                          
                                 } ?>
                         <?php wp_nonce_field('rappel', 'rappel-verif'); ?>  <!-- pour verifier que les reponse du formulaire proviennet bien de notre site -->
                         <div class="form-group">

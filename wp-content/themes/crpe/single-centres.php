@@ -12,16 +12,18 @@ Récuperation du header
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <?php
-
     //   correspondance id centre dans wordpress avec id centre dans thalamus
        $tabId=[32=>22,37=>11,43=>7,39=>3,40=>1,71=>16,41=>5,42=>15];
        $idcentre=$post->ID;
         $client=$_SESSION['client'];
-         if (get_field('mise_en_ligne_jpo')=='true')
+             if (get_field('mise_en_ligne_jpo')==1)
          {
-              $jpo= $client->call(array("service" => "communication","method" => "centerInformationMeetingsList","centerId" => $tabId[$idcentre]));
+              $jpo= $client->call(array("service" => "communication","method" => "centerInformationMeetingsList","centerId" =>$tabId[$idcentre]));
               $dataJPO=$jpo->datas;
               $datJpo=$dataJPO[0]->startDate ; 
+              $centreJPO=get_field('adresse_-_ville');
+              $idJpo=$dataJPO[0]->id;
+              
            }
       ?>
     
@@ -99,7 +101,7 @@ Récuperation du header
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 descriptif_detail">
-                    <h1 class="large">Cours Galien <?php the_field('nom_du_centre');?></h1>
+                    <h1 class="large"><?php the_field('nom_du_centre');?></h1>
                     <p><?php the_field('nom_du_centre');?></p>
                     <h2 class="medium">Equipements</h2>
                     <ul>
@@ -153,7 +155,8 @@ Récuperation du header
                                 <h3 class="medium"><strong><?php echo $dataJPO[0]->title; ?> </strong>
                                 </h3>
                                 <p class="text-justify"><?php echo $dataJPO[0]->description;?></p>
-                                <a class="btn btn-primary" href="http://localhost/galien_crpe/?p=180&centre=<?php the_field('adresse_-_ville')?>&jpoDate=<?php the_field('date_de_la_jpo')?>" >Inscription</a>      
+                                <a class="btn btn-primary" href="http://localhost/galien_crpe/?p=180&centreJPO=<?php echo $centreJPO;?>&jpoDate=<?php echo $dat[2].$dat[1].$dat[0];?>&idjpo=<?php echo $idJpo?>" >Inscription</a>      
+                           
                             </div><!-- /col-sm-9 -->
                         </div><!-- /col-sm-12 -->
                     <?php endif ?>
