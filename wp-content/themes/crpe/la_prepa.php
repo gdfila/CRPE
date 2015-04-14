@@ -136,7 +136,7 @@ Récuperation du header
                                 <p>- Parrainage téléphonique et électronique par des professeurs spécialistes des matières</p>
                             </div><!-- /info_sup -->
                         </div><!-- /info -->
-                        <button class="btn btn-primary" data-toggle="modal" data-target="#signin_form">Inscrivez-vous</button>
+                        <a href="/galien_crpe/contact/brochure" class="btn btn-primary">Inscrivez-vous</a>
                     </div>
                 </div><!-- /col-sm-6 -->
                 <div class="col-sm-6 formules_container">
@@ -154,7 +154,7 @@ Récuperation du header
                                 <p>- Module de remise à niveau en français et en mathématiques transmis pendant l'été</p>
                             </div><!-- /info_sup -->
                         </div><!-- /info -->
-                        <button class="btn btn-primary" data-toggle="modal" data-target="#form">Inscrivez-vous</button>
+                        <a href="/galien_crpe/contact/brochure" class="btn btn-primary">Inscrivez-vous</a>
                     </div>
                 </div><!-- /col-sm-6 -->
             </div><!-- /row -->

@@ -306,7 +306,7 @@
                                     <input type="checkbox" name="rappel" id='rappel' class="rappel_effect"> Demander à être rappelé
                                 </label></p>
 
-                                 plage horaire 
+                                 <!--plage horaire--> 
                                 <div id="horaire" class="form-group slide_rappel">
                                     <label for="horaire">Plage horaire souhaitée</label>
                                     <select class="form-control input-lg" name="horaire">
@@ -324,7 +324,7 @@
                                     <input type="checkbox" name="brochure" id="brochure" class="brochure_effect"> Recevoir la brochure par courrier
                                 </label></p>
 
-                                adresse d'envoie
+                                <!--adresse d'envoie-->
                                 <div id="adressEnvoi" class=" slide_brochure">
                                     <div class="form-group">
                                         <label for="adress">Adresse</label>
