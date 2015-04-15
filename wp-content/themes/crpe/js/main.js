@@ -72,6 +72,23 @@ $(document).ready(function() {
         time: 2500
     });
 
+    // slider images temoignages
+
+      $("#slider4").responsiveSlides({
+        auto: true,
+        pager: false,
+        nav: true,
+        speed: 500,
+        timeout: 20000,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+
     // Formulaire champs chekbox caché
     $('.rappel_effect').click(function(){
         if ($(".rappel_effect").is(":checked") == true )

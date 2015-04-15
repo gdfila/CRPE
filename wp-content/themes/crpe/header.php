@@ -9,7 +9,7 @@
     <title>Le concours de recrutement des professeurs des écoles</title>
     <meta name="description" content="Le concours de recrutement des professeurs des écoles">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    
+
     <script src="<?php bloginfo('template_url'); ?>/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <script>(function(){document.documentElement.className='js'})();</script>
     <script src="<?php bloginfo('template_url'); ?>/js/vendor/jquery-1.11.2.js"></script>
@@ -17,6 +17,8 @@
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.corr.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/crpe.css">
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/responsiveslides.css">
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/demo.css">
 
     <?php wp_head(); ?>
 </head>
@@ -50,7 +52,7 @@
                     </a>
                     <nav>
                         <?php
-                            wp_nav_menu([ 
+                            wp_nav_menu([
                             'theme_location' => 'nav',
                             'container' => 'navbar-header', ]);
                         ?>
@@ -66,7 +68,7 @@
         <li><a href="http://www.studius.fr" target="_blank">Studius</a></li>
     </ul><!-- /action -->
 
-    <!-- 
+    <!--
     Modal : Pop up rappelez-moi
     -->
    <div class="modal fade" id="modalRappel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -81,7 +83,7 @@
                         if (!empty($_GET['erreur']))
                         {
                             echo '<div class="alert">';
-                         
+
                                 switch ($_GET['erreur'])
                                 {
                                     case 'telephone' :
@@ -101,7 +103,7 @@
                                          echo '</div>';
                                         break;
                                  }
-                                 
+
                         } ?>
                     <div class="row">
                         <div class="col-sm-3 hidden-xs hidden-sm picto_title_doc">
@@ -124,9 +126,9 @@
                             <div class="form-group">
                                 <label for="telephone">Télephone *</label>
                                 <input type="tel" name="telephone" class="form-control" placeholder="exemple: 0102030405" required>
-                            </div> 
+                            </div>
 
-                             <!--plage horaire--> 
+                             <!--plage horaire-->
                             <label for="plage horaire">Plage horaire souhaitée</label>
                             <select class="form-control input-lg" name="horaire">
                                  <?php foreach($_SESSION['horaireList'] as $horaire):  ?>
@@ -152,9 +154,9 @@
         </div><!-- /modal-dialog -->
     </div><!-- /modal -->
 
-     
+
     <!--Modal : Pop up contact-->
-    
+
     <div class="modal fade" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -184,7 +186,7 @@
                                     echo '</div>';
                                     break;
                             }
-                          
+
                     } ?>
                     <div class="row">
                         <div class="col-sm-3 hidden-xs hidden-sm picto_title_doc">
@@ -212,7 +214,7 @@
                                 <label for="message">Message</label>
                                 <textarea name="message"   rows="2" cols="85"></textarea>
                             </div>
-                  
+
                             <div class="form-group">
                                 <label for="centres">Centre</label>
                                 <select class="form-control input-lg" name="centre">
@@ -222,16 +224,16 @@
                                 </select>
                             </div>
                             <input type="submit" class="btn btn-lg btn-primary" name="valider" value="Envoyer"><br><br>
-                        </form > 
+                        </form >
                     </div><!-- /row -->
                 </div><!-- /modal-body -->
             </div><!-- /modal-content -->
         </div><!-- /modal-dialog -->
     </div><!-- /modal -->
 
-     
+
     <!--Modal : Pop up brochure-->
-    
+
     <div class="modal fade" id="modalBrochure" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -239,7 +241,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Fermer &times;</span></button>
                 </div><!-- /modal-header -->
                 <div class="modal-body">
-                    <?php 
+                    <?php
                     //affichage message d'erreur
                     if (!empty($_GET['erreur']))
                     {
@@ -266,7 +268,7 @@
                                      echo '</div>';
                                      break;
                             }
-                            
+
                     }
                             if (isset($_GET['sucess']))
                             {
@@ -284,7 +286,7 @@
                         </div>
                         <form class="col-sm-7 col-sm-offset-1" method="post" action="#">
                             <h2 class="medium" id="exampleModalLabel">Téléchargez les brochures d’information Galien</h2>
-                            <?php wp_nonce_field('brochure', 'brochure-verif'); ?>   pour verifier que les reponse du formulaire proviennet bien de notre site 
+                            <?php wp_nonce_field('brochure', 'brochure-verif'); ?>   pour verifier que les reponse du formulaire proviennet bien de notre site
                             <div class="form-group">
                                 <label for="nom">Nom *</label>
                                 <input type="text" name="nom" class="form-control" id="exampleInputName1" >
@@ -300,13 +302,13 @@
                             <div class="form-group">
                                 <label for="telephone">Télephone</label>
                                 <input type="tel" name="telephone" class="form-control" placeholder="exemple: 0102030405">
-                            </div>  
+                            </div>
                             <div class="checkbox">
                                 <p><label>
                                     <input type="checkbox" name="rappel" id='rappel' class="rappel_effect"> Demander à être rappelé
                                 </label></p>
 
-                                 <!--plage horaire--> 
+                                 <!--plage horaire-->
                                 <div id="horaire" class="form-group slide_rappel">
                                     <label for="horaire">Plage horaire souhaitée</label>
                                     <select class="form-control input-lg" name="horaire">
