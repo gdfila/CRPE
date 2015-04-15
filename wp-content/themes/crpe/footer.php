@@ -20,8 +20,13 @@
                 <div class="col-xs-6 col-sm-3">
                     <h2 class="small">Infos pratiques</h2>
                     <ul>
+<<<<<<< HEAD
                          <li><a href="mailto:recrutement@cours-galien.fr">Galien recrute</a></li>
                         <li><a href="http://www.studius.fr">Studius, espace étudiant</a></li>
+=======
+                         <li><a href="/galien_crpe/recrutement">Galien recrute</a></li>
+                        <li><a href="http://www.studius.fr">Studius</a></li>
+>>>>>>> 77dd31cd21bf253f8851288aa00c0fc48e9b60d5
                         <li><a href="#">Mentions légales</a></li>
                     </ul>
                 </div><!-- /col-sm-3 -->
