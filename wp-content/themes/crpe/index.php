@@ -28,7 +28,7 @@ Récuperation du header
     Section présentant les valeurs de l'école
      -->
     <section class="valeurs img_prez img_prez_aplat">
-        <img class="hidden-xs hidden-sm back_img" src="<?php bloginfo('template_directory'); ?>/img/images/esprit_galien.jpg" alt="img valeur de l'ecole">
+        <img class="hidden-xs hidden-sm back_img" src="<?php bloginfo('template_directory'); ?>/img/images/esprit_galien_home.jpg" alt="img valeur de l'ecole">
         <div class="container">
             <div class="row">
                 <h1 class="x-large text_shadow"><?php the_field('titre_valeurs_de_lecole'); ?></h1>

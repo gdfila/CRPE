@@ -21,7 +21,7 @@
                     <h2 class="small">Infos pratiques</h2>
                     <ul>
                          <li><a href="mailto:recrutement@cours-galien.fr">Galien recrute</a></li>
-                        <li><a href="http://www.studius.fr">Studius</a></li>
+                        <li><a href="http://www.studius.fr">Studius, espace étudiant</a></li>
                         <li><a href="#">Mentions légales</a></li>
                     </ul>
                 </div><!-- /col-sm-3 -->

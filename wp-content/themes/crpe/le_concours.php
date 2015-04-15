@@ -20,7 +20,7 @@ Récuperation du header
     Affiche une image de présentation pour la page
      --> 
     <div class="hidden-xs hidden-sm img_prez img_prez_aplat img_prez_incurve">
-        <img class="back_img" src="<?php echo $post_thumbnail_url; ?>" alt="">
+        <img class="back_img_concours" src="<?php echo $post_thumbnail_url; ?>" alt="">
     </div><!-- /img_prez -->
 
     <!--
@@ -121,8 +121,7 @@ académies.</p>
             <h1 class="large">Les modalités d'épreuves</h1>
             <div class="row">
                 <h2>Épreuves d'admissibilité</h2>
-                <p>Les 2 épreuves d’admissibilité durent 4h chacune. Une note ≤ 10 points à l’une de ces épreuves est
-                    éliminatoire.</p><br>
+                <p class="medium">Les 2 épreuves d’admissibilité durent 4h chacune. Une note ≤ 10 points à l’une de ces épreuves est éliminatoire.</p><br>
                 <div class="col-xs-12 col-sm-6 ">
                     <div class="contenu_exam">
                         <div class="coeff_exam">
@@ -132,7 +131,7 @@ académies.</p>
                         <table>
                             <tr>
                                 <td><p><strong>Partie 1 :</strong> Réponse, construite et
-    rédigée à une question portant surun ou plusieurs textes littéraires ou documentaires</p></td>
+    rédigée à une question portant sur un ou plusieurs textes littéraires ou documentaires</p></td>
                                 <td><strong class="x-small">11 points</strong></td>
                             </tr>
                             <tr>
@@ -141,7 +140,7 @@ langue : grammaire, orthographe, lexique et système phonologique</p></td>
                                 <td><strong class="x-small">11 points</strong></td>
                             </tr>
                             <tr>
-                                <td><p><strong>Partie 3 :</strong>Analyse d'un dossier
+                                <td><p><strong>Partie 3 :</strong> Analyse d'un dossier
 composé d'un ou plusieurs supports d'enseignement du français</p></td>
                                 <td><p><strong class="x-small">13 points</strong></td>
                             </tr>
@@ -166,12 +165,12 @@ des programmes de l'école ou du collège, ou sur le socle commun</p></td>
                                 <td><strong class="x-small">13 points</strong></td>
                             </tr>
                             <tr>
-                                <td><p><strong>Partie 2 :</strong>Exercices indépendants et
+                                <td><p><strong>Partie 2 :</strong> Exercices indépendants et
 complémentaires : QCM, réponses construites, productions d’élèves</p></td>
                                 <td><strong class="x-small">13 points</strong></td>
                             </tr>
                             <tr>
-                                <td><p><strong>Partie 3 :</strong>Analyse d'un dossier
+                                <td><p><strong>Partie 3 :</strong> Analyse d'un dossier
 composé d'un ou plusieurs supports d'enseignement des mathématiques</p></td>
                                 <td><strong class="x-small">14 points</strong></td>
                             </tr>
@@ -182,15 +181,15 @@ de la production peut être pénalisante – jusqu’à -5 points</i></p></td>
                         </table>
                      </div><!-- /contenu_exam -->
                 </div><!-- /col-sm-6 -->
-            </div>
+            </div><br>
             <div class="row">
                 <h2>Épreuves d'admission</h2>
-                <p>Les épreuves d’admission se composent :<br>
+                <p class="medium">Les épreuves d’admission se composent :<br>
 - d’une mise en situation professionnelle basée sur la rédaction d’un dossier dont le
 thème est choisi librement par le candidat. Ce dossier à envoyer au jury quelques
 semaines avant la présentation orale.<br>
 - D’un entretien sur des dossiers proposés par le jury. Un temps de préparation de 3h est
-laissé au candidat.</p>
+laissé au candidat.</p><br>
                 <div class="col-xs-12 col-sm-6">
                     <div class="contenu_exam">
                         <div class="coeff_exam">
@@ -199,7 +198,7 @@ laissé au candidat.</p>
                         <h2 class="small">mise en situation professionnelle</h2>   
                         <p>Le candidat remet au jury un dossier de 10 pages,
 portant sur le sujet qu'il a choisi parmi lesdomaines suivants : sciences et technologie,
-histoire, géographie, histoires des arts, arts visuels,éducation musicale ou enseignements moral et civique</p>                     
+histoire, géographie, histoires des arts, arts visuels,éducation musicale ou enseignements moral et civique<br></p>                    
                         <table>
                             <tr>
                                 <td><p>Présentation du dossier - 20 min</p></td>
@@ -220,11 +219,11 @@ histoire, géographie, histoires des arts, arts visuels,éducation musicale ou e
                         <h2 class="small">Entretien à partir d'un dossier</h2>
                         <table>
                             <tr>
-                                <td><p><strong>Partie 1 :</strong>activité sportive, artistique :<br />- Exposé - 10 min<br />- Entretien avec le jury - 30 min</p></td>
+                                <td><p><strong>Partie 1 :</strong> activité sportive, artistique :<br /> - Exposé - 10 min<br />- Entretien avec le jury - 30 min</p></td>
                                 <td><strong class="x-small">40 points</strong></td>
                             </tr>
                             <tr>
-                                <td><p><strong>Partie 2 :</strong>situation professionnelle :<br />- Exposé - 15 min<br />- Entretien - 30 min<br /><i>L’entretien porte sur les acquis des élèves, les conditions d’exercice du métier et les valeurs de la République.</i></p></td>
+                                <td><p><strong>Partie 2 :</strong> situation professionnelle :<br /> - Exposé - 15 min<br />- Entretien - 30 min<br /><i><br>L’entretien porte sur les acquis des élèves, les conditions d’exercice du métier et les valeurs de la République.</i></p></td>
                                 <td><strong class="x-small">60 points</strong></td>
                             </tr>
                         </table>
