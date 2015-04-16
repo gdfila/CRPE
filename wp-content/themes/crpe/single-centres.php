@@ -30,7 +30,7 @@ Récuperation du header
      --> 
     <div class="img_prez img_prez_aplat img_prez_incurve">
         <div class="container">
-            <img class="hidden-xs hidden-sm back_img" src="<?php echo $post_thumbnail_url; ?>" alt="">
+            <img class="hidden-xs hidden-sm back_img_centre" src="<?php echo $post_thumbnail_url; ?>" alt="">
             <h1 class="x-large text_shadow"><?php the_field('nom_du_centre');?></h1>
             <h2 class="medium text_shadow">Cours Galien</h2>
             <?php   if($dataJPO==true): ?>

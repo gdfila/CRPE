@@ -28,7 +28,7 @@ Récuperation du header
     Section présentant les valeurs de l'école
      -->
     <section class="valeurs img_prez img_prez_aplat">
-        <img class="hidden-xs hidden-sm back_img" src="<?php bloginfo('template_directory'); ?>/img/images/esprit_galien.jpg" alt="img valeur de l'ecole">
+        <img class="hidden-xs hidden-sm back_img" src="<?php bloginfo('template_directory'); ?>/img/images/esprit_galien_home.jpg" alt="img valeur de l'ecole">
         <div class="container">
             <div class="row">
                 <h1 class="x-large text_shadow"><?php the_field('titre_valeurs_de_lecole'); ?></h1>
@@ -63,74 +63,115 @@ Récuperation du header
     <!--
     Section présentant les témoignages sous slider
      -->
-    <section class="temoignages">
+
+<section>
+<div class="container" id="wrapper">
+    <h1 class="text-center"><?php the_field('titre_'); ?></h1>
+    <!-- Slideshow 4 -->
+    <div class="callbacks_container row">
+      <ul class="rslides" id="slider4">
+        <li>
+        <div class="col-sm-6 col-sm-offset-1">
+          <img src="<?php the_field('image_1er_etudiant'); ?>" alt="">
+        </div>
+        <div class="col-sm-5 temoignage_back">
+            <p class="small text_slider"><strong><?php the_field('nom_1er_etudiant'); ?></strong></p>
+            <p class="text_slider"><?php the_field('niveau_etude_1er_etudiant'); ?><br /><?php the_field('paragraphe_1er_etudiant'); ?></p>
+        </div>
+        </li>
+        <li>
+        <div class="col-sm-6 col-sm-offset-1">
+          <img src="<?php the_field('image_2eme_etudiant'); ?>" alt="">
+        </div>
+            <div class="col-sm-5 temoignage_back">
+            <p class="small text_slider"><strong><?php the_field('nom_2eme_etudiant'); ?></strong></p>
+            <p class="text_slider"><?php the_field('niveau_etude_2eme_etudiant'); ?><br /><?php the_field('paragraphe_2eme_etudiant'); ?></p>
+        </div>
+        </li>
+        <li>
+        <div class="col-sm-6 col-sm-offset-1">
+          <img src="<?php the_field('image_3eme_etudiant'); ?>" alt="">
+        </div>
+            <div class="col-sm-5 temoignage_back">
+            <p class="small text_slider"><strong><?php the_field('nom_3eme_etudiant'); ?></strong></p>
+            <p class="text_slider"><?php the_field('niveau_etude_3eme_etudiant'); ?><br /><?php the_field('paragraphe_3eme_etudiant'); ?></p>
+        </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!--  Temoignages video -->
+
+<!--     <section class="temoignages">
         <div class="container">
             <h1 class="large"><?php the_field('titre_'); ?></h1>
             <div class="row">
-                <div id="carousel-example-generic" class="temoignage_slider slide" data-ride="carousel">
+                <div id="carousel-example-generic" class="temoignage_slider slide" data-ride="carousel"> -->
                     <!-- Wrapper for slides -->
-                    <div class="carousel-inner temoignage_slider_inner">
+                    <!-- <div class="carousel-inner temoignage_slider_inner">
                         <div class="item active">
                             <div class="col-sm-6 col-sm-offset-1">
                                 <div class="embed-responsive embed-responsive-16by9 col-sm-9">
                                     <iframe class="embed-responsive-item" src="<?php the_field('youtube_1er_etudiant'); ?>"></iframe>
                                 </div>
-                            </div><!-- /col-sm-6 -->
-                            <div class="col-sm-5 temoignage_back">
+                            </div> --><!-- /col-sm-6 -->
+                            <!-- <div class="col-sm-5 temoignage_back">
                               <div class="temoignage_slider_caption">
                                   <p class="small"><strong><?php the_field('nom_1er_etudiant'); ?></strong></p>
                                   <p><?php the_field('niveau_etude_1er_etudiant'); ?><br /><?php the_field('paragraphe_1er_etudiant'); ?></p>
-                              </div><!-- /temoignage_slider_caption -->
-                            </div><!-- /col-sm-5 -->
-                        </div>
+                              </div> --><!-- /temoignage_slider_caption -->
+                            <!-- </div> --><!-- /col-sm-5 -->
+                        <!-- </div>
                         <div class="item">
                             <div class="col-sm-6 col-sm-offset-1">
                                 <div class="embed-responsive embed-responsive-16by9 col-sm-9">
                                     <iframe class="embed-responsive-item" src="<?php the_field('youtube_2eme_etudiant'); ?>"></iframe>
                                 </div>
-                            </div><!-- /col-sm-6 -->
-                            <div class="col-sm-5 temoignage_back">
+                            </div> --><!-- /col-sm-6 -->
+                            <!-- <div class="col-sm-5 temoignage_back">
                                 <div class="temoignage_slider_caption">
                                     <p class="small"><strong><?php the_field('nom_2eme_etudiant'); ?></strong></p>
                                     <p><?php the_field('niveau_etude_2eme_etudiant'); ?><br /><?php the_field('paragraphe_2eme_etudiant'); ?></p>
-                                </div><!-- /temoignage_slider_caption -->
-                            </div><!-- /col-sm-5 -->
-                        </div>
+                                </div> --><!-- /temoignage_slider_caption -->
+                            <!-- </div> --><!-- /col-sm-5 -->
+                        <!-- </div>
                         <div class="item">
                             <div class="col-sm-6 col-sm-offset-1">
                                 <div class="embed-responsive embed-responsive-16by9 col-sm-9">
                                     <iframe class="embed-responsive-item" src="<?php the_field('youtube_3eme_etudiant'); ?>"></iframe>
                                 </div>
-                            </div><!-- /col-sm-6 -->
-                            <div class="col-sm-5 temoignage_back">
+                            </div> --><!-- /col-sm-6 -->
+                            <!-- <div class="col-sm-5 temoignage_back">
                                 <div class="temoignage_slider_caption">
                                     <p class="small"><strong><?php the_field('nom_3eme_etudiant'); ?></strong></p>
                                     <p><?php the_field('niveau_etude_3eme_etudiant'); ?><br /><?php the_field('paragraphe_3eme_etudiant'); ?></p>
-                                </div><!-- /temoignage_slider_caption -->
-                            </div><!-- /col-sm-5 -->
-                        </div>
+                                </div> --><!-- /temoignage_slider_caption -->
+                            <!-- </div> --><!-- /col-sm-5 -->
+                        <!-- </div>
                     </div>
-                    <div class="controllers col-sm-6 col-xs-12">
+                    <div class="controllers col-sm-6 col-xs-12"> -->
                         <!-- Controls -->
-                        <a class="left temoignage_slider-control" href="#carousel-example-generic" data-slide="prev">
+                       <!--  <a class="left temoignage_slider-control" href="#carousel-example-generic" data-slide="prev">
                             <span class="glyphicon glyphicon-chevron-left"></span>
                         </a>
                         <a class="right temoignage_slider-control" href="#carousel-example-generic" data-slide="next">
                             <span class="glyphicon glyphicon-chevron-right"></span>
                         </a>
-                    </div><!-- /col-sm-6 -->
-                    <div class="controllers col-sm-6 col-xs-12">
+                    </div> --><!-- /col-sm-6 -->
+                    <!-- <div class="controllers col-sm-6 col-xs-12"> -->
                         <!-- Indicators -->
-                        <ol class="temoignage_slider-indicators">
+                        <!-- <ol class="temoignage_slider-indicators">
                             <li data-target="#temoignage_slider-example-generic" data-slide-to="0" class="active"></li>
                             <li data-target="#temoignage_slider-example-generic" data-slide-to="1"></li>
                             <li data-target="#temoignage_slider-example-generic" data-slide-to="2"></li>
                         </ol>
-                    </div><!-- /temoignage_slider_caption -->
-                </div><!-- /temoignage_slider -->
-            </div><!-- /row -->
-        </div><!-- /container -->
-    </section><!-- /temoignages -->
+                    </div> --><!-- /temoignage_slider_caption -->
+               <!--  </div> --><!-- /temoignage_slider -->
+            <!-- </div> --><!-- /row -->
+        <!-- </div> --><!-- /container -->
+   <!--  </section> --><!-- /temoignages -->
 
     <!--
     Section présentant les chiffres de l'école
@@ -168,19 +209,19 @@ Récuperation du header
     <section class="formules">
         <div class="container">
             <div class="row">
-                <h1 class="large"><?php the_field('titre_formules'); ?>Decouvrez nos formules</h1>
+                <h1 class="large"><?php the_field('titre_formules'); ?></h1>
                 <div class="col-sm-6 formules_container">
                     <div>
-                        <h2 class="medium"><?php the_field('titre_1ere_formule'); ?>Pack <strong>entrainement</strong></h2>
+                        <h2 class="medium"><?php the_field('titre_1ere_formule'); ?></h2>
                         <img src="<?php bloginfo('template_directory'); ?>/img/images/049_MG_8616.jpg" alt="">
-                        <p class="presentation-pack"><?php the_field('1ere_formule_1er_paragraphe'); ?>Destiné à ceux qui préparent seul le concours mais qui souhaite s'entraîner en conditions réelles aux épreuves d'admissibilité.</p>
-                        <p class="tarif"><?php the_field('1ere_formule_prix'); ?>32h / 400€</p>
+                        <p class="presentation-pack"><?php the_field('1ere_formule_description'); ?></p>
+                        <p class="tarif"><?php the_field('1ere_formule_prix'); ?></p>
                         <div class="info">
                             <p class="button active"><em>En savoir <span>+</span></em></p>
                             <div class="info_sup">
-                                <p><?php the_field('1ere_formule_savoir_+'); ?>- 4 concours blancs complets en conditions réelles (32h)</p>
-                                <p>- Copies corrigées et annotées de façon personnalisée</p>
-                                <p>- Parrainage téléphonique et électronique par des professeurs spécialistes des matières</p>
+                                <p><?php the_field('1ere_formule_savoir_+_1er_paragraphe'); ?></p>
+                                <p><?php the_field('1ere_formule_savoir_+_2eme_paragraphe'); ?></p>
+                                <p><?php the_field('1ere_formule_savoir_+_3eme_paragraphe'); ?></p>
                             </div><!-- /info_sup -->
                         </div><!-- /info -->
                       <a href="/galien_crpe/contact/brochure" class="btn btn-primary">Inscrivez-vous</a>
@@ -188,17 +229,17 @@ Récuperation du header
                 </div><!-- /col-sm-6 -->
                 <div class="col-sm-6 formules_container">
                     <div>
-                        <h2 class="medium"><?php the_field('titre_2eme_formule'); ?>Pack <strong>complet</strong></h2>
+                        <h2 class="medium"><?php the_field('titre_2eme_formule'); ?></h2>
                         <img src="<?php bloginfo('template_directory'); ?>/img/images/DSC_0191-2.jpg" alt="">
-                        <p class="presentation-pack"><?php the_field('1ere_formule_1er_paragraphe'); ?>Recommandé pour ceux qui veulent une préparation complète aux épreuves d'admissibilité et d'admission.</p>
-                        <p class="tarif"><?php the_field('1ere_formule_prix'); ?>272h / 1950€</p>
+                        <p class="presentation-pack"><?php the_field('2eme_formule_description'); ?></p>
+                        <p class="tarif"><?php the_field('2eme_formule_prix'); ?></p>
                         <div class="info">
                             <p class="button active"><em>En savoir <span>+</span></em></p>
                             <div class="info_sup">
-                                <p><?php the_field('2eme_formule_savoir_+'); ?>- Cours le samedi en petits effectifs sur l'ensemble des matières (240h)</p>
-                                <p>- 4 concours blancs complets en conditions réelles (32h)</p>
-                                <p>- Copies corrigées et annotées de façon personnalisée + corrections détaillées faites en cours</p>
-                                <p>- Module de remise à niveau en français et en mathématiques transmis pendant l'été</p>
+                                <p><?php the_field('2eme_formule_savoir_+_1er_paragraphe'); ?></p>
+                                <p><?php the_field('2eme_formule_savoir_+_2eme_paragraphe'); ?></p>
+                                <p><?php the_field('2eme_formule_savoir_+_3eme_paragraphe'); ?></p>
+                                <p><?php the_field('2eme_formule_savoir_+_4eme_paragraphe'); ?></p>
                             </div><!-- /info_sup -->
                         </div><!-- /info -->
                         <!--<button class="btn btn-primary" data-toggle="modal" data-target="#form">Inscrivez-vous</button>-->

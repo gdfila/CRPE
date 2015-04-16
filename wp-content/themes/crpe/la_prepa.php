@@ -20,7 +20,7 @@ Récuperation du header
     Affiche une image de présentation pour la page
      --> 
     <div class="hidden-xs hidden-sm img_prez img_prez_aplat img_prez_incurve">
-        <img class="back_img" src="<?php echo $post_thumbnail_url; ?>" alt="">
+        <img class="back_img_prepa" src="<?php echo $post_thumbnail_url; ?>" alt="">
     </div><!-- /img_prez -->
 
     <!--

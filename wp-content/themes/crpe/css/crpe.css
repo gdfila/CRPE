@@ -32,7 +32,7 @@ html {
 body {
     position: relative;
     font-family: 'robotoregular', helvetica, sans-serif; color: #777; word-wrap: break-word;}
-body, a { 
+body, a {
     font-size: 0.95em;}
 .logo {
     max-width: 120px;}
@@ -145,6 +145,14 @@ img {
     width: 100%;}
 .img_prez .back_img {
     position: absolute; top: -50%; left: 0; z-index: -1;}
+.back_img_concours {
+    position: absolute; width: 100%; top: -46%; left: 0; z-index: -1;}
+.back_img_prepa {
+    position: absolute; top: -40%; left: 0; z-index: -1;}
+.back_img_centre {
+    position: absolute; top: -37%; left: 0; z-index: -1;}
+.back_img_brochure {
+    position: absolute; top: 0%; left: 0; z-index: -1;}
 .carousel:before, .carousel:after,
 .img_prez:before,
 .img_prez:after {
@@ -163,7 +171,7 @@ img {
     z-index: 3;}
 .carousel-inner>.item>img,
 .carousel-inner>.item>a>img {
-    position: absolute; top: 0; left: 0; z-index: -1;}
+    position: absolute; top: -40px; left: 0; z-index: -1;}
 
 /***********************************************
 ************ plugin jpo slider *****************
@@ -236,7 +244,9 @@ img {
 /***********************************************
 ************* Slider temoignage ****************
 ***********************************************/
-
+.temoignage_back {
+    padding-right: 2em;
+}
 .temoignages {
      padding: 80px 50px 100px;}
 .temoignage_slider {
@@ -292,7 +302,7 @@ img {
     max-width: 100%; margin-bottom: 25px;}
 .formules .info_sup {
     display: none;}
-.tarif{    
+.tarif{
     font-size: 1.5em; }
 
 /***********************************************
@@ -631,7 +641,7 @@ textarea {
     .cercle-3 {
         position: relative;
         width: 185px; height: 185px; margin: 10px auto;
-        background-color: rgba(255,255,255,0.5); border-radius: 50%;
+        background-color: rgba(255,255,255,0.7); border-radius: 50%;
         text-align: center; line-height: 185px;
         overflow: hidden;}
     .cercle-3 strong {
@@ -691,9 +701,9 @@ textarea {
         height: inherit;}
 
     /* Action */
-    #action li:nth-child(1), 
-    #action li:nth-child(2), 
-    #action li:nth-child(3), 
+    #action li:nth-child(1),
+    #action li:nth-child(2),
+    #action li:nth-child(3),
     #action li:nth-child(4) {
         background-color: rgba(23,64,92,0.5);}
 
@@ -769,7 +779,7 @@ textarea {
 
 @media (max-width: 560px) {
 
-    body, a { 
+    body, a {
         font-size: 0.85em;}
     .x-large {
         font-size: 2em;}
