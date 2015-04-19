@@ -1,0 +1,797 @@
+/***********************************************
+********* Css commun à toute la page ***********
+***********************************************/
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/Roboto-Regular-webfont.eot');
+    src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'eraserregular';
+    src: url('../fonts/EraserRegular-webfont.eot');
+    src: url('../fonts/EraserRegular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/EraserRegular-webfont.woff') format('woff'),
+         url('../fonts/EraserRegular-webfont.ttf') format('truetype'),
+         url('../fonts/EraserRegular-webfont.svg#eraserregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*, *:before, *:after {
+    margin: 0; padding: 0; list-style: none;}
+html {
+    font-size: 100%;}
+body {
+    position: relative;
+    font-family: 'robotoregular', helvetica, sans-serif; color: #777; word-wrap: break-word;}
+body, a {
+    font-size: 0.95em;}
+.logo {
+    max-width: 120px;}
+section {
+    padding: 50px 50px 0;
+    text-align: center;}
+h1, h2, h3, h4, h5, h6 {
+     color: #333; text-transform: uppercase;}
+h1 {
+    margin-bottom: 50px;}
+h2, h3, h4 {
+    margin-bottom: 25px;}
+.x-large {
+    font-size: 3em;}
+.large {
+    font-size: 2.3em;}
+.medium {
+    font-size: 1.6em;}
+.small {
+    font-size: 1.2em;}
+.x-small {
+    font-size: 1.1em;}
+a:hover {
+    text-decoration: none;}
+.button {
+    cursor: pointer;}
+img {
+    max-width: 100%;}
+
+/***********************************************
+*********** Menu navigation ********************
+***********************************************/
+
+    /* Barre de navigation à l'ouverture de la page */
+
+    .nav_header {
+        position: relative; z-index: 9998;}
+    .nav_header .top_nav {
+        background-color: #17405c;
+        color: #fff; text-transform: uppercase;}
+    .nav_header .top_nav div {
+        padding: 25px 0 25px 30px;}
+    .nav_header .top_nav h1 {
+        margin: 0; padding-left: 20px;
+        background: url('../img/picto/arrow.png') no-repeat; background-position-y: 3px;
+        font-size: 0.95em; color: #fff; letter-spacing: 0.04em;}
+    .nav_header .top_nav h1, .nav_header .content_nav nav {
+        margin-left: 200px;}
+    .nav_header .content_nav {
+        background-color: #f16150;}
+    .nav_header .content_nav .logo_nav {
+        position: absolute; top: 0; z-index: 1;
+        width: 140px; height: 115%; padding-top: 70px;
+        background-color: #3497db;
+        /* CSS3 */
+        -moz-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.1); -webkit-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.1); -o-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.1); box-shadow: 0 0px 10px 1px rgba(0,0,0,0.1);}
+    .nav_header .content_nav .logo_nav .logo {
+        position: absolute; left: 10px; bottom: 15px;}
+    .nav_header nav > ul li a {
+        display: block; padding: 15px;
+        color: #fff; text-transform: uppercase;
+        cursor: pointer;}
+    .nav_header nav ul li,
+    .nav_header nav ul li ul li {
+        display: inline-block;}
+    .nav_header nav li:hover > a {
+        background-color: #3497db;}
+    .nav_header nav li:hover > .sub-menu {
+        display: none;}
+    .nav_header nav .sub-menu {
+        position: absolute; left: 0; z-index: 1;
+        display: none; width: 100%;
+        background-color: #3497db;
+        text-align: center;
+        /* CSS3 */
+        -moz-box-shadow: 0px -1px 1px 0px rgba(0,0,0, 0.1); -webkit-box-shadow: 0px -1px 1px 0px rgba(0,0,0, 0.1); -o-box-shadow: 0px -1px 1px 0px rgba(0,0,0, 0.1); box-shadow: 0px -1px 1px 0px rgba(0,0,0, 0.1);}
+    .nav_header .content_nav .sub-menu li a {
+        padding: 8px 15px;
+        text-transform: none;}
+    .nav_header .content_nav .sub-menu li a:hover {
+        background-color: rgba(22,64,91, 0.3);}
+
+    /* Barre de navigation au scroll */
+
+    .nav_header .nav_fixed {
+        position: fixed; top: 0;
+        width: 100%;}
+    .nav_header .nav_fixed .logo_nav {
+        position: absolute; top: 5px; z-index: 1;
+        height: inherit; padding-top: inherit;
+        background-color: inherit; -webkit-box-shadow: none; -moz-box-shadow: none; -ms-box-shadow: none; box-shadow: none;}
+    .nav_header .nav_fixed .logo_nav .logo {
+        position: initial;
+        max-width: 100px;}
+
+/***********************************************
+*********** carousel & img-prez ****************
+***********************************************/
+
+.img_prez {
+    position: relative; overflow: hidden;}
+.img_prez h1 {
+    color: #fff;}
+.carousel-inner,
+.carousel-inner .item,
+.img_prez {
+    height: 515px;}
+.img_prez,
+.img_prez .back_img {
+    width: 100%;}
+.img_prez .back_img {
+    position: absolute; top: -50%; left: 0; z-index: -1;}
+.back_img_concours {
+    position: absolute; width: 100%; top: -46%; left: 0; z-index: -1;}
+.back_img_prepa {
+    position: absolute; top: -40%; left: 0; z-index: -1;}
+.back_img_centre {
+    position: absolute; top: -37%; left: 0; z-index: -1;}
+.back_img_brochure {
+    position: absolute; top: 0%; left: 0; z-index: -1;}
+.carousel:before, .carousel:after,
+.img_prez:before,
+.img_prez:after {
+    position: absolute; content: "";
+    width: 100%;}
+.carousel:before,
+.img_prez_aplat:before {
+    top: 0; left: 0; z-index: 1;
+    height: 100%;
+    background-color: rgba(22,64,91, 0.01);}
+.carousel:after, .img_prez_incurve:after {
+    bottom: -16px; left: 0; z-index: 3;
+    height: 100px;
+    background: url('../img/bottom_incurve.png') no-repeat; background-size: 100% 100%;}
+.carousel-inner {
+    z-index: 3;}
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+    position: absolute; top: -40px; left: 0; z-index: -1;}
+
+/***********************************************
+************ plugin jpo slider *****************
+***********************************************/
+
+.carousel-caption {
+    position: absolute; left: 15%; bottom: 70px; z-index: 1500;
+    width: 400px; padding: 15px 15px 15px 50px;
+    background-color: rgba(22,64,91,0.7);
+    font-size: 15px; color: #fff; text-align: left; line-height: 20px;}
+.carousel-caption:after {
+    position: absolute; content: ""; top: 15px; left: 15px;
+    width: 24px; height: 24px;
+    background: url('../img/picto/arrow_medium.png') no-repeat; background-size: 100% 100%;}
+.carousel-caption h4 {
+    margin-bottom: 5px;
+    font-size: 1em; color: #fff;}
+.carousel-caption p {
+    font-size: 0.85em;}
+
+/***********************************************
+**************** plugin action *****************
+***********************************************/
+
+#action {
+    position: fixed; top: 200px; right: 0; z-index: 9997;}
+#action li {
+    display: block; width: 70px; height: 70px;
+    line-height: 125px; font-size: 0.65em; color: #fff; text-align: center;
+    cursor: pointer;}
+#action li:nth-child(1) {
+    background: #17405c url('../img/picto/picto_phone.png') no-repeat center 10px;}
+#action li:nth-child(2) {
+    background: #17405c url('../img/picto/picto_contact.png') no-repeat center 20px;}
+#action li:nth-child(3) {
+    background: #17405c url('../img/picto/picto_documentation.png') no-repeat center 17px;}
+#action li:nth-child(4) {
+    background: #17405c url('../img/picto/picto_espace_etudiant.png') no-repeat center 13px;}
+#action li:nth-child(1):hover, #action li:nth-child(2):hover, #action li:nth-child(3):hover, #action li:nth-child(4):hover {
+    background-color: #f16150;}
+#action li a {
+    color: #fff;}
+
+/***********************************************
+************** Section Accroche ****************
+***********************************************/
+
+.accroche h2 {
+    color: #777; text-transform: inherit;}
+
+/***********************************************
+************ Section Valeurs *******************
+***********************************************/
+
+.valeurs .cercle-3 {
+    padding: 48px 10px 10px;
+    background-repeat: no-repeat; background-position: 50% 8px;
+    line-height: normal;}
+.valeurs .cercle-3 h2 {
+    margin-bottom: 5px;}
+.valeurs div div:nth-child(2) .cercle-3 {
+    background-image: url('../img/picto/partage.png');}
+.valeurs div div:nth-child(3) .cercle-3 {
+    background-image: url('../img/picto/progression.png');}
+.valeurs div div:nth-child(4) .cercle-3 {
+    background-image: url('../img/picto/cohesion.png');}
+.valeurs div div:nth-child(5) .cercle-3 {
+    background-image: url('../img/picto/reussite.png');}
+
+/***********************************************
+************* Slider temoignage ****************
+***********************************************/
+.temoignage_back {
+    padding-right: 2em;
+}
+.temoignages {
+     padding: 80px 50px 100px;}
+.temoignage_slider {
+    position: relative;
+    max-height: 246px;
+    overflow-y: hidden;}
+.temoignage_slider_inner,
+.temoignage_slider_caption {
+    width: 80%; margin: auto;}
+.temoignage_slider_inner .temoignage_back {
+    height: 246px;
+    background-color: #fff;}
+.temoignage_slider_caption {
+    position: relative;
+    padding-top: 30px;
+    text-align: justify;}
+.temoignage_slider-caption .h2_small {
+    margin-bottom: 0;}
+.embed-responsive {
+    width: 100%;}
+.controllers .right {
+    float: right;}
+.controllers {
+    position: absolute; top: 45%;
+    width: 100%;}
+.controllers .left {
+    float: left;}
+.glyphicon {
+    font-size: 3em; color: #777;}
+
+/***********************************************
+************* Section  Formules ****************
+***********************************************/
+.formules{
+   color:black;
+   font-weight: bold;}
+.formules .formules_container {
+    padding: 0;}
+.formules .formules_container > div {
+    width: 340px; min-height: 540px; margin: auto; padding-bottom: 20px;
+    border: 2px solid #f0f0f0;
+    text-align: center;
+    /* CSS3 */
+    -moz-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); -webkit-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); -o-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3);}
+.formules h2 {
+    margin: 0; padding: 20px;
+    background-color: #f0f0f0;}
+.presentation-pack{
+    color: #f16150;}
+.formules p {
+    padding: 15px;}
+.formules img {
+    max-width: 100%; margin-bottom: 25px;}
+.formules .info_sup {
+    display: none;}
+.tarif{
+    font-size: 1.5em; }
+
+/***********************************************
+******** Section Condition examen **************
+***********************************************/
+
+.contenu_exam {
+    position: relative;
+    width: 80%; margin: 50px auto;
+    border: 1px solid #f16150;
+    /* CSS3 */
+    -moz-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.1); -webkit-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.1); -o-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.1); box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.1);
+    text-align: center;}
+.contenu_exam h2 {
+    margin: 0; padding: 40px 20px;
+    background-color: #f16150;
+    color: #fff;}
+.contenu_exam table {
+    width: 100%;}
+.contenu_exam > p {
+    margin: 0;}
+.contenu_exam tr,
+.contenu_exam > p {
+    border-bottom: 1px solid #f16150;}
+.contenu_exam tr:last-child {
+    border-bottom: none;}
+.contenu_exam td,
+.contenu_exam > p {
+    padding: 10px;
+    text-align: left;}
+.contenu_exam td:nth-child(1) {
+    width: 70%;}
+.contenu_exam td:nth-child(2) {
+    width: 30%;}
+.coeff_exam {
+    position: absolute; top: -50px; left: -40px;
+    padding: 20px 25px;
+    background-color: #303030; border: 8px solid #C8AD7F; border-radius: 20px;
+    /* CSS3 */
+    -moz-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); -webkit-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); -o-box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3); box-shadow: 1px 0px 10px -1px rgba(0,0,0, 0.3);
+    font-family: 'eraserregular', 'robotoregular', helvetica, sans-serif; font-size: 0.80em; color: #fff;}
+
+/***********************************************
+****** Section Reperes Savoir faire ************
+***********************************************/
+
+.prez_com h2 {
+    margin: 10px 0;}
+.prez_com .prez_com_container {
+    padding: 0 20px 20px;}
+.prez_com .prez_com_container p {
+    height: 105px; margin: 0;
+    text-align: justify;
+    overflow: hidden;}
+
+/***********************************************
+************* Section pédagogie **************
+***********************************************/
+
+.outil_pedagogique h1 span {
+    font-size: 4em;}
+.outil_pedagogique .outil_pedagogique_container {
+    padding: 0 20px;}
+.outil_pedagogique .text_normal {
+    text-transform: initial;}
+.outil_pedagogique .outil_pedagogique_container p {
+    text-align: justify;}
+.outil_pedagogique a {
+    width: 100%;}
+.equipe_temoignage {
+    margin-top: 50px;
+    background-color: #fff;
+    text-align: left;}
+.equipe_temoignage .equipe_temoignage_img {
+    padding-left: 0;}
+.equipe_temoignage img {
+    max-width: 100%;}
+.equipe_temoignage .equipe_temoignage_title {
+    margin: 5px 0;
+    font-size: 0.80em;}
+.equipe_temoignage .equipe_temoignage_title strong {
+    font-size: 1.2em;}
+.equipe_temoignage blockquote {
+  padding-left: 48px;
+  background: url('../img/picto/blockquote.png') no-repeat;}
+
+/***********************************************
+********* Centre image presentation ************
+***********************************************/
+
+#container_centre .img_prez {
+    text-align: center;}
+#container_centre .img_prez h2 {
+    color: #fff;}
+#container_centre .img_prez h1 {
+    display: inline-block; margin: 35px 0 0; padding-bottom: 10px;
+    font-size: 4em;
+    border-bottom: 1px solid #fff;}
+#container_centre .img_prez h2 {
+    margin: 10px 0;}
+
+/***********************************************
+******************* Mini jpo *******************
+***********************************************/
+
+.min_jpo_container {
+    position: relative;
+    width: 350px; margin: auto;}
+.min_jpo {
+    position: absolute; z-index: 2000;
+    width: 100%; padding: 10px 20px 20px;
+    background-color: #fff;
+    /* CSS3 */
+    -moz-box-shadow: 1px 1px 10px 0px rgba(0,0,0, 0.3); -webkit-box-shadow: 1px 1px 10px 0px rgba(0,0,0, 0.3); -o-box-shadow: 1px 1px 10px 0px rgba(0,0,0, 0.3); box-shadow: 1px 1px 10px 0px rgba(0,0,0, 0.3);}
+.min_jpo .min_jpo_date,
+.min_jpo .min_jpo_contact {
+    height: 50px; margin-bottom: 5px; padding: 0;
+    background-color: rgb(241,97,80); border-right: 1px solid #fff;
+    color: #fff;}
+.min_jpo .min_jpo_date {
+    padding-top: 5px;}
+.min_jpo .min_jpo_date strong {
+    font-size: 2em;}
+.min_jpo .min_jpo_date span {
+    text-transform: uppercase;}
+.min_jpo .min_jpo_contact a {
+    display: block; width: 100%; height: 100%;
+    background: url('../img/picto/picto_contact.png') no-repeat center;
+    color: #fff; text-indent: -9999px;}
+.min_jpo h3 {
+    margin: 5px;
+    font-size: 1em; color: #f16150;}
+.min_jpo p {
+    height: 65px;
+    font-size: 0.8em;
+    overflow: hidden;}
+.min_jpo .btn {
+    width: 100%;}
+.min_jpo .btn-primary {
+    background-color: #17405c;}
+
+/***********************************************
+***************** Google map *******************
+***********************************************/
+
+.acf-map {
+    width: 100%; height: 300px; margin-top: 30px;}
+.acf-map div[title="Cliquer pour effectuer un zoom"], .acf-map div[title="Faire glisser le curseur pour zoomer"] {
+    display: none;}
+
+/***********************************************
+************** Section Descriptif **************
+***********************************************/
+
+.descriptif,
+.jpo .descriptif_detail {
+    text-align: left;}
+.descriptif h1,
+.descriptif h2,
+.descriptif h3,
+.descriptif ul {
+    margin-bottom: 10px;}
+.descriptif ul li {
+    margin-left: 20px;
+    list-style-type: square;}
+.descriptif .encart_contact {
+    padding: 20px;
+    background-color: #17405c;
+    color: #fff;}
+.descriptif .encart_contact h2,
+.descriptif .encart_contact h3 {
+    color: #fff;}
+.descriptif .encart_contact h3 {
+    margin: 10px 0; padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255, 0.8)}
+.descriptif .encart_contact p {
+    color: rgba(255,255,255, 0.8);}
+.descriptif .encart_contact a {
+    width: 100%;}
+
+/***********************************************
+**************** Section Jpo *******************
+***********************************************/
+
+.jpo .big_jpo {
+    padding: 30px;
+    background-color: rgb(241,97,80);
+    color: #fff; text-align: left;}
+.jpo .big_jpo h3,
+.jpo .big_jpo h4 {
+    color: #fff;}
+.jpo .big_jpo .btn {
+    background-color: #17405c;}
+.jpo .big_jpo:hover {
+    background-color: #fff;
+    color: #777;}
+.jpo .big_jpo:hover h3,
+.jpo .big_jpo:hover h4 {
+    color: #333;}
+.jpo .big_jpo:hover .btn {
+    background-color: #f16150;}
+.jpo .big_jpo_date {
+    text-align: right;}
+.jpo .big_jpo_date  strong {
+    font-size: 5em;}
+.jpo .big_jpo_date  span {
+    margin-right: 15px;
+    font-size: 1.5em; text-transform: uppercase;}
+
+/***********************************************
+********* Section Contact (formulaire) *********
+***********************************************/
+
+.contact {
+    text-align: left;}
+#adressEnvoi,
+#horaire {
+    display:none;}
+#horaire label,
+#adressEnvoi label {
+    margin-bottom: 5px; padding-left: 0;
+    font-weight: 700;}
+.contact h1 {
+    padding-left: 44px;
+    background: url('../img/picto/arrow_grey.png') no-repeat center left;}
+textarea {
+    max-width: 100%;}
+
+    /*********** Rappel **********/
+    .picto_title_phone {
+        padding-top: 120px;
+        background: url('../img/picto/picto_phone_grey.png') no-repeat top center;
+        text-transform: inherit;}
+
+    /*********** Brochure **********/
+    .picto_title_doc {
+        padding-top: 100px;
+        background: url('../img/picto/picto_documentation_grey.png') no-repeat top center;
+        text-transform: inherit;}
+
+    /*********** Contact **********/
+    .picto_title_mail {
+        padding-top: 100px;
+        background: url('../img/picto/picto_contact_grey.png') no-repeat top center;
+        text-transform: inherit;}
+
+/***********************************************
+***************** Scroll top *******************
+***********************************************/
+
+#scroll_up {
+    position: fixed; bottom: 20px; right: 20px;
+    display: none; width: 38px; height: 38px;
+    background: #16405b url('../img/picto/arrow_top.png') no-repeat center; background-size: 24px; border-radius: 3px;
+    text-indent: -9999px;
+    opacity: 0.8;
+    -webkit-transition: background 200ms linear;
+    -moz-transition: background 200ms linear;
+    transition: background 200ms linear;}
+
+/***********************************************
+******************** Footer ********************
+***********************************************/
+
+    /* Fil d'ariane */
+    #ariane {
+        width: 100%; margin-top: 50px; padding: 10px 0;
+        background-color: #f16150;}
+    #ariane a {
+        color: #fff; text-transform: uppercase;}
+    #ariane a:hover {
+        text-decoration: underline;}
+    .breadcrumbs {
+        display:inline-block; color:white;
+        text-transform: uppercase; font-size: 0.8em;
+    }
+
+    /* Footer logo+lien */
+    footer {
+        width: 100%; padding: 50px 0;
+        background-color: #17405c;}
+    footer, footer h2, footer a, footer a:hover {
+        color: #fff;}
+    footer a {
+        font-size: 0.8em;}
+    footer a:hover {
+        text-decoration: underline;}
+    footer div div div:nth-child(2),
+    footer div div div:nth-child(3),
+    footer div div div:nth-child(4) {
+        min-height: 120px;
+        border-left: 1px solid #fff;}
+    footer div div div:nth-child(4) ul li {
+        display: inline-block; width: 30px; height: 30px; margin-right: 5px;}
+    footer div div div:nth-child(4) ul li a {
+        display: block; width: 100%; height: 100%;
+        text-indent: -9999px;}
+    footer div div div:nth-child(4) ul li a:hover {
+        opacity: 0.7;}
+    footer div div div:nth-child(4) ul li:nth-child(1) a {
+        background: url('../img/picto/picto_fb.png') no-repeat;}
+    footer div div div:nth-child(4) ul li:nth-child(2) a {
+        background: url('../img/picto/picto_twitter.png') no-repeat;}
+    footer div div div:nth-child(4) ul li:nth-child(3) a {
+        background: url('../img/picto/picto_google+.png') no-repeat;}
+    footer div div div:nth-child(4) ul li:nth-child(4) a {
+        background: url('../img/picto/picto_linkedin.png') no-repeat;}
+    footer div div div:nth-child(4) ul li:nth-child(5) a {
+        background: url('../img/picto/picto_youtube.png') no-repeat;}
+
+/***********************************************
+******************** Etat **********************
+***********************************************/
+
+    /* Ombre porté sur texte */
+    .text_shadow {
+        text-shadow: 0 1px 15px rgba(0,0,0,0.4);}
+
+    /* Séparation couleur "corail" à mettre avant la fermeture de la balise ayant la classe container */
+    hr {
+        margin-top: 50px;
+        border-bottom: 1px solid rgb(241,97,80);}
+
+    /* Affichage du texte caché sur prepa et concours */
+    .lire_suite, .lire_moins {
+    float: right;
+    font-size: 0.80em; font-style: italic;
+    cursor: pointer;}
+    .lire_moins {
+        display: none;}
+
+    /***********************************************
+    ****************** Cercle /4 *******************
+    ***********************************************/
+
+    .cercle-3 {
+        position: relative;
+        width: 185px; height: 185px; margin: 10px auto;
+        background-color: rgba(255,255,255,0.7); border-radius: 50%;
+        text-align: center; line-height: 185px;
+        overflow: hidden;}
+    .cercle-3 strong {
+        margin: 10px 0;
+        text-transform: uppercase;}
+    .cercle-3 strong,
+    .cercle-3 p {
+         color: #333;}
+    .cercle-3 p {
+        font-size: 0.8em;}
+
+    /***********************************************
+    ****************** Cercle /3 *******************
+    ***********************************************/
+
+    .cercle-4 {
+        position: relative;
+        width: 225px; height: 225px; margin: 10px auto; padding: 2px;
+        background-color: rgba(255,255,255,0.5); border-radius: 50%;
+        text-align: center;
+        overflow: hidden;}
+    .cercle-4 strong {
+        display: inline-block; margin: 15% 0 10px;
+        text-transform: uppercase;}
+    .cercle-4 strong,
+    .cercle-4 span {
+        font-size: 3.4em; color: #17405c;}
+    .cercle-4 p {
+        display: block; width: 50%; margin: auto;
+        font-size: 1.05em; color: #333;}
+
+/***********************************************
+********************** Ie **********************
+***********************************************/
+
+.browserupgrade {
+    width: 100%; height: 200px; line-height: 200px;
+    text-align: center;}
+
+@media (max-width: 992px) {
+
+    /* Nav */
+    .nav_header .top_nav h1 {
+          background-position-y: 2px;
+        font-size: 0.85em;}
+    .nav_header .top_nav h1,
+    .nav_header .content_nav nav {
+        margin-left: 140px;}
+    .nav_header nav > ul li a {
+        padding: 13px;
+        font-size: 0.85em;}
+    .nav_header .nav_fixed .logo_nav .logo {
+        max-width: 85px;}
+    .nav_header .content_nav .sub-menu li a {
+        padding: 8px 12px;}
+    .img_prez {
+        height: inherit;}
+
+    /* Action */
+    #action li:nth-child(1),
+    #action li:nth-child(2),
+    #action li:nth-child(3),
+    #action li:nth-child(4) {
+        background-color: rgba(23,64,92,0.5);}
+
+    /* Img prez */
+    .img_prez h1 {
+        color: #333;}
+
+    /* Valeurs */
+    .valeurs .cercle-3 {
+        background-color: #777;}
+    .valeurs .cercle-3 p {
+        color: #fff;}
+
+    /* Statistiques */
+    .statistiques .cercle-4 {
+        background-color: #777;}
+    .statistiques .cercle-4 p {
+        color: #fff;}
+
+    /* Centre */
+    #container_centre .img_prez h1 {
+    border-bottom: 1px solid #333;}
+    #container_centre .img_prez h2 {
+    color: #333;}
+}
+
+@media (max-width: 767px) {
+
+    /* Nav */
+    .nav_header .content_nav {
+        padding-bottom: 10px;}
+    .logo_nav {
+        display: block; width: 100px; height: 100%; margin-left: 25px; padding: 9px 0;}
+    .logo {
+        max-width: 100px;}
+    .nav_header .content_nav nav {
+        margin-left: 0;}
+    .nav_header nav ul li,
+    .nav_header nav ul li ul li {
+        display: block;
+        border-top: 1px solid #fff;}
+    .nav_header nav .sub-menu {
+        position: inherit;}
+    .nav_header .content_nav .sub-menu li a {
+        background-color: #fff;
+        color: #777; text-align: left;}
+    .nav_header .content_nav .sub-menu li a:hover {
+        background-color: #777;
+        color: #fff;}
+
+    /* slider */
+    .carousel-inner {
+        height: 350px;}
+
+    /* Savoir faire */
+    .savoir_faire .savoir_faire_container p {
+        height: inherit;}
+    .savoir_faire .savoir_faire_container span {
+        display: none;}
+
+    /* Formules */
+    .formules .formules_container {
+        margin-top: 20px;}
+
+    /* Jpo */
+    .jpo .big_jpo_date {
+        text-align: left;}
+
+    /* Footer */
+    .reseaux_sociaux {
+        margin-top: 20px;}
+}
+
+@media (max-width: 560px) {
+
+    body, a {
+        font-size: 0.85em;}
+    .x-large {
+        font-size: 2em;}
+    .large {
+        font-size: 1.8em;}
+    .medium {
+        font-size: 1.4em;}
+    .small {
+        font-size: 1.1em;}
+    .x-small {
+        font-size: 1em;}
+    /* slider */
+    .carousel-inner {
+        height: 255px;}
+}

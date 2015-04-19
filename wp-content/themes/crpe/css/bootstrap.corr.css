@@ -1,0 +1,76 @@
+/***********************************************
+******* Modification de bootstrap **************
+***********************************************/
+
+h1, h2, h3, h4, h5, h6, ul, ol { 
+	margin: 0; padding: 0;}
+.carousel-indicators {
+	bottom: 50px;}
+
+	/* Modal */
+	.modal { 
+		z-index: 9999;}
+	.modal-header {
+		background-color: #f16150;}
+	.modal-header .modal-title, .modal-header .close span {
+		color: #fff;}
+	.modal-header .close {
+		margin-top: -5px;
+		opacity: 1;
+		font-size: 0.80em; font-weight: 100; text-shadow: none;}
+	.alert {
+		background-color:  #3497db;
+		color: #fff;
+	}
+                     .red{
+                                background-color:  rgb(241,97,80);  
+                     }
+
+	/* Bouton */
+	.btn {
+		padding: 10px 30px;
+		border-radius: 0; -webkit-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.1); -moz-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.1); -ms-box-shadow: 0 0px 10px 1px rgba(0,0,0,0.1); box-shadow: 0 0px 10px 1px rgba(0,0,0,0.1);}
+	.btn-primary { 
+		background-color: #f16150; border: none;}
+	.btn-primary:hover, 
+	.btn-primary:focus, 
+	.btn-primary.focus, 
+	.btn-primary:active, 
+	.btn-primary.active, 
+	.open>.dropdown-toggle.btn-primary {
+	 	background-color: #f16150; border-color: none;}
+
+	/* Nav */
+	.navbar-header {
+		background-color: #f16150;}
+	.navbar-toggle .icon-bar {
+		height: 4px;
+		background-color: #fff;}
+	.navbar-toggle .icon-bar+.icon-bar {
+	    margin-top: 5px;}
+	.navbar-collapse {
+		padding: 0;
+		border-top: none;}
+
+@media screen and (min-width: 768px) {
+.carousel-indicators {
+  bottom: 20px;
+}
+blockquote {
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+  border-left: none;
+}
+hr {margin: 0;}
+
+	/* Nav */
+	.navbar-header {
+	  display: none;
+	}
+
+@media screen and (min-width: 960px) {
+	.carousel-indicators {
+	  bottom: 20px;
+	}
+}
