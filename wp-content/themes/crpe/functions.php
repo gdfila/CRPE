@@ -83,7 +83,9 @@ function add_my_rewrite() {
  */
 function remplirListe()
 {
+
      include_once "api/Thalamus_Init.php";
+
   // Liste des centres
   $centersList = $client->call(array("service" => "formation","method" => "centersListByFormation","formationId" => 400));
    //  plage horaire

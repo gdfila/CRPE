@@ -12,6 +12,7 @@ Récuperation du header
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <?php
+
         $dataJPO=false;
         $datJpo="";
             // on recherche l'id du centre dans thalamus
@@ -44,6 +45,7 @@ Récuperation du header
                     }
                 }
                 ?>
+
     
     <!--
     Affiche une image de présentation pour la page
@@ -53,6 +55,7 @@ Récuperation du header
             <img class="hidden-xs hidden-sm back_img_centre" src="<?php echo $post_thumbnail_url; ?>" alt="">
             <h1 class="x-large text_shadow"><?php the_field('nom_du_centre');?></h1>
             <h2 class="medium text_shadow">Cours Galien</h2>
+
             <?php   if($dataJPO!=FALSE): ?>
                 <div class="min_jpo_container">
                     <div class="min_jpo">
@@ -63,14 +66,17 @@ Récuperation du header
                                    $dat=explode("/",$datJpo);
                                    echo '<strong>'.intval($dat[0]).' </strong><span>'.$mois[intval($dat[1])].'</span>';
                                 ?>
+
                             <?php endif ?>
                         </div><!-- /col-sm-6 -->
                         <div class="col-sm-6 min_jpo_contact">
                             <a href="http://localhost/galien_crpe/contact/contact/">Contact</a>
                         </div><!-- /col-sm-6 -->
                         <div>
+
                             <h3 class="small"><strong><?php  echo $dataJPO->title ?></strong></h3>
                             <p class="text-justify"><?php echo $dataJPO->description;?></p>
+
                             <a class="btn btn-primary" href="#liste_jpo">Lire la suite</a>
                         </div>
                     </div><!-- /min_jpo -->
@@ -171,6 +177,7 @@ Récuperation du header
                                 <h3 class="medium"><strong><?php echo $dataJPO->title; ?> </strong>
                                 </h3>
                                 <p class="text-justify"><?php echo $dataJPO->description;?></p>
+
                                 <a class="btn btn-primary" href="http://localhost/galien_crpe/?p=180&centre=<?php the_field('adresse_-_ville')?>&jpoDate=<?php the_field('date_de_la_jpo')?>" >Inscription</a>      
                             </div><!-- /col-sm-9 -->
                         </div><!-- /col-sm-12 -->
